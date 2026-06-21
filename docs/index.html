@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain Home Finder | Under $200k Near White Plains NY</title>
+  <style>
+    :root {
+      --forest:    #1e3a2f;
+      --canopy:    #2d5a40;
+      --moss:      #4a7c5f;
+      --sage:      #7aab8a;
+      --cream:     #f5f0e8;
+      --parchment: #ece5d5;
+      --bark:      #6b4c3b;
+      --stone:     #8a8070;
+      --gold:      #c9821a;
+      --amber:     #e8a020;
+      --water:     #3a7ea8;
+      --sky:       #5fa8d3;
+      --price-red: #b5341a;
+      --card-bg:   #ffffff;
+      --shadow:    rgba(30,58,47,0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--forest);
+      color: #2c2c2c;
+      min-height: 100vh;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      background: linear-gradient(160deg, #0d2118 0%, var(--forest) 50%, #1a3830 100%);
+      border-bottom: 3px solid var(--moss);
+      padding: 28px 24px 22px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    }
+
+    .header-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-title {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .header-title h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #e8f2ec;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+
+    .header-title h1 span.icon { font-size: 1.4rem; margin-right: 6px; }
+
+    .header-title p {
+      font-size: 0.85rem;
+      color: var(--sage);
+      margin-top: 4px;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    #last-updated {
+      font-size: 0.78rem;
+      color: var(--sage);
+      opacity: 0.8;
+    }
+
+    .btn-refresh {
+      background: var(--canopy);
+      color: #e8f2ec;
+      border: 1.5px solid var(--moss);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-refresh:hover { background: var(--moss); border-color: var(--sage); }
+    .btn-refresh:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .spin { display: inline-block; animation: spin 0.9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      background: var(--canopy);
+      border-bottom: 2px solid var(--moss);
+      padding: 12px 24px;
+      position: sticky;
+      top: 100px;
+      z-index: 90;
+    }
+
+    .filter-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-inner label { font-size: 0.82rem; color: var(--sage); font-weight: 600; white-space: nowrap; }
+
+    select, .sort-select {
+      background: var(--forest);
+      color: #d8ead0;
+      border: 1px solid var(--moss);
+      border-radius: 6px;
+      padding: 7px 12px;
+      font-size: 0.84rem;
+      cursor: pointer;
+      outline: none;
+    }
+    select:focus { border-color: var(--sage); }
+
+    .filter-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      background: transparent;
+      color: var(--sage);
+      border: 1.5px solid var(--moss);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .chip.active { background: var(--moss); color: #fff; border-color: var(--sage); }
+    .chip:hover { background: rgba(74,124,95,0.3); }
+
+    .stats-badge {
+      margin-left: auto;
+      font-size: 0.82rem;
+      color: var(--sage);
+      white-space: nowrap;
+    }
+    .stats-badge strong { color: #e8f2ec; }
+
+    /* ─── MAIN GRID ─── */
+    .main {
+      max-width: 1300px;
+      margin: 28px auto;
+      padding: 0 20px 60px;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin: 0 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(200,130,26,0.3);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    /* ─── PROPERTY CARD ─── */
+    .card {
+      background: var(--card-bg);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(30,58,47,0.25);
+    }
+
+    /* A-frame ribbon */
+    .aframe-ribbon {
+      position: absolute;
+      top: 14px;
+      left: -2px;
+      background: linear-gradient(90deg, var(--gold), var(--amber));
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px 5px 12px;
+      border-radius: 0 20px 20px 0;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-photo {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      background: var(--parchment);
+    }
+
+    .card-photo-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #d4e8d8 0%, #c0d9c8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .card-body {
+      padding: 18px 20px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .card-price {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--price-red);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .card-stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: #444;
+      font-weight: 600;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+    .card-stats span { display: flex; align-items: center; gap: 3px; }
+
+    .card-address {
+      font-size: 0.84rem;
+      color: #555;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .card-address strong { color: #333; }
+
+    .card-area {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--canopy);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .card-drive {
+      font-size: 0.78rem;
+      color: var(--stone);
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.55;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+
+    .feature-tag {
+      font-size: 0.73rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    .tag-mountain { background: #d9ede1; color: #2a6b45; }
+    .tag-lake     { background: #d0e8f2; color: #1e5c7a; }
+    .tag-river    { background: #d4eee8; color: #1e6858; }
+    .tag-aframe   { background: #fdefd5; color: #9a5c00; }
+    .tag-default  { background: #eeeae4; color: #5a5248; }
+
+    .card-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: var(--stone);
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .card-meta span { display: flex; align-items: center; gap: 4px; }
+
+    .card-footer {
+      border-top: 1px solid #eee;
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .source-badge {
+      font-size: 0.72rem;
+      color: var(--stone);
+      font-weight: 600;
+    }
+
+    .btn-view {
+      background: var(--canopy);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 7px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .btn-view:hover { background: var(--moss); }
+
+    /* ─── EMPTY / ERROR STATES ─── */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--sage);
+    }
+    .empty-state .icon { font-size: 4rem; display: block; margin-bottom: 16px; }
+    .empty-state h2 { font-size: 1.3rem; color: #d8ead0; margin-bottom: 8px; }
+    .empty-state p { font-size: 0.9rem; opacity: 0.7; }
+
+    .loading-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(13,33,24,0.7);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      color: #e8f2ec;
+    }
+    .loading-overlay.visible { display: flex; }
+    .loading-ring {
+      width: 52px;
+      height: 52px;
+      border: 4px solid rgba(74,124,95,0.3);
+      border-top-color: var(--sage);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .loading-overlay p { font-size: 1rem; color: var(--sage); }
+
+    .error-banner {
+      background: #5c1a10;
+      color: #f9c8bc;
+      border: 1px solid #a03020;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .error-banner.visible { display: block; }
+
+    .data-notice {
+      background: rgba(74,124,95,0.15);
+      border: 1px solid var(--moss);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      color: var(--sage);
+      margin-bottom: 20px;
+      display: none;
+    }
+    .data-notice.visible { display: block; }
+    .data-notice a { color: var(--amber); }
+
+    /* ─── SCROLLTOP ─── */
+    #scrolltop {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--canopy);
+      color: #e8f2ec;
+      border: 1.5px solid var(--moss);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background 0.15s;
+      z-index: 200;
+    }
+    #scrolltop:hover { background: var(--moss); }
+    #scrolltop.visible { display: flex; }
+
+    @media (max-width: 680px) {
+      .header-title h1 { font-size: 1.3rem; }
+      .filter-bar { top: 80px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADING OVERLAY -->
+<div class="loading-overlay" id="loading">
+  <div class="loading-ring"></div>
+  <p>Fetching latest listings&hellip;</p>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="header-title">
+      <h1><span class="icon">&#9968;</span> Mountain Home Finder</h1>
+      <p>Homes under $200,000 &bull; Within 3 hrs of White Plains, NY &bull; Outdoors &amp; A-frames first</p>
+    </div>
+    <div class="header-controls">
+      <span id="last-updated">Last updated: &mdash;</span>
+      <button class="btn-refresh" id="refresh-btn" onclick="loadListings()">
+        <span id="refresh-icon">&#8635;</span> Refresh Listings
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <label>Filter:</label>
+    <div class="filter-chips">
+      <button class="chip active" data-filter="all" onclick="setFilter('all', this)">All Homes</button>
+      <button class="chip" data-filter="aframe" onclick="setFilter('aframe', this)">&#9968; A-Frames Only</button>
+      <button class="chip" data-filter="mountain" onclick="setFilter('mountain', this)">&#127956; Mountain</button>
+      <button class="chip" data-filter="lake" onclick="setFilter('lake', this)">&#128060; Lake</button>
+      <button class="chip" data-filter="river" onclick="setFilter('river', this)">&#128032; River</button>
+    </div>
+    <label style="margin-left:8px;">Sort:</label>
+    <select id="sort-select" onchange="renderListings()">
+      <option value="recommended">Recommended (A-frames first)</option>
+      <option value="price_asc">Price: Low to High</option>
+      <option value="price_desc">Price: High to Low</option>
+      <option value="newest">Newest Listed</option>
+      <option value="sqft">Most Sq Ft</option>
+    </select>
+    <span class="stats-badge" id="stats-badge"><strong>0</strong> homes found</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+  <div class="error-banner" id="error-banner"></div>
+  <div class="data-notice" id="data-notice">
+    &#8505; Showing sample listings.
+    <a href="https://github.com/forzacode/practice-v1/actions" target="_blank" rel="noopener">Run the GitHub Actions scraper</a>
+    to populate with live listings from Redfin &amp; LandWatch.
+  </div>
+
+  <div id="aframe-section" style="display:none;">
+    <p class="section-label">&#9968; A-Frame &amp; Cabin Picks</p>
+    <div class="grid" id="aframe-grid"></div>
+  </div>
+
+  <div id="standard-section" style="display:none; margin-top: 28px;">
+    <p class="section-label" id="standard-label">&#127758; All Outdoor Homes</p>
+    <div class="grid" id="standard-grid"></div>
+  </div>
+
+  <div class="empty-state" id="empty-state" style="display:none;">
+    <span class="icon">&#127965;</span>
+    <h2>No listings match your filter</h2>
+    <p>Try a different filter or click Refresh to reload listings.</p>
+  </div>
+</main>
+
+<button id="scrolltop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+
+<script>
+  let allListings = [];
+  let activeFilter = 'all';
+
+  // ── LOAD & PARSE ──────────────────────────────────────────────────────────
+  async function loadListings() {
+    setLoading(true);
+    hideError();
+
+    try {
+      const url = './listings.json?t=' + Date.now();
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+
+      allListings = data.listings || [];
+
+      const updatedAt = data.updated_at
+        ? new Date(data.updated_at).toLocaleString('en-US', {
+            month: 'short', day: 'numeric', year: 'numeric',
+            hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+          })
+        : '—';
+      document.getElementById('last-updated').textContent = 'Updated: ' + updatedAt;
+
+      // Show notice if sample data
+      const notice = document.getElementById('data-notice');
+      if (data.note && data.note.includes('Sample')) {
+        notice.classList.add('visible');
+      } else {
+        notice.classList.remove('visible');
+      }
+
+      renderListings();
+    } catch (err) {
+      showError('Could not load listings: ' + err.message + '. Make sure listings.json exists and GitHub Pages is enabled.');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // ── FILTER & SORT ─────────────────────────────────────────────────────────
+  function setFilter(f, el) {
+    activeFilter = f;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    renderListings();
+  }
+
+  function filterListings(listings) {
+    if (activeFilter === 'all') return listings;
+    if (activeFilter === 'aframe') return listings.filter(l => l.is_aframe);
+    if (activeFilter === 'mountain') return listings.filter(l => l.area_type && l.area_type.includes('mountain'));
+    if (activeFilter === 'lake')    return listings.filter(l => l.area_type && l.area_type.includes('lake'));
+    if (activeFilter === 'river')   return listings.filter(l => l.area_type && l.area_type.includes('river'));
+    return listings;
+  }
+
+  function sortListings(listings) {
+    const mode = document.getElementById('sort-select').value;
+    const copy = [...listings];
+    if (mode === 'recommended') {
+      copy.sort((a, b) => {
+        if (b.is_aframe !== a.is_aframe) return b.is_aframe - a.is_aframe;
+        if (b.outdoor_score !== a.outdoor_score) return b.outdoor_score - a.outdoor_score;
+        return a.price - b.price;
+      });
+    } else if (mode === 'price_asc') {
+      copy.sort((a, b) => a.price - b.price);
+    } else if (mode === 'price_desc') {
+      copy.sort((a, b) => b.price - a.price);
+    } else if (mode === 'newest') {
+      copy.sort((a, b) => (a.days_on_market || 999) - (b.days_on_market || 999));
+    } else if (mode === 'sqft') {
+      copy.sort((a, b) => (b.sqft || 0) - (a.sqft || 0));
+    }
+    return copy;
+  }
+
+  // ── RENDER ────────────────────────────────────────────────────────────────
+  function renderListings() {
+    const filtered = filterListings(allListings);
+    const sorted   = sortListings(filtered);
+
+    const aframes   = sorted.filter(l => l.is_aframe);
+    const standard  = sorted.filter(l => !l.is_aframe);
+
+    document.getElementById('stats-badge').innerHTML =
+      '<strong>' + filtered.length + '</strong> home' + (filtered.length !== 1 ? 's' : '') + ' found';
+
+    const aframeSection  = document.getElementById('aframe-section');
+    const standardSection = document.getElementById('standard-section');
+    const emptyState     = document.getElementById('empty-state');
+    const stdLabel       = document.getElementById('standard-label');
+
+    if (filtered.length === 0) {
+      aframeSection.style.display = 'none';
+      standardSection.style.display = 'none';
+      emptyState.style.display = 'block';
+      return;
+    }
+    emptyState.style.display = 'none';
+
+    if (aframes.length > 0) {
+      aframeSection.style.display = 'block';
+      document.getElementById('aframe-grid').innerHTML = aframes.map(cardHTML).join('');
+    } else {
+      aframeSection.style.display = 'none';
+    }
+
+    if (standard.length > 0) {
+      standardSection.style.display = 'block';
+      stdLabel.textContent = aframes.length > 0
+        ? '&#127758; Other Outdoor Homes'
+        : '&#127758; All Outdoor Homes';
+      document.getElementById('standard-grid').innerHTML = standard.map(cardHTML).join('');
+    } else {
+      standardSection.style.display = 'none';
+    }
+  }
+
+  // ── CARD TEMPLATE ─────────────────────────────────────────────────────────
+  function cardHTML(l) {
+    const priceDisplay = l.price_display || (l.price ? '$' + l.price.toLocaleString() : 'Contact agent');
+
+    const beds  = l.beds  ? l.beds  + ' bd'  : '';
+    const baths = l.baths ? l.baths + ' ba'  : '';
+    const sqft  = l.sqft  ? l.sqft.toLocaleString() + ' sqft' : '';
+    const stats = [beds, baths, sqft].filter(Boolean).join(' &bull; ');
+
+    const taxes = l.taxes
+      ? '<span>&#128190; $' + l.taxes.toLocaleString() + '/yr taxes</span>'
+      : '';
+    const yearBuilt = l.year_built ? '<span>&#127968; Built ' + l.year_built + '</span>' : '';
+    const lotSize   = l.lot_size   ? '<span>&#127795; ' + l.lot_size + ' acres</span>' : '';
+    const dom       = l.days_on_market != null
+      ? '<span>&#128197; ' + l.days_on_market + ' days on market</span>'
+      : '';
+
+    const featureTags = (l.features || []).map(f => {
+      const fl = f.toLowerCase();
+      let cls = 'tag-default';
+      if (fl.includes('a-frame') || fl.includes('cabin') || fl.includes('chalet')) cls = 'tag-aframe';
+      else if (fl.includes('mountain')) cls = 'tag-mountain';
+      else if (fl.includes('lake'))     cls = 'tag-lake';
+      else if (fl.includes('river') || fl.includes('creek') || fl.includes('stream')) cls = 'tag-river';
+      return '<span class="feature-tag ' + cls + '">' + escHtml(f) + '</span>';
+    }).join('');
+
+    const areaIcon = areaEmoji(l.area_type);
+    const desc = l.description ? '<p class="card-desc">' + escHtml(l.description) + '</p>' : '';
+    const photoEl = l.photo
+      ? '<img class="card-photo" src="' + l.photo + '" alt="Property photo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+        + '<div class="card-photo-placeholder" style="display:none">&#127968;</div>'
+      : '<div class="card-photo-placeholder">&#127968;</div>';
+
+    const ribbon = l.is_aframe
+      ? '<div class="aframe-ribbon">&#9968; A-Frame Pick</div>'
+      : '';
+
+    const viewLink = l.url && l.url !== 'https://www.redfin.com' && l.url !== 'https://www.landwatch.com'
+      ? '<a class="btn-view" href="' + l.url + '" target="_blank" rel="noopener">View Listing &#8599;</a>'
+      : '<span style="font-size:0.78rem;color:var(--stone);">Search by address</span>';
+
+    return `
+    <div class="card">
+      ${ribbon}
+      ${photoEl}
+      <div class="card-body">
+        <div class="card-price">${priceDisplay}</div>
+        <div class="card-stats">${stats}</div>
+        <div class="card-address">
+          <strong>${escHtml(l.address || '')}</strong>
+        </div>
+        <div class="card-area">${areaIcon} ${escHtml(l.area || '')}</div>
+        <div class="card-drive">&#128663; ~${escHtml(l.drive_time || '')} from White Plains, NY</div>
+        ${desc}
+        <div class="card-features">${featureTags}</div>
+        <div class="card-meta">${taxes}${yearBuilt}${lotSize}${dom}</div>
+        <div class="card-footer">
+          <span class="source-badge">via ${escHtml(l.source || 'Web')}</span>
+          ${viewLink}
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function areaEmoji(type) {
+    if (!type) return '&#127968;';
+    if (type.includes('mountain')) return '&#9968;';
+    if (type.includes('lake'))     return '&#128060;';
+    if (type.includes('river'))    return '&#127754;';
+    return '&#127774;';
+  }
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  // ── UI HELPERS ────────────────────────────────────────────────────────────
+  function setLoading(on) {
+    document.getElementById('loading').classList.toggle('visible', on);
+    const btn  = document.getElementById('refresh-btn');
+    const icon = document.getElementById('refresh-icon');
+    btn.disabled = on;
+    icon.className = on ? 'spin' : '';
+    icon.textContent = on ? '&#8635;' : '&#8635;';
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('error-banner');
+    el.textContent = msg;
+    el.classList.add('visible');
+  }
+
+  function hideError() {
+    document.getElementById('error-banner').classList.remove('visible');
+  }
+
+  // ── SCROLL TO TOP ─────────────────────────────────────────────────────────
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrolltop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // ── INIT ──────────────────────────────────────────────────────────────────
+  loadListings();
+</script>
+</body>
+</html>

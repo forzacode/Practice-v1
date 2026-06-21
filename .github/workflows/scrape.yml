@@ -1,0 +1,40 @@
+name: Refresh Home Listings
+
+on:
+  schedule:
+    # Runs nightly at 6 AM ET (10 UTC)
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+    # Allows manual "Refresh" trigger from GitHub Actions UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run scraper
+        run: python scraper/scrape.py
+
+      - name: Commit and push updated listings
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/listings.json
+          git diff --staged --quiet && echo "No changes to commit." || \
+            git commit -m "chore: refresh listings $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
