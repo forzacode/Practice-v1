@@ -1,487 +1,604 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mountain Home Finder | Under $200k Near White Plains NY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
-    :root {
-      --forest:    #1e3a2f;
-      --canopy:    #2d5a40;
-      --moss:      #4a7c5f;
-      --sage:      #7aab8a;
-      --cream:     #f5f0e8;
-      --parchment: #ece5d5;
-      --bark:      #6b4c3b;
-      --stone:     #8a8070;
-      --gold:      #c9821a;
-      --amber:     #e8a020;
-      --water:     #3a7ea8;
-      --sky:       #5fa8d3;
-      --price-red: #b5341a;
-      --card-bg:   #ffffff;
-      --shadow:    rgba(30,58,47,0.15);
+
+    /* ═══════════════════════════════════════════════════════════
+       THEME TOKENS
+       Light = Monet Water Lilies / Giverny
+       Dark  = Picasso Blue / Cubist Night
+    ═══════════════════════════════════════════════════════════ */
+    [data-theme="light"] {
+      --bg-radial-1: rgba(174,210,235,0.55);
+      --bg-radial-2: rgba(210,175,215,0.45);
+      --bg-radial-3: rgba(172,215,190,0.40);
+      --bg-radial-4: rgba(235,205,175,0.38);
+      --bg-radial-5: rgba(220,185,205,0.32);
+      --bg-base:     #ede8f5;
+
+      --glass-h:  rgba(190,215,238,0.58);
+      --glass-h2: rgba(200,175,218,0.52);
+      --glass-f:  rgba(230,225,245,0.85);
+      --glass-bd: rgba(255,255,255,0.55);
+
+      --card-bg:  rgba(255,255,255,0.88);
+      --card-bd:  rgba(195,182,225,0.28);
+      --shadow-a: rgba(105,85,148,0.08);
+      --shadow-b: rgba(105,85,148,0.18);
+
+      --text-h:   #211535;
+      --text-b:   #4a3f60;
+      --text-s:   #8a7a9a;
+      --text-inv: #f8f2ff;
+
+      --accent:   #6a90b8;   /* Monet water */
+      --accent2:  #b87898;   /* water lily rose */
+      --sage:     #68a878;   /* garden green */
+      --ochre:    #c09030;   /* Picasso gold */
+      --terra:    #b86848;   /* terracotta */
+
+      --price:    #9a3040;
+      --new-c:    #2a9060;
+      --drop-c:   #2860a8;
+
+      --chip-act: rgba(100,142,185,0.82);
+      --chip-txt: #5a4a7a;
+      --btn-bg:   rgba(100,142,185,0.85);
+      --btn-h:    rgba(100,142,185,1.00);
+
+      --hr:       rgba(195,182,225,0.32);
+      --source-c: #9a8aaa;
+      --tag-mtn-bg: #d0eadc; --tag-mtn-tx: #2a6848;
+      --tag-lk-bg:  #c8e0f0; --tag-lk-tx:  #1e5070;
+      --tag-rv-bg:  #c8eae0; --tag-rv-tx:  #1e5850;
+      --tag-af-bg:  #f8e8c8; --tag-af-tx:  #7a5010;
+      --tag-df-bg:  #e8e2f2; --tag-df-tx:  #5a5070;
+
+      --ph-bg:    linear-gradient(135deg,#dce8f0,#d0dcea);
+      --notice-bg: rgba(170,195,225,0.2);
+      --notice-bd: rgba(100,140,185,0.35);
+      --err-bg:   rgba(160,50,60,0.12);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    [data-theme="dark"] {
+      --bg-radial-1: rgba(28,58,100,0.65);
+      --bg-radial-2: rgba(62,30,85,0.55);
+      --bg-radial-3: rgba(15,55,48,0.55);
+      --bg-radial-4: rgba(55,28,18,0.45);
+      --bg-radial-5: rgba(40,20,60,0.40);
+      --bg-base:     #0d0b1c;
+
+      --glass-h:  rgba(18,22,52,0.88);
+      --glass-h2: rgba(28,18,48,0.82);
+      --glass-f:  rgba(12,14,32,0.94);
+      --glass-bd: rgba(80,70,140,0.28);
+
+      --card-bg:  rgba(20,17,38,0.92);
+      --card-bd:  rgba(75,62,130,0.32);
+      --shadow-a: rgba(0,0,0,0.35);
+      --shadow-b: rgba(0,0,0,0.55);
+
+      --text-h:   #e8e0fa;
+      --text-b:   #b8a8d8;
+      --text-s:   #7868a0;
+      --text-inv: #100c20;
+
+      --accent:   #5a90c2;
+      --accent2:  #c07888;
+      --sage:     #4a9862;
+      --ochre:    #c09030;
+      --terra:    #c07060;
+
+      --price:    #e07878;
+      --new-c:    #22c55e;
+      --drop-c:   #60a8e0;
+
+      --chip-act: rgba(70,112,172,0.90);
+      --chip-txt: #a898c8;
+      --btn-bg:   rgba(65,100,165,0.88);
+      --btn-h:    rgba(80,118,182,1.00);
+
+      --hr:       rgba(75,62,130,0.30);
+      --source-c: #7060a0;
+      --tag-mtn-bg: #1e3830; --tag-mtn-tx: #78c898;
+      --tag-lk-bg:  #182840; --tag-lk-tx:  #78acd8;
+      --tag-rv-bg:  #183830; --tag-rv-tx:  #78c8b8;
+      --tag-af-bg:  #382808; --tag-af-tx:  #d8a848;
+      --tag-df-bg:  #221e38; --tag-df-tx:  #9888c0;
+
+      --ph-bg:    linear-gradient(135deg,#181428,#101828);
+      --notice-bg: rgba(40,60,100,0.25);
+      --notice-bd: rgba(60,90,155,0.4);
+      --err-bg:   rgba(120,30,30,0.25);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       BASE RESET + TRANSITIONS
+    ═══════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--forest);
-      color: #2c2c2c;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       min-height: 100vh;
+      color: var(--text-b);
+      background:
+        radial-gradient(ellipse at 12% 22%, var(--bg-radial-1) 0%, transparent 52%),
+        radial-gradient(ellipse at 78% 12%, var(--bg-radial-2) 0%, transparent 48%),
+        radial-gradient(ellipse at 52% 78%, var(--bg-radial-3) 0%, transparent 52%),
+        radial-gradient(ellipse at 88% 68%, var(--bg-radial-4) 0%, transparent 44%),
+        radial-gradient(ellipse at 28% 88%, var(--bg-radial-5) 0%, transparent 44%),
+        var(--bg-base);
+      background-attachment: fixed;
+      transition: background 0.5s ease, color 0.3s ease;
     }
 
-    /* ─── HEADER ─── */
+    /* smooth theme transitions */
+    header, .filter-bar, .card, .btn-refresh, .btn-theme,
+    .chip, select, #map, .loading-overlay,
+    .error-banner, .data-notice {
+      transition: background 0.4s ease, color 0.3s ease,
+                  border-color 0.3s ease, box-shadow 0.35s ease;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HEADER  (glassmorphism, Monet/Cubist gradient)
+    ═══════════════════════════════════════════════════════════ */
     header {
-      background: linear-gradient(160deg, #0d2118 0%, var(--forest) 50%, #1a3830 100%);
-      border-bottom: 3px solid var(--moss);
-      padding: 28px 24px 22px;
+      background: linear-gradient(130deg, var(--glass-h) 0%, var(--glass-h2) 100%);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--glass-bd);
+      padding: 20px 28px 16px;
       position: sticky;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+      z-index: 200;
+      box-shadow: 0 4px 32px var(--shadow-a);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent), var(--sage), var(--ochre), var(--accent2));
+      opacity: 0.55;
     }
 
     .header-inner {
-      max-width: 1300px;
+      max-width: 1320px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .header-title {
-      flex: 1;
-      min-width: 280px;
-    }
+    .header-brand { flex: 1; min-width: 240px; }
 
-    .header-title h1 {
-      font-size: 1.7rem;
+    .header-brand h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.65rem;
       font-weight: 700;
-      color: #e8f2ec;
-      letter-spacing: -0.3px;
+      color: var(--text-h);
+      letter-spacing: -0.2px;
       line-height: 1.2;
     }
 
-    .header-title h1 span.icon { font-size: 1.4rem; margin-right: 6px; }
-
-    .header-title p {
-      font-size: 0.85rem;
-      color: var(--sage);
-      margin-top: 4px;
+    .header-brand p {
+      font-size: 0.79rem;
+      color: var(--text-s);
+      margin-top: 3px;
+      letter-spacing: 0.1px;
     }
 
-    .header-controls {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 
-    #last-updated {
-      font-size: 0.78rem;
-      color: var(--sage);
-      opacity: 0.8;
+    #last-updated { font-size: 0.74rem; color: var(--text-s); white-space: nowrap; }
+
+    .btn-theme {
+      background: var(--glass-bd);
+      border: 1px solid var(--glass-bd);
+      border-radius: 50%;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; cursor: pointer;
+      backdrop-filter: blur(10px);
     }
+    .btn-theme:hover { background: rgba(255,255,255,0.3); }
 
     .btn-refresh {
-      background: var(--canopy);
-      color: #e8f2ec;
-      border: 1.5px solid var(--moss);
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 0.9rem;
+      background: var(--btn-bg);
+      color: var(--text-inv);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 9px 20px;
+      border-radius: 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s;
-      white-space: nowrap;
+      display: flex; align-items: center; gap: 7px;
+      backdrop-filter: blur(8px);
+      letter-spacing: 0.2px;
     }
-    .btn-refresh:hover { background: var(--moss); border-color: var(--sage); }
+    .btn-refresh:hover   { background: var(--btn-h); }
     .btn-refresh:disabled { opacity: 0.5; cursor: not-allowed; }
 
-    .spin { display: inline-block; animation: spin 0.9s linear infinite; }
+    .spin { animation: spin 0.9s linear infinite; display: inline-block; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ─── FILTER BAR ─── */
+    /* ═══════════════════════════════════════════════════════════
+       FILTER BAR
+    ═══════════════════════════════════════════════════════════ */
     .filter-bar {
-      background: var(--canopy);
-      border-bottom: 2px solid var(--moss);
-      padding: 12px 24px;
+      background: var(--glass-f);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--glass-bd);
+      padding: 10px 28px;
       position: sticky;
-      top: 100px;
-      z-index: 90;
+      top: 82px;
+      z-index: 190;
     }
 
     .filter-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      max-width: 1320px; margin: 0 auto;
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
     }
 
-    .filter-inner label { font-size: 0.82rem; color: var(--sage); font-weight: 600; white-space: nowrap; }
-
-    select, .sort-select {
-      background: var(--forest);
-      color: #d8ead0;
-      border: 1px solid var(--moss);
-      border-radius: 6px;
-      padding: 7px 12px;
-      font-size: 0.84rem;
-      cursor: pointer;
-      outline: none;
+    .filter-label {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-s);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      white-space: nowrap;
     }
-    select:focus { border-color: var(--sage); }
 
-    .filter-chips {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+    .filter-chips { display: flex; gap: 6px; flex-wrap: wrap; }
 
     .chip {
       background: transparent;
-      color: var(--sage);
-      border: 1.5px solid var(--moss);
-      border-radius: 20px;
+      color: var(--chip-txt);
+      border: 1.5px solid var(--hr);
+      border-radius: 22px;
       padding: 5px 14px;
-      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
       cursor: pointer;
-      transition: all 0.15s;
       white-space: nowrap;
+      letter-spacing: 0.15px;
     }
-    .chip.active { background: var(--moss); color: #fff; border-color: var(--sage); }
-    .chip:hover { background: rgba(74,124,95,0.3); }
+    .chip:hover  { border-color: var(--accent); color: var(--accent); }
+    .chip.active {
+      background: var(--chip-act);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 2px 8px var(--shadow-a);
+    }
+    .chip.fav-chip { border-color: var(--ochre); color: var(--ochre); }
+    .chip.fav-chip.active { background: var(--ochre); color: #fff; }
+
+    select {
+      background: transparent;
+      color: var(--text-b);
+      border: 1.5px solid var(--hr);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.80rem;
+      cursor: pointer;
+      outline: none;
+    }
+    select:focus { border-color: var(--accent); }
+    [data-theme="dark"] select option { background: #1a1630; }
+
+    .view-toggle {
+      display: flex;
+      border: 1.5px solid var(--hr);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .view-btn {
+      background: transparent; color: var(--text-s);
+      border: none; padding: 6px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.80rem; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+    }
+    .view-btn.active { background: var(--chip-act); color: #fff; }
+    .view-btn:hover:not(.active) { color: var(--accent); }
 
     .stats-badge {
       margin-left: auto;
-      font-size: 0.82rem;
-      color: var(--sage);
-      white-space: nowrap;
+      font-size: 0.78rem; color: var(--text-s); white-space: nowrap;
     }
-    .stats-badge strong { color: #e8f2ec; }
+    .stats-badge strong { color: var(--text-h); font-weight: 700; }
 
-    /* ─── MAIN GRID ─── */
-    .main {
-      max-width: 1300px;
-      margin: 28px auto;
-      padding: 0 20px 60px;
-    }
+    /* ═══════════════════════════════════════════════════════════
+       MAIN
+    ═══════════════════════════════════════════════════════════ */
+    .main { max-width: 1320px; margin: 28px auto; padding: 0 22px 70px; }
 
     .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin: 0 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--text-s);
+      margin: 0 0 16px;
+      display: flex; align-items: center; gap: 14px;
     }
+    .section-label::before,
     .section-label::after {
       content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(200,130,26,0.3);
+      flex: 1; height: 1px;
+      background: var(--hr);
     }
+    .section-label::before { max-width: 32px; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
       gap: 22px;
     }
 
-    /* ─── PROPERTY CARD ─── */
+    /* ═══════════════════════════════════════════════════════════
+       MAP
+    ═══════════════════════════════════════════════════════════ */
+    #map-container { display: none; }
+    #map {
+      height: 630px;
+      border-radius: 16px;
+      border: 1px solid var(--card-bd);
+      box-shadow: 0 8px 40px var(--shadow-b);
+    }
+    .map-note { font-size: 0.74rem; color: var(--text-s); margin-top: 8px; text-align: right; }
+
+    /* ═══════════════════════════════════════════════════════════
+       CARD
+    ═══════════════════════════════════════════════════════════ */
     .card {
       background: var(--card-bg);
-      border-radius: 14px;
+      border-radius: 18px;
+      border: 1px solid var(--card-bd);
       overflow: hidden;
-      box-shadow: 0 4px 20px var(--shadow);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; flex-direction: column;
+      box-shadow: 0 3px 18px var(--shadow-a);
       position: relative;
+      backdrop-filter: blur(10px);
     }
     .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(30,58,47,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 38px var(--shadow-b);
     }
 
-    /* A-frame ribbon */
-    .aframe-ribbon {
+    /* Coloured left accent by area type */
+    .card::before {
+      content: '';
       position: absolute;
-      top: 14px;
-      left: -2px;
-      background: linear-gradient(90deg, var(--gold), var(--amber));
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 5px 14px 5px 12px;
-      border-radius: 0 20px 20px 0;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      border-radius: 18px 0 0 18px;
+      background: var(--card-accent, var(--hr));
     }
+
+    /* ribbons */
+    .ribbon-aframe {
+      position: absolute; top: 14px; left: 2px;
+      background: linear-gradient(90deg, var(--ochre), #d8b040);
+      color: #fff;
+      font-size: 0.68rem; font-weight: 800;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      padding: 4px 12px 4px 10px;
+      border-radius: 0 14px 14px 0;
+      box-shadow: 1px 2px 8px rgba(0,0,0,0.22);
+      z-index: 10;
+    }
+    .ribbon-new {
+      position: absolute; top: 14px; right: 44px;
+      background: var(--new-c);
+      color: #fff;
+      font-size: 0.62rem; font-weight: 800;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 8px;
+      z-index: 10;
+    }
+
+    /* heart */
+    .heart-btn {
+      position: absolute; top: 10px; right: 10px; z-index: 10;
+      background: rgba(255,255,255,0.88);
+      border: none; width: 32px; height: 32px; border-radius: 50%;
+      font-size: 1.05rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      color: #ccc; line-height: 1;
+    }
+    [data-theme="dark"] .heart-btn { background: rgba(30,25,55,0.88); color: #554a80; }
+    .heart-btn:hover  { transform: scale(1.15); }
+    .heart-btn.active { color: var(--accent2); }
 
     .card-photo {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      background: var(--parchment);
+      width: 100%; height: 198px; object-fit: cover; display: block;
+      background: var(--ph-bg);
     }
-
     .card-photo-placeholder {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #d4e8d8 0%, #c0d9c8 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
+      width: 100%; height: 198px;
+      background: var(--ph-bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.8rem;
     }
 
-    .card-body {
-      padding: 18px 20px 16px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    .card-body { padding: 17px 19px 15px 22px; flex: 1; display: flex; flex-direction: column; }
+
+    .price-drop-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(40,96,168,0.12);
+      color: var(--drop-c);
+      font-size: 0.70rem; font-weight: 700;
+      padding: 3px 9px; border-radius: 8px;
+      margin-bottom: 5px; width: fit-content;
+      border: 1px solid rgba(40,96,168,0.2);
     }
+    [data-theme="dark"] .price-drop-badge { background: rgba(60,100,160,0.2); }
 
     .card-price {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: 1.65rem;
-      font-weight: 800;
-      color: var(--price-red);
+      font-weight: 700;
+      color: var(--price);
       line-height: 1;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .card-stats {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.88rem;
-      color: #444;
-      font-weight: 600;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
-    }
-    .card-stats span { display: flex; align-items: center; gap: 3px; }
-
-    .card-address {
-      font-size: 0.84rem;
-      color: #555;
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-    .card-address strong { color: #333; }
-
-    .card-area {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.82rem;
-      color: var(--canopy);
-      font-weight: 700;
-      margin-bottom: 4px;
+      font-size: 0.84rem; font-weight: 600; color: var(--text-b);
+      margin-bottom: 7px; display: flex; flex-wrap: wrap; gap: 8px;
     }
 
-    .card-drive {
-      font-size: 0.78rem;
-      color: var(--stone);
-      margin-bottom: 12px;
-    }
+    .card-address { font-size: 0.81rem; color: var(--text-s); margin-bottom: 5px; line-height: 1.4; }
+    .card-address strong { color: var(--text-b); }
 
-    .card-desc {
-      font-size: 0.82rem;
-      color: #555;
-      line-height: 1.55;
-      margin-bottom: 12px;
-      flex: 1;
+    .directions-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.74rem; font-weight: 600; color: var(--accent);
+      text-decoration: none; margin-bottom: 11px;
     }
+    .directions-link:hover { color: var(--accent2); text-decoration: underline; }
 
-    .card-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 14px;
-    }
+    .card-area  { font-size: 0.78rem; font-weight: 700; color: var(--sage); margin-bottom: 2px; display: flex; align-items: center; gap: 5px; }
+    .card-drive { font-size: 0.74rem; color: var(--text-s); margin-bottom: 10px; }
+    .card-desc  { font-size: 0.79rem; color: var(--text-s); line-height: 1.58; margin-bottom: 11px; flex: 1; }
 
+    .card-features { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
     .feature-tag {
-      font-size: 0.73rem;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 12px;
-      white-space: nowrap;
+      font-size: 0.70rem; font-weight: 600;
+      padding: 3px 9px; border-radius: 10px; white-space: nowrap;
     }
-
-    .tag-mountain { background: #d9ede1; color: #2a6b45; }
-    .tag-lake     { background: #d0e8f2; color: #1e5c7a; }
-    .tag-river    { background: #d4eee8; color: #1e6858; }
-    .tag-aframe   { background: #fdefd5; color: #9a5c00; }
-    .tag-default  { background: #eeeae4; color: #5a5248; }
+    .tag-mtn { background: var(--tag-mtn-bg); color: var(--tag-mtn-tx); }
+    .tag-lk  { background: var(--tag-lk-bg);  color: var(--tag-lk-tx); }
+    .tag-rv  { background: var(--tag-rv-bg);   color: var(--tag-rv-tx); }
+    .tag-af  { background: var(--tag-af-bg);   color: var(--tag-af-tx); }
+    .tag-df  { background: var(--tag-df-bg);   color: var(--tag-df-tx); }
 
     .card-meta {
-      display: flex;
-      gap: 16px;
-      font-size: 0.78rem;
-      color: var(--stone);
-      margin-bottom: 14px;
-      flex-wrap: wrap;
+      display: flex; flex-wrap: wrap; gap: 12px;
+      font-size: 0.74rem; color: var(--text-s);
+      margin-bottom: 12px;
     }
-    .card-meta span { display: flex; align-items: center; gap: 4px; }
 
     .card-footer {
-      border-top: 1px solid #eee;
-      padding-top: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      border-top: 1px solid var(--hr);
+      padding-top: 11px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
     }
-
-    .source-badge {
-      font-size: 0.72rem;
-      color: var(--stone);
-      font-weight: 600;
-    }
+    .source-badge { font-size: 0.68rem; color: var(--source-c); font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; }
 
     .btn-view {
-      background: var(--canopy);
+      background: var(--btn-bg);
       color: #fff;
-      padding: 8px 16px;
-      border-radius: 7px;
-      font-size: 0.82rem;
-      font-weight: 700;
+      border: none;
+      padding: 7px 16px; border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; font-weight: 700;
       text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: background 0.15s;
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 4px;
+      letter-spacing: 0.1px;
     }
-    .btn-view:hover { background: var(--moss); }
+    .btn-view:hover { background: var(--btn-h); }
 
-    /* ─── EMPTY / ERROR STATES ─── */
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--sage);
-    }
-    .empty-state .icon { font-size: 4rem; display: block; margin-bottom: 16px; }
-    .empty-state h2 { font-size: 1.3rem; color: #d8ead0; margin-bottom: 8px; }
-    .empty-state p { font-size: 0.9rem; opacity: 0.7; }
+    /* ═══════════════════════════════════════════════════════════
+       STATES
+    ═══════════════════════════════════════════════════════════ */
+    .empty-state { text-align: center; padding: 70px 20px; color: var(--text-s); }
+    .empty-state .ico { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+    .empty-state h2  { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--text-h); margin-bottom: 6px; }
+    .empty-state p   { font-size: 0.86rem; }
 
     .loading-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(13,33,24,0.7);
-      z-index: 999;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 16px;
-      color: #e8f2ec;
+      display: none; position: fixed; inset: 0;
+      background: rgba(15,12,28,0.72); backdrop-filter: blur(6px);
+      z-index: 999; align-items: center; justify-content: center;
+      flex-direction: column; gap: 16px;
     }
-    .loading-overlay.visible { display: flex; }
+    .loading-overlay.on { display: flex; }
     .loading-ring {
-      width: 52px;
-      height: 52px;
-      border: 4px solid rgba(74,124,95,0.3);
-      border-top-color: var(--sage);
+      width: 52px; height: 52px;
+      border: 3px solid rgba(106,144,184,0.3);
+      border-top-color: var(--accent);
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      animation: spin 0.85s linear infinite;
     }
-    .loading-overlay p { font-size: 1rem; color: var(--sage); }
+    .loading-overlay p { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text-s); font-size: 1rem; }
 
     .error-banner {
-      background: #5c1a10;
-      color: #f9c8bc;
-      border: 1px solid #a03020;
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-size: 0.85rem;
-      margin-bottom: 20px;
-      display: none;
+      background: var(--err-bg); color: var(--accent2);
+      border: 1px solid var(--accent2); border-radius: 10px;
+      padding: 11px 15px; font-size: 0.82rem;
+      margin-bottom: 18px; display: none;
     }
-    .error-banner.visible { display: block; }
+    .error-banner.on { display: block; }
 
     .data-notice {
-      background: rgba(74,124,95,0.15);
-      border: 1px solid var(--moss);
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-size: 0.82rem;
-      color: var(--sage);
-      margin-bottom: 20px;
-      display: none;
+      background: var(--notice-bg);
+      border: 1px solid var(--notice-bd);
+      border-radius: 10px;
+      padding: 11px 15px; font-size: 0.79rem;
+      color: var(--text-s); margin-bottom: 18px; display: none;
     }
-    .data-notice.visible { display: block; }
-    .data-notice a { color: var(--amber); }
+    .data-notice.on { display: block; }
+    .data-notice a { color: var(--ochre); text-decoration: none; font-weight: 600; }
+    .data-notice a:hover { text-decoration: underline; }
 
-    /* ─── SCROLLTOP ─── */
     #scrolltop {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--canopy);
-      color: #e8f2ec;
-      border: 1.5px solid var(--moss);
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: background 0.15s;
-      z-index: 200;
+      position: fixed; bottom: 24px; right: 24px;
+      background: var(--btn-bg); color: #fff;
+      border: none; width: 42px; height: 42px;
+      border-radius: 50%; font-size: 1rem; cursor: pointer;
+      display: none; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px var(--shadow-b); z-index: 200;
     }
-    #scrolltop:hover { background: var(--moss); }
-    #scrolltop.visible { display: flex; }
+    #scrolltop:hover { background: var(--btn-h); }
+    #scrolltop.on { display: flex; }
 
     @media (max-width: 680px) {
-      .header-title h1 { font-size: 1.3rem; }
-      .filter-bar { top: 80px; }
+      .header-brand h1 { font-size: 1.3rem; }
+      .filter-bar { top: 74px; }
       .grid { grid-template-columns: 1fr; }
+      #map { height: 460px; }
     }
   </style>
 </head>
 <body>
 
-<!-- LOADING OVERLAY -->
+<!-- LOADING -->
 <div class="loading-overlay" id="loading">
   <div class="loading-ring"></div>
-  <p>Fetching latest listings&hellip;</p>
+  <p>Gathering listings&hellip;</p>
 </div>
 
 <!-- HEADER -->
 <header>
   <div class="header-inner">
-    <div class="header-title">
-      <h1><span class="icon">&#9968;</span> Mountain Home Finder</h1>
-      <p>Homes under $200,000 &bull; Within 3 hrs of White Plains, NY &bull; Outdoors &amp; A-frames first</p>
+    <div class="header-brand">
+      <h1>&#9968; Mountain Home Finder</h1>
+      <p>Under $200,000 &middot; Within 3 hrs of White Plains, NY &middot; Outdoors &amp; A-frames first</p>
     </div>
-    <div class="header-controls">
+    <div class="header-actions">
       <span id="last-updated">Last updated: &mdash;</span>
+      <button class="btn-theme" id="theme-btn" onclick="toggleTheme()" title="Toggle light / dark">
+        <span id="theme-icon">&#9788;</span>
+      </button>
       <button class="btn-refresh" id="refresh-btn" onclick="loadListings()">
-        <span id="refresh-icon">&#8635;</span> Refresh Listings
+        <span id="refresh-icon">&#8635;</span> Refresh
       </button>
     </div>
   </div>
@@ -490,23 +607,29 @@
 <!-- FILTER BAR -->
 <div class="filter-bar">
   <div class="filter-inner">
-    <label>Filter:</label>
+    <span class="filter-label">Filter</span>
     <div class="filter-chips">
-      <button class="chip active" data-filter="all" onclick="setFilter('all', this)">All Homes</button>
-      <button class="chip" data-filter="aframe" onclick="setFilter('aframe', this)">&#9968; A-Frames Only</button>
-      <button class="chip" data-filter="mountain" onclick="setFilter('mountain', this)">&#127956; Mountain</button>
-      <button class="chip" data-filter="lake" onclick="setFilter('lake', this)">&#128060; Lake</button>
-      <button class="chip" data-filter="river" onclick="setFilter('river', this)">&#128032; River</button>
+      <button class="chip active" data-filter="all"      onclick="setFilter('all',this)">All Homes</button>
+      <button class="chip"        data-filter="aframe"   onclick="setFilter('aframe',this)">&#9968; A-Frames</button>
+      <button class="chip"        data-filter="mountain" onclick="setFilter('mountain',this)">&#127956; Mountain</button>
+      <button class="chip"        data-filter="lake"     onclick="setFilter('lake',this)">&#128060; Lake</button>
+      <button class="chip"        data-filter="river"    onclick="setFilter('river',this)">&#128032; River</button>
+      <button class="chip"        data-filter="drop"     onclick="setFilter('drop',this)">&#8595; Price Drop</button>
+      <button class="chip fav-chip" data-filter="saved"  onclick="setFilter('saved',this)" id="saved-chip">&#9825; Saved</button>
     </div>
-    <label style="margin-left:8px;">Sort:</label>
+    <span class="filter-label" style="margin-left:6px;">Sort</span>
     <select id="sort-select" onchange="renderListings()">
-      <option value="recommended">Recommended (A-frames first)</option>
-      <option value="price_asc">Price: Low to High</option>
-      <option value="price_desc">Price: High to Low</option>
+      <option value="recommended">Recommended</option>
+      <option value="price_asc">Price &#8593; Low</option>
+      <option value="price_desc">Price &#8595; High</option>
       <option value="newest">Newest Listed</option>
       <option value="sqft">Most Sq Ft</option>
     </select>
-    <span class="stats-badge" id="stats-badge"><strong>0</strong> homes found</span>
+    <div class="view-toggle">
+      <button class="view-btn active" id="btn-list" onclick="setView('list')">&#9776; List</button>
+      <button class="view-btn"        id="btn-map"  onclick="setView('map')">&#128205; Map</button>
+    </div>
+    <span class="stats-badge" id="stats-badge"><strong>0</strong> homes</span>
   </div>
 </div>
 
@@ -514,260 +637,385 @@
 <main class="main">
   <div class="error-banner" id="error-banner"></div>
   <div class="data-notice" id="data-notice">
-    &#8505; Showing sample listings.
-    <a href="https://github.com/forzacode/practice-v1/actions" target="_blank" rel="noopener">Run the GitHub Actions scraper</a>
-    to populate with live listings from Redfin &amp; LandWatch.
+    &#8505; Showing sample listings &mdash;
+    <a href="https://github.com/forzacode/practice-v1/actions" target="_blank" rel="noopener">run the scraper</a>
+    to populate with live data from Redfin, LandWatch &amp; Craigslist.
   </div>
 
-  <div id="aframe-section" style="display:none;">
-    <p class="section-label">&#9968; A-Frame &amp; Cabin Picks</p>
-    <div class="grid" id="aframe-grid"></div>
+  <!-- LIST VIEW -->
+  <div id="list-view">
+    <div id="aframe-section" style="display:none">
+      <p class="section-label">A-Frame &amp; Cabin Picks</p>
+      <div class="grid" id="aframe-grid"></div>
+    </div>
+    <div id="standard-section" style="display:none; margin-top:30px">
+      <p class="section-label" id="standard-label">All Outdoor Homes</p>
+      <div class="grid" id="standard-grid"></div>
+    </div>
+    <div class="empty-state" id="empty-state" style="display:none">
+      <span class="ico">&#127965;</span>
+      <h2>No listings match</h2>
+      <p>Try a different filter or click Refresh.</p>
+    </div>
   </div>
 
-  <div id="standard-section" style="display:none; margin-top: 28px;">
-    <p class="section-label" id="standard-label">&#127758; All Outdoor Homes</p>
-    <div class="grid" id="standard-grid"></div>
-  </div>
-
-  <div class="empty-state" id="empty-state" style="display:none;">
-    <span class="icon">&#127965;</span>
-    <h2>No listings match your filter</h2>
-    <p>Try a different filter or click Refresh to reload listings.</p>
+  <!-- MAP VIEW -->
+  <div id="map-container">
+    <div id="map"></div>
+    <p class="map-note" id="map-note"></p>
   </div>
 </main>
 
 <button id="scrolltop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-  let allListings = [];
-  let activeFilter = 'all';
+// ── THEME ─────────────────────────────────────────────────────────────────────
+const ICONS = { light: '&#9788;', dark: '&#9790;' };
 
-  // ── LOAD & PARSE ──────────────────────────────────────────────────────────
-  async function loadListings() {
-    setLoading(true);
-    hideError();
+function applyTheme(t) {
+  document.documentElement.dataset.theme = t;
+  document.getElementById('theme-icon').innerHTML = t === 'light' ? ICONS.light : ICONS.dark;
+  localStorage.setItem('mhf-theme', t);
+  if (leafletMap) swapTiles(t);
+}
 
-    try {
-      const url = './listings.json?t=' + Date.now();
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
+function toggleTheme() {
+  const cur = document.documentElement.dataset.theme || 'light';
+  applyTheme(cur === 'light' ? 'dark' : 'light');
+}
 
-      allListings = data.listings || [];
+// Init theme before first paint
+(function() {
+  const saved = localStorage.getItem('mhf-theme') || 'light';
+  document.documentElement.dataset.theme = saved;
+  // icon set after DOM ready (script runs at end)
+})();
 
-      const updatedAt = data.updated_at
-        ? new Date(data.updated_at).toLocaleString('en-US', {
-            month: 'short', day: 'numeric', year: 'numeric',
-            hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
-          })
-        : '—';
-      document.getElementById('last-updated').textContent = 'Updated: ' + updatedAt;
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let allListings   = [];
+let activeFilter  = 'all';
+let viewMode      = 'list';
+let leafletMap    = null;
+let tileLayer     = null;
+let mapMarkers    = [];
+let favorites     = new Set(JSON.parse(localStorage.getItem('mhf-fav') || '[]'));
+const lastVisit   = parseInt(localStorage.getItem('mhf-visit') || '0');
+let visitRecorded = false;
 
-      // Show notice if sample data
-      const notice = document.getElementById('data-notice');
-      if (data.note && data.note.includes('Sample')) {
-        notice.classList.add('visible');
-      } else {
-        notice.classList.remove('visible');
-      }
+// ── SAMPLE DATA ───────────────────────────────────────────────────────────────
+const SAMPLE_DATA = {"updated_at":"2026-06-21T12:00:00Z","note":"Sample listings","listings":[{"id":"sample-001","source":"Redfin","price":139000,"price_display":"$139,000","previous_price":159000,"beds":2,"baths":1,"sqft":924,"address":"47 Pine Ridge Rd, Livingston Manor, NY 12758","city":"Livingston Manor","state":"NY","zip":"12758","url":"https://www.redfin.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1968,"lot_size":1.2,"days_on_market":22,"taxes":2800,"is_aframe":true,"outdoor_score":5,"first_seen":"2026-06-21T12:00:00Z","features":["A-Frame Cabin","Mountain area","Near Willowemoc Creek","Private wooded lot"],"description":"Charming A-frame cabin nestled in the Catskill Mountains. Cathedral ceilings, wood-burning stove, wraparound deck with mountain views. 10 min to fly-fishing streams.","photo":"https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80","lat":41.898,"lon":-74.820},{"id":"sample-002","source":"Redfin","price":178500,"price_display":"$178,500","previous_price":null,"beds":3,"baths":2,"sqft":1400,"address":"22 Hemlock Hollow Rd, Narrowsburg, NY 12764","city":"Narrowsburg","state":"NY","zip":"12764","url":"https://www.redfin.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1955,"lot_size":3.5,"days_on_market":8,"taxes":3600,"is_aframe":true,"outdoor_score":5,"first_seen":"2026-06-21T12:00:00Z","features":["A-Frame Cabin","Delaware River nearby","Mountain area","3.5 acres wooded"],"description":"Classic A-frame with stunning river views. Updated kitchen, new roof 2023, full basement. Steps to Delaware River canoe launch. Minutes to Narrowsburg village.","photo":"https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600&q=80","lat":41.601,"lon":-75.001},{"id":"sample-003","source":"LandWatch","price":119000,"price_display":"$119,000","previous_price":null,"beds":1,"baths":1,"sqft":680,"address":"Beechwood Lake Rd, Wurtsboro, NY 12790","city":"Wurtsboro","state":"NY","zip":"12790","url":"https://www.landwatch.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1962,"lot_size":0.4,"days_on_market":45,"taxes":2100,"is_aframe":false,"outdoor_score":4,"first_seen":"2026-06-21T12:00:00Z","features":["Lake access","Mountain area","Seasonal stream","Private dock rights"],"description":"Cozy lakefront retreat on private community lake. Swim, fish and kayak from your backyard. Year-round road access. Perfect weekend escape or full-time home.","photo":"https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=600&q=80","lat":41.533,"lon":-74.490},{"id":"sample-004","source":"Redfin","price":157000,"price_display":"$157,000","previous_price":null,"beds":2,"baths":1,"sqft":1080,"address":"88 Catskill River Rd, Phoenicia, NY 12464","city":"Phoenicia","state":"NY","zip":"12464","url":"https://www.redfin.com","area":"Ulster County (Hudson Valley/Catskills), NY","area_type":"mountain_river","drive_time":"~2h","year_built":1940,"lot_size":0.6,"days_on_market":14,"taxes":3200,"is_aframe":false,"outdoor_score":4,"first_seen":"2026-06-21T12:00:00Z","features":["Mountain area","Esopus Creek nearby","River area","Village walkability"],"description":"Cozy cottage in the heart of Catskill Mountain hiking country. Walking distance to Phoenicia shops. Minutes from swimming holes and state forest trailheads.","photo":"https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80","lat":42.083,"lon":-74.316},{"id":"sample-005","source":"Redfin","price":164900,"price_display":"$164,900","previous_price":175000,"beds":3,"baths":1,"sqft":1250,"address":"15 Lakeside Dr, Hawley, PA 18428","city":"Hawley","state":"PA","zip":"18428","url":"https://www.redfin.com","area":"Wayne County (Poconos), PA","area_type":"mountain_lake","drive_time":"~2h","year_built":1975,"lot_size":0.3,"days_on_market":31,"taxes":2600,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Lake region","Mountain area","Lake Wallenpaupack nearby","Community beach"],"description":"Pocono Mountains retreat with community lake access on Lake Wallenpaupack. Ski resorts and state parks minutes away.","photo":"https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=600&q=80","lat":41.474,"lon":-75.175},{"id":"sample-006","source":"Redfin","price":189000,"price_display":"$189,000","previous_price":null,"beds":3,"baths":2,"sqft":1600,"address":"241 Maple Hill Rd, Great Barrington, MA 01230","city":"Great Barrington","state":"MA","zip":"01230","url":"https://www.redfin.com","area":"Berkshire County, MA","area_type":"mountain_river","drive_time":"~2.5h","year_built":1930,"lot_size":1.8,"days_on_market":6,"taxes":4100,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Berkshire Mountains","River area","Housatonic River nearby","Near ski resorts"],"description":"Charming farmhouse in the Southern Berkshires. Updated throughout. Minutes to Tanglewood, skiing at Butternut, swimming in Stockbridge Bowl.","photo":"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80","lat":42.196,"lon":-73.363},{"id":"sample-007","source":"Redfin","price":142000,"price_display":"$142,000","previous_price":null,"beds":2,"baths":1,"sqft":980,"address":"9 Forest Glen Rd, Roxbury, NY 12474","city":"Roxbury","state":"NY","zip":"12474","url":"https://www.redfin.com","area":"Delaware County (Catskills), NY","area_type":"mountain","drive_time":"~2h","year_built":1950,"lot_size":2.0,"days_on_market":58,"taxes":2400,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Mountain area","Catskill Mountains","2 wooded acres","Near skiing"],"description":"Classic Catskill farmhouse with original character intact. Two private acres bordered by state forest. Hunter and Windham ski areas nearby.","photo":"https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=600&q=80","lat":42.295,"lon":-74.553},{"id":"sample-008","source":"Redfin","price":199000,"price_display":"$199,000","previous_price":null,"beds":2,"baths":2,"sqft":1150,"address":"33 Covered Bridge Rd, Kent, CT 06757","city":"Kent","state":"CT","zip":"06757","url":"https://www.redfin.com","area":"Litchfield County (NW Corner), CT","area_type":"mountain_lake_river","drive_time":"~1.5h","year_built":1988,"lot_size":0.75,"days_on_market":19,"taxes":3800,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Mountains","Housatonic River nearby","Lake Waramaug nearby","State parks nearby"],"description":"Beautifully maintained home in Connecticut's scenic northwest corner. Litchfield Hills hiking, world-class fly-fishing on the Housatonic, Lake Waramaug swimming all minutes away.","photo":"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80","lat":41.723,"lon":-73.476}]};
 
-      renderListings();
-    } catch (err) {
-      showError('Could not load listings: ' + err.message + '. Make sure listings.json exists and GitHub Pages is enabled.');
-    } finally {
-      setLoading(false);
-    }
-  }
+// ── LOAD ──────────────────────────────────────────────────────────────────────
+async function loadListings() {
+  setLoading(true);
+  hideError();
+  let data = null;
+  try {
+    const res = await fetch('./listings.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+  } catch (_) { data = SAMPLE_DATA; }
 
-  // ── FILTER & SORT ─────────────────────────────────────────────────────────
-  function setFilter(f, el) {
-    activeFilter = f;
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    el.classList.add('active');
-    renderListings();
-  }
+  allListings = data.listings || [];
 
-  function filterListings(listings) {
-    if (activeFilter === 'all') return listings;
-    if (activeFilter === 'aframe') return listings.filter(l => l.is_aframe);
-    if (activeFilter === 'mountain') return listings.filter(l => l.area_type && l.area_type.includes('mountain'));
-    if (activeFilter === 'lake')    return listings.filter(l => l.area_type && l.area_type.includes('lake'));
-    if (activeFilter === 'river')   return listings.filter(l => l.area_type && l.area_type.includes('river'));
-    return listings;
-  }
+  const ua = data.updated_at
+    ? new Date(data.updated_at).toLocaleString('en-US',
+        { month:'short', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short' })
+    : '—';
+  document.getElementById('last-updated').textContent = 'Updated: ' + ua;
 
-  function sortListings(listings) {
-    const mode = document.getElementById('sort-select').value;
-    const copy = [...listings];
-    if (mode === 'recommended') {
-      copy.sort((a, b) => {
-        if (b.is_aframe !== a.is_aframe) return b.is_aframe - a.is_aframe;
-        if (b.outdoor_score !== a.outdoor_score) return b.outdoor_score - a.outdoor_score;
-        return a.price - b.price;
-      });
-    } else if (mode === 'price_asc') {
-      copy.sort((a, b) => a.price - b.price);
-    } else if (mode === 'price_desc') {
-      copy.sort((a, b) => b.price - a.price);
-    } else if (mode === 'newest') {
-      copy.sort((a, b) => (a.days_on_market || 999) - (b.days_on_market || 999));
-    } else if (mode === 'sqft') {
-      copy.sort((a, b) => (b.sqft || 0) - (a.sqft || 0));
-    }
-    return copy;
-  }
+  const notice = document.getElementById('data-notice');
+  if (data.note && data.note.includes('Sample')) notice.classList.add('on');
+  else notice.classList.remove('on');
 
-  // ── RENDER ────────────────────────────────────────────────────────────────
-  function renderListings() {
-    const filtered = filterListings(allListings);
-    const sorted   = sortListings(filtered);
+  updateSavedChip();
+  renderListings();
+  setLoading(false);
+}
 
-    const aframes   = sorted.filter(l => l.is_aframe);
-    const standard  = sorted.filter(l => !l.is_aframe);
+// ── FILTER + SORT ─────────────────────────────────────────────────────────────
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderListings();
+}
 
-    document.getElementById('stats-badge').innerHTML =
-      '<strong>' + filtered.length + '</strong> home' + (filtered.length !== 1 ? 's' : '') + ' found';
+function filterListings(list) {
+  if (activeFilter === 'all')      return list;
+  if (activeFilter === 'aframe')   return list.filter(l => l.is_aframe);
+  if (activeFilter === 'mountain') return list.filter(l => (l.area_type||'').includes('mountain'));
+  if (activeFilter === 'lake')     return list.filter(l => (l.area_type||'').includes('lake'));
+  if (activeFilter === 'river')    return list.filter(l => (l.area_type||'').includes('river'));
+  if (activeFilter === 'drop')     return list.filter(l => l.previous_price && l.previous_price > l.price);
+  if (activeFilter === 'saved')    return list.filter(l => favorites.has(l.id));
+  return list;
+}
 
-    const aframeSection  = document.getElementById('aframe-section');
-    const standardSection = document.getElementById('standard-section');
-    const emptyState     = document.getElementById('empty-state');
-    const stdLabel       = document.getElementById('standard-label');
+function sortListings(list) {
+  const mode = document.getElementById('sort-select').value;
+  const c = [...list];
+  if (mode === 'recommended') {
+    c.sort((a,b) => {
+      if (b.is_aframe !== a.is_aframe) return b.is_aframe - a.is_aframe;
+      if (b.outdoor_score !== a.outdoor_score) return b.outdoor_score - a.outdoor_score;
+      return a.price - b.price;
+    });
+  } else if (mode === 'price_asc')  c.sort((a,b) => a.price - b.price);
+  else if (mode === 'price_desc')   c.sort((a,b) => b.price - a.price);
+  else if (mode === 'newest')       c.sort((a,b) => (a.days_on_market||999) - (b.days_on_market||999));
+  else if (mode === 'sqft')         c.sort((a,b) => (b.sqft||0) - (a.sqft||0));
+  return c;
+}
 
-    if (filtered.length === 0) {
-      aframeSection.style.display = 'none';
-      standardSection.style.display = 'none';
-      emptyState.style.display = 'block';
-      return;
-    }
-    emptyState.style.display = 'none';
+// ── RENDER ────────────────────────────────────────────────────────────────────
+function renderListings() {
+  const filtered = filterListings(allListings);
+  const sorted   = sortListings(filtered);
 
-    if (aframes.length > 0) {
-      aframeSection.style.display = 'block';
-      document.getElementById('aframe-grid').innerHTML = aframes.map(cardHTML).join('');
-    } else {
-      aframeSection.style.display = 'none';
-    }
+  document.getElementById('stats-badge').innerHTML =
+    '<strong>' + filtered.length + '</strong> home' + (filtered.length !== 1 ? 's' : '');
 
-    if (standard.length > 0) {
-      standardSection.style.display = 'block';
-      stdLabel.textContent = aframes.length > 0
-        ? '&#127758; Other Outdoor Homes'
-        : '&#127758; All Outdoor Homes';
+  if (viewMode === 'map') { updateMap(sorted); return; }
+
+  const aframes  = sorted.filter(l => l.is_aframe);
+  const standard = sorted.filter(l => !l.is_aframe);
+
+  const aS = document.getElementById('aframe-section');
+  const sS = document.getElementById('standard-section');
+  const eS = document.getElementById('empty-state');
+
+  if (filtered.length === 0) {
+    aS.style.display = 'none'; sS.style.display = 'none'; eS.style.display = 'block';
+  } else {
+    eS.style.display = 'none';
+    aS.style.display = aframes.length  ? 'block' : 'none';
+    if (aframes.length)  document.getElementById('aframe-grid').innerHTML   = aframes.map(cardHTML).join('');
+    sS.style.display = standard.length ? 'block' : 'none';
+    if (standard.length) {
+      document.getElementById('standard-label').textContent = aframes.length ? 'Other Outdoor Homes' : 'All Outdoor Homes';
       document.getElementById('standard-grid').innerHTML = standard.map(cardHTML).join('');
-    } else {
-      standardSection.style.display = 'none';
     }
   }
 
-  // ── CARD TEMPLATE ─────────────────────────────────────────────────────────
-  function cardHTML(l) {
-    const priceDisplay = l.price_display || (l.price ? '$' + l.price.toLocaleString() : 'Contact agent');
+  if (!visitRecorded) { localStorage.setItem('mhf-visit', Date.now()); visitRecorded = true; }
+}
 
-    const beds  = l.beds  ? l.beds  + ' bd'  : '';
-    const baths = l.baths ? l.baths + ' ba'  : '';
-    const sqft  = l.sqft  ? l.sqft.toLocaleString() + ' sqft' : '';
-    const stats = [beds, baths, sqft].filter(Boolean).join(' &bull; ');
+// ── CARD ──────────────────────────────────────────────────────────────────────
+function cardHTML(l) {
+  const isFav   = favorites.has(l.id);
+  const isNew   = checkNew(l);
+  const hasDrop = l.previous_price && l.previous_price > l.price && l.price > 0;
 
-    const taxes = l.taxes
-      ? '<span>&#128190; $' + l.taxes.toLocaleString() + '/yr taxes</span>'
-      : '';
-    const yearBuilt = l.year_built ? '<span>&#127968; Built ' + l.year_built + '</span>' : '';
-    const lotSize   = l.lot_size   ? '<span>&#127795; ' + l.lot_size + ' acres</span>' : '';
-    const dom       = l.days_on_market != null
-      ? '<span>&#128197; ' + l.days_on_market + ' days on market</span>'
-      : '';
+  const stats = [l.beds&&l.beds+'bd', l.baths&&l.baths+'ba', l.sqft&&l.sqft.toLocaleString()+'sqft'].filter(Boolean).join(' · ');
 
-    const featureTags = (l.features || []).map(f => {
-      const fl = f.toLowerCase();
-      let cls = 'tag-default';
-      if (fl.includes('a-frame') || fl.includes('cabin') || fl.includes('chalet')) cls = 'tag-aframe';
-      else if (fl.includes('mountain')) cls = 'tag-mountain';
-      else if (fl.includes('lake'))     cls = 'tag-lake';
-      else if (fl.includes('river') || fl.includes('creek') || fl.includes('stream')) cls = 'tag-river';
-      return '<span class="feature-tag ' + cls + '">' + escHtml(f) + '</span>';
-    }).join('');
+  const accentColor = l.is_aframe ? 'var(--ochre)'
+    : (l.area_type||'').includes('lake')     ? 'var(--accent)'
+    : (l.area_type||'').includes('river')    ? 'var(--sage)'
+    : (l.area_type||'').includes('mountain') ? 'var(--sage)'
+    : 'var(--hr)';
 
-    const areaIcon = areaEmoji(l.area_type);
-    const desc = l.description ? '<p class="card-desc">' + escHtml(l.description) + '</p>' : '';
-    const photoEl = l.photo
-      ? '<img class="card-photo" src="' + l.photo + '" alt="Property photo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
-        + '<div class="card-photo-placeholder" style="display:none">&#127968;</div>'
-      : '<div class="card-photo-placeholder">&#127968;</div>';
+  const mapsAddr = encodeURIComponent((l.address || (l.city+', '+l.state) || '').trim());
 
-    const ribbon = l.is_aframe
-      ? '<div class="aframe-ribbon">&#9968; A-Frame Pick</div>'
-      : '';
+  const featureTags = (l.features||[]).map(f => {
+    const fl = f.toLowerCase();
+    let cls = 'tag-df';
+    if (fl.includes('a-frame')||fl.includes('cabin')) cls = 'tag-af';
+    else if (fl.includes('mountain'))                 cls = 'tag-mtn';
+    else if (fl.includes('lake'))                     cls = 'tag-lk';
+    else if (fl.includes('river')||fl.includes('creek')||fl.includes('stream')) cls = 'tag-rv';
+    return `<span class="feature-tag ${cls}">${h(f)}</span>`;
+  }).join('');
 
-    const viewLink = l.url && l.url !== 'https://www.redfin.com' && l.url !== 'https://www.landwatch.com'
-      ? '<a class="btn-view" href="' + l.url + '" target="_blank" rel="noopener">View Listing &#8599;</a>'
-      : '<span style="font-size:0.78rem;color:var(--stone);">Search by address</span>';
+  const meta = [
+    l.taxes          ? `<span>&#128190; $${l.taxes.toLocaleString()}/yr</span>` : '',
+    l.year_built     ? `<span>&#127968; ${l.year_built}</span>` : '',
+    l.lot_size       ? `<span>&#127795; ${l.lot_size} ac</span>` : '',
+    l.days_on_market != null ? `<span>&#128197; ${l.days_on_market}d</span>` : '',
+  ].filter(Boolean).join('');
 
-    return `
-    <div class="card">
-      ${ribbon}
-      ${photoEl}
-      <div class="card-body">
-        <div class="card-price">${priceDisplay}</div>
-        <div class="card-stats">${stats}</div>
-        <div class="card-address">
-          <strong>${escHtml(l.address || '')}</strong>
-        </div>
-        <div class="card-area">${areaIcon} ${escHtml(l.area || '')}</div>
-        <div class="card-drive">&#128663; ~${escHtml(l.drive_time || '')} from White Plains, NY</div>
-        ${desc}
-        <div class="card-features">${featureTags}</div>
-        <div class="card-meta">${taxes}${yearBuilt}${lotSize}${dom}</div>
-        <div class="card-footer">
-          <span class="source-badge">via ${escHtml(l.source || 'Web')}</span>
-          ${viewLink}
-        </div>
+  const validUrl = l.url && !['https://www.redfin.com','https://www.landwatch.com','https://www.craigslist.org'].includes(l.url);
+  const photoEl  = l.photo
+    ? `<img class="card-photo" src="${l.photo}" alt="" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-photo-placeholder" style="display:none">&#127968;</div>`
+    : '<div class="card-photo-placeholder">&#127968;</div>';
+
+  return `
+  <div class="card" style="--card-accent:${accentColor}">
+    ${l.is_aframe   ? '<div class="ribbon-aframe">&#9968; A-Frame</div>' : ''}
+    ${isNew         ? '<div class="ribbon-new">New</div>'                 : ''}
+    <button class="heart-btn${isFav?' active':''}" data-id="${h(l.id)}" onclick="toggleFav(this)" title="${isFav?'Remove':'Save'}">
+      ${isFav ? '&#9829;' : '&#9825;'}
+    </button>
+    ${photoEl}
+    <div class="card-body">
+      ${hasDrop ? `<div class="price-drop-badge">&#8595; Was $${l.previous_price.toLocaleString()}</div>` : ''}
+      <div class="card-price">${l.price_display || (l.price ? '$'+l.price.toLocaleString() : 'Contact')}</div>
+      <div class="card-stats">${stats}</div>
+      <div class="card-address"><strong>${h(l.address||'')}</strong></div>
+      ${mapsAddr ? `<a class="directions-link" href="https://www.google.com/maps/dir/White+Plains,+NY/${mapsAddr}" target="_blank" rel="noopener">&#128663; Directions from White Plains</a>` : ''}
+      <div class="card-area">${areaEmoji(l.area_type)} ${h(l.area||'')}</div>
+      <div class="card-drive">${h(l.drive_time||'')} from White Plains</div>
+      ${l.description ? `<p class="card-desc">${h(l.description)}</p>` : ''}
+      <div class="card-features">${featureTags}</div>
+      <div class="card-meta">${meta}</div>
+      <div class="card-footer">
+        <span class="source-badge">${h(l.source||'Web')}</span>
+        ${validUrl ? `<a class="btn-view" href="${l.url}" target="_blank" rel="noopener">View &#8599;</a>` : '<span style="font-size:0.7rem;color:var(--text-s)">Search by address</span>'}
       </div>
-    </div>`;
-  }
+    </div>
+  </div>`;
+}
 
-  function areaEmoji(type) {
-    if (!type) return '&#127968;';
-    if (type.includes('mountain')) return '&#9968;';
-    if (type.includes('lake'))     return '&#128060;';
-    if (type.includes('river'))    return '&#127754;';
-    return '&#127774;';
-  }
+// ── MAP ───────────────────────────────────────────────────────────────────────
+function setView(mode) {
+  viewMode = mode;
+  document.getElementById('btn-list').classList.toggle('active', mode === 'list');
+  document.getElementById('btn-map').classList.toggle('active',  mode === 'map');
+  document.getElementById('list-view').style.display     = mode === 'list' ? '' : 'none';
+  document.getElementById('map-container').style.display = mode === 'map'  ? '' : 'none';
 
-  function escHtml(s) {
-    return String(s)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+  if (mode === 'map') {
+    if (!leafletMap) initMap();
+    const sorted = sortListings(filterListings(allListings));
+    updateMap(sorted);
+    setTimeout(() => leafletMap.invalidateSize(), 200);
   }
+}
 
-  // ── UI HELPERS ────────────────────────────────────────────────────────────
-  function setLoading(on) {
-    document.getElementById('loading').classList.toggle('visible', on);
-    const btn  = document.getElementById('refresh-btn');
-    const icon = document.getElementById('refresh-icon');
-    btn.disabled = on;
-    icon.className = on ? 'spin' : '';
-    icon.textContent = on ? '&#8635;' : '&#8635;';
-  }
+function initMap() {
+  leafletMap = L.map('map').setView([41.9, -74.5], 8);
+  swapTiles(document.documentElement.dataset.theme || 'light');
+}
 
-  function showError(msg) {
-    const el = document.getElementById('error-banner');
-    el.textContent = msg;
-    el.classList.add('visible');
-  }
+function swapTiles(theme) {
+  if (!leafletMap) return;
+  if (tileLayer) leafletMap.removeLayer(tileLayer);
+  const url = theme === 'dark'
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+  tileLayer = L.tileLayer(url, {
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 19,
+  }).addTo(leafletMap);
+}
 
-  function hideError() {
-    document.getElementById('error-banner').classList.remove('visible');
-  }
+function updateMap(listings) {
+  mapMarkers.forEach(m => leafletMap.removeLayer(m));
+  mapMarkers = [];
 
-  // ── SCROLL TO TOP ─────────────────────────────────────────────────────────
-  window.addEventListener('scroll', () => {
-    document.getElementById('scrolltop').classList.toggle('visible', window.scrollY > 400);
+  const mapped   = listings.filter(l => l.lat && l.lon);
+  const unmapped = listings.length - mapped.length;
+  const theme    = document.documentElement.dataset.theme || 'light';
+
+  mapped.forEach(l => {
+    const isFav  = favorites.has(l.id);
+    const isNew  = checkNew(l);
+    const hasDrop = l.previous_price && l.previous_price > l.price;
+
+    const bg = l.is_aframe ? '#c09030'
+             : (l.area_type||'').includes('lake')     ? '#5a8fb8'
+             : (l.area_type||'').includes('river')    ? '#4a9870'
+             : '#5a8870';
+
+    const newDot = isNew ? `<span style="position:absolute;top:-5px;right:-5px;width:9px;height:9px;background:#22c55e;border-radius:50%;border:2px solid #fff;display:block"></span>` : '';
+    const favPre = isFav ? '&#9829; ' : '';
+
+    const icon = L.divIcon({
+      html: `<div style="position:relative;background:${bg};color:#fff;padding:5px 11px;border-radius:18px;font-size:11px;font-weight:700;white-space:nowrap;box-shadow:0 3px 12px rgba(0,0,0,0.35);cursor:pointer;font-family:Inter,sans-serif">${favPre}${l.price_display}${newDot}</div>`,
+      className: '', iconAnchor: [0,24], popupAnchor: [60,-18],
+    });
+
+    const mapsAddr = encodeURIComponent((l.address||'').trim());
+    const statsLine = [l.beds&&l.beds+'bd', l.baths&&l.baths+'ba', l.sqft&&l.sqft.toLocaleString()+'sqft'].filter(Boolean).join(' · ');
+    const validUrl  = l.url && !['https://www.redfin.com','https://www.landwatch.com'].includes(l.url);
+
+    const popupBg   = theme === 'dark' ? '#1a1630' : '#fff';
+    const popupTxt  = theme === 'dark' ? '#b8a8d8' : '#4a3f60';
+    const popupHead = theme === 'dark' ? '#e07878' : '#9a3040';
+
+    const popup = `
+      <div style="min-width:220px;font-family:Inter,sans-serif;color:${popupTxt};background:${popupBg};border-radius:8px">
+        ${hasDrop ? `<div style="color:#60a8e0;font-size:0.71rem;font-weight:700;margin-bottom:3px">&#8595; Was $${l.previous_price.toLocaleString()}</div>` : ''}
+        <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:${popupHead};margin-bottom:3px">${l.price_display}</div>
+        <div style="font-size:0.82rem;font-weight:600;margin-bottom:5px">${statsLine}</div>
+        <div style="font-size:0.78rem;margin-bottom:7px">${h(l.address||'')}</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          ${validUrl ? `<a href="${l.url}" target="_blank" style="background:${bg};color:#fff;padding:4px 10px;border-radius:12px;text-decoration:none;font-size:0.76rem;font-weight:700">View &#8599;</a>` : ''}
+          ${mapsAddr ? `<a href="https://www.google.com/maps/dir/White+Plains,+NY/${mapsAddr}" target="_blank" style="color:#5a90c2;font-size:0.75rem;font-weight:600">&#128663; Directions</a>` : ''}
+        </div>
+      </div>`;
+
+    const marker = L.marker([l.lat, l.lon], { icon })
+      .addTo(leafletMap)
+      .bindPopup(popup, { maxWidth:270, className:'mhf-popup' });
+    mapMarkers.push(marker);
   });
 
-  // ── INIT ──────────────────────────────────────────────────────────────────
-  loadListings();
+  if (mapMarkers.length > 0) {
+    leafletMap.fitBounds(L.featureGroup(mapMarkers).getBounds().pad(0.12));
+  }
+
+  document.getElementById('map-note').textContent = unmapped > 0
+    ? `${mapped.length} of ${listings.length} listings placed on map (${unmapped} without coordinates)`
+    : `All ${mapped.length} listings shown`;
+}
+
+// ── FAVORITES ─────────────────────────────────────────────────────────────────
+function toggleFav(btn) {
+  const id = btn.dataset.id;
+  if (favorites.has(id)) {
+    favorites.delete(id); btn.classList.remove('active'); btn.innerHTML = '&#9825;'; btn.title = 'Save listing';
+  } else {
+    favorites.add(id);    btn.classList.add('active');    btn.innerHTML = '&#9829;'; btn.title = 'Remove from saved';
+  }
+  localStorage.setItem('mhf-fav', JSON.stringify([...favorites]));
+  updateSavedChip();
+  if (activeFilter === 'saved') renderListings();
+  if (viewMode === 'map') updateMap(sortListings(filterListings(allListings)));
+}
+
+function updateSavedChip() {
+  const count = allListings.filter(l => favorites.has(l.id)).length;
+  document.getElementById('saved-chip').innerHTML = count > 0 ? `&#9829; Saved (${count})` : '&#9825; Saved';
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+function checkNew(l) {
+  if (!lastVisit) return false;
+  return new Date(l.first_seen || l.scraped_at || 0).getTime() > lastVisit;
+}
+
+function areaEmoji(t) {
+  if (!t) return '&#127968;';
+  if (t.includes('mountain')) return '&#9968;';
+  if (t.includes('lake'))     return '&#128060;';
+  if (t.includes('river'))    return '&#127754;';
+  return '&#127774;';
+}
+
+function h(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function setLoading(on) {
+  document.getElementById('loading').classList.toggle('on', on);
+  const btn = document.getElementById('refresh-btn');
+  const ico = document.getElementById('refresh-icon');
+  btn.disabled = on;
+  ico.className = on ? 'spin' : '';
+}
+
+function showError(msg) { const e = document.getElementById('error-banner'); e.textContent = msg; e.classList.add('on'); }
+function hideError()     { document.getElementById('error-banner').classList.remove('on'); }
+
+window.addEventListener('scroll', () => {
+  document.getElementById('scrolltop').classList.toggle('on', window.scrollY > 380);
+});
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+applyTheme(localStorage.getItem('mhf-theme') || 'light');
+loadListings();
 </script>
 </body>
 </html>
