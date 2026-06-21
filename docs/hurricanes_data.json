@@ -1,11 +1,2898 @@
 {
-  "last_updated": null,
-  "team": {},
-  "news": [],
-  "schedule": [],
-  "stats": {},
+  "last_updated": "2026-06-21T15:15:12.254725+00:00",
+  "team": {
+    "name": "Miami Hurricanes",
+    "abbreviation": "MIA",
+    "location": "Miami",
+    "nickname": "Miami",
+    "color": "f47423",
+    "alternate_color": "035131",
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+    "record": {},
+    "website": ""
+  },
+  "news": [
+    {
+      "title": "2027 college football recruiting class rankings: Top 25 schools",
+      "summary": "These schools are setting the pace as the recruiting race heats up.",
+      "url": "https://www.espn.com/college-football/recruiting/story/_/id/48503376/2027-college-football-recruiting-class-rankings-top-teams-schools",
+      "published": "2026-06-19T12:02:16Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2025/1129/r1582390_608x342_16-9.jpg"
+    },
+    {
+      "title": "Ranking the top running backs in college football for 2026",
+      "summary": "Kewan Lacy, Mark Fletcher Jr. and a host of others are in the running for the top of our list.",
+      "url": "https://www.espn.com/college-football/story/_/id/49086318/ranking-top-running-backs-college-football-2026",
+      "published": "2026-06-18T12:07:51Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0616/ncf_rank-running-backs_16x9.jpg"
+    },
+    {
+      "title": "2026 college football Top 25: How far does Texas Tech fall without Sorsby?",
+      "summary": "The Brendan Sorsby saga for Texas Tech appears to have ended. How will the Red Raiders fare without their presumptive QB1?",
+      "url": "https://www.espn.com/college-football/story/_/id/48370187/2026-college-football-way-too-early-top-25-spring-update",
+      "published": "2026-06-16T16:39:26Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2025/1019/r1562326_608x342_16-9.jpg"
+    },
+    {
+      "title": "2027 NFL draft: Ranking top five prospects at every position",
+      "summary": "The NFL draft is a long way off, but Matt Miller and Jordan Reid ranked the five best prospects at every position. How do the top QBs, OTs, CBs and more stack up?",
+      "url": "https://www.espn.com/nfl/draft2027/story/_/id/49001685/nfl-draft-2027-top-five-every-position-players-watch",
+      "published": "2026-06-12T10:38:20Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0611/r1671076_608x342_16-9.jpg"
+    },
+    {
+      "title": "Ranking top 10 receivers in college football for 2026",
+      "summary": "The Ohio State star is clearly No. 1 on the list, but after that the debate begins.",
+      "url": "https://www.espn.com/college-football/story/_/id/48992931/ranking-top-10-receivers-college-football-2026",
+      "published": "2026-06-11T11:08:18Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0610/ncf_rank-receivers_16x9.jpg"
+    },
+    {
+      "title": "2027 NFL draft quarterback class: Top prospects to know",
+      "summary": "Next year's QB draft class should be loaded, with big names such as Arch Manning, Dante Moore, CJ Carr and Trinidad Chambliss. Here's what you need to know.",
+      "url": "https://www.espn.com/nfl/draft2027/story/_/id/48828988/2027-nfl-draft-quarterback-class-top-prospects-manning-moore-carr",
+      "published": "2026-06-09T17:56:53Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0522/r1662057_608x342_16-9.jpg"
+    },
+    {
+      "title": "College Football Future Power Rankings through 2027",
+      "summary": "Coaches, current roster, recruits: Who has the best overall team over the next two seasons?",
+      "url": "https://www.espn.com/college-football/story/_/id/48864748/college-football-2026-future-power-rankings-every-team",
+      "published": "2026-06-10T13:35:49Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0608/college_football_future_power_rankings_1296x729.png"
+    },
+    {
+      "title": "CFB Future Power Rankings: Miami",
+      "summary": "Adam Rittenberg looks at how Miami is positioned for the next two college football seasons.",
+      "url": "https://www.espn.com/video/clip/_/id/49003904/miami",
+      "published": "2026-06-08T23:17:41Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/media/motion/2026/0608/dm_260608_miami_ia_16x9/dm_260608_miami_ia_16x9.jpg"
+    },
+    {
+      "title": "Picking college football's top non-QB playmakers in 2026",
+      "summary": "It won't just be QBs who affect the upcoming season. These players stand to make a big impact.",
+      "url": "https://www.espn.com/college-football/story/_/id/48846437/college-football-2026-non-quarterback-playmakers",
+      "published": "2026-06-04T10:55:06Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0526/ncf_non-qb_playmakers_16x9.jpg"
+    },
+    {
+      "title": "2026 ACC college football preview, predictions, top transfers and more",
+      "summary": "Repeat run for Miami? Revenge for Duke? Reset for Clemson? Redemption at UNC? Intrigue abounds in the ACC.",
+      "url": "https://www.espn.com/college-football/story/_/id/48947564/2026-acc-college-football-preview-predictions-top-transfers-more",
+      "published": "2026-06-03T10:48:13Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0602/r1667380_608x342_16-9.jpg"
+    },
+    {
+      "title": "Kewan Lacy, Malachi Toney, Dante Moore on EA Sports CFB 27 cover",
+      "summary": "EA Sports College Football 27 will also feature Indiana's Curt Cignetti, USC QB Jayden Maiava, Texas' Colin Simmons and Notre Dame CB Leonard Moore on the cover.",
+      "url": "https://www.espn.com/college-football/story/_/id/48945575/kewan-lacy-malachi-toney-dante-moore-ea-sports-cfb-27-cover",
+      "published": "2026-06-02T15:31:59Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2025/0911/r1543772_600x400_3-2.jpg"
+    },
+    {
+      "title": "Ranking college football's top 100 newcomers for the 2026 season",
+      "summary": "What new faces and top prospects will impact the 2026 season? We stack the best of the bunch.",
+      "url": "https://www.espn.com/college-football/story/_/id/48896153/college-football-2026-top-100-newcomers-transfers-recruits",
+      "published": "2026-06-02T15:12:35Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0528/ncf_newcomers-ranking_16x9.jpg"
+    },
+    {
+      "title": "What to know about college football recruiting's busiest month",
+      "summary": "Summer recruiting is already hot. We take a look at the teams that are winning, the recruitments who will be most interesting and more.",
+      "url": "https://www.espn.com/college-football/recruiting/story/_/id/48911285/college-football-recruiting-2026-summer-intel-commits-flips-winners-visits",
+      "published": "2026-06-01T13:31:28Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0529/r1665449_608x342_16-9.jpg"
+    },
+    {
+      "title": "Miami athletic director Dan Radakovich retires after 4 ½ years",
+      "summary": "Miami athletic director Dan Radakovich has retired after 4 1/2 years.",
+      "url": "https://www.espn.com/college-football/story/_/id/48937873/miami-athletic-director-dan-radakovich-retires-4years",
+      "published": "2026-06-01T12:08:18Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0310/r1626246_1296x729_16-9.jpg"
+    },
+    {
+      "title": "College football recruiting: Comparing top 2026, 2027, 2028 prospects",
+      "summary": "How do the 2026 freshmen compare to upcoming classes? How many juniors could be immediate starters?",
+      "url": "https://www.espn.com/college-football/recruiting/story/_/id/48883256/college-football-recruiting-comparing-top-2026-2027-2028-prospects",
+      "published": "2026-05-27T12:29:22Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0526/r1664031_608x342_16-9.jpg"
+    },
+    {
+      "title": "Ranking all 138 FBS QB situations ahead of the 2026 season",
+      "summary": "Just three months from the 2026 season, David Hale ranks all 138 FBS programs' quarterback rooms into tiers.",
+      "url": "https://www.espn.com/college-football/story/_/id/48818009/2026-college-football-138-fbs-quarterback-tiers-season-arch-manning-cj-carr",
+      "published": "2026-05-26T10:46:47Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0525/ncf_ranking-138-fbs-qbs_16x9.jpg"
+    },
+    {
+      "title": "100 days until Week 0: Top storylines, games and predictions for the 2026 season",
+      "summary": "From must-see games to Heisman Trophy contenders, we cover 100 things to know ahead of the 2026 season.",
+      "url": "https://www.espn.com/college-football/story/_/id/48610717/2026-100-days-college-football-players-coaches-playoff",
+      "published": "2026-05-24T00:15:30Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0519/ranking_offseason_teams_608x342.png"
+    },
+    {
+      "title": "Mark Matthews, No. 3 OT in 2027 class, commits to Texas A&M",
+      "summary": "Texas A&M on Friday beat out Miami for the commitment of five-star offensive tackle Mark Matthews, ESPN's No. 11 overall prospect in the 2027 class.",
+      "url": "https://www.espn.com/college-football/story/_/id/48781157/5-star-ot-mark-matthews-commits-texas-aggies-football-2027-class",
+      "published": "2026-05-15T22:57:26Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0515/r1658775_1296x729_16-9.jpg"
+    },
+    {
+      "title": "ACC supports 24-team CFP model that gives 'hope' to all teams",
+      "summary": "ACC commissioner Jim Phillips backed a 24-team expanded College Football Playoff format, a move supported by a majority of the league's coaches and ADs.",
+      "url": "https://www.espn.com/college-football/story/_/id/48761075/acc-supports-24-team-cfp-model-gives-hope-all-teams",
+      "published": "2026-05-13T20:27:02Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2025/0317/r1465598_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Herbstreit to McAfee: Miami could win it all this season",
+      "summary": "Kirk Herbstreit joins Pat McAfee and makes the case for Miami to win college football's national title this season.",
+      "url": "https://www.espn.com/video/clip/_/id/48751748/miami-win-all-season",
+      "published": "2026-05-12T18:26:18Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/media/motion/2026/0512/ss_20260512_140528562_3524850861/ss_20260512_140528562_3524850861.jpg"
+    },
+    {
+      "title": "College football post-spring football buzz: Notes around the country",
+      "summary": "What we heard around college football after the completion of spring practice.",
+      "url": "https://www.espn.com/college-football/story/_/id/48695281/college-football-spring-buzz-week-0-cfp-ohio-state-notre-dame-army-navy",
+      "published": "2026-05-11T15:49:27Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2025/1209/r1587014_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Donte Wright, No. 30 in the SC Next 300, commits to play for Miami",
+      "summary": "Four-star cornerback Donte Wright, No. 30 in the SC Next 300, flipped his commitment to Miami from Georgia on Saturday.",
+      "url": "https://www.espn.com/college-football/story/_/id/48724201/donte-wright-no-30-sc-next-300-commits-play-miami",
+      "published": "2026-05-09T21:56:18Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2014/1015/fan_g_fg2_cr_600x600.jpg"
+    },
+    {
+      "title": "Miami murder case retrial delayed amid misconduct allegations",
+      "summary": "A judge on Thursday delayed the retrial of former Hurricanes football player Rashaun Jones, who is accused of killing teammate Bryan Pata in 2006.",
+      "url": "https://www.espn.com/college-football/story/_/id/48704026/bryan-pata-rashaun-jones-retrial-postponed-misconduct-allegations",
+      "published": "2026-05-08T02:15:34Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0302/r1622236_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Bucs Rueben Bain Jr. honors Warren Sapp in rookie camp arrival",
+      "summary": "Prior to Bain, Sapp was the last player to be selected by the Buccaneers in the first round out of the University of Miami.",
+      "url": "https://www.espn.com/nfl/story/_/id/48704786/rueben-bain-tampa-bay-buccaneers-rookie-camp-arrival-warren-sapp-jersey",
+      "published": "2026-05-07T21:22:54Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0507/r1654956_510x287_16-9.png"
+    },
+    {
+      "title": "College football Top 25: Award candidates for every team",
+      "summary": "Which players are most likely to take home hardware from the nation's best teams?",
+      "url": "https://www.espn.com/college-football/story/_/id/48678516/college-football-top-25-award-candidates-every-team",
+      "published": "2026-05-07T10:41:57Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0505/r1653881_608x342_16-9.jpg"
+    },
+    {
+      "title": "Ranking the offseason for every Power 4 college football team",
+      "summary": "Nail the transfer portal? Miss a big recruit? Find a top coordinator? All are part of our offseason evaluations.",
+      "url": "https://www.espn.com/college-football/story/_/id/48627615/ranking-offseason-college-football-power-4-teams-2026",
+      "published": "2026-05-06T14:50:10Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0502/ranking_offseason_teams_revised_608x342.png"
+    },
+    {
+      "title": "NFL draft confidential: College coaches' surprise moves, sleeper picks",
+      "summary": "College coaches know the draftees in different ways. They were surprised by some moves and loved what the Cowboys, Jets, Cardinals and others did.",
+      "url": "https://www.espn.com/nfl/draft2026/story/_/id/48638948/2026-nfl-draft-confidential-college-coaches-surprise-picks-sleepers",
+      "published": "2026-05-04T13:24:50Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0424/r1648310_608x342_16-9.jpg"
+    },
+    {
+      "title": "2027 NFL mock draft: Reid's early first-round predictions",
+      "summary": "We're still a full year out, but let's make way-too-early predictions for every first-round pick of the 2027 NFL draft. Will Arch Manning go No. 1? Jeremiah Smith?",
+      "url": "https://www.espn.com/nfl/draft2027/story/_/id/48611355/2027-nfl-mock-draft-early-first-round-predictions-32-picks-manning-smith",
+      "published": "2026-04-30T20:29:56Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0424/260430_nfl_jordan-reid-mock-draft_16x9_608x342.jpg"
+    },
+    {
+      "title": "2026 college football Top 25: Under-the-radar players for each team",
+      "summary": "Someone from each of the top teams you may not know now, but will by the end of the 2026 season.",
+      "url": "https://www.espn.com/college-football/story/_/id/48570616/2026-college-football-top-25-radar-players-team",
+      "published": "2026-04-29T10:51:19Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0427/r1650196_608x342_16-9.jpg"
+    },
+    {
+      "title": "Replacing the first round of the NFL draft: Who's up next in college football?",
+      "summary": "The teams that lost first-round players will be looking for the next man up. Here's who should take over for those 32 picks.",
+      "url": "https://www.espn.com/college-football/story/_/id/48581444/nfl-draft-first-round-replacements-college-football-2026",
+      "published": "2026-04-27T11:19:46Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0424/r1648646_608x342_16-9.jpg"
+    },
+    {
+      "title": "A look at how Miami has been one of the most efficient programs in turning official visits into commitments - 247Sports",
+      "summary": "A look at how Miami has been one of the most efficient programs in turning official visits into commitments&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQdFZmYXQxWGhuaFpPNEpsNzdIbDR1VDMzVUR4dTRXNHNvanM1YklIaHJWT1J5andYcVJac01mNFk2OF83M1Z3RkNzV2FxQkZRUGc0TVFORzBIU1hUWnNPdV9hc2hta0tPMTJUb3pILWVxN3dybDR5Ym5tVVVOYjkxaGV2LUtDYTdqNjY3b0xpZFdpdDZLWE9VUUVRTkRpZmhldkkyNWxqdGpCMk9JQU9qaFRWdTN1a0FfaWxQMVZmaWZERG1qQW40b0NEbmRoOWNjZDY0WkpHWXk3ajRpLWE4ZEEtOTJZZFk3V1lSVUUydUFsY2VuRGVBTVQ0RGVKYWd6U3ZxUzVpOGl3cHFxSHh6NXZCYnFHRXk2M3FlTHdB?oc=5",
+      "published": "Fri, 19 Jun 2026 14:38:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Miami EDGE commit Jayvon Dawson discusses impressive performance at Hurricanes’ Elite Camp - On3",
+      "summary": "Miami EDGE commit Jayvon Dawson discusses impressive performance at Hurricanes’ Elite Camp&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPUVZ0YS1vVkJZM1pCM1J3Zk41VG13ZmU1aVdjNllRRkxrNnYxVjJzT1Z6QmFFdk9XWXNpbEVEZjlDb0h5dHlnSk1VaXgwSjZYZEw0Vy1pTVJZaDdfOWNPNnRwRmVXZW55NG55OW5iQ2o0N3RIUUVUZXpYOFlJQUI1UE1HeU5zMmFSemZCWGxFYmF5bjdQWF9DblpZaDJrWGs3emJXWWpBbF82WHhzWW9kdGVKQW40bERQVG5weEl0OFNhakZnYnBhMHZjVXhIQmhSMjN4RA?oc=5",
+      "published": "Sun, 21 Jun 2026 10:03:06 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Mark Fletcher's playoff dominance earns Miami star major ESPN recognition - Canes Warning",
+      "summary": "Mark Fletcher's playoff dominance earns Miami star major ESPN recognition&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbE8tdGQ4M1JzZFZVOTNsbGVtQXZRTmZvdUhHOW9icmZnUTEtdWN5SDNCaEctMS12NG1vQmFUUVNEWGNYNkU1c2l5NVJkVFFkZDF0SGk5NVVGR3pVbDFIei1EaXZadjAxWnFkeUxwU0JWOEZvVXkyRXpiMElNeFk4NHpaNVdXTU92MTdiRnJqQ1BLSXFFaVFJdUlXNHpRXzA?oc=5",
+      "published": "Sat, 20 Jun 2026 21:58:24 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "2026 Miami Football Early Opponent Preview, Game 5: Clemson - Sports Illustrated",
+      "summary": "2026 Miami Football Early Opponent Preview, Game 5: Clemson&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSG5kQTM3Nkd2SFZvci1GWFdxVHRESmZOc0hPNHZvOVBDcUw4SWllbWl3NGRQYVYxQlF2Uk1jSk91MkpHeC1uSWNiTExCeDBvNUpVRXpQLVJ3bXBsX0pXRmg1RjFBVlpxYWJDTVJYb1RTQnozOVhmN21VcUdIbDRRTnJhVU8tejkxT1dwcTNzUHQ0bDQ2b3JnRlJVT0pSbVpE?oc=5",
+      "published": "Fri, 19 Jun 2026 11:00:04 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Three Miami Hurricane Players To Control In NCAA 27 - CanesInSight",
+      "summary": "Three Miami Hurricane Players To Control In NCAA 27&nbsp;&nbsp;CanesInSight",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQajhNT2Y0Q1l3NnhvYV9RQnQ5RzVlZUZVc19rMFkzTzgwcTFtWlNsZV9lcUdURGlfWXpSZjhONzJIMXhmMjM1X2Zzd0t1NmJrQWtSYjFTSnJaWU5LOWFEMmg0b2FvYUpPUnZVQUJiQ2lfcXQzeldDcjdhLWFKcllFNTZLRElEeTN3TFpwNExfZ0RvVkR3djU0eEpQZHcyTkVTc2lVcllB?oc=5",
+      "published": "Sat, 20 Jun 2026 16:58:24 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Miami’s Offensive Go-To Depth Makes This Team Different in 2026 - On3",
+      "summary": "Miami’s Offensive Go-To Depth Makes This Team Different in 2026&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWWRhWlNLOG83ZERfeGJVTHo1anFiOFhUbFpxX3Nia2QwZlhvdzJ6LWl2MlhhMWYzUXNZTGtqRDlQQk95SnZqX1U1Q0ZjUlRSem40NGk3a0lFdXZLNGR3STVWSVg4WXRsQktUVTBKNE9GMkVHaUR3RVFfV2kxVGFldzI2X21hSkxZa1ZZWVZwQXlkcWxTSWpPaDdKejJmVk01X2ExUEV5U2JFdEtjaTJfcg?oc=5",
+      "published": "Fri, 19 Jun 2026 07:00:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Summer Camps Are Back: Inside Miami's push for on-campus competition - 247Sports",
+      "summary": "Summer Camps Are Back: Inside Miami's push for on-campus competition&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOcUU3Tjk0OVdyLURzZm1zYkpXYTktenJmQVpEQzZoV2FfTXBWbjd0MXpoWjFsanNJVGxVODZKcE1wcGpQQmQ2VXZaRHVBYU91YTJzYTM2NHFncXc1MHp2anc3QlRFMWc0TW4wbHBOSXIyVlJUREFyRjRjbTVNV2pHYkd3Ynd6bE9EaXZqSF9WY3llNTFlVGpwU1ZEQjhNbVN3NzhTZUZiNTVITk51Z25BTmc4Y1FqV1lqaU9aS2JwcFZTWWtPbUpPbGJta0lmUWExVzZfelNwUm05cDAyZG1xWGtqdnZhYWhKc29idU02Z3dPVEJyOXpzaXRsX2gwTGxLZlhXUDRES3pvZ0JZTjVCXzBmVFd3aGtyVlNF?oc=5",
+      "published": "Fri, 19 Jun 2026 14:38:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Miami makes strong first impression on Rivals300 OL Mataio Fano - On3",
+      "summary": "Miami makes strong first impression on Rivals300 OL Mataio Fano&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX2lQT25qRDR2R0wxUzIyb2dUa2RsaEU0enlOaXMyUzE5dFg3bnZvd21oeEl5QWUwd3hjblZJZGtlNlNPRUxPM3VKTXhGSUZDZkhnZ25oTlNwSVRQeGdIczA1dnJYWHVPSmRSSzdfOUZGNkgzdFJudDlJRXo2MlNleGlib1g2R1ZLTjhMLTFfYVUxOWZXU0JVNVk0OWpGOUdSUnZRRTdoUExYSXpZYlMyVERR?oc=5",
+      "published": "Fri, 19 Jun 2026 07:00:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Rivals RPM Trends: Miami leads for No. 1 overall recruit nationally - On3",
+      "summary": "Rivals RPM Trends: Miami leads for No. 1 overall recruit nationally&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQT2VqeC00dWpOcFB2SThsRHBoamdubDhPaUJIc2lLLUtNYXFhaUl1Mi01UUlTdlJ1QVlqU0lVRzZRWTNMUDExNFZvTFI1cHNaOG4xX1haZzB6U182eXVndkN1aUExQ0hXdlFpZlFkbjNhQzJ6ODNOWWpjSXl0UDJyQTJjTVBUOUtVNnNfOGVFSmNaV1h0c05VaHpiREtXVmJTNE0zbVlWWC0yWHdhbF9mdkZIY0Y?oc=5",
+      "published": "Fri, 19 Jun 2026 07:00:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "STATE OF THE U: Why Miami's 2026 Additions Could Keep the Canes Elite - On3",
+      "summary": "STATE OF THE U: Why Miami's 2026 Additions Could Keep the Canes Elite&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWW9zWnlxVVlqVkgzNUhGb3k1UDBsdnZJWHdKLVhvZEl0Y0R4Nm9QMk1aeEs4WDdPLXJ5dUlvQ25zelRXc1VVTlI3QTk5Y0hDb2U0bTlSa2F4bGhiNTZJRWRZaVdOdDNyaVpGbnZtTm9oYXhlQjJnMFRvTU5YT0I1aVlOaUpiYTI5TXExOHVwckd6aFFoNGhpek9TSzNXQkY2SmFfU25QYmxpQl9CT3BoM0tTRnZucU0?oc=5",
+      "published": "Sat, 20 Jun 2026 09:32:05 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    }
+  ],
+  "schedule": [
+    {
+      "season": 2025,
+      "date": "2025-08-31T23:30Z",
+      "name": "Notre Dame Fighting Irish at Miami Hurricanes",
+      "short_name": "ND @ MIA",
+      "opponent": "Notre Dame Fighting Irish",
+      "opponent_short": "Notre Dame",
+      "opponent_abbreviation": "ND",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 27.0,
+        "displayValue": "27"
+      },
+      "opp_score": {
+        "value": 24.0,
+        "displayValue": "24"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-09-06T23:00Z",
+      "name": "Bethune-Cookman Wildcats at Miami Hurricanes",
+      "short_name": "BCU @ MIA",
+      "opponent": "Bethune-Cookman Wildcats",
+      "opponent_short": "Bethune",
+      "opponent_abbreviation": "BCU",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2065.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 45.0,
+        "displayValue": "45"
+      },
+      "opp_score": {
+        "value": 3.0,
+        "displayValue": "3"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-09-13T20:30Z",
+      "name": "South Florida Bulls at Miami Hurricanes",
+      "short_name": "USF @ MIA",
+      "opponent": "South Florida Bulls",
+      "opponent_short": "South Florida",
+      "opponent_abbreviation": "USF",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 49.0,
+        "displayValue": "49"
+      },
+      "opp_score": {
+        "value": 12.0,
+        "displayValue": "12"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-09-20T23:30Z",
+      "name": "Florida Gators at Miami Hurricanes",
+      "short_name": "FLA @ MIA",
+      "opponent": "Florida Gators",
+      "opponent_short": "Florida",
+      "opponent_abbreviation": "FLA",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 26.0,
+        "displayValue": "26"
+      },
+      "opp_score": {
+        "value": 7.0,
+        "displayValue": "7"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-10-04T23:30Z",
+      "name": "Miami Hurricanes at Florida State Seminoles",
+      "short_name": "MIA @ FSU",
+      "opponent": "Florida State Seminoles",
+      "opponent_short": "Florida St",
+      "opponent_abbreviation": "FSU",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "away",
+      "venue": "Doak Campbell Stadium",
+      "city": "Tallahassee",
+      "result": "W",
+      "miami_score": {
+        "value": 28.0,
+        "displayValue": "28"
+      },
+      "opp_score": {
+        "value": 22.0,
+        "displayValue": "22"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-10-17T23:00Z",
+      "name": "Louisville Cardinals at Miami Hurricanes",
+      "short_name": "LOU @ MIA",
+      "opponent": "Louisville Cardinals",
+      "opponent_short": "Louisville",
+      "opponent_abbreviation": "LOU",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "L",
+      "miami_score": {
+        "value": 21.0,
+        "displayValue": "21"
+      },
+      "opp_score": {
+        "value": 24.0,
+        "displayValue": "24"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-10-25T23:00Z",
+      "name": "Stanford Cardinal at Miami Hurricanes",
+      "short_name": "STAN @ MIA",
+      "opponent": "Stanford Cardinal",
+      "opponent_short": "Stanford",
+      "opponent_abbreviation": "STAN",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 42.0,
+        "displayValue": "42"
+      },
+      "opp_score": {
+        "value": 7.0,
+        "displayValue": "7"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-11-01T16:00Z",
+      "name": "Miami Hurricanes at SMU Mustangs",
+      "short_name": "MIA @ SMU",
+      "opponent": "SMU Mustangs",
+      "opponent_short": "SMU",
+      "opponent_abbreviation": "SMU",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "away",
+      "venue": "Gerald J. Ford Stadium",
+      "city": "Dallas",
+      "result": "L",
+      "miami_score": {
+        "value": 20.0,
+        "displayValue": "20"
+      },
+      "opp_score": {
+        "value": 26.0,
+        "displayValue": "26"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final/OT",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-11-08T20:30Z",
+      "name": "Syracuse Orange at Miami Hurricanes",
+      "short_name": "SYR @ MIA",
+      "opponent": "Syracuse Orange",
+      "opponent_short": "Syracuse",
+      "opponent_abbreviation": "SYR",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 38.0,
+        "displayValue": "38"
+      },
+      "opp_score": {
+        "value": 10.0,
+        "displayValue": "10"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-11-15T20:40Z",
+      "name": "NC State Wolfpack at Miami Hurricanes",
+      "short_name": "NCSU @ MIA",
+      "opponent": "NC State Wolfpack",
+      "opponent_short": "NC State",
+      "opponent_abbreviation": "NCSU",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "home",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami Gardens",
+      "result": "W",
+      "miami_score": {
+        "value": 41.0,
+        "displayValue": "41"
+      },
+      "opp_score": {
+        "value": 7.0,
+        "displayValue": "7"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-11-22T17:00Z",
+      "name": "Miami Hurricanes at Virginia Tech Hokies",
+      "short_name": "MIA @ VT",
+      "opponent": "Virginia Tech Hokies",
+      "opponent_short": "Virginia Tech",
+      "opponent_abbreviation": "VT",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "away",
+      "venue": "Lane Stadium",
+      "city": "Blacksburg",
+      "result": "W",
+      "miami_score": {
+        "value": 34.0,
+        "displayValue": "34"
+      },
+      "opp_score": {
+        "value": 17.0,
+        "displayValue": "17"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    },
+    {
+      "season": 2025,
+      "date": "2025-11-29T17:00Z",
+      "name": "Miami Hurricanes at Pittsburgh Panthers",
+      "short_name": "MIA @ PITT",
+      "opponent": "Pittsburgh Panthers",
+      "opponent_short": "Pitt",
+      "opponent_abbreviation": "PITT",
+      "opponent_logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+      "opponent_rank": "",
+      "miami_rank": "",
+      "home_away": "away",
+      "venue": "Acrisure Stadium",
+      "city": "Pittsburgh",
+      "result": "W",
+      "miami_score": {
+        "value": 38.0,
+        "displayValue": "38"
+      },
+      "opp_score": {
+        "value": 7.0,
+        "displayValue": "7"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
+      "neutral_site": false,
+      "conference_game": false,
+      "tv": ""
+    }
+  ],
+  "stats": {
+    "passing": {
+      "completionPct": {
+        "display": "71.7",
+        "value": 71.717,
+        "rank": ""
+      },
+      "completions": {
+        "display": "355",
+        "value": 355.0,
+        "rank": ""
+      },
+      "interceptionPct": {
+        "display": "2.42",
+        "value": 2.424,
+        "rank": ""
+      },
+      "interceptions": {
+        "display": "12",
+        "value": 12.0,
+        "rank": ""
+      },
+      "longPassing": {
+        "display": "61",
+        "value": 61.0,
+        "rank": ""
+      },
+      "netPassingYards": {
+        "display": "4,051",
+        "value": 4051.0,
+        "rank": ""
+      },
+      "netPassingYardsPerGame": {
+        "display": "253.2",
+        "value": 253.1875,
+        "rank": ""
+      },
+      "passingAttempts": {
+        "display": "495",
+        "value": 495.0,
+        "rank": ""
+      },
+      "passingTouchdownPct": {
+        "display": "6.47",
+        "value": 6.465,
+        "rank": ""
+      },
+      "passingTouchdowns": {
+        "display": "32",
+        "value": 32.0,
+        "rank": ""
+      },
+      "QBRating": {
+        "display": "156.9",
+        "value": 156.94792,
+        "rank": ""
+      },
+      "sacks": {
+        "display": "20",
+        "value": 20.0,
+        "rank": ""
+      },
+      "sackYardsLost": {
+        "display": "-127",
+        "value": -127.0,
+        "rank": ""
+      },
+      "yardsPerPassAttempt": {
+        "display": "8.2",
+        "value": 8.184,
+        "rank": ""
+      },
+      "passingYards": {
+        "display": "4,051",
+        "value": 4051.0,
+        "rank": ""
+      },
+      "passingFumblesLost": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "yardsPerGame": {
+        "display": "405.0",
+        "value": 405.0,
+        "rank": ""
+      },
+      "totalPointsPerGame": {
+        "display": "30.9",
+        "value": 30.938,
+        "rank": ""
+      },
+      "totalPoints": {
+        "display": "495",
+        "value": 495.0,
+        "rank": ""
+      },
+      "totalTouchdowns": {
+        "display": "92",
+        "value": 92.0,
+        "rank": ""
+      },
+      "passingYardsPerGame": {
+        "display": "253.2",
+        "value": 253.188,
+        "rank": ""
+      },
+      "completionAttempts": {
+        "display": "355-495",
+        "value": "",
+        "rank": ""
+      },
+      "sacksYardsLost": {
+        "display": "20--127",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "rushing": {
+      "rushingAttempts": {
+        "display": "567",
+        "value": 567.0,
+        "rank": ""
+      },
+      "rushingYards": {
+        "display": "2,429",
+        "value": 2429.0,
+        "rank": ""
+      },
+      "yardsPerRushAttempt": {
+        "display": "4.3",
+        "value": 4.284,
+        "rank": ""
+      },
+      "longRushing": {
+        "display": "57",
+        "value": 57.0,
+        "rank": ""
+      },
+      "rushingBigPlays": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "rushingTouchdowns": {
+        "display": "28",
+        "value": 28.0,
+        "rank": ""
+      },
+      "rushingYardsPerGame": {
+        "display": "151.8",
+        "value": 151.813,
+        "rank": ""
+      },
+      "rushingFumbles": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "rushingFumblesLost": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "rushingFirstDowns": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "totalYards": {
+        "display": "6,480",
+        "value": 6480.0,
+        "rank": ""
+      },
+      "totalOffensivePlays": {
+        "display": "1082",
+        "value": 1082.0,
+        "rank": ""
+      },
+      "totalPointsPerGame": {
+        "display": "30.9",
+        "value": 30.938,
+        "rank": ""
+      },
+      "totalPoints": {
+        "display": "495",
+        "value": 495.0,
+        "rank": ""
+      },
+      "totalTouchdowns": {
+        "display": "92",
+        "value": 92.0,
+        "rank": ""
+      }
+    },
+    "receiving": {
+      "receptions": {
+        "display": "355",
+        "value": 355.0,
+        "rank": ""
+      },
+      "receivingTargets": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "receivingYards": {
+        "display": "4,051",
+        "value": 4051.0,
+        "rank": ""
+      },
+      "receivingTouchdowns": {
+        "display": "32",
+        "value": 32.0,
+        "rank": ""
+      },
+      "longReception": {
+        "display": "61",
+        "value": 61.0,
+        "rank": ""
+      },
+      "receivingBigPlays": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "receivingYardsPerGame": {
+        "display": "253.2",
+        "value": 253.188,
+        "rank": ""
+      },
+      "receivingFumbles": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "receivingFumblesLost": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "receivingYardsAfterCatch": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "receivingFirstDowns": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "yardsPerReception": {
+        "display": "11.4",
+        "value": 11.411,
+        "rank": ""
+      },
+      "totalPointsPerGame": {
+        "display": "30.9",
+        "value": 30.938,
+        "rank": ""
+      },
+      "totalPoints": {
+        "display": "495",
+        "value": 495.0,
+        "rank": ""
+      },
+      "totalTouchdowns": {
+        "display": "92",
+        "value": 92.0,
+        "rank": ""
+      }
+    },
+    "miscellaneous": {
+      "firstDowns": {
+        "display": "347",
+        "value": 347.0,
+        "rank": ""
+      },
+      "firstDownsRushing": {
+        "display": "140",
+        "value": 140.0,
+        "rank": ""
+      },
+      "firstDownsPassing": {
+        "display": "187",
+        "value": 187.0,
+        "rank": ""
+      },
+      "firstDownsPenalty": {
+        "display": "20",
+        "value": 20.0,
+        "rank": ""
+      },
+      "thirdDownConvs": {
+        "display": "91",
+        "value": 91.0,
+        "rank": ""
+      },
+      "thirdDownAttempts": {
+        "display": "199",
+        "value": 199.0,
+        "rank": ""
+      },
+      "thirdDownConvPct": {
+        "display": "45.73",
+        "value": 45.729,
+        "rank": ""
+      },
+      "fourthDownConvs": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "fourthDownAttempts": {
+        "display": "23",
+        "value": 23.0,
+        "rank": ""
+      },
+      "fourthDownConvPct": {
+        "display": "69.57",
+        "value": 69.565,
+        "rank": ""
+      },
+      "totalPenalties": {
+        "display": "112",
+        "value": 112.0,
+        "rank": ""
+      },
+      "totalPenaltyYards": {
+        "display": "916",
+        "value": 916.0,
+        "rank": ""
+      },
+      "possessionTimeSeconds": {
+        "display": "31751",
+        "value": 31751.0,
+        "rank": ""
+      },
+      "redzoneFieldGoalPct": {
+        "display": "0.00",
+        "value": 0.0,
+        "rank": ""
+      },
+      "redzoneScoringPct": {
+        "display": "0.00",
+        "value": 0.0,
+        "rank": ""
+      },
+      "redzoneEfficiencyPct": {
+        "display": "0.00",
+        "value": 0.0,
+        "rank": ""
+      },
+      "redzoneTouchdownPct": {
+        "display": "0.00",
+        "value": 0.0,
+        "rank": ""
+      },
+      "totalTakeaways": {
+        "display": "25",
+        "value": 25.0,
+        "rank": ""
+      },
+      "totalGiveaways": {
+        "display": "15",
+        "value": 15.0,
+        "rank": ""
+      },
+      "turnOverDifferential": {
+        "display": "10",
+        "value": 10.0,
+        "rank": ""
+      },
+      "fumblesLost": {
+        "display": "3",
+        "value": 3.0,
+        "rank": ""
+      },
+      "thirdDownEff": {
+        "display": "91-199",
+        "value": "",
+        "rank": ""
+      },
+      "fourthDownEff": {
+        "display": "16-23",
+        "value": "",
+        "rank": ""
+      },
+      "totalPenaltiesYards": {
+        "display": "112-916",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "defensive": {
+      "soloTackles": {
+        "display": "521",
+        "value": 521.0,
+        "rank": ""
+      },
+      "assistTackles": {
+        "display": "384",
+        "value": 384.0,
+        "rank": ""
+      },
+      "totalTackles": {
+        "display": "905",
+        "value": 905.0,
+        "rank": ""
+      },
+      "sacks": {
+        "display": "50",
+        "value": 50.0,
+        "rank": ""
+      },
+      "sackYards": {
+        "display": "379",
+        "value": 379.0,
+        "rank": ""
+      },
+      "stuffs": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "passesDefended": {
+        "display": "59",
+        "value": 59.0,
+        "rank": ""
+      },
+      "avgInterceptionYards": {
+        "display": "19.1",
+        "value": 19.125,
+        "rank": ""
+      },
+      "longInterception": {
+        "display": "72",
+        "value": 72.0,
+        "rank": ""
+      },
+      "miscTouchdowns": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "kicksBlocked": {
+        "display": "1",
+        "value": 1.0,
+        "rank": ""
+      },
+      "tacklesForLoss": {
+        "display": "102",
+        "value": 102.0,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      }
+    },
+    "defensiveInterceptions": {
+      "interceptions": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "interceptionYards": {
+        "display": "306",
+        "value": 306.0,
+        "rank": ""
+      },
+      "interceptionTouchdowns": {
+        "display": "3",
+        "value": 3.0,
+        "rank": ""
+      },
+      "totalInterceptionsYards": {
+        "display": "16-306",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "general": {
+      "fumbles": {
+        "display": "11",
+        "value": 11.0,
+        "rank": ""
+      },
+      "fumblesForced": {
+        "display": "13",
+        "value": 13.0,
+        "rank": ""
+      },
+      "fumblesRecovered": {
+        "display": "9",
+        "value": 9.0,
+        "rank": ""
+      },
+      "fumblesTouchdowns": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "gamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "fumblesAndLost": {
+        "display": "11-3",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "returning": {
+      "kickReturns": {
+        "display": "17",
+        "value": 17.0,
+        "rank": ""
+      },
+      "kickReturnYards": {
+        "display": "368",
+        "value": 368.0,
+        "rank": ""
+      },
+      "yardsPerKickReturn": {
+        "display": "21.6",
+        "value": 21.647058,
+        "rank": ""
+      },
+      "longKickReturn": {
+        "display": "38",
+        "value": 38.0,
+        "rank": ""
+      },
+      "kickReturnTouchdowns": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "puntReturns": {
+        "display": "24",
+        "value": 24.0,
+        "rank": ""
+      },
+      "puntReturnYards": {
+        "display": "307",
+        "value": 307.0,
+        "rank": ""
+      },
+      "yardsPerPuntReturn": {
+        "display": "12.8",
+        "value": 12.791667,
+        "rank": ""
+      },
+      "longPuntReturn": {
+        "display": "55",
+        "value": 55.0,
+        "rank": ""
+      },
+      "puntReturnTouchdowns": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "puntReturnFairCatches": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "kickReturnFumblesLost": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "puntReturnFumblesLost": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "totalPuntReturnsYards": {
+        "display": "24-307",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "kicking": {
+      "fieldGoalsMade": {
+        "display": "18",
+        "value": 18.0,
+        "rank": ""
+      },
+      "fieldGoalAttempts": {
+        "display": "25",
+        "value": 25.0,
+        "rank": ""
+      },
+      "fieldGoalPct": {
+        "display": "72.0",
+        "value": 72.0,
+        "rank": ""
+      },
+      "longFieldGoalMade": {
+        "display": "53",
+        "value": 53.0,
+        "rank": ""
+      },
+      "fieldGoalAttempts1_19": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "fieldGoalAttempts20_29": {
+        "display": "5",
+        "value": 5.0,
+        "rank": ""
+      },
+      "fieldGoalAttempts30_39": {
+        "display": "7",
+        "value": 7.0,
+        "rank": ""
+      },
+      "fieldGoalAttempts40_49": {
+        "display": "10",
+        "value": 10.0,
+        "rank": ""
+      },
+      "fieldGoalAttempts50": {
+        "display": "3",
+        "value": 3.0,
+        "rank": ""
+      },
+      "extraPointsMade": {
+        "display": "61",
+        "value": 61.0,
+        "rank": ""
+      },
+      "extraPointAttempts": {
+        "display": "61",
+        "value": 61.0,
+        "rank": ""
+      },
+      "extraPointPct": {
+        "display": "100.0",
+        "value": 100.0,
+        "rank": ""
+      },
+      "fieldGoalsMade1_19": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "fieldGoalsMade20_29": {
+        "display": "5",
+        "value": 5.0,
+        "rank": ""
+      },
+      "fieldGoalsMade30_39": {
+        "display": "6",
+        "value": 6.0,
+        "rank": ""
+      },
+      "fieldGoalsMade40_49": {
+        "display": "6",
+        "value": 6.0,
+        "rank": ""
+      },
+      "fieldGoalsMade50": {
+        "display": "1",
+        "value": 1.0,
+        "rank": ""
+      },
+      "totalKickingPoints": {
+        "display": "115",
+        "value": 115.0,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "16",
+        "value": 16.0,
+        "rank": ""
+      },
+      "touchbackPct": {
+        "display": "88",
+        "value": 87.629,
+        "rank": ""
+      },
+      "avgKickoffReturnYards": {
+        "display": "21.6",
+        "value": 21.647,
+        "rank": ""
+      },
+      "kickoffReturnYards": {
+        "display": "368",
+        "value": 368.0,
+        "rank": ""
+      },
+      "kickoffReturns": {
+        "display": "17",
+        "value": 17.0,
+        "rank": ""
+      },
+      "totalKickoffYards": {
+        "display": "17-368",
+        "value": "",
+        "rank": ""
+      },
+      "totalGoalsVsAttemps": {
+        "display": "18-25",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "punting": {
+      "punts": {
+        "display": "55",
+        "value": 55.0,
+        "rank": ""
+      },
+      "puntYards": {
+        "display": "2,398",
+        "value": 2398.0,
+        "rank": ""
+      },
+      "longPunt": {
+        "display": "73",
+        "value": 73.0,
+        "rank": ""
+      },
+      "grossAvgPuntYards": {
+        "display": "43.6",
+        "value": 43.6,
+        "rank": ""
+      },
+      "netAvgPuntYards": {
+        "display": "40.3",
+        "value": 40.345,
+        "rank": ""
+      },
+      "puntsBlocked": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "puntsInside20": {
+        "display": "23",
+        "value": 23.0,
+        "rank": ""
+      },
+      "touchbacks": {
+        "display": "6",
+        "value": 6.0,
+        "rank": ""
+      },
+      "fairCatches": {
+        "display": "0",
+        "value": 0.0,
+        "rank": ""
+      },
+      "puntReturns": {
+        "display": "22",
+        "value": 22.0,
+        "rank": ""
+      },
+      "puntReturnYards": {
+        "display": "296",
+        "value": 296.0,
+        "rank": ""
+      },
+      "avgPuntReturnYards": {
+        "display": "13.5",
+        "value": 13.455,
+        "rank": ""
+      },
+      "teamGamesPlayed": {
+        "display": "15",
+        "value": 15.0,
+        "rank": ""
+      },
+      "totalPuntsYards": {
+        "display": "55-2,398",
+        "value": "",
+        "rank": ""
+      }
+    },
+    "scoring": {
+      "rushingTouchdowns": {
+        "display": "28",
+        "value": 28.0,
+        "rank": ""
+      },
+      "receivingTouchdowns": {
+        "display": "32",
+        "value": 32.0,
+        "rank": ""
+      },
+      "returnTouchdowns": {
+        "display": "3",
+        "value": 3.0,
+        "rank": ""
+      },
+      "totalTouchdowns": {
+        "display": "63",
+        "value": 63.0,
+        "rank": ""
+      },
+      "fieldGoals": {
+        "display": "18",
+        "value": 18.0,
+        "rank": ""
+      },
+      "kickExtraPoints": {
+        "display": "61",
+        "value": 61.0,
+        "rank": ""
+      },
+      "totalTwoPointConvs": {
+        "display": "1",
+        "value": 1.0,
+        "rank": ""
+      },
+      "totalPoints": {
+        "display": "495",
+        "value": 495.0,
+        "rank": ""
+      },
+      "totalPointsPerGame": {
+        "display": "30.9",
+        "value": 30.938,
+        "rank": ""
+      }
+    }
+  },
   "leaders": [],
-  "roster": [],
-  "social": { "reddit": [] },
-  "recruiting": []
+  "roster": [
+    {
+      "name": "Seuseu Alofaituli",
+      "first_name": "Seuseu",
+      "last_name": "Alofaituli",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "65",
+      "year": "",
+      "hometown": "Las Vegas",
+      "home_state": "NV",
+      "height": "6' 2\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141356.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141356/seuseu-alofaituli"
+    },
+    {
+      "name": "Judd Anderson",
+      "first_name": "Judd",
+      "last_name": "Anderson",
+      "position": "QB",
+      "position_name": "Quarterback",
+      "jersey": "15",
+      "year": "",
+      "hometown": "Gray",
+      "home_state": "GA",
+      "height": "6' 6\"",
+      "weight": "220 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5110100.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5110100/judd-anderson"
+    },
+    {
+      "name": "Alex Bauman",
+      "first_name": "Alex",
+      "last_name": "Bauman",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "87",
+      "year": "",
+      "hometown": "Red Bank",
+      "home_state": "NJ",
+      "height": "6' 5\"",
+      "weight": "245 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4832029.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4832029/alex-bauman"
+    },
+    {
+      "name": "Joe Borchers",
+      "first_name": "Joe",
+      "last_name": "Borchers",
+      "position": "QB",
+      "position_name": "Quarterback",
+      "jersey": "18",
+      "year": "",
+      "hometown": "Sarasota",
+      "home_state": "FL",
+      "height": "6' 3\"",
+      "weight": "210 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5168278.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5168278/joe-borchers"
+    },
+    {
+      "name": "CharMar Brown",
+      "first_name": "CharMar",
+      "last_name": "Brown",
+      "position": "RB",
+      "position_name": "Running Back",
+      "jersey": "6",
+      "year": "",
+      "hometown": "Omaha",
+      "home_state": "NE",
+      "height": "5' 11\"",
+      "weight": "214 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5156998.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5156998/charmar-brown"
+    },
+    {
+      "name": "Max Buchanan",
+      "first_name": "Max",
+      "last_name": "Buchanan",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "66",
+      "year": "",
+      "hometown": "Sanford",
+      "home_state": "FL",
+      "height": "6' 4\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141389.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141389/max-buchanan"
+    },
+    {
+      "name": "Brennan Burton",
+      "first_name": "Brennan",
+      "last_name": "Burton",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "40",
+      "year": "",
+      "hometown": "Virginia Beach",
+      "home_state": "VA",
+      "height": "6' 0\"",
+      "weight": "205 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226970.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226970/brennan-burton"
+    },
+    {
+      "name": "Demetrius Campbell",
+      "first_name": "Demetrius",
+      "last_name": "Campbell",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "72",
+      "year": "",
+      "hometown": "Orlando",
+      "home_state": "FL",
+      "height": "6' 6\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5198250.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5198250/demetrius-campbell"
+    },
+    {
+      "name": "Ny Carr",
+      "first_name": "Ny",
+      "last_name": "Carr",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "12",
+      "year": "",
+      "hometown": "Moultrie",
+      "home_state": "GA",
+      "height": "6' 0\"",
+      "weight": "175 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079374.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079374/ny-carr"
+    },
+    {
+      "name": "Hunter Carver",
+      "first_name": "Hunter",
+      "last_name": "Carver",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "80",
+      "year": "",
+      "hometown": "Woodbury",
+      "home_state": "MN",
+      "height": "6' 4\"",
+      "weight": "230 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226971.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226971/hunter-carver"
+    },
+    {
+      "name": "Jackson Carver",
+      "first_name": "Jackson",
+      "last_name": "Carver",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "85",
+      "year": "",
+      "hometown": "Woodbury",
+      "home_state": "MN",
+      "height": "6' 6\"",
+      "weight": "220 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4921109.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4921109/jackson-carver"
+    },
+    {
+      "name": "Andrew Cohen",
+      "first_name": "Andrew",
+      "last_name": "Cohen",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "43",
+      "year": "",
+      "hometown": "Mahopac",
+      "home_state": "NY",
+      "height": "6' 2\"",
+      "weight": "205 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226972.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226972/andrew-cohen"
+    },
+    {
+      "name": "Mark Fletcher Jr.",
+      "first_name": "Mark",
+      "last_name": "Fletcher Jr.",
+      "position": "RB",
+      "position_name": "Running Back",
+      "jersey": "4",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "225 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870736.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870736/mark-fletcher-jr"
+    },
+    {
+      "name": "Nino Francavilla",
+      "first_name": "Nino",
+      "last_name": "Francavilla",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "55",
+      "year": "",
+      "hometown": "Toronto",
+      "home_state": "ON",
+      "height": "6' 3\"",
+      "weight": "295 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5155865.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5155865/nino-francavilla"
+    },
+    {
+      "name": "Luka Gilbert",
+      "first_name": "Luka",
+      "last_name": "Gilbert",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "88",
+      "year": "",
+      "hometown": "West Chester",
+      "home_state": "OH",
+      "height": "6' 7\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141467.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141467/luka-gilbert"
+    },
+    {
+      "name": "Vinny Gonzalez",
+      "first_name": "Vinny",
+      "last_name": "Gonzalez",
+      "position": "QB",
+      "position_name": "Quarterback",
+      "jersey": "",
+      "year": "",
+      "hometown": "",
+      "home_state": "",
+      "height": "",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5306780.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5306780/vinny-gonzalez"
+    },
+    {
+      "name": "Luke Hoaglund",
+      "first_name": "Luke",
+      "last_name": "Hoaglund",
+      "position": "RB",
+      "position_name": "Running Back",
+      "jersey": "48",
+      "year": "",
+      "hometown": "Naples",
+      "home_state": "FL",
+      "height": "6' 0\"",
+      "weight": "",
+      "image": "",
+      "profile": "https://www.espn.com/college-football/player/_/id/5295129/luke-hoaglund"
+    },
+    {
+      "name": "Ian Johnson",
+      "first_name": "Ian",
+      "last_name": "Johnson",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "68",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "5' 10\"",
+      "weight": "280 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5099873.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5099873/ian-johnson"
+    },
+    {
+      "name": "Tony Johnson",
+      "first_name": "Tony",
+      "last_name": "Johnson",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "17",
+      "year": "",
+      "hometown": "Ocala",
+      "home_state": "FL",
+      "height": "5' 10\"",
+      "weight": "187 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4879499.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4879499/tony-johnson"
+    },
+    {
+      "name": "Ray Ray Joseph",
+      "first_name": "Ray Ray",
+      "last_name": "Joseph",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "5",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "5' 10\"",
+      "weight": "175 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870770.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870770/ray-ray-joseph"
+    },
+    {
+      "name": "Tommy Kinsler IV",
+      "first_name": "Tommy",
+      "last_name": "Kinsler IV",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "62",
+      "year": "",
+      "hometown": "Ocala",
+      "home_state": "FL",
+      "height": "6' 6\"",
+      "weight": "340 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870782.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870782/tommy-kinsler-iv"
+    },
+    {
+      "name": "Elija Lofton",
+      "first_name": "Elija",
+      "last_name": "Lofton",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "9",
+      "year": "",
+      "hometown": "Las Vegas",
+      "home_state": "NV",
+      "height": "6' 3\"",
+      "weight": "230 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079503.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079503/elija-lofton"
+    },
+    {
+      "name": "Kolby Luna",
+      "first_name": "Kolby",
+      "last_name": "Luna",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "86",
+      "year": "",
+      "hometown": "Kellogg",
+      "home_state": "ID",
+      "height": "6' 2\"",
+      "weight": "205 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5159950.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5159950/kolby-luna"
+    },
+    {
+      "name": "Riply Luna",
+      "first_name": "Riply",
+      "last_name": "Luna",
+      "position": "QB",
+      "position_name": "Quarterback",
+      "jersey": "81",
+      "year": "",
+      "hometown": "Kellogg",
+      "home_state": "ID",
+      "height": "6' 2\"",
+      "weight": "205 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5159947.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5159947/riply-luna"
+    },
+    {
+      "name": "Jordan Lyle",
+      "first_name": "Jordan",
+      "last_name": "Lyle",
+      "position": "RB",
+      "position_name": "Running Back",
+      "jersey": "2",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "6' 0\"",
+      "weight": "190 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079591.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079591/jordan-lyle"
+    },
+    {
+      "name": "Matthew McCoy",
+      "first_name": "Matthew",
+      "last_name": "McCoy",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "78",
+      "year": "",
+      "hometown": "St. Johns",
+      "home_state": "FL",
+      "height": "6' 6\"",
+      "weight": "290 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4896339.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4896339/matthew-mccoy"
+    },
+    {
+      "name": "Juan Minaya",
+      "first_name": "Juan",
+      "last_name": "Minaya",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "77",
+      "year": "",
+      "hometown": "Paramus",
+      "home_state": "NJ",
+      "height": "6' 6\"",
+      "weight": "330 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5142325.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5142325/juan-minaya"
+    },
+    {
+      "name": "Joshua Moore",
+      "first_name": "Joshua",
+      "last_name": "Moore",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "3",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "6' 4\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141593.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141593/joshua-moore"
+    },
+    {
+      "name": "Jack Nickel",
+      "first_name": "Jack",
+      "last_name": "Nickel",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "84",
+      "year": "",
+      "hometown": "Milton",
+      "home_state": "GA",
+      "height": "6' 4\"",
+      "weight": "260 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4685484.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4685484/jack-nickel"
+    },
+    {
+      "name": "Luke Nickel",
+      "first_name": "Luke",
+      "last_name": "Nickel",
+      "position": "QB",
+      "position_name": "Quarterback",
+      "jersey": "16",
+      "year": "",
+      "hometown": "Alpharetta",
+      "home_state": "GA",
+      "height": "6' 2\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141605.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141605/luke-nickel"
+    },
+    {
+      "name": "Samson Okunlola",
+      "first_name": "Samson",
+      "last_name": "Okunlola",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "63",
+      "year": "",
+      "hometown": "Brockton",
+      "home_state": "MA",
+      "height": "6' 6\"",
+      "weight": "300 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870875.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870875/samson-okunlola"
+    },
+    {
+      "name": "Henry Pikus",
+      "first_name": "Henry",
+      "last_name": "Pikus",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "37",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5295128.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5295128/henry-pikus"
+    },
+    {
+      "name": "Deryc Plazz",
+      "first_name": "Deryc",
+      "last_name": "Plazz",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "79",
+      "year": "",
+      "hometown": "Jacksonville",
+      "home_state": "FL",
+      "height": "6' 4\"",
+      "weight": "275 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5146424.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5146424/deryc-plazz"
+    },
+    {
+      "name": "Girard Pringle Jr.",
+      "first_name": "Girard",
+      "last_name": "Pringle Jr.",
+      "position": "RB",
+      "position_name": "Running Back",
+      "jersey": "22",
+      "year": "",
+      "hometown": "Tampa",
+      "home_state": "FL",
+      "height": "5' 10\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5164331.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5164331/girard-pringle-jr"
+    },
+    {
+      "name": "Dylan Reiman",
+      "first_name": "Dylan",
+      "last_name": "Reiman",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "46",
+      "year": "",
+      "hometown": "Jupiter",
+      "home_state": "FL",
+      "height": "6' 6\"",
+      "weight": "245 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226978.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226978/dylan-reiman"
+    },
+    {
+      "name": "Chance Robinson",
+      "first_name": "Chance",
+      "last_name": "Robinson",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "18",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "190 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079661.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079661/chance-robinson"
+    },
+    {
+      "name": "Ryan Rodriguez",
+      "first_name": "Ryan",
+      "last_name": "Rodriguez",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "76",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "275 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4682510.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4682510/ryan-rodriguez"
+    },
+    {
+      "name": "Owen Ruskavich",
+      "first_name": "Owen",
+      "last_name": "Ruskavich",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "44",
+      "year": "",
+      "hometown": "Great Falls",
+      "home_state": "VA",
+      "height": "6' 7\"",
+      "weight": "228 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5168292.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5168292/owen-ruskavich"
+    },
+    {
+      "name": "Brock Schott",
+      "first_name": "Brock",
+      "last_name": "Schott",
+      "position": "TE",
+      "position_name": "Tight End",
+      "jersey": "19",
+      "year": "",
+      "hometown": "Leo",
+      "home_state": "IN",
+      "height": "6' 3\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5142604.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5142604/brock-schott"
+    },
+    {
+      "name": "Ralph Scroggins",
+      "first_name": "Ralph",
+      "last_name": "Scroggins",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "64",
+      "year": "",
+      "hometown": "Savannah",
+      "home_state": "GA",
+      "height": "6' 1\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5304420.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5304420/ralph-scroggins"
+    },
+    {
+      "name": "Nick Thomas",
+      "first_name": "Nick",
+      "last_name": "Thomas",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "33",
+      "year": "",
+      "hometown": "Missouri City",
+      "home_state": "TX",
+      "height": "5' 8\"",
+      "weight": "170 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226983.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226983/nick-thomas"
+    },
+    {
+      "name": "Malachi Toney",
+      "first_name": "Malachi",
+      "last_name": "Toney",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "10",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "5' 11\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5159175.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5159175/malachi-toney"
+    },
+    {
+      "name": "Joshisa Trader",
+      "first_name": "Joshisa",
+      "last_name": "Trader",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "1",
+      "year": "",
+      "hometown": "Hollywood",
+      "home_state": "FL",
+      "height": "6' 1\"",
+      "weight": "180 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079745.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079745/joshisa-trader"
+    },
+    {
+      "name": "Daylyn Upshaw",
+      "first_name": "Daylyn",
+      "last_name": "Upshaw",
+      "position": "WR",
+      "position_name": "Wide Receiver",
+      "jersey": "13",
+      "year": "",
+      "hometown": "Columbus",
+      "home_state": "GA",
+      "height": "6' 0\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5164365.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5164365/daylyn-upshaw"
+    },
+    {
+      "name": "Yerovi Valdes Alfonso",
+      "first_name": "Yerovi",
+      "last_name": "Valdes Alfonso",
+      "position": "OL",
+      "position_name": "Offensive Lineman",
+      "jersey": "74",
+      "year": "",
+      "hometown": "Cape Coral",
+      "home_state": "FL",
+      "height": "6' 7\"",
+      "weight": "350 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226984.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226984/yerovi-valdes-alfonso"
+    },
+    {
+      "name": "Terrell Walden II",
+      "first_name": "Terrell",
+      "last_name": "Walden II",
+      "position": "RB",
+      "position_name": "Running Back",
+      "jersey": "20",
+      "year": "",
+      "hometown": "Winter Garden",
+      "home_state": "FL",
+      "height": "5' 9\"",
+      "weight": "180 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5098610.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5098610/terrell-walden-ii"
+    },
+    {
+      "name": "Raul Aguirre Jr.",
+      "first_name": "Raul",
+      "last_name": "Aguirre Jr.",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "10",
+      "year": "",
+      "hometown": "Fayetteville",
+      "home_state": "GA",
+      "height": "6' 2\"",
+      "weight": "233 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870590.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870590/raul-aguirre-jr"
+    },
+    {
+      "name": "Jaylin Alderman",
+      "first_name": "Jaylin",
+      "last_name": "Alderman",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "21",
+      "year": "",
+      "hometown": "Valdosta",
+      "home_state": "GA",
+      "height": "6' 1\"",
+      "weight": "230 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4685113.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4685113/jaylin-alderman"
+    },
+    {
+      "name": "Briton Allen",
+      "first_name": "Briton",
+      "last_name": "Allen",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "40",
+      "year": "",
+      "hometown": "Orlando",
+      "home_state": "FL",
+      "height": "6' 0\"",
+      "weight": "190 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4426453.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4426453/briton-allen"
+    },
+    {
+      "name": "Ja'Boree Antoine",
+      "first_name": "Ja'Boree",
+      "last_name": "Antoine",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "16",
+      "year": "",
+      "hometown": "New Iberia",
+      "home_state": "LA",
+      "height": "6' 1\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141368.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141368/jaboree-antoine"
+    },
+    {
+      "name": "Armondo Blount",
+      "first_name": "Armondo",
+      "last_name": "Blount",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "18",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "6' 4\"",
+      "weight": "260 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141370.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141370/armondo-blount"
+    },
+    {
+      "name": "Kamal Bonner",
+      "first_name": "Kamal",
+      "last_name": "Bonner",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "32",
+      "year": "",
+      "hometown": "Moultrie",
+      "home_state": "GA",
+      "height": "6' 2\"",
+      "weight": "195 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5078098.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5078098/kamal-bonner"
+    },
+    {
+      "name": "Charles Brantley",
+      "first_name": "Charles",
+      "last_name": "Brantley",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "19",
+      "year": "",
+      "hometown": "Venice",
+      "home_state": "FL",
+      "height": "6' 0\"",
+      "weight": "170 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4431626.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4431626/charles-brantley"
+    },
+    {
+      "name": "Damari Brown",
+      "first_name": "Damari",
+      "last_name": "Brown",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "2",
+      "year": "",
+      "hometown": "Plantation",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "195 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870650.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870650/damari-brown"
+    },
+    {
+      "name": "Malik Bryant",
+      "first_name": "Malik",
+      "last_name": "Bryant",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "9",
+      "year": "",
+      "hometown": "Orlando",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "225 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4870623.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4870623/malik-bryant"
+    },
+    {
+      "name": "Bear Cortes",
+      "first_name": "Bear",
+      "last_name": "Cortes",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "59",
+      "year": "",
+      "hometown": "Chattanooga",
+      "home_state": "TN",
+      "height": "6' 2\"",
+      "weight": "",
+      "image": "",
+      "profile": "https://www.espn.com/college-football/player/_/id/5295130/bear-cortes"
+    },
+    {
+      "name": "Samuel Coufal",
+      "first_name": "Samuel",
+      "last_name": "Coufal",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "92",
+      "year": "",
+      "hometown": "Wales",
+      "home_state": "WI",
+      "height": "6' 2\"",
+      "weight": "250 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5168282.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5168282/samuel-coufal"
+    },
+    {
+      "name": "Dylan Day",
+      "first_name": "Dylan",
+      "last_name": "Day",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "23",
+      "year": "",
+      "hometown": "Baton Rouge",
+      "home_state": "LA",
+      "height": "6' 2\"",
+      "weight": "200 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5142262.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5142262/dylan-day"
+    },
+    {
+      "name": "Chris Ewald Jr.",
+      "first_name": "Chris",
+      "last_name": "Ewald Jr.",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "20",
+      "year": "",
+      "hometown": "Sunrise",
+      "home_state": "FL",
+      "height": "6' 1\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5295127.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5295127/chris-ewald-jr"
+    },
+    {
+      "name": "Bryce Fitzgerald",
+      "first_name": "Bryce",
+      "last_name": "Fitzgerald",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "13",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "6' 1\"",
+      "weight": "172 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5298737.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5298737/bryce-fitzgerald"
+    },
+    {
+      "name": "OJ Frederique Jr.",
+      "first_name": "OJ",
+      "last_name": "Frederique Jr.",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "29",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "6' 0\"",
+      "weight": "180 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5226976.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5226976/oj-frederique-jr"
+    },
+    {
+      "name": "Adarius Hayes",
+      "first_name": "Adarius",
+      "last_name": "Hayes",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "34",
+      "year": "",
+      "hometown": "Largo",
+      "home_state": "FL",
+      "height": "6' 4\"",
+      "weight": "230 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079440.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079440/adarius-hayes"
+    },
+    {
+      "name": "Artavius Jones",
+      "first_name": "Artavius",
+      "last_name": "Jones",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "42",
+      "year": "",
+      "hometown": "Blountstown",
+      "home_state": "FL",
+      "height": "6' 3\"",
+      "weight": "310 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5139099.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5139099/artavius-jones"
+    },
+    {
+      "name": "Nick Kelly",
+      "first_name": "Nick",
+      "last_name": "Kelly",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "36",
+      "year": "",
+      "hometown": "Petaluma",
+      "home_state": "CA",
+      "height": "5' 11\"",
+      "weight": "189 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5082923.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5082923/nick-kelly"
+    },
+    {
+      "name": "Braylon Lamar",
+      "first_name": "Braylon",
+      "last_name": "Lamar",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "45",
+      "year": "",
+      "hometown": "Cary",
+      "home_state": "NC",
+      "height": "6' 0\"",
+      "weight": "203 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5168310.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5168310/braylon-lamar"
+    },
+    {
+      "name": "Marquise Lightfoot",
+      "first_name": "Marquise",
+      "last_name": "Lightfoot",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "12",
+      "year": "",
+      "hometown": "Chicago",
+      "home_state": "IL",
+      "height": "6' 5\"",
+      "weight": "230 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5126999.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5126999/marquise-lightfoot"
+    },
+    {
+      "name": "Hayden Lowe",
+      "first_name": "Hayden",
+      "last_name": "Lowe",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "14",
+      "year": "",
+      "hometown": "Los Angeles",
+      "home_state": "CA",
+      "height": "6' 5\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5149474.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5149474/hayden-lowe"
+    },
+    {
+      "name": "Xavier Lucas",
+      "first_name": "Xavier",
+      "last_name": "Lucas",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "6",
+      "year": "",
+      "hometown": "Pompano Beach",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "198 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5127735.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5127735/xavier-lucas"
+    },
+    {
+      "name": "Ryan Mack",
+      "first_name": "Ryan",
+      "last_name": "Mack",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "27",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "5' 11\"",
+      "weight": "170 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079564.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079564/ryan-mack"
+    },
+    {
+      "name": "Ezekiel Marcelin Jr.",
+      "first_name": "Ezekiel",
+      "last_name": "Marcelin Jr.",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "54",
+      "year": "",
+      "hometown": "Miami",
+      "home_state": "FL",
+      "height": "5' 11\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5141569.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5141569/ezekiel-marcelin-jr"
+    },
+    {
+      "name": "Cole McConathy II",
+      "first_name": "Cole",
+      "last_name": "McConathy II",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "44",
+      "year": "",
+      "hometown": "Spanish Fort",
+      "home_state": "AL",
+      "height": "6' 5\"",
+      "weight": "225 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5146893.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5146893/cole-mcconathy-ii"
+    },
+    {
+      "name": "Jack McManus",
+      "first_name": "Jack",
+      "last_name": "McManus",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "52",
+      "year": "",
+      "hometown": "Wallingford",
+      "home_state": "CT",
+      "height": "6' 2\"",
+      "weight": "235 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5096912.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5096912/jack-mcmanus"
+    },
+    {
+      "name": "Ahmad Moten Sr.",
+      "first_name": "Ahmad",
+      "last_name": "Moten Sr.",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "99",
+      "year": "",
+      "hometown": "Fort Lauderdale",
+      "home_state": "FL",
+      "height": "6' 3\"",
+      "weight": "325 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4916996.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4916996/ahmad-moten-sr"
+    },
+    {
+      "name": "Mykah Newton",
+      "first_name": "Mykah",
+      "last_name": "Newton",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "55",
+      "year": "",
+      "hometown": "Gainesville",
+      "home_state": "FL",
+      "height": "6' 3\"",
+      "weight": "",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5198317.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5198317/mykah-newton"
+    },
+    {
+      "name": "Ethan O'Connor",
+      "first_name": "Ethan",
+      "last_name": "O'Connor",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "24",
+      "year": "",
+      "hometown": "Irvine",
+      "home_state": "CA",
+      "height": "6' 1\"",
+      "weight": "172 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/4919038.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/4919038/ethan-oconnor"
+    },
+    {
+      "name": "Booker Pickett",
+      "first_name": "Booker",
+      "last_name": "Pickett",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "33",
+      "year": "",
+      "hometown": "Tampa",
+      "home_state": "FL",
+      "height": "6' 4\"",
+      "weight": "210 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5079565.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5079565/booker-pickett"
+    },
+    {
+      "name": "Zechariah Poyser",
+      "first_name": "Zechariah",
+      "last_name": "Poyser",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "7",
+      "year": "",
+      "hometown": "Wildwood",
+      "home_state": "FL",
+      "height": "6' 2\"",
+      "weight": "190 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5150903.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5150903/zechariah-poyser"
+    },
+    {
+      "name": "Cam Pruitt",
+      "first_name": "Cam",
+      "last_name": "Pruitt",
+      "position": "LB",
+      "position_name": "Linebacker",
+      "jersey": "22",
+      "year": "",
+      "hometown": "Theodore",
+      "home_state": "AL",
+      "height": "6' 2\"",
+      "weight": "200 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5132631.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5132631/cam-pruitt"
+    },
+    {
+      "name": "Jadais Richard",
+      "first_name": "Jadais",
+      "last_name": "Richard",
+      "position": "DB",
+      "position_name": "Defensive Back",
+      "jersey": "25",
+      "year": "",
+      "hometown": "West Monroe",
+      "home_state": "LA",
+      "height": "6' 1\"",
+      "weight": "195 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5089172.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5089172/jadais-richard"
+    },
+    {
+      "name": "Cooper Ricks",
+      "first_name": "Cooper",
+      "last_name": "Ricks",
+      "position": "DL",
+      "position_name": "Defensive Lineman",
+      "jersey": "95",
+      "year": "",
+      "hometown": "Davidson",
+      "home_state": "NC",
+      "height": "6' 3\"",
+      "weight": "230 lbs",
+      "image": "https://a.espncdn.com/i/headshots/college-football/players/full/5168290.png",
+      "profile": "https://www.espn.com/college-football/player/_/id/5168290/cooper-ricks"
+    }
+  ],
+  "social": {
+    "reddit": []
+  },
+  "recruiting": [
+    {
+      "title": "2026 college football recruiting class rankings: Top 75 schools - ESPN",
+      "summary": "2026 college football recruiting class rankings: Top 75 schools&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOaDl1cG1MZVRtaVk4dWUwZm5tRkgtb0hKeGdnVzRLNW9jWDlsRktmTlBJd2RKaXo3TENQekxycTF3SGp6c2E0NmtiNElHTjdXWFBrbUwzMXE1MmZyZlBYcFB1SUs3b0hMTXY1QV94MjNyekk3Tzk5R0Y3OEdvYXJQWVZ2ZzNfWXZJYUhWMFg3VDNuVWRTc3FuT2d2MEI2bXlyLUw5RGdzWkFoeUZ3c3FPNGJIY3AtMENDc0JfMmNHVFctbm1Tc29pV0lmblZ1dlU?oc=5",
+      "published": "Wed, 04 Feb 2026 08:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Miami's 2025 recruiting class will play a big role in the Hurricanes building on success in 2026 - 247Sports",
+      "summary": "Miami's 2025 recruiting class will play a big role in the Hurricanes building on success in 2026&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOdW5GS1VqUk02QVMxNVBZWTRrWmxULWJrb05SQU15a3oyU09McTBwNVdiMV9wZHREZWhPMUNnRGVkZ0RIVzVRNW1vUlQ0OUJXSDJ4am50MW9fbmJNWmo0OWEzRHVJNHUza2lYR1RjV1AwSjRhc2dsT0owRFFWQ09pcDNDcnlBdVBoOTlDOXRLamJERU5KSGxwUkZBRDR0OE42TFpidGZWUEtwMnJjWHJkalVVejd3NWctTFNnMkoyb05BM0V4cndSRUhFT094UUFOU3FtdllWblh6RTFOVEYtZWV4RjQ?oc=5",
+      "published": "Wed, 18 Feb 2026 08:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "StoryStream - Miami Hurricanes Recruiting: National Signing Day Central 2026 - State of The U",
+      "summary": "StoryStream - Miami Hurricanes Recruiting: National Signing Day Central 2026&nbsp;&nbsp;State of The U",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZmZHdDZoQnJvSzA4aVZuZG5ERzh4bDZRd1ZucXpDWXM1NllodnF6OGRPUHRJYkF0LWotbEJlTVhIRHh5U2tidTVGWjR3Sm5VUEdWZWZPRnAwcERPMVh4djN4R2tlNkRmQWZjR2RYYTRBU1paSkVzcWpra3lvS1c0aHJpODlwdE1kSEJ5S1JCS2YwenBtTEh3bjNjSzF6ZjBFd19SVUZDU0hwWUFKeDVUUXhEYy1ZNHkwdE0wSC1WR0FsOUVLck9ZMW1lVXRDLWU4T1JUMkdYeDVSNFZFWjVya3BGYXdVNjEzVzJsXw?oc=5",
+      "published": "Wed, 10 Dec 2025 08:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Five takeaways as Miami Hurricanes put together another top-10 recruiting class - Miami Herald",
+      "summary": "Five takeaways as Miami Hurricanes put together another top-10 recruiting class&nbsp;&nbsp;Miami Herald",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQblhsTDFhTHUybHNkQ0NnOXpmRmlVbjFRRmNLWU82cHdyS25URHVnZFVLTWx2UnQ4eFpmVjg4MDczeDhLY1hEVVQxZnR0Z0d6YlozWnEwZ3VWVjdPR0FSMU51dFM2QzBWeGVXRG9FdkZudjZaUUNIVm9femtjdDFDcG5OQXBJMHlPUmNEX0RjdXRkQdIBkgFBVV95cUxPLXB5LVJueWJvT3I4ckZRZF8tZHZ2VS1nMUMyRDE4RExyM3lKdS1xN1J1ejlJOW8zWUg0a3R0bXd3ZkxLSVFTRG50UUFCa3lhMWx4ZE5wMVExejJ6Z1JRQmh5RkRIcW1nYmkwN2tvdWZfOEp1Vkk1dmh5WXd5WjQzRWk4NG1XcnFqNmo1Nmc0dmt2QQ?oc=5",
+      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Meet The Commits: Miami adds more in-state talent to Top 10 recruiting class - On3",
+      "summary": "Meet The Commits: Miami adds more in-state talent to Top 10 recruiting class&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQ2Z5NW0yVXRVNXZsSldmNHFydWpKUEVQcXpPVDlYd0w5MGVCbFhOb0tCYjE1V0FXSFhkRHZ4UDFTdEhuSWNRSmR5TWt1MmhFU25MZWxrUk9SWjNCcDJ4eUtDR1ltVzN2M2hGcUFTeFptbWdPV05nMzlJdWJMZ29PYTQ4YXB2d0F4dy13dGpNWjdUSmhmNHFWNDdjd2xPVU9OQjloQXNVVzhjQ3FNUndWSGJ5dGMwRmRwVFlveTMwZXd4QQ?oc=5",
+      "published": "Sat, 11 Apr 2026 14:05:09 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Miami Hurricanes National Signing Day Notebook: Who is a Cane and Who Is Not? - Sports Illustrated",
+      "summary": "Miami Hurricanes National Signing Day Notebook: Who is a Cane and Who Is Not?&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZ0kzcGcySWZCZllDdzY2Ty1xVlMwSnNXbThpV1NLOHFrcExWcHk4azc4TDR2ZjVzVjJkVkpzY3AwbUZ1cnEyYnpUb2REZHBfN3ZlY1lBZzduOE8tSURvNEYxbXhPZlROaWlMUkFxU3BIYUlMWDFUM2hzbVFNZ2lKWU44QkpxZEl6XzJ3MTVkcWtwVjJadS1nRDFsWGdYbF9JUm04UlppMnU2ZnN4aDJieDIzMUJxemxUMWFz?oc=5",
+      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Miami football Early Signing Period tracker: Can Hurricanes hold on to top commits? - Canes Warning",
+      "summary": "Miami football Early Signing Period tracker: Can Hurricanes hold on to top commits?&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR0ZUSVFjUFFfYl9FSTNwMUp1Uk56cFVCbmdzaUliV1JYbUF5OEZBRlR4b0Y5X0lJQzZPSzV2aVcxUzlVVmVqbzhaLUdXSFJyaHlMaVhnazNxaVRrcjZoUkFWZm1yQ1F6ZXVCdkVzSEsxcEw4OG9UcEh0SmI1RGE2V3I2UmNkNkN5NlRkOWZ3TWJLcTF5Wm9wMkpRTEozWWFMNjVuNzd2TFZjQQ?oc=5",
+      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Florida State vs. Miami football recruiting: 2026 recruits for Seminoles and Hurricanes - USA Today",
+      "summary": "Florida State vs. Miami football recruiting: 2026 recruits for Seminoles and Hurricanes&nbsp;&nbsp;USA Today",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPTE9acV92U2hNWUszSVI0ZjlBc19HOXlReUVwNVM5empDN084NDB2UWlBSHl6Vjl1RmJwYzRNMlVxdEV6RXh6THV3WXhRMUZWWmVxN3ozdFg4SnhkalV4b0kya185dWlNZ3NjalpxMC1wNW5JNHEzUFB4UlZ2ckM5ck82TTNLODdCeWRDOFRvQmNwenRGeGlMcXJTRXJfQ2dSWE9tNm5PSUxVdWV6YjRaSUF0ZGcyaVRiNmxwVGx3Tk1NcG9GTkRhTHo4MEh3cE5lcHl3ellCODBLemljN3c?oc=5",
+      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Updating the 2026 football recruiting rankings and what's ahead in the class - ESPN",
+      "summary": "Updating the 2026 football recruiting rankings and what's ahead in the class&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdnhWQ1lad3ZLeXlnQnR3RHFvV2g5YjNUcnhnZFFHUFUtVGV3ekgydHRKSGhYTU9zR09ibXN0VG1aM3p5WTJaMkUtY2lleExPRG1fc2E3THVXRmx0NnNLdnZKVl9XZGxjZUJaZm9sU25kNFZtdDBTNUVaYXh5MkZ2TTZ1SFhXQ1h1eHl2elJKRHhvbmhxWUNqdzBIcjRxUDQxdVZkbXJZeE1uLXQ0VUF4b0F3R0xOM1dnQWlFOTFpWDg2bUpNSklJ?oc=5",
+      "published": "Wed, 29 Oct 2025 07:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Meet The Commits: Miami has Top 5 recruiting class after landing two big targets - On3",
+      "summary": "Meet The Commits: Miami has Top 5 recruiting class after landing two big targets&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOT2JKQ1gtSDBqMUR1Sy1WaWxWZXhOMmxTSHExMV92UmdvM2hkNEZXLXE2dFlNVVZPVmdaVl95NWJPOFpkNDhUSGRrU2dJRUZmUVFmMWFMX3ZGNy02ZHpWOHM3ZkxLb2xMaUpkd0Y2cm44bmcyUUFMUmw4cEpNakMxWmhQd1phblQ5ZGw4bkxMcjc5N3I4VkhhZ3psY1pMOWNELXEyYk8xSEdwdy1SMVZteUkxZkxhY0tGV1BIR05xQzlYZkxBZ2hz?oc=5",
+      "published": "Fri, 22 May 2026 13:19:20 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Recruiting intel: Who remains uncommitted? Which classes could rise? - ESPN",
+      "summary": "Recruiting intel: Who remains uncommitted? Which classes could rise?&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRVF5Ri1DMV9UUzJ3dzVLVVpwcW9XQVRmS21LRC1TeHFuZElELW5OeWxpallpRnkyRjJsQlZzM2owM21IN0xCdlVpNXFna2xZRXNidVFlMl9PUzVodTlfVVJWX3lQbVgtLXJPQ1VhREtYQzBMcVdGV0dvdFNncTFEUlVlb3ByaGp4V01xT0JhN2tOc0Q4YkVGckdGZDhEQl9RQ0VuRzFrUDhMbC1TUUtJaDdidW5FSGlRRlowekJ5U01OVGpHMTFJ?oc=5",
+      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "OL Zaquan Linton is no longer a member of Miami's recruiting class - 247Sports",
+      "summary": "OL Zaquan Linton is no longer a member of Miami's recruiting class&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxObzBza0FvRTdNa0ZGMnlTck1nVnNwZU9oNjNkenZ0dDFFRzl3RDF0S0phMjdadmphLUpxS3g2OXJHWV9NZGVfMlAwaUpuSFRqb0duVEVTdVh1YjhmMWd4RDFZVjhKYV94T243WV8wdEtmWFZaZmw3UUtMNklxYVVWNXdwWVNhV1ZCVVFVTGhyaDZ3Qml4T3pZUlpSbUhLVEwyTHl6TGtOcVlITHhBelhBV0VuODVoWmoxT0xDTFpMUXBydXBKRS1OUzlqZTJHNnRTbk1QUURBSjZKdEVEQ0xrTDV5dHJOZGZaeG96WXZEeEF1ZHIxQm1lT3JDSQ?oc=5",
+      "published": "Fri, 17 Apr 2026 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Every Ohio State player who has entered the NCAA Transfer Portal - Sports Illustrated",
+      "summary": "Every Ohio State player who has entered the NCAA Transfer Portal&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNajVRMVEzS3BHS2RSZFFBNHNCMlg2N2ZWTGRxYlRySEVtNjRjT2FSdWVQV1dGQjc3dVcwbXZ5aFlJMm5Ec01HNVF3UklDV0J6cHBrR0t0OWswUWIxMHBEY3dXTEpMc2R2b2xGbWFzb000alZDdzQ5OE9vaDNNVWlhQ1pJT05tdVYzMlc2MTcydGJuU1VfR2NBOWp2aG5BRWw4eFNud0tnc3QtSGI1ZnpHczVGSGpycUdHVmxF?oc=5",
+      "published": "Fri, 02 Jan 2026 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Alabama linked to Dylan Raiola transfer after Dayton decommits from Nebraska - Fly War Eagle",
+      "summary": "Alabama linked to Dylan Raiola transfer after Dayton decommits from Nebraska&nbsp;&nbsp;Fly War Eagle",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZ2hYQW5vaC01cjNXM1NrWkxDbHhGelMtQmdHQ28zaXFnR2JqT0FLeUJkYjd3dG1Wb0JSTzJJYXY0aE44LUtYaXQyeTNYWmxjdmNaUnB4UlhjZk92aENrcFpYMzkzNjFoTUpOTUQ3NXltcEt3eXZWZ1dJR1N2NWRCclNUdVhSRWdqS0JRaHU4X3pPTzcwU1ZJ?oc=5",
+      "published": "Wed, 26 Nov 2025 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Defensive lineman signee in the 2026 class will no longer enroll at FSU anymore - Chop Chat",
+      "summary": "Defensive lineman signee in the 2026 class will no longer enroll at FSU anymore&nbsp;&nbsp;Chop Chat",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdjlodm00VXV2cFNtcURsWmlSQk9IOTZ2YkdwYS1HTEl4LTRTYU1mTGM5Ul9oTU5JTzhZcl96QzZzLTRSQkQ4T1RJRVFPZ1d0Vkw3S2FvS0xEYUxtLWFEZ19KMTZ0bTA2aUpvVmtjeU05QngtQThKRUIzMW5YQ21Gcm1RWGFKUDhseWMtVWtLM0FKbzVJRHQxeFc5SlE4VXhLZkE?oc=5",
+      "published": "Mon, 12 Jan 2026 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Dayton Raiola's Top CFB Landing Spots After Dylan's Brother Decommits from Nebraska - Bleacher Report",
+      "summary": "Dayton Raiola's Top CFB Landing Spots After Dylan's Brother Decommits from Nebraska&nbsp;&nbsp;Bleacher Report",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWFo4clB0cVhwa09SelotU1ZjOGc5ODZFM3JPOXdsM2RMc0wtdndROG1PeUxPcEZRckFwQmhsaEctaE9xRkJJQnV1aHA2dFVlQWpmM0VUX1NNdDh2TEVkSWFNLWg4UkpnTVJHeTVKQnZDTW1mQVlidWZHaDJYQWx6eWhBQzAwRmJIZ3JMM2Fzd1pMWjdnUnJwVENwcmR5UUZrUHhDaWxQNWxEN2pybkVlY3loSnhtZDk1X1Y4T1BR?oc=5",
+      "published": "Thu, 20 Nov 2025 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Updating the 2026 football recruiting rankings and what's ahead in the class - ESPN",
+      "summary": "Updating the 2026 football recruiting rankings and what's ahead in the class&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdnhWQ1lad3ZLeXlnQnR3RHFvV2g5YjNUcnhnZFFHUFUtVGV3ekgydHRKSGhYTU9zR09ibXN0VG1aM3p5WTJaMkUtY2lleExPRG1fc2E3THVXRmx0NnNLdnZKVl9XZGxjZUJaZm9sU25kNFZtdDBTNUVaYXh5MkZ2TTZ1SFhXQ1h1eHl2elJKRHhvbmhxWUNqdzBIcjRxUDQxdVZkbXJZeE1uLXQ0VUF4b0F3R0xOM1dnQWlFOTFpWDg2bUpNSklJ?oc=5",
+      "published": "Wed, 29 Oct 2025 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "2026 College Basketball Transfer Portal: Intel on Flory Bidunga, Somto Cyril Acaden Lewis, Juke Harris - 247Sports",
+      "summary": "2026 College Basketball Transfer Portal: Intel on Flory Bidunga, Somto Cyril Acaden Lewis, Juke Harris&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxOM0hBU2JBLUhOVDlHYV8xZTJQSmdSc1g3UmlNLWRTcGF3Ri01QVJlblNzbm0yUDgweTdNTllFR09OVmZQbVRfN0ZEWDJEbnE4TlRZR0RLRk9lbGpKTGtXN3dBdXdoN1YyYzYtYzZzR0tTSzkxcGxtMkRCOXh4X0txVUFPdjRXZlFZQmJvQVJoU3J0SGNvbGx4M3V0OHRBTFRBeG9odEdCOTB2QmlsVE5BclhVZkc1M2dEZ1EyNFRlYzd2Z0NvYm84NkhJd2tqRDdtX3lSWUpleEs0RldCcWYwNUs4VzBRWjExcElrR0hzWFJUYlFxM0ZnTzNRWVFlYnZTTDJGZ1pXNkZuNG9QT0Vlcmk0ZkZOQTdEeUxJVVl4TDF6RmJ2T0tkMDU3eEY0SE00OW9WNVhCaHh6bDBN?oc=5",
+      "published": "Tue, 07 Apr 2026 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Colorado in Danger of Losing Four-Star Recruit to Miami - Sports Illustrated",
+      "summary": "Colorado in Danger of Losing Four-Star Recruit to Miami&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQS1NBWW5kTGU4STEwYWw1d2dHeF9WT2QtdWJab29nTFpmeGpOZGlzM0IxeFhicF9GYUNTakR1Y3ZQVzVxbm4tRExWdkNWSy1jaEQwLUFTTzg2OWs0NnBqbnl2ZWJkMWlmVGZsU1R6SXpOWFQ2MGkxLVFMNFV6N2pTSVFSY0RzczhzTXZ4SGx5dTNBeUVBTmpOdmJGY1VUa2ZaZ0JGZnN4eWxZWDk0Mlo4?oc=5",
+      "published": "Sat, 15 Nov 2025 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Future LSU stars tell exactly how they feel about former Tigers HC Brian Kelly and his firing without saying anything at all - A to Z Sports",
+      "summary": "Future LSU stars tell exactly how they feel about former Tigers HC Brian Kelly and his firing without saying anything at all&nbsp;&nbsp;A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPbXc4ZVEwOEhBWVN1SFFMVWNVMHY5a2FzaThmcmVOTGJtTl85UFN5c0N3cjFEQU9OSnVyRXpvSUFsLTh5T2x4NWhLRk41M0pnMUtzbWlVV3lvSVlTN21pYkt3MXNpc3hRUS1OdE5ZVHhzTzctOGV0WkIwaTFHR1BvR2MwYzAxbHRBZmRWVTQ5TUlzTlJfTHJBenVXcXROczlQeGxnc2xPemdBeWVPbTNkRTkzeTA3T09XOXB3cnpkUjdjUXZzTHQ2SG9nMzZxclVaTzF0Y3lQdUtXU0NCMkY2aUdZU296ZFIxeGZvandYUnZ5aVNTVF9CWA?oc=5",
+      "published": "Mon, 17 Nov 2025 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    }
+  ]
 }
