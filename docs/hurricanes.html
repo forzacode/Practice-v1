@@ -3,1007 +3,403 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miami Hurricanes Football Dashboard</title>
+  <title>Miami Hurricanes Football</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* ── Base reset & variables ─────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --orange:        #F47321;
-      --orange-dim:    #c45e1a;
-      --orange-glow:   rgba(244,115,33,0.18);
-      --green:         #005030;
-      --green-light:   #006b41;
-      --green-glow:    rgba(0,80,48,0.35);
-      --bg:            #0b0e0b;
-      --bg2:           #111411;
-      --card:          #181d18;
-      --card-h:        #1f261f;
-      --border:        #252c25;
-      --border-accent: rgba(244,115,33,0.30);
-      --text:          #eceee9;
-      --text2:         #9ba89b;
-      --text3:         #6a776a;
-      --radius:        10px;
-      --shadow:        0 2px 16px rgba(0,0,0,0.45);
+      --bg:       #070908;
+      --surf:     #0c100c;
+      --card:     #121712;
+      --card-h:   #181f18;
+      --border:   #1b231b;
+      --border-o: rgba(244,115,33,.22);
+      --orange:   #F47321;
+      --og:       rgba(244,115,33,.14);
+      --green:    #005030;
+      --green-d:  #001f10;
+      --win:      #00c04b;
+      --loss:     #e53935;
+      --text:     #ebeeed;
+      --text2:    #768876;
+      --text3:    #3c4e3c;
+      --r:        10px;
+      --rl:       16px;
+      --fd:       'Barlow Condensed', sans-serif;
+      --fb:       'Inter', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
+    body { font-family: var(--fb); background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
     a { color: var(--orange); text-decoration: none; }
-    a:hover { text-decoration: underline; }
     img { display: block; }
 
-    /* ── Top banner ─────────────────────────────────────────── */
-    .top-banner {
-      background: linear-gradient(90deg, var(--green) 0%, #003520 100%);
-      border-bottom: 2px solid var(--orange);
-      padding: 0 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      backdrop-filter: blur(12px);
-    }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(244,115,33,.3); border-radius: 2px; }
 
-    .banner-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      height: 62px;
+    /* ── HEADER ───────────────────────────────── */
+    .header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(7,9,8,.93);
+      backdrop-filter: blur(20px) saturate(160%);
+      border-bottom: 1px solid rgba(244,115,33,.2);
     }
-
-    .logo-u {
-      width: 44px;
-      height: 44px;
+    .header::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--orange) 30%, var(--orange) 70%, transparent);
+    }
+    .header-inner {
+      max-width: 1360px; margin: 0 auto; padding: 0 1.5rem;
+      height: 70px; display: flex; align-items: center; gap: 1rem;
+    }
+    .logo-mark {
+      width: 48px; height: 48px; border-radius: 50%;
       background: var(--orange);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: #fff;
-      flex-shrink: 0;
-      letter-spacing: -1px;
-      box-shadow: 0 0 16px var(--orange-glow);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--fd); font-weight: 900; font-size: 1.7rem; color: #fff;
+      flex-shrink: 0; letter-spacing: -1px;
+      box-shadow: 0 0 24px rgba(244,115,33,.45), 0 0 48px rgba(244,115,33,.12);
     }
-
-    .banner-title {
-      flex: 1;
-      min-width: 0;
+    .header-brand { flex: 1; min-width: 0; }
+    .brand-main {
+      font-family: var(--fd); font-size: 1.5rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: .04em; color: #fff; line-height: 1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
-
-    .banner-title h1 {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.1;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .brand-sub {
+      font-size: .58rem; font-weight: 700; letter-spacing: .22em;
+      color: rgba(255,255,255,.28); text-transform: uppercase; margin-top: 3px;
     }
-
-    .banner-title .subtitle {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.55);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .header-right { display: flex; align-items: center; gap: .75rem; flex-shrink: 0; }
+    .header-record {
+      text-align: center; padding: .3rem .9rem;
+      border: 1px solid rgba(244,115,33,.3); border-radius: 8px;
+      background: rgba(244,115,33,.07);
     }
-
-    .banner-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-shrink: 0;
+    .record-num {
+      font-family: var(--fd); font-size: 1.35rem; font-weight: 900;
+      color: var(--orange); letter-spacing: .04em; line-height: 1;
     }
-
-    .record-badge {
-      background: var(--orange);
-      color: #fff;
-      font-weight: 800;
-      font-size: 0.95rem;
-      padding: 0.3rem 0.8rem;
-      border-radius: 6px;
-      letter-spacing: 0.03em;
+    .record-lbl {
+      display: block; font-size: .52rem; font-weight: 700;
+      letter-spacing: .16em; color: var(--text3); text-transform: uppercase; margin-top: 1px;
     }
-
-    .updated-time {
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.5);
-      white-space: nowrap;
-    }
-
+    .header-sep { width: 1px; height: 28px; background: var(--border); }
+    .header-ts { font-size: .66rem; color: var(--text3); white-space: nowrap; text-align: right; line-height: 1.4; }
     .btn-refresh {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #fff;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.45rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s;
-      font-family: inherit;
-      white-space: nowrap;
+      display: flex; align-items: center; gap: .35rem;
+      background: transparent; border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.65); font-size: .72rem; font-weight: 700;
+      font-family: var(--fb); letter-spacing: .07em; text-transform: uppercase;
+      padding: .5rem .9rem; border-radius: 6px; cursor: pointer;
+      transition: all .2s; white-space: nowrap;
     }
-
-    .btn-refresh:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.4); }
-    .btn-refresh:active { transform: scale(0.97); }
-    .btn-refresh.loading .icon-refresh { animation: spin 0.8s linear infinite; }
-
+    .btn-refresh:hover { background: var(--og); border-color: rgba(244,115,33,.4); color: var(--orange); }
+    .btn-refresh.loading .ricon { animation: spin .7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── Tab navigation ─────────────────────────────────────── */
-    .tab-bar {
-      background: var(--bg2);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 62px;
-      z-index: 100;
+    /* ── TAB BAR ──────────────────────────────── */
+    .tabbar { background: var(--surf); border-bottom: 1px solid var(--border); position: sticky; top: 70px; z-index: 100; }
+    .tabbar-inner {
+      max-width: 1360px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; overflow-x: auto; scrollbar-width: none;
     }
-
-    .tab-bar-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .tab-bar-inner::-webkit-scrollbar { display: none; }
-
+    .tabbar-inner::-webkit-scrollbar { display: none; }
     .tab-btn {
-      flex-shrink: 0;
-      padding: 0 1.2rem;
-      height: 46px;
-      background: none;
-      border: none;
-      border-bottom: 3px solid transparent;
-      color: var(--text2);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      transition: color 0.2s, border-color 0.2s;
-      white-space: nowrap;
+      position: relative; flex-shrink: 0; height: 48px; padding: 0 1.1rem;
+      background: none; border: none;
+      font-family: var(--fb); font-size: .72rem; font-weight: 700;
+      letter-spacing: .09em; text-transform: uppercase;
+      color: var(--text3); cursor: pointer; transition: color .2s; white-space: nowrap;
     }
-
-    .tab-btn:hover { color: var(--text); }
-    .tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
-
-    /* ── Main layout ────────────────────────────────────────── */
-    .main {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
+    .tab-btn::after {
+      content: ''; position: absolute; bottom: 0; left: 1.1rem; right: 1.1rem;
+      height: 2px; background: var(--orange); border-radius: 2px 2px 0 0;
+      transform: scaleX(0); transition: transform .2s;
     }
+    .tab-btn:hover { color: var(--text2); }
+    .tab-btn.active { color: var(--orange); }
+    .tab-btn.active::after { transform: scaleX(1); }
 
+    /* ── MAIN ─────────────────────────────────── */
+    .main { max-width: 1360px; margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
     .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+    .tab-panel.active { display: block; animation: fadeUp .22s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* ── Section headings ───────────────────────────────────── */
-    .section-heading {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 1rem;
-    }
+    /* ── SECTION HEADS ────────────────────────── */
+    .sh { display: flex; align-items: center; gap: .65rem; margin-bottom: 1rem; }
+    .sh h2 { font-family: var(--fd); font-size: 1.05rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; color: var(--text2); white-space: nowrap; }
+    .sh-line { flex: 1; height: 1px; background: var(--border); }
 
-    .section-heading h2 {
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--text2);
-    }
-
-    .section-heading .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--orange);
-      flex-shrink: 0;
-    }
-
-    /* ── Cards ──────────────────────────────────────────────── */
+    /* ── CARDS ────────────────────────────────── */
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
     }
+    .card:hover { border-color: var(--border-o); transform: translateY(-2px); box-shadow: 0 10px 40px rgba(0,0,0,.55), 0 0 18px rgba(244,115,33,.05); }
 
-    .card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow);
-    }
-
-    /* ── HOME TAB ───────────────────────────────────────────── */
-    .home-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 900px) {
-      .home-grid { grid-template-columns: 340px 1fr; }
-    }
-
-    /* Next game / last result hero */
+    /* ── GAME HERO ────────────────────────────── */
     .game-hero {
-      background: linear-gradient(135deg, var(--green) 0%, #002e1a 100%);
-      border: 1px solid var(--green-light);
-      border-radius: var(--radius);
-      padding: 1.4rem;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg, #001f10 0%, #09090a 45%, #1b0700 100%);
+      border: 1px solid rgba(244,115,33,.18); border-radius: var(--rl);
+      padding: 2rem; position: relative; overflow: hidden; margin-bottom: 1.5rem;
     }
-
     .game-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(244,115,33,0.12) 0%, transparent 60%);
+      content: ''; position: absolute; top: -80px; right: -80px; width: 340px; height: 340px;
+      background: radial-gradient(circle, rgba(244,115,33,.08) 0%, transparent 65%); pointer-events: none;
     }
-
-    .game-hero-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--orange);
-      margin-bottom: 1rem;
+    .game-hero::after {
+      content: ''; position: absolute; bottom: -60px; left: -60px; width: 260px; height: 260px;
+      background: radial-gradient(circle, rgba(0,80,48,.18) 0%, transparent 65%); pointer-events: none;
     }
-
-    .game-matchup {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
+    .gh-label {
+      font-size: .62rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 1.5rem; display: flex; align-items: center; gap: .5rem;
     }
+    .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--loss); animation: livepulse 1.2s ease-in-out infinite; }
+    @keyframes livepulse { 0%,100% { opacity:1; box-shadow:0 0 0 0 rgba(229,57,53,.5); } 50% { opacity:.7; box-shadow:0 0 0 5px rgba(229,57,53,0); } }
 
-    .game-team {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      min-width: 80px;
+    .matchup-grid {
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center; gap: 1rem; position: relative; z-index: 1;
     }
-
-    .game-team img, .game-team .team-logo-placeholder {
-      width: 56px;
-      height: 56px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      padding: 4px;
+    .team-side { display: flex; flex-direction: column; align-items: center; gap: .55rem; }
+    .team-logo-wrap {
+      width: 76px; height: 76px; border-radius: 50%;
+      background: rgba(255,255,255,.05); padding: 6px;
+      display: flex; align-items: center; justify-content: center;
     }
+    .team-logo-wrap img { width: 64px; height: 64px; object-fit: contain; }
+    .team-logo-wrap .logo-ph { width: 64px; height: 64px; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; }
+    .team-rank { font-family: var(--fd); font-size: .75rem; font-weight: 800; color: var(--orange); letter-spacing: .04em; }
+    .team-name-h { font-family: var(--fd); font-size: 1.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; color: #fff; text-align: center; line-height: 1.1; }
+    .team-rec-h { font-size: .7rem; font-weight: 600; color: var(--text2); }
 
-    .game-team .team-logo-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
+    .matchup-center { text-align: center; }
+    .score-hero { font-family: var(--fd); font-size: 3.75rem; font-weight: 900; color: #fff; letter-spacing: -.02em; line-height: 1; }
+    .vs-hero { font-family: var(--fd); font-size: 2rem; font-weight: 900; color: var(--text3); letter-spacing: .15em; }
+    .game-date-h { font-family: var(--fd); font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .06em; margin-top: .3rem; }
+    .result-badge {
+      display: inline-block; font-family: var(--fd); font-size: 1rem; font-weight: 900;
+      letter-spacing: .08em; padding: .35rem 1.1rem; border-radius: 6px; margin-top: .65rem;
     }
+    .rb-win  { background: rgba(0,192,75,.12);  color: var(--win);  border: 1px solid rgba(0,192,75,.25); }
+    .rb-loss { background: rgba(229,57,53,.12); color: var(--loss); border: 1px solid rgba(229,57,53,.25); }
+    .rb-up   { background: var(--og);           color: var(--orange); border: 1px solid rgba(244,115,33,.3); }
+    .rb-live { background: rgba(229,57,53,.18); color: var(--loss);  border: 1px solid rgba(229,57,53,.4); animation: livepulse 1.5s ease-in-out infinite; }
 
-    .game-team-name { font-size: 0.78rem; font-weight: 600; text-align: center; color: var(--text); }
-    .game-team-rank { font-size: 0.66rem; color: var(--orange); font-weight: 700; }
+    .gh-venue { font-size: .67rem; color: rgba(255,255,255,.3); text-align: center; margin-top: .75rem; position: relative; z-index: 1; }
+    .gh-tv { color: var(--orange); font-weight: 700; }
 
-    .game-center {
-      flex: 1;
-      text-align: center;
+    .season-strip { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.07); position: relative; z-index: 1; }
+    .pip { width: 26px; height: 26px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--fd); font-size: .72rem; font-weight: 900; cursor: default; position: relative; }
+    .pip.w { background: rgba(0,192,75,.12);  color: var(--win);  border: 1px solid rgba(0,192,75,.2); }
+    .pip.l { background: rgba(229,57,53,.12); color: var(--loss); border: 1px solid rgba(229,57,53,.2); }
+    .pip.u { background: rgba(255,255,255,.04); color: var(--text3); border: 1px solid var(--border); }
+
+    /* ── HOME LAYOUT ──────────────────────────── */
+    .home-cols { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 960px) { .home-cols { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
+
+    /* Home news items */
+    .hn-item { display: flex; gap: .875rem; padding: .875rem; cursor: pointer; border-bottom: 1px solid var(--border); }
+    .hn-item:last-child { border-bottom: none; }
+    .hn-thumb { flex-shrink: 0; width: 80px; height: 60px; border-radius: 6px; overflow: hidden; background: var(--card-h); }
+    .hn-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .hn-ph { width: 100%; height: 100%; background: linear-gradient(135deg, var(--green-d), #090a09); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+    .hn-body { flex: 1; min-width: 0; }
+    .hn-src { font-size: .6rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; color: var(--orange); margin-bottom: .2rem; }
+    .hn-title { font-size: .87rem; font-weight: 700; color: var(--text); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .hn-time { font-size: .63rem; color: var(--text3); margin-top: .3rem; }
+
+    /* Home reddit items */
+    .hr-item { padding: .875rem; cursor: pointer; border-bottom: 1px solid var(--border); }
+    .hr-item:last-child { border-bottom: none; }
+    .hr-top { display: flex; align-items: center; gap: .5rem; margin-bottom: .35rem; }
+    .hr-sub { font-size: .61rem; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: var(--orange); }
+    .hr-flair { font-size: .59rem; background: rgba(244,115,33,.1); color: rgba(244,115,33,.75); padding: .1rem .45rem; border-radius: 999px; font-weight: 600; }
+    .hr-title { font-size: .87rem; font-weight: 700; color: var(--text); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .hr-meta { display: flex; gap: .7rem; margin-top: .35rem; font-size: .63rem; color: var(--text3); }
+
+    /* ── NEWS POSTER CARDS ────────────────────── */
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+
+    .np { position: relative; border-radius: var(--r); overflow: hidden; cursor: pointer; background: var(--card); border: 1px solid var(--border); display: flex; flex-direction: column; transition: border-color .2s, transform .2s, box-shadow .2s; }
+    .np:hover { border-color: var(--border-o); transform: translateY(-3px); box-shadow: 0 14px 44px rgba(0,0,0,.6), 0 0 20px rgba(244,115,33,.05); }
+    .np-media { width: 100%; height: 178px; overflow: hidden; position: relative; }
+    .np-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .np:hover .np-media img { transform: scale(1.05); }
+    .np-media::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, rgba(18,23,18,.95) 0%, transparent 100%); }
+    .np-ph { width: 100%; height: 120px; background: linear-gradient(135deg, #002010, #080a08); display: flex; align-items: center; justify-content: center; font-family: var(--fd); font-size: 4rem; font-weight: 900; color: rgba(244,115,33,.08); letter-spacing: -3px; }
+    .np-body { padding: .875rem .875rem 0; flex: 1; }
+    .np-src { font-size: .6rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--orange); margin-bottom: .35rem; }
+    .np-title { font-size: .92rem; font-weight: 700; color: var(--text); line-height: 1.38; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .np-summary { font-size: .77rem; color: var(--text2); line-height: 1.5; margin-top: .4rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .np-foot { display: flex; align-items: center; justify-content: space-between; padding: .6rem .875rem; border-top: 1px solid var(--border); margin-top: .75rem; font-size: .64rem; color: var(--text3); }
+    .np-foot-read { color: var(--orange); font-weight: 700; letter-spacing: .05em; }
+
+    /* Filter chips */
+    .filter-bar { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    .chip { padding: .35rem .85rem; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--text2); font-size: .72rem; font-weight: 600; cursor: pointer; transition: all .18s; font-family: var(--fb); }
+    .chip:hover { border-color: var(--border-o); color: var(--text); }
+    .chip.on { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+    /* ── SCHEDULE ─────────────────────────────── */
+    .sched-wrap { border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; background: var(--card); }
+    .game-row {
+      display: grid; grid-template-columns: 80px 1fr auto auto auto;
+      align-items: center; gap: 1rem; padding: .875rem 1.1rem;
+      border-bottom: 1px solid var(--border); position: relative;
+      transition: background .15s;
     }
+    .game-row:last-child { border-bottom: none; }
+    .game-row:hover { background: var(--card-h); }
+    .game-row.win::before  { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: var(--win);  border-radius: 0 2px 2px 0; }
+    .game-row.loss::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: var(--loss); border-radius: 0 2px 2px 0; }
+    .game-row.live-row { background: rgba(229,57,53,.04); }
 
-    .game-score {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: -1px;
-    }
+    .g-date-col { }
+    .g-dow { font-size: .59rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); }
+    .g-md { font-family: var(--fd); font-size: 1.05rem; font-weight: 800; color: var(--text2); line-height: 1.1; }
+    .g-opp { display: flex; align-items: center; gap: .75rem; min-width: 0; }
+    .g-logo { width: 34px; height: 34px; border-radius: 50%; object-fit: contain; background: rgba(255,255,255,.05); padding: 3px; flex-shrink: 0; }
+    .g-logo-ph { width: 34px; height: 34px; border-radius: 50%; background: var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .95rem; }
+    .g-opp-name { font-size: .9rem; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .g-opp-sub { font-size: .63rem; color: var(--text3); margin-top: 1px; display: flex; gap: .4rem; align-items: center; }
+    .badge-conf { background: rgba(0,80,48,.3); color: #00a876; padding: .05rem .35rem; border-radius: 3px; font-weight: 700; font-size: .58rem; text-transform: uppercase; }
+    .badge-neut { background: var(--og); color: var(--orange); padding: .05rem .35rem; border-radius: 3px; font-weight: 700; font-size: .58rem; text-transform: uppercase; }
+    .g-ha { font-size: .67rem; color: var(--text3); font-weight: 600; white-space: nowrap; }
+    .g-tv { font-size: .7rem; color: var(--text3); white-space: nowrap; }
+    .g-result { text-align: right; white-space: nowrap; }
+    .rl { font-family: var(--fd); font-size: 1.4rem; font-weight: 900; line-height: 1; }
+    .rl.w  { color: var(--win); }
+    .rl.l  { color: var(--loss); }
+    .rl.lv { color: var(--loss); animation: livepulse 1s ease-in-out infinite; }
+    .rscore { font-size: .73rem; color: var(--text2); font-weight: 600; display: block; margin-top: 1px; }
+    .rup { font-family: var(--fd); font-size: .88rem; font-weight: 800; color: var(--text3); text-transform: uppercase; letter-spacing: .04em; }
 
-    .game-date {
-      font-size: 0.73rem;
-      color: rgba(255,255,255,0.55);
-      margin-top: 0.3rem;
-    }
-
-    .game-result-badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 800;
-      padding: 0.2rem 0.7rem;
-      border-radius: 4px;
-      margin-top: 0.5rem;
-    }
-
-    .game-result-badge.win { background: #004d24; color: #00e676; }
-    .game-result-badge.loss { background: #4d0000; color: #ff5252; }
-    .game-result-badge.upcoming { background: var(--orange); color: #fff; }
-    .game-result-badge.live { background: #cc0000; color: #fff; animation: pulse 1s ease-in-out infinite; }
-
-    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
-
-    .game-venue { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.6rem; }
-    .game-tv { font-size: 0.7rem; color: var(--orange); margin-top: 0.2rem; font-weight: 600; }
-
-    /* Season summary */
-    .season-strip {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .season-pip {
-      width: 28px;
-      height: 28px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.65rem;
-      font-weight: 800;
-      cursor: default;
-    }
-
-    .pip-w { background: #004d24; color: #00e676; }
-    .pip-l { background: #4d0000; color: #ff5252; }
-    .pip-u { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
-
-    /* News mini list */
-    .news-list { display: flex; flex-direction: column; gap: 0.75rem; }
-
-    .news-item {
-      display: flex;
-      gap: 0.75rem;
-      padding: 0.85rem;
-      cursor: pointer;
-    }
-
-    .news-item-img {
-      width: 72px;
-      height: 56px;
-      border-radius: 6px;
-      object-fit: cover;
-      flex-shrink: 0;
-      background: var(--border);
-    }
-
-    .news-item-img-placeholder {
-      width: 72px;
-      height: 56px;
-      border-radius: 6px;
-      background: linear-gradient(135deg, var(--green) 0%, #001f10 100%);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-    }
-
-    .news-item-body { flex: 1; min-width: 0; }
-
-    .news-item-source {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--orange);
-      margin-bottom: 0.25rem;
-    }
-
-    .news-item-title {
-      font-size: 0.87rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.35;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .news-item-date {
-      font-size: 0.68rem;
-      color: var(--text3);
-      margin-top: 0.3rem;
-    }
-
-    /* Reddit mini */
-    .reddit-list { display: flex; flex-direction: column; gap: 0.6rem; }
-
-    .reddit-item {
-      padding: 0.8rem 0.9rem;
-      cursor: pointer;
-    }
-
-    .reddit-item-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .reddit-sub {
-      font-size: 0.66rem;
-      font-weight: 700;
-      color: var(--orange);
-      text-transform: uppercase;
-    }
-
-    .reddit-flair {
-      font-size: 0.62rem;
-      background: rgba(244,115,33,0.15);
-      color: var(--orange);
-      padding: 0.1rem 0.45rem;
-      border-radius: 999px;
-    }
-
-    .reddit-title {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.35;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .reddit-meta {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: 0.4rem;
-      font-size: 0.68rem;
-      color: var(--text3);
-    }
-
-    .reddit-meta span { display: flex; align-items: center; gap: 0.25rem; }
-
-    /* ── NEWS TAB ───────────────────────────────────────────── */
-    .news-filters {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.2rem;
-    }
-
-    .filter-chip {
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--text2);
-      font-size: 0.76rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-
-    .filter-chip:hover { border-color: var(--border-accent); color: var(--text); }
-    .filter-chip.active { background: var(--orange); border-color: var(--orange); color: #fff; }
-
-    .news-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-
-    .news-card {
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .news-card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .news-card-img-placeholder {
-      width: 100%;
-      height: 180px;
-      background: linear-gradient(135deg, var(--green) 0%, #001f10 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-    }
-
-    .news-card-body { padding: 0.9rem; flex: 1; }
-
-    .news-card-source {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--orange);
-      margin-bottom: 0.4rem;
-    }
-
-    .news-card-title {
-      font-size: 0.92rem;
-      font-weight: 700;
-      line-height: 1.35;
-      color: var(--text);
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .news-card-summary {
-      font-size: 0.79rem;
-      color: var(--text2);
-      line-height: 1.5;
-      margin-top: 0.5rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .news-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.6rem 0.9rem;
-      border-top: 1px solid var(--border);
-      font-size: 0.68rem;
-      color: var(--text3);
-    }
-
-    /* ── SCHEDULE TAB ───────────────────────────────────────── */
-    .schedule-table-wrap { overflow-x: auto; }
-
-    .schedule-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-    }
-
-    .schedule-table thead th {
-      text-align: left;
-      padding: 0.55rem 0.9rem;
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--text3);
-      border-bottom: 1px solid var(--border);
-      white-space: nowrap;
-    }
-
-    .schedule-table tbody tr {
-      border-bottom: 1px solid var(--border);
-      transition: background 0.15s;
-    }
-
-    .schedule-table tbody tr:hover { background: var(--card-h); }
-    .schedule-table tbody tr.current-game { background: rgba(244,115,33,0.08); }
-
-    .schedule-table td {
-      padding: 0.75rem 0.9rem;
-      vertical-align: middle;
-      white-space: nowrap;
-    }
-
-    .opp-cell {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
-
-    .opp-logo-sm {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.05);
-      padding: 2px;
-      flex-shrink: 0;
-    }
-
-    .opp-logo-placeholder {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-
-    .opp-name { font-weight: 600; color: var(--text); }
-    .opp-rank-tag { font-size: 0.65rem; color: var(--orange); font-weight: 700; }
-
-    .tag-home { color: var(--text3); font-size: 0.72rem; }
-
-    .result-cell { font-weight: 800; font-size: 0.9rem; }
-    .result-w { color: #00c853; }
-    .result-l { color: #ff5252; }
-    .result-upcoming { color: var(--orange); font-weight: 600; font-size: 0.8rem; }
-    .result-live { color: #ff5252; font-weight: 800; }
-
-    .score-cell { color: var(--text2); font-size: 0.82rem; }
-
-    .conf-badge {
-      font-size: 0.62rem;
-      background: rgba(0,80,48,0.35);
-      color: var(--green-light);
-      padding: 0.1rem 0.4rem;
-      border-radius: 3px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .neutral-badge {
-      font-size: 0.62rem;
-      background: rgba(244,115,33,0.15);
-      color: var(--orange);
-      padding: 0.1rem 0.4rem;
-      border-radius: 3px;
-      font-weight: 700;
-    }
-
-    /* ── STATS TAB ──────────────────────────────────────────── */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .stat-card {
-      padding: 1.1rem 1.2rem;
-    }
-
-    .stat-card-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text3);
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-card-value {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--orange);
-      line-height: 1;
-    }
-
-    .stat-card-sublabel {
-      font-size: 0.75rem;
-      color: var(--text2);
-      margin-top: 0.3rem;
-    }
-
-    .stat-rank {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 700;
-      background: rgba(244,115,33,0.15);
-      color: var(--orange);
-      padding: 0.15rem 0.45rem;
-      border-radius: 4px;
-      margin-top: 0.4rem;
-    }
+    /* ── STATS ────────────────────────────────── */
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .875rem; margin-bottom: 2rem; }
+    .stat-card { padding: 1.25rem; }
+    .stat-cat { font-size: .6rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--text3); margin-bottom: .5rem; }
+    .stat-num { font-family: var(--fd); font-size: 2.9rem; font-weight: 900; color: var(--orange); line-height: 1; letter-spacing: -.02em; }
+    .stat-unit { font-size: .62rem; font-weight: 700; letter-spacing: .12em; color: var(--text3); text-transform: uppercase; margin-top: .25rem; }
+    .stat-rank { display: inline-block; font-size: .6rem; font-weight: 800; background: var(--og); color: var(--orange); padding: .15rem .5rem; border-radius: 999px; margin-top: .5rem; letter-spacing: .05em; }
 
     /* Leaders */
-    .leaders-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 0.75rem;
-    }
+    .leaders-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: .75rem; margin-bottom: 2rem; }
+    .leader-card { display: flex; gap: .75rem; align-items: center; padding: .9rem; }
+    .l-photo { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; background: var(--border); flex-shrink: 0; border: 2px solid rgba(244,115,33,.3); }
+    .l-photo-ph { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--bg)); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; border: 2px solid rgba(244,115,33,.3); }
+    .l-cat { font-size: .58rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; color: var(--orange); }
+    .l-name { font-size: .88rem; font-weight: 700; color: var(--text); margin-top: .15rem; }
+    .l-val { font-family: var(--fd); font-size: 1.1rem; font-weight: 800; color: var(--text2); }
+    .l-pos { font-size: .62rem; color: var(--text3); }
 
-    .leader-card {
-      padding: 1rem;
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
+    /* ── RECRUITING ───────────────────────────── */
+    .rec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: .875rem; }
+    .rec-card { padding: 1rem; cursor: pointer; }
+    .rec-src { font-size: .6rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; color: var(--orange); margin-bottom: .35rem; }
+    .rec-title { font-size: .9rem; font-weight: 700; color: var(--text); line-height: 1.38; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .rec-summary { font-size: .77rem; color: var(--text2); line-height: 1.5; margin-top: .4rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .rec-time { font-size: .63rem; color: var(--text3); margin-top: .5rem; }
 
-    .leader-photo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: var(--border);
-      flex-shrink: 0;
-      border: 2px solid var(--orange);
-    }
+    /* ── SOCIAL ───────────────────────────────── */
+    .soc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: .875rem; }
+    .soc-card { padding: 1rem; cursor: pointer; border-left: 3px solid transparent; }
+    .soc-card.canes { border-left-color: var(--orange); }
+    .soc-card.cfb   { border-left-color: var(--text3); }
+    .soc-top { display: flex; align-items: center; gap: .5rem; margin-bottom: .55rem; }
+    .soc-sub { font-size: .61rem; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: var(--orange); }
+    .soc-flair { font-size: .58rem; background: var(--og); color: rgba(244,115,33,.8); padding: .1rem .45rem; border-radius: 999px; font-weight: 600; }
+    .soc-title { font-size: .92rem; font-weight: 700; color: var(--text); line-height: 1.38; margin-bottom: .4rem; }
+    .soc-text { font-size: .77rem; color: var(--text2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .soc-foot { display: flex; gap: .875rem; margin-top: .7rem; font-size: .66rem; color: var(--text3); padding-top: .65rem; border-top: 1px solid var(--border); }
+    .soc-foot span { display: flex; align-items: center; gap: .25rem; }
+    .score-bar { height: 2px; background: var(--border); border-radius: 1px; margin-top: .5rem; overflow: hidden; }
+    .score-bar-fill { height: 100%; background: linear-gradient(90deg, rgba(244,115,33,.5), var(--orange)); border-radius: 1px; }
 
-    .leader-photo-placeholder {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--bg));
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      border: 2px solid var(--orange);
-    }
+    /* ── ROSTER ───────────────────────────────── */
+    .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .75rem; }
+    .roster-card { padding: 1rem .75rem; text-align: center; }
+    .r-photo-wrap { position: relative; width: 68px; height: 68px; margin: 0 auto .6rem; }
+    .r-photo-wrap img { width: 68px; height: 68px; border-radius: 50%; object-fit: cover; border: 2px solid var(--green); }
+    .r-ph { width: 68px; height: 68px; border-radius: 50%; background: linear-gradient(135deg, #002a18, #0a0c0a); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; border: 2px solid var(--green); }
+    .r-jersey { position: absolute; bottom: -2px; right: -4px; background: var(--orange); color: #fff; font-family: var(--fd); font-size: .67rem; font-weight: 900; padding: 0 5px; border-radius: 3px; line-height: 1.45; }
+    .r-name { font-size: .83rem; font-weight: 700; color: var(--text); }
+    .r-pos { font-family: var(--fd); font-size: .88rem; font-weight: 800; color: var(--orange); letter-spacing: .04em; }
+    .r-yr { font-size: .63rem; color: var(--text3); margin-top: .1rem; }
+    .r-ht { font-size: .63rem; color: var(--text3); }
 
-    .leader-info {}
-    .leader-cat { font-size: 0.65rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.06em; }
-    .leader-name { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-top: 0.15rem; }
-    .leader-value { font-size: 0.8rem; color: var(--text2); margin-top: 0.1rem; }
-    .leader-pos { font-size: 0.68rem; color: var(--text3); }
+    /* ── EMPTY ────────────────────────────────── */
+    .empty { text-align: center; padding: 4rem 2rem; color: var(--text3); }
+    .empty .ei { font-size: 2.5rem; margin-bottom: .75rem; }
+    .empty h3 { font-size: .9rem; font-weight: 700; color: var(--text2); margin-bottom: .4rem; }
+    .empty p { font-size: .8rem; line-height: 1.5; }
 
-    /* ── RECRUITING TAB ─────────────────────────────────────── */
-    .recruiting-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1rem;
-    }
+    /* ── LOADING ──────────────────────────────── */
+    #overlay { position: fixed; inset: 0; background: rgba(7,9,8,.9); backdrop-filter: blur(8px); z-index: 999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; }
+    .loader { width: 44px; height: 44px; border: 3px solid var(--border); border-top-color: var(--orange); border-radius: 50%; animation: spin .7s linear infinite; }
+    #overlay p { font-size: .8rem; color: var(--text3); font-weight: 500; letter-spacing: .06em; }
 
-    .recruit-card { padding: 1rem; cursor: pointer; }
+    /* ── STALE ────────────────────────────────── */
+    #stale { display: none; background: rgba(244,115,33,.07); border-bottom: 1px solid rgba(244,115,33,.18); padding: .5rem 1.5rem; text-align: center; font-size: .72rem; color: rgba(244,115,33,.8); font-weight: 500; }
 
-    .recruit-source {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--orange);
-      margin-bottom: 0.35rem;
-    }
-
-    .recruit-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.35;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .recruit-summary {
-      font-size: 0.78rem;
-      color: var(--text2);
-      line-height: 1.5;
-      margin-top: 0.45rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .recruit-date { font-size: 0.68rem; color: var(--text3); margin-top: 0.5rem; }
-
-    /* ── SOCIAL TAB ─────────────────────────────────────────── */
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-
-    .social-card { padding: 1rem; cursor: pointer; }
-
-    .social-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.6rem;
-    }
-
-    .social-sub-badge {
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: var(--orange);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .social-flair {
-      font-size: 0.62rem;
-      background: rgba(244,115,33,0.12);
-      color: var(--orange);
-      padding: 0.1rem 0.5rem;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .social-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.35;
-      margin-bottom: 0.4rem;
-    }
-
-    .social-text {
-      font-size: 0.78rem;
-      color: var(--text2);
-      line-height: 1.5;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .social-footer {
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.75rem;
-      font-size: 0.72rem;
-      color: var(--text3);
-      border-top: 1px solid var(--border);
-      padding-top: 0.6rem;
-    }
-
-    .social-footer span { display: flex; align-items: center; gap: 0.25rem; }
-
-    /* ── ROSTER TAB ─────────────────────────────────────────── */
-    .roster-filters {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.2rem;
-    }
-
-    .roster-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .roster-card { padding: 1rem; text-align: center; cursor: default; }
-
-    .roster-photo {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 0.6rem;
-      background: var(--border);
-      border: 2px solid var(--green-light);
-    }
-
-    .roster-photo-placeholder {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--bg));
-      margin: 0 auto 0.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      border: 2px solid var(--green-light);
-    }
-
-    .roster-jersey { font-size: 0.7rem; color: var(--orange); font-weight: 800; }
-    .roster-name { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-top: 0.15rem; }
-    .roster-pos { font-size: 0.75rem; color: var(--text2); }
-    .roster-year { font-size: 0.68rem; color: var(--text3); margin-top: 0.1rem; }
-    .roster-ht-wt { font-size: 0.68rem; color: var(--text3); }
-
-    /* ── Empty states ───────────────────────────────────────── */
-    .empty-state {
-      text-align: center;
-      padding: 4rem 2rem;
-      color: var(--text3);
-    }
-
-    .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; }
-    .empty-state h3 { font-size: 1rem; font-weight: 600; color: var(--text2); margin-bottom: 0.5rem; }
-    .empty-state p { font-size: 0.85rem; line-height: 1.5; }
-
-    /* ── Loading overlay ────────────────────────────────────── */
-    #loading-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(11,14,11,0.85);
-      backdrop-filter: blur(6px);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .spinner {
-      width: 48px;
-      height: 48px;
-      border: 3px solid var(--border);
-      border-top-color: var(--orange);
-      border-radius: 50%;
-      animation: spin 0.75s linear infinite;
-    }
-
-    #loading-overlay p { color: var(--text2); font-size: 0.9rem; font-weight: 500; }
-
-    /* ── Stale data banner ──────────────────────────────────── */
-    #stale-banner {
-      display: none;
-      background: rgba(244,115,33,0.12);
-      border-bottom: 1px solid rgba(244,115,33,0.3);
-      padding: 0.5rem 1.5rem;
-      font-size: 0.78rem;
-      color: var(--orange);
-      text-align: center;
-    }
-
-    /* ── Responsive tweaks ──────────────────────────────────── */
-    @media (max-width: 600px) {
-      .banner-inner { gap: 0.6rem; padding: 0 0.75rem; }
-      .banner-meta { gap: 0.4rem; }
-      .updated-time { display: none; }
-      .record-badge { font-size: 0.82rem; padding: 0.25rem 0.6rem; }
-      .main { padding: 1rem 0.75rem 3rem; }
-      .news-grid, .social-grid, .recruiting-grid { grid-template-columns: 1fr; }
+    /* ── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 640px) {
+      .header-inner { padding: 0 1rem; }
+      .header-ts, .header-sep { display: none; }
+      .brand-main { font-size: 1.2rem; }
+      .main { padding: 1rem .875rem 3rem; }
+      .news-grid, .soc-grid, .rec-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .leaders-grid { grid-template-columns: 1fr 1fr; }
-      .roster-grid { grid-template-columns: repeat(3, 1fr); }
+      .roster-grid { grid-template-columns: repeat(3,1fr); }
+      .game-row { grid-template-columns: 70px 1fr auto; }
+      .g-ha, .g-tv { display: none; }
+      .score-hero { font-size: 2.75rem; }
+      .team-name-h { font-size: 1.1rem; }
+      .team-logo-wrap { width: 58px; height: 58px; }
+      .team-logo-wrap img { width: 46px; height: 46px; }
     }
   </style>
 </head>
 <body>
 
-<div id="loading-overlay">
-  <div class="spinner"></div>
-  <p>Loading Hurricanes data...</p>
-</div>
+<div id="overlay"><div class="loader"></div><p>LOADING HURRICANES DATA</p></div>
+<div id="stale">⚠ Data may be stale — GitHub Actions refreshes daily at 7 AM ET</div>
 
-<div id="stale-banner">
-  ⚠ Data may be more than 24 hours old — GitHub Actions runs daily to refresh automatically.
-</div>
-
-<!-- ── Header ─────────────────────────────────────────────── -->
-<header class="top-banner">
-  <div class="banner-inner">
-    <div class="logo-u">U</div>
-    <div class="banner-title">
-      <h1>MIAMI HURRICANES</h1>
-      <div class="subtitle">Football Dashboard</div>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-mark">U</div>
+    <div class="header-brand">
+      <div class="brand-main">Miami Hurricanes</div>
+      <div class="brand-sub">Football Dashboard</div>
     </div>
-    <div class="banner-meta">
-      <div class="record-badge" id="record-badge">— — —</div>
-      <div class="updated-time" id="updated-time">Loading...</div>
+    <div class="header-right">
+      <div class="header-record" id="record-box">
+        <div class="record-num" id="record-num">–&nbsp;–</div>
+        <span class="record-lbl">Season</span>
+      </div>
+      <div class="header-sep"></div>
+      <div class="header-ts" id="header-ts">–</div>
       <button class="btn-refresh" id="btn-refresh" onclick="loadData(true)">
-        <span class="icon-refresh">↺</span> Refresh
+        <span class="ricon">↺</span> Refresh
       </button>
     </div>
   </div>
 </header>
 
-<!-- ── Tab bar ────────────────────────────────────────────── -->
-<nav class="tab-bar">
-  <div class="tab-bar-inner">
+<!-- TABS -->
+<nav class="tabbar">
+  <div class="tabbar-inner">
     <button class="tab-btn active" data-tab="home">🏠 Home</button>
     <button class="tab-btn" data-tab="news">📰 News</button>
     <button class="tab-btn" data-tab="schedule">📅 Schedule</button>
@@ -1014,106 +410,68 @@
   </div>
 </nav>
 
-<!-- ── Main content ───────────────────────────────────────── -->
+<!-- MAIN -->
 <main class="main">
 
   <!-- HOME -->
   <div class="tab-panel active" id="tab-home">
-    <div class="home-grid">
-      <!-- Left column -->
+    <div id="game-hero-wrap"></div>
+    <div class="home-cols">
       <div>
-        <div id="game-hero" class="game-hero">
-          <div class="game-hero-label" id="game-label">NEXT GAME</div>
-          <div class="game-matchup" id="game-matchup">
-            <div class="empty-state" style="padding:1rem 0; width:100%;">
-              <div class="icon">🏈</div>
-              <p>Schedule loading...</p>
-            </div>
-          </div>
-          <div class="season-strip" id="season-strip"></div>
-        </div>
+        <div class="sh"><h2>Latest News</h2><div class="sh-line"></div></div>
+        <div class="card" id="home-news"></div>
       </div>
-
-      <!-- Right column -->
       <div>
-        <div class="section-heading">
-          <div class="dot"></div>
-          <h2>Latest News</h2>
-        </div>
-        <div class="news-list" id="home-news-list"></div>
+        <div class="sh"><h2>Fan Talk</h2><div class="sh-line"></div></div>
+        <div class="card" id="home-reddit"></div>
       </div>
-    </div>
-
-    <!-- Reddit below -->
-    <div style="margin-top:1.5rem;">
-      <div class="section-heading">
-        <div class="dot"></div>
-        <h2>Fan Talk — Reddit</h2>
-      </div>
-      <div class="reddit-list" id="home-reddit-list" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:0.75rem;"></div>
     </div>
   </div>
 
   <!-- NEWS -->
   <div class="tab-panel" id="tab-news">
-    <div class="news-filters" id="news-filters">
-      <button class="filter-chip active" data-source="all">All Sources</button>
-    </div>
+    <div class="filter-bar" id="news-filters"></div>
     <div class="news-grid" id="news-grid"></div>
   </div>
 
   <!-- SCHEDULE -->
   <div class="tab-panel" id="tab-schedule">
-    <div class="schedule-table-wrap">
-      <table class="schedule-table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Opponent</th>
-            <th>H/A</th>
-            <th>TV</th>
-            <th>Result</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody id="schedule-body"></tbody>
-      </table>
-    </div>
+    <div class="sched-wrap" id="sched-wrap"></div>
   </div>
 
   <!-- STATS -->
   <div class="tab-panel" id="tab-stats">
-    <div class="section-heading"><div class="dot"></div><h2>Team Leaders</h2></div>
-    <div class="leaders-grid" id="leaders-grid" style="margin-bottom:2rem;"></div>
-    <div class="section-heading"><div class="dot"></div><h2>Team Statistics</h2></div>
+    <div class="sh"><h2>Statistical Leaders</h2><div class="sh-line"></div></div>
+    <div class="leaders-grid" id="leaders-grid"></div>
+    <div class="sh"><h2>Team Stats</h2><div class="sh-line"></div></div>
     <div class="stats-grid" id="stats-grid"></div>
   </div>
 
   <!-- RECRUITING -->
   <div class="tab-panel" id="tab-recruiting">
-    <div class="section-heading"><div class="dot"></div><h2>Recruiting News</h2></div>
-    <div class="recruiting-grid" id="recruiting-grid"></div>
+    <div class="sh"><h2>Recruiting News</h2><div class="sh-line"></div></div>
+    <div class="rec-grid" id="rec-grid"></div>
   </div>
 
   <!-- SOCIAL -->
   <div class="tab-panel" id="tab-social">
-    <div class="section-heading"><div class="dot"></div><h2>Reddit Community</h2></div>
-    <div class="social-grid" id="social-grid"></div>
+    <div class="sh"><h2>Reddit Community</h2><div class="sh-line"></div></div>
+    <div class="soc-grid" id="soc-grid"></div>
   </div>
 
   <!-- ROSTER -->
   <div class="tab-panel" id="tab-roster">
-    <div class="roster-filters" id="roster-filters">
-      <button class="filter-chip active" data-pos="all">All Positions</button>
-      <button class="filter-chip" data-pos="QB">QB</button>
-      <button class="filter-chip" data-pos="RB">RB</button>
-      <button class="filter-chip" data-pos="WR">WR</button>
-      <button class="filter-chip" data-pos="TE">TE</button>
-      <button class="filter-chip" data-pos="OL">OL</button>
-      <button class="filter-chip" data-pos="DL">DL</button>
-      <button class="filter-chip" data-pos="LB">LB</button>
-      <button class="filter-chip" data-pos="DB">DB</button>
-      <button class="filter-chip" data-pos="K">K/P</button>
+    <div class="filter-bar" id="pos-filters">
+      <button class="chip on" data-pos="all">All</button>
+      <button class="chip" data-pos="QB">QB</button>
+      <button class="chip" data-pos="RB">RB</button>
+      <button class="chip" data-pos="WR">WR</button>
+      <button class="chip" data-pos="TE">TE</button>
+      <button class="chip" data-pos="OL">OL</button>
+      <button class="chip" data-pos="DL">DL</button>
+      <button class="chip" data-pos="LB">LB</button>
+      <button class="chip" data-pos="DB">DB</button>
+      <button class="chip" data-pos="K">K/P</button>
     </div>
     <div class="roster-grid" id="roster-grid"></div>
   </div>
@@ -1121,16 +479,10 @@
 </main>
 
 <script>
-/* ──────────────────────────────────────────────────────────
-   App state
-────────────────────────────────────────────────────────── */
-let DATA = null;
-let activeNewsSource = 'all';
-let activeRosterPos = 'all';
+/* ── State ─────────────────────────────────────────────── */
+let DATA = null, newsFilter = 'all', rosterPos = 'all';
 
-/* ──────────────────────────────────────────────────────────
-   Tab switching
-────────────────────────────────────────────────────────── */
+/* ── Tabs ──────────────────────────────────────────────── */
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1140,501 +492,399 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   });
 });
 
-/* ──────────────────────────────────────────────────────────
-   Utility helpers
-────────────────────────────────────────────────────────── */
-function fmtDate(iso) {
+/* ── Roster position filters ───────────────────────────── */
+document.querySelectorAll('#pos-filters .chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    rosterPos = btn.dataset.pos;
+    document.querySelectorAll('#pos-filters .chip').forEach(b => b.classList.toggle('on', b === btn));
+    renderRoster();
+  });
+});
+
+/* ── Helpers ───────────────────────────────────────────── */
+const esc = s => { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; };
+const timeAgo = iso => {
   if (!iso) return '';
+  const s = (Date.now() - new Date(iso)) / 1000;
+  if (s < 60) return 'just now';
+  if (s < 3600) return Math.floor(s/60) + 'm ago';
+  if (s < 86400) return Math.floor(s/3600) + 'h ago';
+  return Math.floor(s/86400) + 'd ago';
+};
+const fmtShort = iso => {
+  if (!iso) return '';
+  try { return new Date(iso).toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric' }); }
+  catch { return ''; }
+};
+const fmtMD = iso => {
+  if (!iso) return ['',''];
   try {
     const d = new Date(iso);
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  } catch { return iso; }
-}
+    return [
+      d.toLocaleDateString('en-US', { weekday:'short' }).toUpperCase(),
+      d.toLocaleDateString('en-US', { month:'short', day:'numeric' }).toUpperCase()
+    ];
+  } catch { return ['','']; }
+};
 
-function fmtDateShort(iso) {
-  if (!iso) return '';
-  try {
-    const d = new Date(iso);
-    return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-  } catch { return iso; }
-}
-
-function timeAgo(iso) {
-  if (!iso) return '';
-  const diff = (Date.now() - new Date(iso)) / 1000;
-  if (diff < 60) return 'just now';
-  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
-  return Math.floor(diff / 86400) + 'd ago';
-}
-
-function esc(str) {
-  const d = document.createElement('div');
-  d.textContent = str || '';
-  return d.innerHTML;
-}
-
-function imgOrPlaceholder(src, cls, placeholder = '🌀') {
-  if (src) {
-    return `<img src="${esc(src)}" class="${cls}" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='flex';" />
-            <div class="${cls}-placeholder" style="display:none;">${placeholder}</div>`;
-  }
-  return `<div class="${cls}-placeholder">${placeholder}</div>`;
-}
-
-/* ──────────────────────────────────────────────────────────
-   Data loading
-────────────────────────────────────────────────────────── */
+/* ── Load ──────────────────────────────────────────────── */
 async function loadData(force = false) {
-  const overlay = document.getElementById('loading-overlay');
   const btn = document.getElementById('btn-refresh');
-  if (force) {
-    btn.classList.add('loading');
-    btn.querySelector('.icon-refresh').textContent = '↺';
-  } else {
-    overlay.style.display = 'flex';
-  }
-
+  const ov = document.getElementById('overlay');
+  force ? btn.classList.add('loading') : (ov.style.display = 'flex');
   try {
-    const url = `./hurricanes_data.json?t=${force ? Date.now() : ''}`;
-    const r = await fetch(url, { cache: force ? 'no-store' : 'default' });
+    const r = await fetch(`./hurricanes_data.json?t=${force ? Date.now() : ''}`, { cache: force ? 'no-store' : 'default' });
     DATA = await r.json();
-
-    // Check staleness
-    const staleBanner = document.getElementById('stale-banner');
-    if (DATA.last_updated) {
-      const ageHours = (Date.now() - new Date(DATA.last_updated)) / 3600000;
-      staleBanner.style.display = ageHours > 25 ? 'block' : 'none';
-    } else {
-      staleBanner.style.display = 'block';
-    }
-
+    const age = DATA.last_updated ? (Date.now() - new Date(DATA.last_updated)) / 3600000 : 99;
+    document.getElementById('stale').style.display = age > 25 ? 'block' : 'none';
     renderAll();
-  } catch (e) {
-    console.error('Load failed:', e);
-    document.getElementById('home-news-list').innerHTML =
-      '<div class="empty-state"><div class="icon">⚠️</div><h3>Could not load data</h3><p>Check that hurricanes_data.json exists and the page is served over HTTP/HTTPS.</p></div>';
+  } catch(e) {
+    document.getElementById('home-news').innerHTML = '<div class="empty"><div class="ei">⚠️</div><h3>Could not load data</h3><p>Serve this file over HTTP/HTTPS, then hit Refresh.</p></div>';
   } finally {
-    overlay.style.display = 'none';
+    ov.style.display = 'none';
     btn.classList.remove('loading');
   }
 }
 
-/* ──────────────────────────────────────────────────────────
-   Render everything
-────────────────────────────────────────────────────────── */
 function renderAll() {
   if (!DATA) return;
-  renderBanner();
-  renderGameHero();
-  renderHomeNews();
-  renderHomeReddit();
-  renderNewsTab();
-  renderSchedule();
-  renderStats();
-  renderLeaders();
-  renderRecruiting();
-  renderSocial();
-  renderRoster();
+  renderBanner(); renderGameHero(); renderHomeNews(); renderHomeReddit();
+  renderNews(); renderSchedule(); renderStats(); renderLeaders();
+  renderRecruiting(); renderSocial(); renderRoster();
 }
 
-/* ── Banner ─────────────────────────────────────────────── */
+/* ── Banner ────────────────────────────────────────────── */
 function renderBanner() {
-  const team = DATA.team || {};
-  const record = team.record || {};
-  const badge = document.getElementById('record-badge');
-  badge.textContent = record.summary || '— — —';
-  document.getElementById('updated-time').textContent =
-    DATA.last_updated ? 'Updated ' + timeAgo(DATA.last_updated) : 'Not yet updated';
+  const rec = DATA.team?.record?.summary || '–';
+  document.getElementById('record-num').textContent = rec;
+  document.getElementById('header-ts').innerHTML =
+    DATA.last_updated ? `Updated<br>${timeAgo(DATA.last_updated)}` : 'Not updated';
 }
 
-/* ── Game hero (next game or last result) ───────────────── */
+/* ── Game Hero ─────────────────────────────────────────── */
 function renderGameHero() {
   const schedule = DATA.schedule || [];
   const team = DATA.team || {};
-  const label = document.getElementById('game-label');
-  const matchup = document.getElementById('game-matchup');
-  const strip = document.getElementById('season-strip');
+  const wrap = document.getElementById('game-hero-wrap');
+
+  const live  = schedule.find(g => g.status === 'STATUS_IN_PROGRESS');
+  const next  = schedule.find(g => g.status === 'STATUS_SCHEDULED');
+  const last  = [...schedule].reverse().find(g => g.status === 'STATUS_FINAL');
+  const focus = live || next || last;
 
   // Season pip strip
-  const finished = schedule.filter(g => g.result === 'W' || g.result === 'L');
-  const upcoming = schedule.filter(g => g.status === 'STATUS_SCHEDULED' || (!g.result && g.status !== 'STATUS_FINAL'));
-  strip.innerHTML = schedule.map(g => {
-    const cls = g.result === 'W' ? 'pip-w' : g.result === 'L' ? 'pip-l' : 'pip-u';
-    const letter = g.result || '·';
-    return `<div class="season-pip ${cls}" title="${esc(g.opponent)}">${letter}</div>`;
+  const pips = schedule.map(g => {
+    const cls = g.result === 'W' ? 'w' : g.result === 'L' ? 'l' : 'u';
+    const lbl = g.result || '·';
+    return `<div class="pip ${cls}" title="${esc(g.opponent)}">${lbl}</div>`;
   }).join('');
 
-  // Find next game (upcoming) or most recent finished game
-  const live = schedule.find(g => g.status === 'STATUS_IN_PROGRESS');
-  const next = schedule.find(g => g.status === 'STATUS_SCHEDULED');
-  const last = [...schedule].reverse().find(g => g.status === 'STATUS_FINAL');
-
-  const focus = live || next || last;
   if (!focus) {
-    matchup.innerHTML = '<div class="empty-state" style="padding:1rem 0;width:100%;"><div class="icon">🏈</div><p>No schedule data yet.</p></div>';
+    wrap.innerHTML = `<div class="game-hero"><div class="empty"><div class="ei">🏈</div><h3>No schedule yet</h3></div></div>`;
     return;
   }
 
-  if (live) label.textContent = '🔴 LIVE';
-  else if (next) label.textContent = 'NEXT GAME';
-  else label.textContent = 'LAST RESULT';
+  const label = live ? `<div class="live-dot"></div> LIVE NOW`
+              : next ? 'NEXT GAME'
+              : 'LAST RESULT';
 
-  const miamiLogo = team.logo || '';
-  const oppLogo = focus.opponent_logo || '';
-  const rankTag = focus.miami_rank ? `<div class="game-team-rank">#${focus.miami_rank}</div>` : '';
-  const oppRankTag = focus.opponent_rank ? `<div class="game-team-rank">#${focus.opponent_rank}</div>` : '';
+  const mLogo = team.logo || '';
+  const oLogo = focus.opponent_logo || '';
 
-  let centerHTML = '';
+  const mRank = focus.miami_rank ? `<div class="team-rank">#${esc(''+focus.miami_rank)}</div>` : '';
+  const oRank = focus.opponent_rank ? `<div class="team-rank">#${esc(''+focus.opponent_rank)}</div>` : '';
+
+  const mLogoHTML = mLogo ? `<img src="${esc(mLogo)}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="logo-ph">🌀</div>`;
+  const oLogoHTML = oLogo ? `<img src="${esc(oLogo)}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="logo-ph">🏈</div>`;
+
+  let center = '';
   if (focus.status === 'STATUS_FINAL') {
-    const cls = focus.result === 'W' ? 'win' : 'loss';
-    centerHTML = `
-      <div class="game-score">${focus.miami_score}–${focus.opp_score}</div>
-      <div class="game-result-badge ${cls}">${focus.result === 'W' ? 'WIN' : 'LOSS'}</div>
-      <div class="game-date">${fmtDateShort(focus.date)}</div>`;
+    const cls = focus.result === 'W' ? 'rb-win' : 'rb-loss';
+    const lbl = focus.result === 'W' ? 'WIN' : 'LOSS';
+    center = `<div class="score-hero">${esc(focus.miami_score)}–${esc(focus.opp_score)}</div>
+              <div class="result-badge ${cls}">${lbl}</div>
+              <div class="game-date-h">${fmtShort(focus.date)}</div>`;
   } else if (focus.status === 'STATUS_IN_PROGRESS') {
-    centerHTML = `
-      <div class="game-score">${focus.miami_score || '0'}–${focus.opp_score || '0'}</div>
-      <div class="game-result-badge live">LIVE</div>`;
+    center = `<div class="score-hero">${focus.miami_score||0}–${focus.opp_score||0}</div>
+              <div class="result-badge rb-live">🔴 LIVE</div>`;
   } else {
-    centerHTML = `
-      <div class="game-date" style="font-size:1rem;font-weight:800;color:#fff;">${fmtDateShort(focus.date)}</div>
-      <div class="game-result-badge upcoming">UPCOMING</div>`;
+    const [dow, md] = fmtMD(focus.date);
+    center = `<div class="vs-hero">VS</div>
+              <div class="game-date-h">${dow} · ${md}</div>
+              <div class="result-badge rb-up">UPCOMING</div>`;
   }
 
-  const haTag = focus.home_away === 'away' ? 'at ' : focus.neutral_site ? '(Neutral) ' : 'vs ';
-  const venue = focus.venue ? `<div class="game-venue">${esc(haTag)}${esc(focus.venue)}${focus.city ? ', ' + esc(focus.city) : ''}</div>` : '';
-  const tv = focus.tv ? `<div class="game-tv">📺 ${esc(focus.tv)}</div>` : '';
-  const confBadge = focus.conference_game ? '<span class="conf-badge">ACC</span> ' : '';
-  const neutralBadge = focus.neutral_site ? '<span class="neutral-badge">Neutral</span> ' : '';
+  const conf = focus.conference_game ? '<span class="badge-conf">ACC</span>' : '';
+  const neut = focus.neutral_site ? '<span class="badge-neut">Neutral</span>' : '';
+  const ha   = focus.home_away === 'away' ? '@ ' : focus.neutral_site ? '' : 'vs ';
+  const venue = focus.venue ? `${ha}${focus.venue}${focus.city ? ', ' + focus.city : ''}` : '';
+  const tv = focus.tv ? ` · <span class="gh-tv">📺 ${esc(focus.tv)}</span>` : '';
 
-  matchup.innerHTML = `
-    <div class="game-team">
-      ${imgOrPlaceholder(miamiLogo, 'game-team-img', '🌀')}
-      ${rankTag}
-      <div class="game-team-name">Miami</div>
-    </div>
-    <div class="game-center">
-      ${centerHTML}
-      ${venue}${tv}
-      <div style="margin-top:0.4rem;">${confBadge}${neutralBadge}</div>
-    </div>
-    <div class="game-team">
-      ${imgOrPlaceholder(oppLogo, 'game-team-img', '🏈')}
-      ${oppRankTag}
-      <div class="game-team-name">${esc(focus.opponent_short || focus.opponent)}</div>
+  wrap.innerHTML = `
+    <div class="game-hero">
+      <div class="gh-label">${label}</div>
+      <div class="matchup-grid">
+        <div class="team-side">
+          <div class="team-logo-wrap">${mLogoHTML}</div>
+          ${mRank}
+          <div class="team-name-h">Miami</div>
+          <div class="team-rec-h">${esc(DATA.team?.record?.summary||'')}</div>
+        </div>
+        <div class="matchup-center">${center}</div>
+        <div class="team-side">
+          <div class="team-logo-wrap">${oLogoHTML}</div>
+          ${oRank}
+          <div class="team-name-h">${esc(focus.opponent_short||focus.opponent)}</div>
+          <div class="team-rec-h">&nbsp;</div>
+        </div>
+      </div>
+      ${venue ? `<div class="gh-venue">${esc(venue)}${tv} ${conf}${neut}</div>` : ''}
+      ${pips ? `<div class="season-strip">${pips}</div>` : ''}
     </div>`;
 }
 
-/* ── Home news list ─────────────────────────────────────── */
+/* ── Home News ─────────────────────────────────────────── */
 function renderHomeNews() {
-  const news = (DATA.news || []).slice(0, 8);
-  const container = document.getElementById('home-news-list');
-  if (!news.length) {
-    container.innerHTML = '<div class="empty-state"><div class="icon">📰</div><h3>No news yet</h3><p>Hit Refresh or wait for the daily auto-update.</p></div>';
-    return;
-  }
-  container.innerHTML = news.map(n => `
-    <a href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="card news-item">
-        ${n.image ? `<img class="news-item-img" src="${esc(n.image)}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="news-item-img-placeholder">📰</div>`}
-        <div class="news-item-body">
-          <div class="news-item-source">${esc(n.source)}</div>
-          <div class="news-item-title">${esc(n.title)}</div>
-          <div class="news-item-date">${timeAgo(n.published)}</div>
+  const news = (DATA.news||[]).slice(0,8);
+  const el = document.getElementById('home-news');
+  if (!news.length) { el.innerHTML = '<div class="empty"><div class="ei">📰</div><h3>No news yet</h3><p>Hit Refresh.</p></div>'; return; }
+  el.innerHTML = news.map(n => `
+    <a href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+      <div class="hn-item">
+        <div class="hn-thumb">${n.image ? `<img src="${esc(n.image)}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=hn-ph>📰</div>'" />` : '<div class="hn-ph">📰</div>'}</div>
+        <div class="hn-body">
+          <div class="hn-src">${esc(n.source)}</div>
+          <div class="hn-title">${esc(n.title)}</div>
+          <div class="hn-time">${timeAgo(n.published)}</div>
         </div>
       </div>
     </a>`).join('');
 }
 
-/* ── Home Reddit list ───────────────────────────────────── */
+/* ── Home Reddit ───────────────────────────────────────── */
 function renderHomeReddit() {
-  const posts = (DATA.social?.reddit || []).slice(0, 6);
-  const container = document.getElementById('home-reddit-list');
-  if (!posts.length) {
-    container.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">💬</div><h3>No social posts yet</h3></div>';
-    return;
-  }
-  container.innerHTML = posts.map(p => `
-    <a href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="card reddit-item">
-        <div class="reddit-item-header">
-          <span class="reddit-sub">${esc(p.subreddit)}</span>
-          ${p.flair ? `<span class="reddit-flair">${esc(p.flair)}</span>` : ''}
+  const posts = (DATA.social?.reddit||[]).slice(0,6);
+  const el = document.getElementById('home-reddit');
+  if (!posts.length) { el.innerHTML = '<div class="empty"><div class="ei">💬</div><h3>No posts yet</h3></div>'; return; }
+  el.innerHTML = posts.map(p => `
+    <a href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+      <div class="hr-item">
+        <div class="hr-top">
+          <span class="hr-sub">${esc(p.subreddit)}</span>
+          ${p.flair ? `<span class="hr-flair">${esc(p.flair)}</span>` : ''}
         </div>
-        <div class="reddit-title">${esc(p.title)}</div>
-        <div class="reddit-meta">
-          <span>⬆ ${p.score?.toLocaleString() || 0}</span>
-          <span>💬 ${p.comments?.toLocaleString() || 0}</span>
+        <div class="hr-title">${esc(p.title)}</div>
+        <div class="hr-meta">
+          <span>⬆ ${(p.score||0).toLocaleString()}</span>
+          <span>💬 ${(p.comments||0).toLocaleString()}</span>
           <span>${timeAgo(p.created)}</span>
         </div>
       </div>
     </a>`).join('');
 }
 
-/* ── News tab ───────────────────────────────────────────── */
-function renderNewsTab() {
+/* ── News Tab ──────────────────────────────────────────── */
+function renderNews() {
   const news = DATA.news || [];
   const sources = ['all', ...new Set(news.map(n => n.source))];
+  const fEl = document.getElementById('news-filters');
+  fEl.innerHTML = sources.map(s =>
+    `<button class="chip${s===newsFilter?' on':''}" data-source="${esc(s)}">${s==='all'?'All Sources':esc(s)}</button>`
+  ).join('');
+  fEl.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => { newsFilter = b.dataset.source; renderNews(); }));
 
-  // Build filter chips
-  const filtersEl = document.getElementById('news-filters');
-  filtersEl.innerHTML = sources.map(s => `
-    <button class="filter-chip${s === activeNewsSource ? ' active' : ''}" data-source="${esc(s)}">
-      ${s === 'all' ? 'All Sources' : esc(s)}
-    </button>`).join('');
-
-  filtersEl.querySelectorAll('.filter-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeNewsSource = btn.dataset.source;
-      renderNewsTab();
-    });
-  });
-
-  const filtered = activeNewsSource === 'all' ? news : news.filter(n => n.source === activeNewsSource);
+  const items = newsFilter === 'all' ? news : news.filter(n => n.source === newsFilter);
   const grid = document.getElementById('news-grid');
+  if (!items.length) { grid.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">📰</div><h3>No news yet</h3></div>'; return; }
 
-  if (!filtered.length) {
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">📰</div><h3>No news yet</h3><p>Run the scraper or wait for the daily update.</p></div>';
-    return;
-  }
-
-  grid.innerHTML = filtered.map(n => `
+  grid.innerHTML = items.map(n => `
     <a href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="card news-card">
-        ${n.image ? `<img class="news-card-img" src="${esc(n.image)}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="news-card-img-placeholder">🌀</div>`}
-        <div class="news-card-body">
-          <div class="news-card-source">${esc(n.source)}</div>
-          <div class="news-card-title">${esc(n.title)}</div>
-          ${n.summary ? `<div class="news-card-summary">${esc(n.summary)}</div>` : ''}
+      <div class="np">
+        ${n.image
+          ? `<div class="np-media"><img src="${esc(n.image)}" loading="lazy" onerror="this.parentNode.outerHTML='<div class=np-ph>THE U</div>'" /></div>`
+          : `<div class="np-ph">THE U</div>`}
+        <div class="np-body">
+          <div class="np-src">${esc(n.source)}</div>
+          <div class="np-title">${esc(n.title)}</div>
+          ${n.summary ? `<div class="np-summary">${esc(n.summary)}</div>` : ''}
         </div>
-        <div class="news-card-footer">
+        <div class="np-foot">
           <span>${timeAgo(n.published)}</span>
-          <span>Read →</span>
+          <span class="np-foot-read">READ →</span>
         </div>
       </div>
     </a>`).join('');
 }
 
-/* ── Schedule tab ───────────────────────────────────────── */
+/* ── Schedule ──────────────────────────────────────────── */
 function renderSchedule() {
   const schedule = DATA.schedule || [];
-  const tbody = document.getElementById('schedule-body');
+  const wrap = document.getElementById('sched-wrap');
+  if (!schedule.length) { wrap.innerHTML = '<div class="empty"><div class="ei">📅</div><h3>No schedule yet</h3></div>'; return; }
 
-  if (!schedule.length) {
-    tbody.innerHTML = '<tr><td colspan="6"><div class="empty-state"><div class="icon">📅</div><h3>No schedule yet</h3></div></td></tr>';
-    return;
-  }
+  wrap.innerHTML = schedule.map(g => {
+    const isFinal    = g.status === 'STATUS_FINAL';
+    const isLive     = g.status === 'STATUS_IN_PROGRESS';
+    const isUpcoming = !isFinal && !isLive;
+    const rowCls     = g.result==='W' ? 'win' : g.result==='L' ? 'loss' : isLive ? 'live-row' : '';
+    const [dow, md]  = fmtMD(g.date);
 
-  tbody.innerHTML = schedule.map(g => {
-    const isUpcoming = g.status === 'STATUS_SCHEDULED';
-    const isFinal = g.status === 'STATUS_FINAL';
-    const isLive = g.status === 'STATUS_IN_PROGRESS';
+    const logo = g.opponent_logo
+      ? `<img class="g-logo" src="${esc(g.opponent_logo)}" loading="lazy" onerror="this.outerHTML='<div class=g-logo-ph>🏈</div>'" />`
+      : `<div class="g-logo-ph">🏈</div>`;
 
-    let resultHTML = '';
-    if (isFinal) resultHTML = `<span class="result-cell ${g.result === 'W' ? 'result-w' : 'result-l'}">${g.result}</span>`;
-    else if (isLive) resultHTML = `<span class="result-live">LIVE</span>`;
-    else if (isUpcoming) resultHTML = `<span class="result-upcoming">${fmtDateShort(g.date)}</span>`;
+    const oRank = g.opponent_rank ? `#${g.opponent_rank} · ` : '';
+    const conf  = g.conference_game ? `<span class="badge-conf">ACC</span>` : '';
+    const neut  = g.neutral_site    ? `<span class="badge-neut">Neutral</span>` : '';
+    const ha    = g.home_away==='away' ? '@ Away' : g.neutral_site ? 'Neutral' : '🏠 Home';
 
-    const scoreHTML = isFinal
-      ? `<span class="score-cell">${g.miami_score}–${g.opp_score}</span>`
-      : isLive ? `<span class="score-cell result-live">${g.miami_score||0}–${g.opp_score||0}</span>`
-      : '';
+    let result = '';
+    if (isFinal) {
+      const rc = g.result === 'W' ? 'w' : 'l';
+      result = `<div class="rl ${rc}">${g.result}</div><span class="rscore">${g.miami_score}–${g.opp_score}</span>`;
+    } else if (isLive) {
+      result = `<div class="rl lv">LIVE</div><span class="rscore">${g.miami_score||0}–${g.opp_score||0}</span>`;
+    } else {
+      result = `<div class="rup">TBD</div>`;
+    }
 
-    const haLabel = g.home_away === 'away' ? `<span class="tag-home">@ Away</span>` :
-                    g.neutral_site ? `<span class="tag-home">Neutral</span>` :
-                    `<span class="tag-home">🏠 Home</span>`;
-
-    const confBadge = g.conference_game ? `<span class="conf-badge">ACC</span>` : '';
-    const oppRank = g.opponent_rank ? `<span class="opp-rank-tag">#${g.opponent_rank}</span>` : '';
-
-    return `<tr class="${isLive ? 'current-game' : ''}">
-      <td>${isFinal || isLive ? fmtDateShort(g.date) : ''}</td>
-      <td>
-        <div class="opp-cell">
-          ${g.opponent_logo
-            ? `<img class="opp-logo-sm" src="${esc(g.opponent_logo)}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=opp-logo-placeholder>🏈</div>'${g.opponent_short||g.opponent}" />`
-            : '<div class="opp-logo-placeholder">🏈</div>'}
-          <div>
-            <div class="opp-name">${oppRank} ${esc(g.opponent)}</div>
-            <div>${confBadge}</div>
-          </div>
+    return `
+      <div class="game-row ${rowCls}">
+        <div class="g-date-col">
+          <div class="g-dow">${dow}</div>
+          <div class="g-md">${md}</div>
         </div>
-      </td>
-      <td>${haLabel}</td>
-      <td style="color:var(--text2);font-size:0.8rem;">${esc(g.tv)}</td>
-      <td>${resultHTML}</td>
-      <td>${scoreHTML}</td>
-    </tr>`;
+        <div class="g-opp">
+          ${logo}
+          <div class="g-opp-name">${oRank ? `<span style="color:var(--orange);font-size:.75rem;">#${g.opponent_rank}</span> ` : ''}${esc(g.opponent)}</div>
+          <div class="g-opp-sub">${conf}${neut}</div>
+        </div>
+        <div class="g-ha">${ha}</div>
+        <div class="g-tv">${esc(g.tv||'')}</div>
+        <div class="g-result">${result}</div>
+      </div>`;
   }).join('');
 }
 
-/* ── Stats tab ──────────────────────────────────────────── */
+/* ── Stats ─────────────────────────────────────────────── */
 function renderStats() {
   const stats = DATA.stats || {};
-  const grid = document.getElementById('stats-grid');
-
-  // Flatten interesting stats for display
-  const highlights = [
-    { label: 'Scoring Offense', cat: 'scoring', key: 'points', suffix: ' PPG' },
-    { label: 'Total Offense', cat: 'general', key: 'totalYardsPerGame', suffix: ' YPG' },
-    { label: 'Passing Offense', cat: 'passing', key: 'netPassingYardsPerGame', suffix: ' YPG' },
-    { label: 'Rushing Offense', cat: 'rushing', key: 'rushingYardsPerGame', suffix: ' YPG' },
-    { label: 'Scoring Defense', cat: 'defensive', key: 'pointsAllowedPerGame', suffix: ' PPG' },
-    { label: 'Total Defense', cat: 'defensive', key: 'totalYardsAllowedPerGame', suffix: ' YPG' },
-    { label: '3rd Down %', cat: 'situational', key: 'thirdDownConversionPct', suffix: '%' },
-    { label: 'Turnovers', cat: 'turnovers', key: 'totalTurnovers', suffix: '' },
+  const grid  = document.getElementById('stats-grid');
+  const want = [
+    { lbl:'Scoring Offense', cat:'scoring',   key:'points',                  unit:'PTS/GM' },
+    { lbl:'Total Offense',   cat:'general',   key:'totalYardsPerGame',        unit:'YDS/GM' },
+    { lbl:'Passing',         cat:'passing',   key:'netPassingYardsPerGame',   unit:'YDS/GM' },
+    { lbl:'Rushing',         cat:'rushing',   key:'rushingYardsPerGame',      unit:'YDS/GM' },
+    { lbl:'Pts Allowed',     cat:'defensive', key:'pointsAllowedPerGame',     unit:'PTS/GM' },
+    { lbl:'Yds Allowed',     cat:'defensive', key:'totalYardsAllowedPerGame', unit:'YDS/GM' },
+    { lbl:'3rd Down %',      cat:'situational',key:'thirdDownConversionPct',  unit:'%' },
+    { lbl:'Turnovers',       cat:'turnovers', key:'totalTurnovers',           unit:'TO' },
   ];
-
-  const cards = highlights.map(h => {
-    const catData = stats[h.cat] || {};
-    const stat = catData[h.key];
-    if (!stat) return null;
-    const rankBadge = stat.rank ? `<div class="stat-rank">National Rank: #${stat.rank}</div>` : '';
-    return `
-      <div class="card stat-card">
-        <div class="stat-card-label">${esc(h.label)}</div>
-        <div class="stat-card-value">${esc(stat.display)}${esc(h.suffix)}</div>
-        ${rankBadge}
-      </div>`;
+  const cards = want.map(w => {
+    const s = (stats[w.cat]||{})[w.key];
+    if (!s?.display) return null;
+    const rank = s.rank ? `<div class="stat-rank">#${s.rank} nationally</div>` : '';
+    return `<div class="card stat-card"><div class="stat-cat">${esc(w.lbl)}</div><div class="stat-num">${esc(s.display)}</div><div class="stat-unit">${esc(w.unit)}</div>${rank}</div>`;
   }).filter(Boolean);
-
-  if (!cards.length) {
-    // If ESPN didn't return stats, show a placeholder
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">📊</div><h3>Stats will appear after the season starts</h3><p>The ESPN API returns game statistics once games have been played.</p></div>';
-    return;
-  }
-
-  grid.innerHTML = cards.join('');
+  grid.innerHTML = cards.length
+    ? cards.join('')
+    : '<div class="empty" style="grid-column:1/-1"><div class="ei">📊</div><h3>Stats load once the season starts</h3></div>';
 }
 
-/* ── Leaders tab ────────────────────────────────────────── */
+/* ── Leaders ───────────────────────────────────────────── */
 function renderLeaders() {
   const leaders = DATA.leaders || [];
   const grid = document.getElementById('leaders-grid');
-
-  if (!leaders.length) {
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">🏆</div><h3>Leaders load once the season begins</h3></div>';
-    return;
-  }
-
+  if (!leaders.length) { grid.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">🏆</div><h3>Leaders appear once the season begins</h3></div>'; return; }
   grid.innerHTML = leaders.map(l => `
     <div class="card leader-card">
       ${l.headshot
-        ? `<img class="leader-photo" src="${esc(l.headshot)}" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='flex';" />
-           <div class="leader-photo-placeholder" style="display:none;">🏈</div>`
-        : `<div class="leader-photo-placeholder">🏈</div>`}
-      <div class="leader-info">
-        <div class="leader-cat">${esc(l.category)}</div>
-        <div class="leader-name">${esc(l.name)}</div>
-        <div class="leader-value">${esc(l.value)}</div>
-        <div class="leader-pos">${esc(l.position)}${l.jersey ? ' · #' + esc(l.jersey) : ''}</div>
+        ? `<img class="l-photo" src="${esc(l.headshot)}" loading="lazy" onerror="this.outerHTML='<div class=l-photo-ph>🏈</div>'" />`
+        : `<div class="l-photo-ph">🏈</div>`}
+      <div>
+        <div class="l-cat">${esc(l.category)}</div>
+        <div class="l-name">${esc(l.name)}</div>
+        <div class="l-val">${esc(l.value)}</div>
+        <div class="l-pos">${esc(l.position)}${l.jersey?' · #'+esc(l.jersey):''}</div>
       </div>
     </div>`).join('');
 }
 
-/* ── Recruiting tab ─────────────────────────────────────── */
+/* ── Recruiting ────────────────────────────────────────── */
 function renderRecruiting() {
   const items = DATA.recruiting || [];
-  const grid = document.getElementById('recruiting-grid');
-
-  if (!items.length) {
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">🎓</div><h3>No recruiting news yet</h3><p>Check back after the daily refresh.</p></div>';
-    return;
-  }
-
+  const grid = document.getElementById('rec-grid');
+  if (!items.length) { grid.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">🎓</div><h3>No recruiting news yet</h3></div>'; return; }
   grid.innerHTML = items.map(r => `
     <a href="${esc(r.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="card recruit-card">
-        <div class="recruit-source">${esc(r.source)}</div>
-        <div class="recruit-title">${esc(r.title)}</div>
-        ${r.summary ? `<div class="recruit-summary">${esc(r.summary)}</div>` : ''}
-        <div class="recruit-date">${timeAgo(r.published)}</div>
+      <div class="card rec-card">
+        <div class="rec-src">${esc(r.source)}</div>
+        <div class="rec-title">${esc(r.title)}</div>
+        ${r.summary?`<div class="rec-summary">${esc(r.summary)}</div>`:''}
+        <div class="rec-time">${timeAgo(r.published)}</div>
       </div>
     </a>`).join('');
 }
 
-/* ── Social tab ─────────────────────────────────────────── */
+/* ── Social ────────────────────────────────────────────── */
 function renderSocial() {
   const posts = DATA.social?.reddit || [];
-  const grid = document.getElementById('social-grid');
-
-  if (!posts.length) {
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">💬</div><h3>No Reddit posts yet</h3></div>';
-    return;
-  }
-
-  grid.innerHTML = posts.map(p => `
-    <a href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="card social-card">
-        <div class="social-card-header">
-          <span class="social-sub-badge">${esc(p.subreddit)}</span>
-          ${p.flair ? `<span class="social-flair">${esc(p.flair)}</span>` : ''}
+  const grid = document.getElementById('soc-grid');
+  if (!posts.length) { grid.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">💬</div><h3>No posts yet</h3></div>'; return; }
+  const maxScore = Math.max(...posts.map(p => p.score||0), 1);
+  grid.innerHTML = posts.map(p => {
+    const isCanes = p.subreddit === 'r/MiamiHurricanes';
+    const pct = Math.max(4, Math.round(((p.score||0)/maxScore)*100));
+    return `
+      <a href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
+        <div class="card soc-card ${isCanes?'canes':'cfb'}">
+          <div class="soc-top">
+            <span class="soc-sub">${esc(p.subreddit)}</span>
+            ${p.flair?`<span class="soc-flair">${esc(p.flair)}</span>`:''}
+          </div>
+          <div class="soc-title">${esc(p.title)}</div>
+          ${p.text?`<div class="soc-text">${esc(p.text)}</div>`:''}
+          <div class="score-bar"><div class="score-bar-fill" style="width:${pct}%"></div></div>
+          <div class="soc-foot">
+            <span>⬆ ${(p.score||0).toLocaleString()}</span>
+            <span>💬 ${(p.comments||0).toLocaleString()}</span>
+            <span>👤 ${esc(p.author)}</span>
+            <span>${timeAgo(p.created)}</span>
+          </div>
         </div>
-        <div class="social-title">${esc(p.title)}</div>
-        ${p.text ? `<div class="social-text">${esc(p.text)}</div>` : ''}
-        <div class="social-footer">
-          <span>⬆ ${(p.score||0).toLocaleString()}</span>
-          <span>💬 ${(p.comments||0).toLocaleString()}</span>
-          <span>👤 ${esc(p.author)}</span>
-          <span>${timeAgo(p.created)}</span>
-        </div>
-      </div>
-    </a>`).join('');
+      </a>`;
+  }).join('');
 }
 
-/* ── Roster tab ─────────────────────────────────────────── */
+/* ── Roster ────────────────────────────────────────────── */
 function renderRoster() {
-  const roster = DATA.roster || [];
-
-  // Position filter chips
-  const filtersEl = document.getElementById('roster-filters');
-  filtersEl.querySelectorAll('.filter-chip').forEach(btn => {
-    const isActive = btn.dataset.pos === activeRosterPos;
-    btn.classList.toggle('active', isActive);
-    btn.addEventListener('click', () => {
-      activeRosterPos = btn.dataset.pos;
-      renderRoster();
-    });
+  const OL = ['OT','OG','OL','C'], DL = ['DT','DE','DL','NT'], DB = ['CB','S','DB','FS','SS'], KP = ['K','P','LS'];
+  const roster = (DATA.roster||[]).filter(p => {
+    if (rosterPos === 'all') return true;
+    if (rosterPos === 'OL') return OL.includes(p.position);
+    if (rosterPos === 'DL') return DL.includes(p.position);
+    if (rosterPos === 'DB') return DB.includes(p.position);
+    if (rosterPos === 'K')  return KP.includes(p.position);
+    return p.position === rosterPos;
   });
-
-  const OL_POS = ['OT', 'OG', 'OL', 'C'];
-  const DL_POS = ['DT', 'DE', 'DL', 'NT'];
-  const DB_POS = ['CB', 'S', 'DB', 'FS', 'SS'];
-  const KP_POS = ['K', 'P', 'LS'];
-
-  const filtered = activeRosterPos === 'all' ? roster : roster.filter(p => {
-    if (activeRosterPos === 'OL') return OL_POS.includes(p.position);
-    if (activeRosterPos === 'DL') return DL_POS.includes(p.position);
-    if (activeRosterPos === 'DB') return DB_POS.includes(p.position);
-    if (activeRosterPos === 'K') return KP_POS.includes(p.position);
-    return p.position === activeRosterPos;
-  });
-
   const grid = document.getElementById('roster-grid');
-
-  if (!filtered.length) {
-    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">👥</div><h3>No roster data yet</h3></div>';
-    return;
-  }
-
-  grid.innerHTML = filtered.map(p => `
+  if (!roster.length) { grid.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">👥</div><h3>No roster data yet</h3></div>'; return; }
+  grid.innerHTML = roster.map(p => `
     <div class="card roster-card">
-      ${p.image
-        ? `<img class="roster-photo" src="${esc(p.image)}" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='flex';" />
-           <div class="roster-photo-placeholder" style="display:none;">👤</div>`
-        : `<div class="roster-photo-placeholder">👤</div>`}
-      <div class="roster-jersey">#${esc(p.jersey)||'–'}</div>
-      <div class="roster-name">${esc(p.name)}</div>
-      <div class="roster-pos">${esc(p.position_name||p.position)}</div>
-      <div class="roster-year">${esc(p.year)}</div>
-      ${p.height||p.weight ? `<div class="roster-ht-wt">${esc(p.height)}${p.weight?' · '+esc(p.weight):''}</div>` : ''}
+      <div class="r-photo-wrap">
+        ${p.image
+          ? `<img src="${esc(p.image)}" loading="lazy" onerror="this.outerHTML='<div class=r-ph>👤</div>'" />`
+          : `<div class="r-ph">👤</div>`}
+        ${p.jersey?`<div class="r-jersey">#${esc(p.jersey)}</div>`:''}
+      </div>
+      <div class="r-name">${esc(p.name)}</div>
+      <div class="r-pos">${esc(p.position_name||p.position)}</div>
+      <div class="r-yr">${esc(p.year)}</div>
+      ${p.height||p.weight?`<div class="r-ht">${esc(p.height)}${p.weight?' · '+esc(p.weight):''}</div>`:''}
     </div>`).join('');
 }
 
-/* ──────────────────────────────────────────────────────────
-   Boot
-────────────────────────────────────────────────────────── */
+/* ── Boot ──────────────────────────────────────────────── */
 loadData();
 </script>
 </body>
