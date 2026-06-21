@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mountain Home Finder | Under $200k Near White Plains NY</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     :root {
       --forest:    #1e3a2f;
@@ -19,6 +20,8 @@
       --water:     #3a7ea8;
       --sky:       #5fa8d3;
       --price-red: #b5341a;
+      --new-green: #22c55e;
+      --drop-blue: #1d6fa4;
       --card-bg:   #ffffff;
       --shadow:    rgba(30,58,47,0.15);
     }
@@ -36,74 +39,34 @@
     header {
       background: linear-gradient(160deg, #0d2118 0%, var(--forest) 50%, #1a3830 100%);
       border-bottom: 3px solid var(--moss);
-      padding: 28px 24px 22px;
+      padding: 22px 24px 18px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 200;
       box-shadow: 0 4px 24px rgba(0,0,0,0.5);
     }
-
     .header-inner {
       max-width: 1300px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
-
-    .header-title {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .header-title h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #e8f2ec;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-    }
-
-    .header-title h1 span.icon { font-size: 1.4rem; margin-right: 6px; }
-
-    .header-title p {
-      font-size: 0.85rem;
-      color: var(--sage);
-      margin-top: 4px;
-    }
-
-    .header-controls {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    #last-updated {
-      font-size: 0.78rem;
-      color: var(--sage);
-      opacity: 0.8;
-    }
+    .header-title { flex: 1; min-width: 250px; }
+    .header-title h1 { font-size: 1.6rem; font-weight: 700; color: #e8f2ec; letter-spacing: -0.3px; line-height: 1.2; }
+    .header-title p  { font-size: 0.82rem; color: var(--sage); margin-top: 3px; }
+    .header-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    #last-updated { font-size: 0.76rem; color: var(--sage); opacity: 0.8; }
 
     .btn-refresh {
-      background: var(--canopy);
-      color: #e8f2ec;
-      border: 1.5px solid var(--moss);
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s;
-      white-space: nowrap;
+      background: var(--canopy); color: #e8f2ec; border: 1.5px solid var(--moss);
+      padding: 9px 18px; border-radius: 8px; font-size: 0.88rem; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; gap: 7px;
+      transition: all 0.2s; white-space: nowrap;
     }
-    .btn-refresh:hover { background: var(--moss); border-color: var(--sage); }
+    .btn-refresh:hover { background: var(--moss); }
     .btn-refresh:disabled { opacity: 0.5; cursor: not-allowed; }
-
     .spin { display: inline-block; animation: spin 0.9s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -111,667 +74,685 @@
     .filter-bar {
       background: var(--canopy);
       border-bottom: 2px solid var(--moss);
-      padding: 12px 24px;
+      padding: 10px 24px;
       position: sticky;
-      top: 100px;
-      z-index: 90;
+      top: 88px;
+      z-index: 190;
     }
-
     .filter-inner {
-      max-width: 1300px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      max-width: 1300px; margin: 0 auto;
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
     }
+    .filter-inner label { font-size: 0.8rem; color: var(--sage); font-weight: 600; white-space: nowrap; }
 
-    .filter-inner label { font-size: 0.82rem; color: var(--sage); font-weight: 600; white-space: nowrap; }
+    .filter-chips { display: flex; gap: 7px; flex-wrap: wrap; }
+    .chip {
+      background: transparent; color: var(--sage);
+      border: 1.5px solid var(--moss); border-radius: 20px;
+      padding: 5px 13px; font-size: 0.79rem; cursor: pointer;
+      transition: all 0.15s; white-space: nowrap;
+    }
+    .chip.active { background: var(--moss); color: #fff; border-color: var(--sage); }
+    .chip:hover  { background: rgba(74,124,95,0.3); }
+    .chip.fav-chip { border-color: var(--gold); color: var(--amber); }
+    .chip.fav-chip.active { background: var(--gold); color: #fff; border-color: var(--amber); }
 
-    select, .sort-select {
-      background: var(--forest);
-      color: #d8ead0;
-      border: 1px solid var(--moss);
-      border-radius: 6px;
-      padding: 7px 12px;
-      font-size: 0.84rem;
-      cursor: pointer;
-      outline: none;
+    select {
+      background: var(--forest); color: #d8ead0;
+      border: 1px solid var(--moss); border-radius: 6px;
+      padding: 6px 10px; font-size: 0.82rem; cursor: pointer; outline: none;
     }
     select:focus { border-color: var(--sage); }
 
-    .filter-chips {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
+    .view-toggle { display: flex; gap: 0; border: 1.5px solid var(--moss); border-radius: 8px; overflow: hidden; }
+    .view-btn {
+      background: transparent; color: var(--sage); border: none;
+      padding: 7px 14px; font-size: 0.82rem; font-weight: 600; cursor: pointer;
+      transition: all 0.15s; white-space: nowrap;
     }
+    .view-btn.active  { background: var(--moss); color: #fff; }
+    .view-btn:hover:not(.active) { background: rgba(74,124,95,0.3); }
 
-    .chip {
-      background: transparent;
-      color: var(--sage);
-      border: 1.5px solid var(--moss);
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: all 0.15s;
-      white-space: nowrap;
-    }
-    .chip.active { background: var(--moss); color: #fff; border-color: var(--sage); }
-    .chip:hover { background: rgba(74,124,95,0.3); }
-
-    .stats-badge {
-      margin-left: auto;
-      font-size: 0.82rem;
-      color: var(--sage);
-      white-space: nowrap;
-    }
+    .stats-badge { margin-left: auto; font-size: 0.8rem; color: var(--sage); white-space: nowrap; }
     .stats-badge strong { color: #e8f2ec; }
 
-    /* ─── MAIN GRID ─── */
-    .main {
-      max-width: 1300px;
-      margin: 28px auto;
-      padding: 0 20px 60px;
-    }
+    /* ─── MAIN ─── */
+    .main { max-width: 1300px; margin: 24px auto; padding: 0 20px 60px; }
 
     .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin: 0 0 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--amber); margin: 0 0 12px;
+      display: flex; align-items: center; gap: 8px;
     }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: rgba(200,130,26,0.3);
+    .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(200,130,26,0.3); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(315px, 1fr)); gap: 20px; }
+
+    /* ─── MAP ─── */
+    #map-container { display: none; }
+    #map {
+      height: 620px; border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      border: 2px solid var(--moss);
+    }
+    .map-note {
+      font-size: 0.78rem; color: var(--sage); margin-top: 8px;
+      text-align: right; opacity: 0.7;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 22px;
-    }
-
-    /* ─── PROPERTY CARD ─── */
+    /* ─── CARD ─── */
     .card {
-      background: var(--card-bg);
-      border-radius: 14px;
-      overflow: hidden;
+      background: var(--card-bg); border-radius: 14px; overflow: hidden;
       box-shadow: 0 4px 20px var(--shadow);
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
       position: relative;
     }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(30,58,47,0.25);
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(30,58,47,0.25); }
+
+    /* ribbons */
+    .aframe-ribbon {
+      position: absolute; top: 12px; left: -2px;
+      background: linear-gradient(90deg, var(--gold), var(--amber));
+      color: #fff; font-size: 0.7rem; font-weight: 800;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 12px 4px 10px; border-radius: 0 16px 16px 0;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3); z-index: 10;
+    }
+    .new-ribbon {
+      position: absolute; top: 12px; right: 44px;
+      background: var(--new-green);
+      color: #fff; font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 9px; border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 10;
     }
 
-    /* A-frame ribbon */
-    .aframe-ribbon {
-      position: absolute;
-      top: 14px;
-      left: -2px;
-      background: linear-gradient(90deg, var(--gold), var(--amber));
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 5px 14px 5px 12px;
-      border-radius: 0 20px 20px 0;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      gap: 5px;
+    /* heart */
+    .heart-btn {
+      position: absolute; top: 10px; right: 10px;
+      background: rgba(255,255,255,0.9); border: none;
+      width: 32px; height: 32px; border-radius: 50%;
+      font-size: 1.1rem; cursor: pointer; z-index: 10;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      color: #bbb; transition: all 0.15s;
+      line-height: 1;
     }
+    .heart-btn:hover { transform: scale(1.15); }
+    .heart-btn.active { color: #e53e3e; background: #fff; }
 
     .card-photo {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
+      width: 100%; height: 195px; object-fit: cover; display: block;
       background: var(--parchment);
     }
-
     .card-photo-placeholder {
-      width: 100%;
-      height: 200px;
+      width: 100%; height: 195px;
       background: linear-gradient(135deg, #d4e8d8 0%, #c0d9c8 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
+      display: flex; align-items: center; justify-content: center; font-size: 2.8rem;
     }
 
-    .card-body {
-      padding: 18px 20px 16px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    .card-body { padding: 16px 18px 14px; flex: 1; display: flex; flex-direction: column; gap: 0; }
+
+    .price-drop-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #dbeafe; color: var(--drop-blue);
+      font-size: 0.72rem; font-weight: 700;
+      padding: 3px 8px; border-radius: 8px;
+      margin-bottom: 4px; width: fit-content;
     }
 
-    .card-price {
-      font-size: 1.65rem;
-      font-weight: 800;
-      color: var(--price-red);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
+    .card-price { font-size: 1.6rem; font-weight: 800; color: var(--price-red); line-height: 1; margin-bottom: 5px; }
 
     .card-stats {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.88rem;
-      color: #444;
-      font-weight: 600;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.86rem; color: #444; font-weight: 600;
+      margin-bottom: 7px; flex-wrap: wrap;
     }
-    .card-stats span { display: flex; align-items: center; gap: 3px; }
 
-    .card-address {
-      font-size: 0.84rem;
-      color: #555;
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
+    .card-address { font-size: 0.82rem; color: #555; margin-bottom: 4px; line-height: 1.4; }
     .card-address strong { color: #333; }
 
-    .card-area {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.82rem;
-      color: var(--canopy);
-      font-weight: 700;
-      margin-bottom: 4px;
+    .directions-link {
+      font-size: 0.76rem; color: var(--water); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 3px;
+      margin-bottom: 10px; font-weight: 600;
     }
+    .directions-link:hover { color: var(--sky); text-decoration: underline; }
 
-    .card-drive {
-      font-size: 0.78rem;
-      color: var(--stone);
-      margin-bottom: 12px;
-    }
+    .card-area { display: flex; align-items: center; gap: 5px; font-size: 0.8rem; color: var(--canopy); font-weight: 700; margin-bottom: 3px; }
+    .card-drive { font-size: 0.76rem; color: var(--stone); margin-bottom: 10px; }
+    .card-desc { font-size: 0.8rem; color: #555; line-height: 1.55; margin-bottom: 10px; flex: 1; }
 
-    .card-desc {
-      font-size: 0.82rem;
-      color: #555;
-      line-height: 1.55;
-      margin-bottom: 12px;
-      flex: 1;
-    }
-
-    .card-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 14px;
-    }
-
-    .feature-tag {
-      font-size: 0.73rem;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 12px;
-      white-space: nowrap;
-    }
-
+    .card-features { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .feature-tag { font-size: 0.71rem; font-weight: 600; padding: 3px 8px; border-radius: 10px; white-space: nowrap; }
     .tag-mountain { background: #d9ede1; color: #2a6b45; }
     .tag-lake     { background: #d0e8f2; color: #1e5c7a; }
     .tag-river    { background: #d4eee8; color: #1e6858; }
     .tag-aframe   { background: #fdefd5; color: #9a5c00; }
     .tag-default  { background: #eeeae4; color: #5a5248; }
 
-    .card-meta {
-      display: flex;
-      gap: 16px;
-      font-size: 0.78rem;
-      color: var(--stone);
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-    .card-meta span { display: flex; align-items: center; gap: 4px; }
+    .card-meta { display: flex; gap: 14px; font-size: 0.76rem; color: var(--stone); margin-bottom: 12px; flex-wrap: wrap; }
 
     .card-footer {
-      border-top: 1px solid #eee;
-      padding-top: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      border-top: 1px solid #eee; padding-top: 11px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
     }
-
-    .source-badge {
-      font-size: 0.72rem;
-      color: var(--stone);
-      font-weight: 600;
-    }
-
+    .source-badge { font-size: 0.7rem; color: var(--stone); font-weight: 600; }
     .btn-view {
-      background: var(--canopy);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 7px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: background 0.15s;
-      white-space: nowrap;
+      background: var(--canopy); color: #fff; padding: 7px 14px; border-radius: 7px;
+      font-size: 0.8rem; font-weight: 700; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 4px;
+      transition: background 0.15s; white-space: nowrap;
     }
     .btn-view:hover { background: var(--moss); }
 
-    /* ─── EMPTY / ERROR STATES ─── */
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--sage);
-    }
-    .empty-state .icon { font-size: 4rem; display: block; margin-bottom: 16px; }
-    .empty-state h2 { font-size: 1.3rem; color: #d8ead0; margin-bottom: 8px; }
-    .empty-state p { font-size: 0.9rem; opacity: 0.7; }
+    /* ─── EMPTY / STATES ─── */
+    .empty-state { text-align: center; padding: 60px 20px; color: var(--sage); }
+    .empty-state .icon { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+    .empty-state h2 { font-size: 1.2rem; color: #d8ead0; margin-bottom: 6px; }
+    .empty-state p  { font-size: 0.88rem; opacity: 0.7; }
 
     .loading-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(13,33,24,0.7);
-      z-index: 999;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 16px;
-      color: #e8f2ec;
+      display: none; position: fixed; inset: 0;
+      background: rgba(13,33,24,0.75); z-index: 999;
+      align-items: center; justify-content: center; flex-direction: column; gap: 14px; color: #e8f2ec;
     }
     .loading-overlay.visible { display: flex; }
     .loading-ring {
-      width: 52px;
-      height: 52px;
-      border: 4px solid rgba(74,124,95,0.3);
-      border-top-color: var(--sage);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      width: 50px; height: 50px;
+      border: 4px solid rgba(74,124,95,0.3); border-top-color: var(--sage);
+      border-radius: 50%; animation: spin 0.8s linear infinite;
     }
-    .loading-overlay p { font-size: 1rem; color: var(--sage); }
+    .loading-overlay p { font-size: 0.95rem; color: var(--sage); }
 
     .error-banner {
-      background: #5c1a10;
-      color: #f9c8bc;
-      border: 1px solid #a03020;
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-size: 0.85rem;
-      margin-bottom: 20px;
-      display: none;
+      background: #5c1a10; color: #f9c8bc; border: 1px solid #a03020;
+      border-radius: 8px; padding: 12px 16px; font-size: 0.83rem;
+      margin-bottom: 18px; display: none;
     }
     .error-banner.visible { display: block; }
 
     .data-notice {
-      background: rgba(74,124,95,0.15);
-      border: 1px solid var(--moss);
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-size: 0.82rem;
-      color: var(--sage);
-      margin-bottom: 20px;
-      display: none;
+      background: rgba(74,124,95,0.15); border: 1px solid var(--moss);
+      border-radius: 8px; padding: 11px 15px; font-size: 0.8rem;
+      color: var(--sage); margin-bottom: 18px; display: none;
     }
     .data-notice.visible { display: block; }
     .data-notice a { color: var(--amber); }
 
-    /* ─── SCROLLTOP ─── */
     #scrolltop {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--canopy);
-      color: #e8f2ec;
-      border: 1.5px solid var(--moss);
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: background 0.15s;
-      z-index: 200;
+      position: fixed; bottom: 22px; right: 22px;
+      background: var(--canopy); color: #e8f2ec;
+      border: 1.5px solid var(--moss); width: 40px; height: 40px;
+      border-radius: 50%; font-size: 1rem; cursor: pointer;
+      display: none; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: background 0.15s; z-index: 200;
     }
     #scrolltop:hover { background: var(--moss); }
     #scrolltop.visible { display: flex; }
 
     @media (max-width: 680px) {
-      .header-title h1 { font-size: 1.3rem; }
-      .filter-bar { top: 80px; }
+      .header-title h1 { font-size: 1.25rem; }
+      .filter-bar { top: 78px; }
       .grid { grid-template-columns: 1fr; }
+      #map { height: 460px; }
     }
   </style>
 </head>
 <body>
 
-<!-- LOADING OVERLAY -->
 <div class="loading-overlay" id="loading">
   <div class="loading-ring"></div>
   <p>Fetching latest listings&hellip;</p>
 </div>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="header-title">
-      <h1><span class="icon">&#9968;</span> Mountain Home Finder</h1>
-      <p>Homes under $200,000 &bull; Within 3 hrs of White Plains, NY &bull; Outdoors &amp; A-frames first</p>
+      <h1>&#9968; Mountain Home Finder</h1>
+      <p>Homes under $200,000 &bull; Within 3 hrs of White Plains, NY &bull; A-frames &amp; outdoors first</p>
     </div>
     <div class="header-controls">
       <span id="last-updated">Last updated: &mdash;</span>
       <button class="btn-refresh" id="refresh-btn" onclick="loadListings()">
-        <span id="refresh-icon">&#8635;</span> Refresh Listings
+        <span id="refresh-icon">&#8635;</span> Refresh
       </button>
     </div>
   </div>
 </header>
 
-<!-- FILTER BAR -->
 <div class="filter-bar">
   <div class="filter-inner">
     <label>Filter:</label>
     <div class="filter-chips">
-      <button class="chip active" data-filter="all" onclick="setFilter('all', this)">All Homes</button>
-      <button class="chip" data-filter="aframe" onclick="setFilter('aframe', this)">&#9968; A-Frames Only</button>
-      <button class="chip" data-filter="mountain" onclick="setFilter('mountain', this)">&#127956; Mountain</button>
-      <button class="chip" data-filter="lake" onclick="setFilter('lake', this)">&#128060; Lake</button>
-      <button class="chip" data-filter="river" onclick="setFilter('river', this)">&#128032; River</button>
+      <button class="chip active" data-filter="all"      onclick="setFilter('all',this)">All Homes</button>
+      <button class="chip"        data-filter="aframe"   onclick="setFilter('aframe',this)">&#9968; A-Frames</button>
+      <button class="chip"        data-filter="mountain" onclick="setFilter('mountain',this)">&#9968;&#65039; Mountain</button>
+      <button class="chip"        data-filter="lake"     onclick="setFilter('lake',this)">&#128060; Lake</button>
+      <button class="chip"        data-filter="river"    onclick="setFilter('river',this)">&#128032; River</button>
+      <button class="chip"        data-filter="drop"     onclick="setFilter('drop',this)">&#8595; Price Drop</button>
+      <button class="chip fav-chip" data-filter="saved"  onclick="setFilter('saved',this)" id="saved-chip">&#9825; Saved</button>
     </div>
-    <label style="margin-left:8px;">Sort:</label>
+    <label style="margin-left:6px;">Sort:</label>
     <select id="sort-select" onchange="renderListings()">
-      <option value="recommended">Recommended (A-frames first)</option>
-      <option value="price_asc">Price: Low to High</option>
-      <option value="price_desc">Price: High to Low</option>
+      <option value="recommended">Recommended</option>
+      <option value="price_asc">Price: Low &#8594; High</option>
+      <option value="price_desc">Price: High &#8594; Low</option>
       <option value="newest">Newest Listed</option>
       <option value="sqft">Most Sq Ft</option>
     </select>
-    <span class="stats-badge" id="stats-badge"><strong>0</strong> homes found</span>
+    <div class="view-toggle">
+      <button class="view-btn active" id="btn-list" onclick="setView('list')">&#9776; List</button>
+      <button class="view-btn"        id="btn-map"  onclick="setView('map')">&#128205; Map</button>
+    </div>
+    <span class="stats-badge" id="stats-badge"><strong>0</strong> homes</span>
   </div>
 </div>
 
-<!-- MAIN -->
 <main class="main">
   <div class="error-banner" id="error-banner"></div>
   <div class="data-notice" id="data-notice">
     &#8505; Showing sample listings.
     <a href="https://github.com/forzacode/practice-v1/actions" target="_blank" rel="noopener">Run the GitHub Actions scraper</a>
-    to populate with live listings from Redfin &amp; LandWatch.
+    to load live listings from Redfin, LandWatch &amp; Craigslist.
   </div>
 
-  <div id="aframe-section" style="display:none;">
-    <p class="section-label">&#9968; A-Frame &amp; Cabin Picks</p>
-    <div class="grid" id="aframe-grid"></div>
+  <!-- LIST VIEW -->
+  <div id="list-view">
+    <div id="aframe-section" style="display:none;">
+      <p class="section-label">&#9968; A-Frame &amp; Cabin Picks</p>
+      <div class="grid" id="aframe-grid"></div>
+    </div>
+    <div id="standard-section" style="display:none; margin-top:26px;">
+      <p class="section-label" id="standard-label">&#127758; All Outdoor Homes</p>
+      <div class="grid" id="standard-grid"></div>
+    </div>
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <span class="icon">&#127965;</span>
+      <h2>No listings match your filter</h2>
+      <p>Try a different filter or click Refresh.</p>
+    </div>
   </div>
 
-  <div id="standard-section" style="display:none; margin-top: 28px;">
-    <p class="section-label" id="standard-label">&#127758; All Outdoor Homes</p>
-    <div class="grid" id="standard-grid"></div>
-  </div>
-
-  <div class="empty-state" id="empty-state" style="display:none;">
-    <span class="icon">&#127965;</span>
-    <h2>No listings match your filter</h2>
-    <p>Try a different filter or click Refresh to reload listings.</p>
+  <!-- MAP VIEW -->
+  <div id="map-container">
+    <div id="map"></div>
+    <p class="map-note" id="map-note"></p>
   </div>
 </main>
 
 <button id="scrolltop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-  let allListings = [];
-  let activeFilter = 'all';
+// ── STATE ────────────────────────────────────────────────────────────────────
+let allListings   = [];
+let activeFilter  = 'all';
+let viewMode      = 'list';
+let leafletMap    = null;
+let mapMarkers    = [];
 
-  // ── EMBEDDED SAMPLE DATA (fallback when opened as a local file) ───────────
-  const SAMPLE_DATA = {"updated_at":"2026-06-21T12:00:00Z","note":"Sample listings","listings":[{"id":"sample-001","source":"Redfin","price":139000,"price_display":"$139,000","beds":2,"baths":1,"sqft":924,"address":"47 Pine Ridge Rd, Livingston Manor, NY 12758","city":"Livingston Manor","state":"NY","zip":"12758","url":"https://www.redfin.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1968,"lot_size":1.2,"days_on_market":22,"taxes":2800,"is_aframe":true,"outdoor_score":5,"features":["A-Frame Cabin","Mountain area","Near Willowemoc Creek","Private wooded lot"],"description":"Charming A-frame cabin nestled in the Catskill Mountains. Cathedral ceilings, wood-burning stove, wraparound deck with mountain views. 10 min to fly-fishing streams.","photo":"https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80"},{"id":"sample-002","source":"Redfin","price":178500,"price_display":"$178,500","beds":3,"baths":2,"sqft":1400,"address":"22 Hemlock Hollow Rd, Narrowsburg, NY 12764","city":"Narrowsburg","state":"NY","zip":"12764","url":"https://www.redfin.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1955,"lot_size":3.5,"days_on_market":8,"taxes":3600,"is_aframe":true,"outdoor_score":5,"features":["A-Frame Cabin","Delaware River nearby","Mountain area","3.5 acres wooded"],"description":"Classic A-frame with stunning river views. Updated kitchen, new roof 2023, full basement. Steps to Delaware River canoe launch. Minutes to Narrowsburg village.","photo":"https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600&q=80"},{"id":"sample-003","source":"LandWatch","price":119000,"price_display":"$119,000","beds":1,"baths":1,"sqft":680,"address":"Beechwood Lake Rd, Wurtsboro, NY 12790","city":"Wurtsboro","state":"NY","zip":"12790","url":"https://www.landwatch.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1962,"lot_size":0.4,"days_on_market":45,"taxes":2100,"is_aframe":false,"outdoor_score":4,"features":["Lake access","Mountain area","Seasonal stream","Private dock rights"],"description":"Cozy lakefront retreat on private community lake. Swim, fish and kayak from your backyard. Year-round road access. Perfect weekend escape or full-time home.","photo":"https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=600&q=80"},{"id":"sample-004","source":"Redfin","price":157000,"price_display":"$157,000","beds":2,"baths":1,"sqft":1080,"address":"88 Catskill River Rd, Phoenicia, NY 12464","city":"Phoenicia","state":"NY","zip":"12464","url":"https://www.redfin.com","area":"Ulster County (Hudson Valley/Catskills), NY","area_type":"mountain_river","drive_time":"~2h","year_built":1940,"lot_size":0.6,"days_on_market":14,"taxes":3200,"is_aframe":false,"outdoor_score":4,"features":["Mountain area","Esopus Creek nearby","River area","Village walkability"],"description":"Cozy cottage in the heart of Catskill Mountain hiking country. Walking distance to Phoenicia village shops and restaurants. Minutes from swimming holes and state forest trailheads.","photo":"https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80"},{"id":"sample-005","source":"Redfin","price":164900,"price_display":"$164,900","beds":3,"baths":1,"sqft":1250,"address":"15 Lakeside Dr, Hawley, PA 18428","city":"Hawley","state":"PA","zip":"18428","url":"https://www.redfin.com","area":"Wayne County (Poconos), PA","area_type":"mountain_lake","drive_time":"~2h","year_built":1975,"lot_size":0.3,"days_on_market":31,"taxes":2600,"is_aframe":false,"outdoor_score":3,"features":["Lake region","Mountain area","Lake Wallenpaupack nearby","Community beach"],"description":"Pocono Mountains retreat with community lake access on Lake Wallenpaupack. Ski resorts and state parks minutes away. Private community roads.","photo":"https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=600&q=80"},{"id":"sample-006","source":"Redfin","price":189000,"price_display":"$189,000","beds":3,"baths":2,"sqft":1600,"address":"241 Maple Hill Rd, Great Barrington, MA 01230","city":"Great Barrington","state":"MA","zip":"01230","url":"https://www.redfin.com","area":"Berkshire County, MA","area_type":"mountain_river","drive_time":"~2.5h","year_built":1930,"lot_size":1.8,"days_on_market":6,"taxes":4100,"is_aframe":false,"outdoor_score":3,"features":["Berkshire Mountains","River area","Housatonic River nearby","Near ski resorts"],"description":"Charming farmhouse in the Southern Berkshires. Updated throughout. Minutes to Tanglewood, skiing at Butternut, swimming in Stockbridge Bowl.","photo":"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"},{"id":"sample-007","source":"Redfin","price":142000,"price_display":"$142,000","beds":2,"baths":1,"sqft":980,"address":"9 Forest Glen Rd, Roxbury, NY 12474","city":"Roxbury","state":"NY","zip":"12474","url":"https://www.redfin.com","area":"Delaware County (Catskills), NY","area_type":"mountain","drive_time":"~2h","year_built":1950,"lot_size":2.0,"days_on_market":58,"taxes":2400,"is_aframe":false,"outdoor_score":3,"features":["Mountain area","Catskill Mountains","2 wooded acres","Near skiing"],"description":"Classic Catskill farmhouse with original character intact. Two private acres bordered by state forest. Near the historic Catskill Center for Conservation.","photo":"https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=600&q=80"},{"id":"sample-008","source":"Redfin","price":199000,"price_display":"$199,000","beds":2,"baths":2,"sqft":1150,"address":"33 Covered Bridge Rd, Kent, CT 06757","city":"Kent","state":"CT","zip":"06757","url":"https://www.redfin.com","area":"Litchfield County (NW Corner), CT","area_type":"mountain_lake_river","drive_time":"~1.5h","year_built":1988,"lot_size":0.75,"days_on_market":19,"taxes":3800,"is_aframe":false,"outdoor_score":3,"features":["Mountains","Housatonic River nearby","Lake Waramaug nearby","State parks nearby"],"description":"Beautifully maintained home in Connecticut's scenic northwest corner. Litchfield Hills hiking, world-class fly-fishing on the Housatonic, Lake Waramaug swimming all minutes away.","photo":"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"}]};
+// Favorites persisted in localStorage
+let favorites = new Set(JSON.parse(localStorage.getItem('mhf-fav') || '[]'));
 
-  // ── LOAD & PARSE ──────────────────────────────────────────────────────────
-  async function loadListings() {
-    setLoading(true);
-    hideError();
+// "New" detection: record last visit timestamp BEFORE this page load,
+// then update it so next visit knows what's new.
+const lastVisit = parseInt(localStorage.getItem('mhf-visit') || '0');
+// (We write the new timestamp after first render so that within the same
+//  session repeat refreshes don't falsely mark everything as old.)
+let visitRecorded = false;
 
-    let data = null;
+// ── SAMPLE DATA (fallback when opened as a local file) ────────────────────────
+const SAMPLE_DATA = {"updated_at":"2026-06-21T12:00:00Z","note":"Sample listings","listings":[{"id":"sample-001","source":"Redfin","price":139000,"price_display":"$139,000","previous_price":159000,"beds":2,"baths":1,"sqft":924,"address":"47 Pine Ridge Rd, Livingston Manor, NY 12758","city":"Livingston Manor","state":"NY","zip":"12758","url":"https://www.redfin.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1968,"lot_size":1.2,"days_on_market":22,"taxes":2800,"is_aframe":true,"outdoor_score":5,"first_seen":"2026-06-21T12:00:00Z","features":["A-Frame Cabin","Mountain area","Near Willowemoc Creek","Private wooded lot"],"description":"Charming A-frame cabin nestled in the Catskill Mountains. Cathedral ceilings, wood-burning stove, wraparound deck with mountain views. 10 min to fly-fishing streams.","photo":"https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80","lat":41.898,"lon":-74.820},{"id":"sample-002","source":"Redfin","price":178500,"price_display":"$178,500","previous_price":null,"beds":3,"baths":2,"sqft":1400,"address":"22 Hemlock Hollow Rd, Narrowsburg, NY 12764","city":"Narrowsburg","state":"NY","zip":"12764","url":"https://www.redfin.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1955,"lot_size":3.5,"days_on_market":8,"taxes":3600,"is_aframe":true,"outdoor_score":5,"first_seen":"2026-06-21T12:00:00Z","features":["A-Frame Cabin","Delaware River nearby","Mountain area","3.5 acres wooded"],"description":"Classic A-frame with stunning river views. Updated kitchen, new roof 2023, full basement. Steps to Delaware River canoe launch. Minutes to Narrowsburg village.","photo":"https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600&q=80","lat":41.601,"lon":-75.001},{"id":"sample-003","source":"LandWatch","price":119000,"price_display":"$119,000","previous_price":null,"beds":1,"baths":1,"sqft":680,"address":"Beechwood Lake Rd, Wurtsboro, NY 12790","city":"Wurtsboro","state":"NY","zip":"12790","url":"https://www.landwatch.com","area":"Sullivan County (Catskills), NY","area_type":"mountain","drive_time":"~1.5h","year_built":1962,"lot_size":0.4,"days_on_market":45,"taxes":2100,"is_aframe":false,"outdoor_score":4,"first_seen":"2026-06-21T12:00:00Z","features":["Lake access","Mountain area","Seasonal stream","Private dock rights"],"description":"Cozy lakefront retreat on private community lake. Swim, fish and kayak from your backyard. Year-round road access. Perfect weekend escape or full-time home.","photo":"https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=600&q=80","lat":41.533,"lon":-74.490},{"id":"sample-004","source":"Redfin","price":157000,"price_display":"$157,000","previous_price":null,"beds":2,"baths":1,"sqft":1080,"address":"88 Catskill River Rd, Phoenicia, NY 12464","city":"Phoenicia","state":"NY","zip":"12464","url":"https://www.redfin.com","area":"Ulster County (Hudson Valley/Catskills), NY","area_type":"mountain_river","drive_time":"~2h","year_built":1940,"lot_size":0.6,"days_on_market":14,"taxes":3200,"is_aframe":false,"outdoor_score":4,"first_seen":"2026-06-21T12:00:00Z","features":["Mountain area","Esopus Creek nearby","River area","Village walkability"],"description":"Cozy cottage in the heart of Catskill Mountain hiking country. Walking distance to Phoenicia shops. Minutes from swimming holes and state forest trailheads.","photo":"https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80","lat":42.083,"lon":-74.316},{"id":"sample-005","source":"Redfin","price":164900,"price_display":"$164,900","previous_price":175000,"beds":3,"baths":1,"sqft":1250,"address":"15 Lakeside Dr, Hawley, PA 18428","city":"Hawley","state":"PA","zip":"18428","url":"https://www.redfin.com","area":"Wayne County (Poconos), PA","area_type":"mountain_lake","drive_time":"~2h","year_built":1975,"lot_size":0.3,"days_on_market":31,"taxes":2600,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Lake region","Mountain area","Lake Wallenpaupack nearby","Community beach"],"description":"Pocono Mountains retreat with community lake access on Lake Wallenpaupack. Ski resorts and state parks minutes away.","photo":"https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=600&q=80","lat":41.474,"lon":-75.175},{"id":"sample-006","source":"Redfin","price":189000,"price_display":"$189,000","previous_price":null,"beds":3,"baths":2,"sqft":1600,"address":"241 Maple Hill Rd, Great Barrington, MA 01230","city":"Great Barrington","state":"MA","zip":"01230","url":"https://www.redfin.com","area":"Berkshire County, MA","area_type":"mountain_river","drive_time":"~2.5h","year_built":1930,"lot_size":1.8,"days_on_market":6,"taxes":4100,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Berkshire Mountains","River area","Housatonic River nearby","Near ski resorts"],"description":"Charming farmhouse in the Southern Berkshires. Updated throughout. Minutes to Tanglewood, skiing at Butternut, swimming in Stockbridge Bowl.","photo":"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80","lat":42.196,"lon":-73.363},{"id":"sample-007","source":"Redfin","price":142000,"price_display":"$142,000","previous_price":null,"beds":2,"baths":1,"sqft":980,"address":"9 Forest Glen Rd, Roxbury, NY 12474","city":"Roxbury","state":"NY","zip":"12474","url":"https://www.redfin.com","area":"Delaware County (Catskills), NY","area_type":"mountain","drive_time":"~2h","year_built":1950,"lot_size":2.0,"days_on_market":58,"taxes":2400,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Mountain area","Catskill Mountains","2 wooded acres","Near skiing"],"description":"Classic Catskill farmhouse with original character intact. Two private acres bordered by state forest. Hunter and Windham ski areas nearby.","photo":"https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=600&q=80","lat":42.295,"lon":-74.553},{"id":"sample-008","source":"Redfin","price":199000,"price_display":"$199,000","previous_price":null,"beds":2,"baths":2,"sqft":1150,"address":"33 Covered Bridge Rd, Kent, CT 06757","city":"Kent","state":"CT","zip":"06757","url":"https://www.redfin.com","area":"Litchfield County (NW Corner), CT","area_type":"mountain_lake_river","drive_time":"~1.5h","year_built":1988,"lot_size":0.75,"days_on_market":19,"taxes":3800,"is_aframe":false,"outdoor_score":3,"first_seen":"2026-06-21T12:00:00Z","features":["Mountains","Housatonic River nearby","Lake Waramaug nearby","State parks nearby"],"description":"Beautifully maintained home in Connecticut's scenic northwest corner. Litchfield Hills hiking, world-class fly-fishing on the Housatonic, Lake Waramaug swimming all minutes away.","photo":"https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80","lat":41.723,"lon":-73.476}]};
 
-    try {
-      const url = './listings.json?t=' + Date.now();
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      data = await res.json();
-    } catch (_err) {
-      // Opened as a local file or network unavailable — use embedded sample data
-      data = SAMPLE_DATA;
-    }
-
-    allListings = data.listings || [];
-
-    const updatedAt = data.updated_at
-      ? new Date(data.updated_at).toLocaleString('en-US', {
-          month: 'short', day: 'numeric', year: 'numeric',
-          hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
-        })
-      : '—';
-    document.getElementById('last-updated').textContent = 'Updated: ' + updatedAt;
-
-    const notice = document.getElementById('data-notice');
-    if (data.note && data.note.includes('Sample')) {
-      notice.classList.add('visible');
-    } else {
-      notice.classList.remove('visible');
-    }
-
-    renderListings();
-    setLoading(false);
+// ── LOAD ──────────────────────────────────────────────────────────────────────
+async function loadListings() {
+  setLoading(true);
+  hideError();
+  let data = null;
+  try {
+    const res = await fetch('./listings.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    data = await res.json();
+  } catch (_) {
+    data = SAMPLE_DATA;
   }
 
-  // ── FILTER & SORT ─────────────────────────────────────────────────────────
-  function setFilter(f, el) {
-    activeFilter = f;
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    el.classList.add('active');
-    renderListings();
+  allListings = data.listings || [];
+
+  const updatedAt = data.updated_at
+    ? new Date(data.updated_at).toLocaleString('en-US',
+        { month:'short', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit', timeZoneName:'short' })
+    : '—';
+  document.getElementById('last-updated').textContent = 'Updated: ' + updatedAt;
+
+  const notice = document.getElementById('data-notice');
+  if (data.note && data.note.includes('Sample')) notice.classList.add('visible');
+  else notice.classList.remove('visible');
+
+  updateSavedChip();
+  renderListings();
+  setLoading(false);
+}
+
+// ── FILTER + SORT ─────────────────────────────────────────────────────────────
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderListings();
+}
+
+function filterListings(listings) {
+  if (activeFilter === 'all')      return listings;
+  if (activeFilter === 'aframe')   return listings.filter(l => l.is_aframe);
+  if (activeFilter === 'mountain') return listings.filter(l => l.area_type && l.area_type.includes('mountain'));
+  if (activeFilter === 'lake')     return listings.filter(l => l.area_type && l.area_type.includes('lake'));
+  if (activeFilter === 'river')    return listings.filter(l => l.area_type && l.area_type.includes('river'));
+  if (activeFilter === 'drop')     return listings.filter(l => l.previous_price && l.previous_price > l.price);
+  if (activeFilter === 'saved')    return listings.filter(l => favorites.has(l.id));
+  return listings;
+}
+
+function sortListings(listings) {
+  const mode = document.getElementById('sort-select').value;
+  const copy = [...listings];
+  if (mode === 'recommended') {
+    copy.sort((a,b) => {
+      if (b.is_aframe !== a.is_aframe) return b.is_aframe - a.is_aframe;
+      if (b.outdoor_score !== a.outdoor_score) return b.outdoor_score - a.outdoor_score;
+      return a.price - b.price;
+    });
+  } else if (mode === 'price_asc')  copy.sort((a,b) => a.price - b.price);
+  else if (mode === 'price_desc')   copy.sort((a,b) => b.price - a.price);
+  else if (mode === 'newest')       copy.sort((a,b) => (a.days_on_market||999) - (b.days_on_market||999));
+  else if (mode === 'sqft')         copy.sort((a,b) => (b.sqft||0) - (a.sqft||0));
+  return copy;
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+function renderListings() {
+  const filtered = filterListings(allListings);
+  const sorted   = sortListings(filtered);
+
+  document.getElementById('stats-badge').innerHTML =
+    '<strong>' + filtered.length + '</strong> home' + (filtered.length !== 1 ? 's' : '');
+
+  if (viewMode === 'map') {
+    updateMap(sorted);
+    return;
   }
 
-  function filterListings(listings) {
-    if (activeFilter === 'all') return listings;
-    if (activeFilter === 'aframe') return listings.filter(l => l.is_aframe);
-    if (activeFilter === 'mountain') return listings.filter(l => l.area_type && l.area_type.includes('mountain'));
-    if (activeFilter === 'lake')    return listings.filter(l => l.area_type && l.area_type.includes('lake'));
-    if (activeFilter === 'river')   return listings.filter(l => l.area_type && l.area_type.includes('river'));
-    return listings;
-  }
+  const aframes  = sorted.filter(l => l.is_aframe);
+  const standard = sorted.filter(l => !l.is_aframe);
 
-  function sortListings(listings) {
-    const mode = document.getElementById('sort-select').value;
-    const copy = [...listings];
-    if (mode === 'recommended') {
-      copy.sort((a, b) => {
-        if (b.is_aframe !== a.is_aframe) return b.is_aframe - a.is_aframe;
-        if (b.outdoor_score !== a.outdoor_score) return b.outdoor_score - a.outdoor_score;
-        return a.price - b.price;
-      });
-    } else if (mode === 'price_asc') {
-      copy.sort((a, b) => a.price - b.price);
-    } else if (mode === 'price_desc') {
-      copy.sort((a, b) => b.price - a.price);
-    } else if (mode === 'newest') {
-      copy.sort((a, b) => (a.days_on_market || 999) - (b.days_on_market || 999));
-    } else if (mode === 'sqft') {
-      copy.sort((a, b) => (b.sqft || 0) - (a.sqft || 0));
-    }
-    return copy;
-  }
+  const aframeSection   = document.getElementById('aframe-section');
+  const standardSection = document.getElementById('standard-section');
+  const emptyState      = document.getElementById('empty-state');
 
-  // ── RENDER ────────────────────────────────────────────────────────────────
-  function renderListings() {
-    const filtered = filterListings(allListings);
-    const sorted   = sortListings(filtered);
-
-    const aframes   = sorted.filter(l => l.is_aframe);
-    const standard  = sorted.filter(l => !l.is_aframe);
-
-    document.getElementById('stats-badge').innerHTML =
-      '<strong>' + filtered.length + '</strong> home' + (filtered.length !== 1 ? 's' : '') + ' found';
-
-    const aframeSection  = document.getElementById('aframe-section');
-    const standardSection = document.getElementById('standard-section');
-    const emptyState     = document.getElementById('empty-state');
-    const stdLabel       = document.getElementById('standard-label');
-
-    if (filtered.length === 0) {
-      aframeSection.style.display = 'none';
-      standardSection.style.display = 'none';
-      emptyState.style.display = 'block';
-      return;
-    }
+  if (filtered.length === 0) {
+    aframeSection.style.display = 'none';
+    standardSection.style.display = 'none';
+    emptyState.style.display = 'block';
+  } else {
     emptyState.style.display = 'none';
-
     if (aframes.length > 0) {
       aframeSection.style.display = 'block';
       document.getElementById('aframe-grid').innerHTML = aframes.map(cardHTML).join('');
     } else {
       aframeSection.style.display = 'none';
     }
-
     if (standard.length > 0) {
       standardSection.style.display = 'block';
-      stdLabel.textContent = aframes.length > 0
-        ? '&#127758; Other Outdoor Homes'
-        : '&#127758; All Outdoor Homes';
+      document.getElementById('standard-label').textContent =
+        aframes.length > 0 ? '🌎 Other Outdoor Homes' : '🌎 All Outdoor Homes';
       document.getElementById('standard-grid').innerHTML = standard.map(cardHTML).join('');
     } else {
       standardSection.style.display = 'none';
     }
   }
 
-  // ── CARD TEMPLATE ─────────────────────────────────────────────────────────
-  function cardHTML(l) {
-    const priceDisplay = l.price_display || (l.price ? '$' + l.price.toLocaleString() : 'Contact agent');
+  // Record that we've seen these listings (for next-visit NEW detection)
+  if (!visitRecorded) {
+    localStorage.setItem('mhf-visit', Date.now());
+    visitRecorded = true;
+  }
+}
 
-    const beds  = l.beds  ? l.beds  + ' bd'  : '';
-    const baths = l.baths ? l.baths + ' ba'  : '';
-    const sqft  = l.sqft  ? l.sqft.toLocaleString() + ' sqft' : '';
-    const stats = [beds, baths, sqft].filter(Boolean).join(' &bull; ');
+// ── CARD ──────────────────────────────────────────────────────────────────────
+function cardHTML(l) {
+  const isFav      = favorites.has(l.id);
+  const isNewL     = checkNew(l);
+  const hasDrop    = l.previous_price && l.previous_price > l.price && l.price > 0;
 
-    const taxes = l.taxes
-      ? '<span>&#128190; $' + l.taxes.toLocaleString() + '/yr taxes</span>'
-      : '';
-    const yearBuilt = l.year_built ? '<span>&#127968; Built ' + l.year_built + '</span>' : '';
-    const lotSize   = l.lot_size   ? '<span>&#127795; ' + l.lot_size + ' acres</span>' : '';
-    const dom       = l.days_on_market != null
-      ? '<span>&#128197; ' + l.days_on_market + ' days on market</span>'
-      : '';
+  const priceDisplay = l.price_display || (l.price ? '$' + l.price.toLocaleString() : 'Contact agent');
+  const stats = [
+    l.beds  ? l.beds  + ' bd' : '',
+    l.baths ? l.baths + ' ba' : '',
+    l.sqft  ? l.sqft.toLocaleString() + ' sqft' : '',
+  ].filter(Boolean).join(' &bull; ');
 
-    const featureTags = (l.features || []).map(f => {
-      const fl = f.toLowerCase();
-      let cls = 'tag-default';
-      if (fl.includes('a-frame') || fl.includes('cabin') || fl.includes('chalet')) cls = 'tag-aframe';
-      else if (fl.includes('mountain')) cls = 'tag-mountain';
-      else if (fl.includes('lake'))     cls = 'tag-lake';
-      else if (fl.includes('river') || fl.includes('creek') || fl.includes('stream')) cls = 'tag-river';
-      return '<span class="feature-tag ' + cls + '">' + escHtml(f) + '</span>';
-    }).join('');
+  const priceDrop = hasDrop
+    ? `<div class="price-drop-badge">&#8595; Was $${l.previous_price.toLocaleString()}</div>` : '';
 
-    const areaIcon = areaEmoji(l.area_type);
-    const desc = l.description ? '<p class="card-desc">' + escHtml(l.description) + '</p>' : '';
-    const photoEl = l.photo
-      ? '<img class="card-photo" src="' + l.photo + '" alt="Property photo" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
-        + '<div class="card-photo-placeholder" style="display:none">&#127968;</div>'
-      : '<div class="card-photo-placeholder">&#127968;</div>';
+  const aframeRibbon = l.is_aframe
+    ? '<div class="aframe-ribbon">&#9968; A-Frame Pick</div>' : '';
+  const newRibbon = isNewL
+    ? '<div class="new-ribbon">NEW</div>' : '';
+  const heartBtn = `<button class="heart-btn${isFav ? ' active' : ''}" data-id="${escHtml(l.id)}" onclick="toggleFav(this)" title="${isFav ? 'Remove from saved' : 'Save listing'}">${isFav ? '&#9829;' : '&#9825;'}</button>`;
 
-    const ribbon = l.is_aframe
-      ? '<div class="aframe-ribbon">&#9968; A-Frame Pick</div>'
-      : '';
+  const mapsAddr = encodeURIComponent((l.address || (l.city + ', ' + l.state) || '').trim());
+  const directionsLink = mapsAddr
+    ? `<a class="directions-link" href="https://www.google.com/maps/dir/White+Plains,+NY/${mapsAddr}" target="_blank" rel="noopener">&#128663; Directions from White Plains</a>`
+    : '';
 
-    const viewLink = l.url && l.url !== 'https://www.redfin.com' && l.url !== 'https://www.landwatch.com'
-      ? '<a class="btn-view" href="' + l.url + '" target="_blank" rel="noopener">View Listing &#8599;</a>'
-      : '<span style="font-size:0.78rem;color:var(--stone);">Search by address</span>';
+  const featureTags = (l.features || []).map(f => {
+    const fl = f.toLowerCase();
+    let cls = 'tag-default';
+    if (fl.includes('a-frame') || fl.includes('cabin')) cls = 'tag-aframe';
+    else if (fl.includes('mountain')) cls = 'tag-mountain';
+    else if (fl.includes('lake'))     cls = 'tag-lake';
+    else if (fl.includes('river') || fl.includes('creek')) cls = 'tag-river';
+    return `<span class="feature-tag ${cls}">${escHtml(f)}</span>`;
+  }).join('');
 
-    return `
-    <div class="card">
-      ${ribbon}
-      ${photoEl}
-      <div class="card-body">
-        <div class="card-price">${priceDisplay}</div>
-        <div class="card-stats">${stats}</div>
-        <div class="card-address">
-          <strong>${escHtml(l.address || '')}</strong>
-        </div>
-        <div class="card-area">${areaIcon} ${escHtml(l.area || '')}</div>
-        <div class="card-drive">&#128663; ~${escHtml(l.drive_time || '')} from White Plains, NY</div>
-        ${desc}
-        <div class="card-features">${featureTags}</div>
-        <div class="card-meta">${taxes}${yearBuilt}${lotSize}${dom}</div>
-        <div class="card-footer">
-          <span class="source-badge">via ${escHtml(l.source || 'Web')}</span>
-          ${viewLink}
-        </div>
+  const taxes     = l.taxes     ? `<span>&#128190; $${l.taxes.toLocaleString()}/yr</span>` : '';
+  const yearBuilt = l.year_built ? `<span>&#127968; ${l.year_built}</span>` : '';
+  const lotSize   = l.lot_size   ? `<span>&#127795; ${l.lot_size} ac</span>` : '';
+  const dom       = l.days_on_market != null ? `<span>&#128197; ${l.days_on_market}d listed</span>` : '';
+
+  const photoEl = l.photo
+    ? `<img class="card-photo" src="${l.photo}" alt="Property" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-photo-placeholder" style="display:none">&#127968;</div>`
+    : '<div class="card-photo-placeholder">&#127968;</div>';
+
+  const validUrl = l.url && !['https://www.redfin.com','https://www.landwatch.com','https://www.craigslist.org'].includes(l.url);
+  const viewLink = validUrl
+    ? `<a class="btn-view" href="${l.url}" target="_blank" rel="noopener">View &#8599;</a>`
+    : `<span style="font-size:0.72rem;color:var(--stone)">Search by address</span>`;
+
+  return `
+  <div class="card">
+    ${aframeRibbon}${newRibbon}${heartBtn}
+    ${photoEl}
+    <div class="card-body">
+      ${priceDrop}
+      <div class="card-price">${priceDisplay}</div>
+      <div class="card-stats">${stats}</div>
+      <div class="card-address"><strong>${escHtml(l.address || '')}</strong></div>
+      ${directionsLink}
+      <div class="card-area">${areaEmoji(l.area_type)} ${escHtml(l.area || '')}</div>
+      <div class="card-drive">&#128663; ${escHtml(l.drive_time || '')} from White Plains, NY</div>
+      ${l.description ? `<p class="card-desc">${escHtml(l.description)}</p>` : ''}
+      <div class="card-features">${featureTags}</div>
+      <div class="card-meta">${taxes}${yearBuilt}${lotSize}${dom}</div>
+      <div class="card-footer">
+        <span class="source-badge">via ${escHtml(l.source || 'Web')}</span>
+        ${viewLink}
       </div>
-    </div>`;
-  }
+    </div>
+  </div>`;
+}
 
-  function areaEmoji(type) {
-    if (!type) return '&#127968;';
-    if (type.includes('mountain')) return '&#9968;';
-    if (type.includes('lake'))     return '&#128060;';
-    if (type.includes('river'))    return '&#127754;';
-    return '&#127774;';
-  }
+// ── MAP ───────────────────────────────────────────────────────────────────────
+function setView(mode) {
+  viewMode = mode;
+  document.getElementById('btn-list').classList.toggle('active', mode === 'list');
+  document.getElementById('btn-map').classList.toggle('active',  mode === 'map');
+  document.getElementById('list-view').style.display      = mode === 'list' ? '' : 'none';
+  document.getElementById('map-container').style.display  = mode === 'map'  ? '' : 'none';
 
-  function escHtml(s) {
-    return String(s)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+  if (mode === 'map') {
+    if (!leafletMap) initMap();
+    const filtered = filterListings(allListings);
+    const sorted   = sortListings(filtered);
+    updateMap(sorted);
+    setTimeout(() => leafletMap.invalidateSize(), 200);
   }
+}
 
-  // ── UI HELPERS ────────────────────────────────────────────────────────────
-  function setLoading(on) {
-    document.getElementById('loading').classList.toggle('visible', on);
-    const btn  = document.getElementById('refresh-btn');
-    const icon = document.getElementById('refresh-icon');
-    btn.disabled = on;
-    icon.className = on ? 'spin' : '';
-    icon.textContent = on ? '&#8635;' : '&#8635;';
-  }
+function initMap() {
+  leafletMap = L.map('map').setView([41.9, -74.5], 8);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18,
+  }).addTo(leafletMap);
+}
 
-  function showError(msg) {
-    const el = document.getElementById('error-banner');
-    el.textContent = msg;
-    el.classList.add('visible');
-  }
+function updateMap(listings) {
+  mapMarkers.forEach(m => leafletMap.removeLayer(m));
+  mapMarkers = [];
 
-  function hideError() {
-    document.getElementById('error-banner').classList.remove('visible');
-  }
+  const mapped = listings.filter(l => l.lat && l.lon);
+  const unmapped = listings.length - mapped.length;
 
-  // ── SCROLL TO TOP ─────────────────────────────────────────────────────────
-  window.addEventListener('scroll', () => {
-    document.getElementById('scrolltop').classList.toggle('visible', window.scrollY > 400);
+  mapped.forEach(l => {
+    const isNewL = checkNew(l);
+    const isFav  = favorites.has(l.id);
+    const bg = l.is_aframe ? '#c9821a' : l.outdoor_score >= 4 ? '#2d5a40' : '#5a7a6a';
+    const prefix = isFav ? '&#9829; ' : '';
+    const newDot = isNewL
+      ? `<span style="position:absolute;top:-5px;right:-5px;width:10px;height:10px;background:${CSS.escape ? '#22c55e' : '#22c55e'};border-radius:50%;border:2px solid #fff;display:block"></span>`
+      : '';
+
+    const icon = L.divIcon({
+      html: `<div style="position:relative;background:${bg};color:#fff;padding:5px 11px;border-radius:16px;font-size:11px;font-weight:800;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,0.4);cursor:pointer">${prefix}${l.price_display}${newDot}</div>`,
+      className: '',
+      iconAnchor: [0, 24],
+      popupAnchor: [60, -20],
+    });
+
+    const hasDrop = l.previous_price && l.previous_price > l.price;
+    const dropLine = hasDrop
+      ? `<div style="color:#1d6fa4;font-size:0.75rem;margin-bottom:4px">&#8595; Was $${l.previous_price.toLocaleString()}</div>` : '';
+    const statsLine = [l.beds&&l.beds+'bd', l.baths&&l.baths+'ba', l.sqft&&l.sqft.toLocaleString()+'sqft'].filter(Boolean).join(' &bull; ');
+    const mapsAddr  = encodeURIComponent((l.address||'').trim());
+    const linksHtml = [
+      l.url && !['https://www.redfin.com','https://www.landwatch.com'].includes(l.url)
+        ? `<a href="${l.url}" target="_blank" style="background:${bg};color:#fff;padding:4px 10px;border-radius:5px;text-decoration:none;font-size:0.78rem;font-weight:700;display:inline-block;margin-right:6px">View &#8599;</a>` : '',
+      mapsAddr
+        ? `<a href="https://www.google.com/maps/dir/White+Plains,+NY/${mapsAddr}" target="_blank" style="color:#3a7ea8;font-size:0.76rem;font-weight:600">&#128663; Directions</a>` : '',
+    ].filter(Boolean).join('');
+
+    const popup = `
+      <div style="min-width:210px;font-family:system-ui,sans-serif">
+        ${dropLine}
+        <div style="font-size:1.25rem;font-weight:800;color:#b5341a;margin-bottom:3px">${l.price_display}</div>
+        <div style="font-size:0.85rem;font-weight:600;color:#444;margin-bottom:5px">${statsLine}</div>
+        <div style="font-size:0.82rem;color:#555;margin-bottom:8px">${escHtml(l.address||'')}</div>
+        <div style="font-size:0.75rem;color:#888;margin-bottom:8px">&#128663; ${escHtml(l.drive_time||'')} from White Plains</div>
+        ${linksHtml}
+      </div>`;
+
+    const marker = L.marker([l.lat, l.lon], { icon })
+      .addTo(leafletMap)
+      .bindPopup(popup, { maxWidth: 260 });
+    mapMarkers.push(marker);
   });
 
-  // ── INIT ──────────────────────────────────────────────────────────────────
-  loadListings();
+  if (mapMarkers.length > 0) {
+    const group = L.featureGroup(mapMarkers);
+    leafletMap.fitBounds(group.getBounds().pad(0.12));
+  }
+
+  const note = document.getElementById('map-note');
+  note.textContent = unmapped > 0
+    ? `Showing ${mapped.length} of ${listings.length} listings on map (${unmapped} without coordinates)`
+    : `Showing all ${mapped.length} listings`;
+}
+
+// ── FAVORITES ─────────────────────────────────────────────────────────────────
+function toggleFav(btn) {
+  const id = btn.dataset.id;
+  if (favorites.has(id)) {
+    favorites.delete(id);
+    btn.classList.remove('active');
+    btn.innerHTML = '&#9825;';
+    btn.title = 'Save listing';
+  } else {
+    favorites.add(id);
+    btn.classList.add('active');
+    btn.innerHTML = '&#9829;';
+    btn.title = 'Remove from saved';
+  }
+  localStorage.setItem('mhf-fav', JSON.stringify([...favorites]));
+  updateSavedChip();
+  if (activeFilter === 'saved') renderListings();
+  if (viewMode === 'map') {
+    const filtered = filterListings(allListings);
+    updateMap(sortListings(filtered));
+  }
+}
+
+function updateSavedChip() {
+  const count = allListings.filter(l => favorites.has(l.id)).length;
+  document.getElementById('saved-chip').textContent =
+    count > 0 ? `♥ Saved (${count})` : '♡ Saved';
+}
+
+// ── NEW DETECTION ─────────────────────────────────────────────────────────────
+function checkNew(l) {
+  if (!lastVisit) return false;
+  const t = new Date(l.first_seen || l.scraped_at || 0).getTime();
+  return t > lastVisit;
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────────────────
+function areaEmoji(type) {
+  if (!type) return '&#127968;';
+  if (type.includes('mountain')) return '&#9968;';
+  if (type.includes('lake'))     return '&#128060;';
+  if (type.includes('river'))    return '&#127754;';
+  return '&#127774;';
+}
+
+function escHtml(s) {
+  return String(s||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function setLoading(on) {
+  document.getElementById('loading').classList.toggle('visible', on);
+  const btn  = document.getElementById('refresh-btn');
+  const icon = document.getElementById('refresh-icon');
+  btn.disabled = on;
+  icon.className = on ? 'spin' : '';
+}
+
+function showError(msg) {
+  const el = document.getElementById('error-banner');
+  el.textContent = msg; el.classList.add('visible');
+}
+function hideError() {
+  document.getElementById('error-banner').classList.remove('visible');
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('scrolltop').classList.toggle('visible', window.scrollY > 400);
+});
+
+loadListings();
 </script>
 </body>
 </html>
