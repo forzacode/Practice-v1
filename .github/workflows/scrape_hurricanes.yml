@@ -1,0 +1,40 @@
+name: Refresh Hurricanes Data
+
+on:
+  schedule:
+    # Runs daily at 7 AM ET (11 UTC) — catches overnight recruiting news & morning updates
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    # Manual "Refresh Now" trigger from GitHub Actions UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run Hurricanes scraper
+        run: python scraper/scrape_hurricanes.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/hurricanes_data.json
+          git diff --staged --quiet && echo "No changes to commit." || \
+            git commit -m "chore: refresh hurricanes data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push

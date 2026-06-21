@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miami Hurricanes Football Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Base reset & variables ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:        #F47321;
+      --orange-dim:    #c45e1a;
+      --orange-glow:   rgba(244,115,33,0.18);
+      --green:         #005030;
+      --green-light:   #006b41;
+      --green-glow:    rgba(0,80,48,0.35);
+      --bg:            #0b0e0b;
+      --bg2:           #111411;
+      --card:          #181d18;
+      --card-h:        #1f261f;
+      --border:        #252c25;
+      --border-accent: rgba(244,115,33,0.30);
+      --text:          #eceee9;
+      --text2:         #9ba89b;
+      --text3:         #6a776a;
+      --radius:        10px;
+      --shadow:        0 2px 16px rgba(0,0,0,0.45);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { display: block; }
+
+    /* ── Top banner ─────────────────────────────────────────── */
+    .top-banner {
+      background: linear-gradient(90deg, var(--green) 0%, #003520 100%);
+      border-bottom: 2px solid var(--orange);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      backdrop-filter: blur(12px);
+    }
+
+    .banner-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 62px;
+    }
+
+    .logo-u {
+      width: 44px;
+      height: 44px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #fff;
+      flex-shrink: 0;
+      letter-spacing: -1px;
+      box-shadow: 0 0 16px var(--orange-glow);
+    }
+
+    .banner-title {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .banner-title h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .banner-title .subtitle {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.55);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .banner-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .record-badge {
+      background: var(--orange);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      letter-spacing: 0.03em;
+    }
+
+    .updated-time {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+    }
+
+    .btn-refresh {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .btn-refresh:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.4); }
+    .btn-refresh:active { transform: scale(0.97); }
+    .btn-refresh.loading .icon-refresh { animation: spin 0.8s linear infinite; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Tab navigation ─────────────────────────────────────── */
+    .tab-bar {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 62px;
+      z-index: 100;
+    }
+
+    .tab-bar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .tab-bar-inner::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      flex-shrink: 0;
+      padding: 0 1.2rem;
+      height: 46px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      color: var(--text2);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
+
+    /* ── Main layout ────────────────────────────────────────── */
+    .main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Section headings ───────────────────────────────────── */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-heading h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text2);
+    }
+
+    .section-heading .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    /* ── Cards ──────────────────────────────────────────────── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    /* ── HOME TAB ───────────────────────────────────────────── */
+    .home-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .home-grid { grid-template-columns: 340px 1fr; }
+    }
+
+    /* Next game / last result hero */
+    .game-hero {
+      background: linear-gradient(135deg, var(--green) 0%, #002e1a 100%);
+      border: 1px solid var(--green-light);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(244,115,33,0.12) 0%, transparent 60%);
+    }
+
+    .game-hero-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .game-matchup {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .game-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      min-width: 80px;
+    }
+
+    .game-team img, .game-team .team-logo-placeholder {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      padding: 4px;
+    }
+
+    .game-team .team-logo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .game-team-name { font-size: 0.78rem; font-weight: 600; text-align: center; color: var(--text); }
+    .game-team-rank { font-size: 0.66rem; color: var(--orange); font-weight: 700; }
+
+    .game-center {
+      flex: 1;
+      text-align: center;
+    }
+
+    .game-score {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -1px;
+    }
+
+    .game-date {
+      font-size: 0.73rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.3rem;
+    }
+
+    .game-result-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.2rem 0.7rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+
+    .game-result-badge.win { background: #004d24; color: #00e676; }
+    .game-result-badge.loss { background: #4d0000; color: #ff5252; }
+    .game-result-badge.upcoming { background: var(--orange); color: #fff; }
+    .game-result-badge.live { background: #cc0000; color: #fff; animation: pulse 1s ease-in-out infinite; }
+
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+    .game-venue { font-size: 0.7rem; color: rgba(255,255,255,0.4); margin-top: 0.6rem; }
+    .game-tv { font-size: 0.7rem; color: var(--orange); margin-top: 0.2rem; font-weight: 600; }
+
+    /* Season summary */
+    .season-strip {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .season-pip {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      cursor: default;
+    }
+
+    .pip-w { background: #004d24; color: #00e676; }
+    .pip-l { background: #4d0000; color: #ff5252; }
+    .pip-u { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
+
+    /* News mini list */
+    .news-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .news-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.85rem;
+      cursor: pointer;
+    }
+
+    .news-item-img {
+      width: 72px;
+      height: 56px;
+      border-radius: 6px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--border);
+    }
+
+    .news-item-img-placeholder {
+      width: 72px;
+      height: 56px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--green) 0%, #001f10 100%);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .news-item-body { flex: 1; min-width: 0; }
+
+    .news-item-source {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--orange);
+      margin-bottom: 0.25rem;
+    }
+
+    .news-item-title {
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .news-item-date {
+      font-size: 0.68rem;
+      color: var(--text3);
+      margin-top: 0.3rem;
+    }
+
+    /* Reddit mini */
+    .reddit-list { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .reddit-item {
+      padding: 0.8rem 0.9rem;
+      cursor: pointer;
+    }
+
+    .reddit-item-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .reddit-sub {
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-transform: uppercase;
+    }
+
+    .reddit-flair {
+      font-size: 0.62rem;
+      background: rgba(244,115,33,0.15);
+      color: var(--orange);
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+    }
+
+    .reddit-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .reddit-meta {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.4rem;
+      font-size: 0.68rem;
+      color: var(--text3);
+    }
+
+    .reddit-meta span { display: flex; align-items: center; gap: 0.25rem; }
+
+    /* ── NEWS TAB ───────────────────────────────────────────── */
+    .news-filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+    }
+
+    .filter-chip {
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text2);
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .filter-chip:hover { border-color: var(--border-accent); color: var(--text); }
+    .filter-chip.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .news-card {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .news-card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .news-card-img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, var(--green) 0%, #001f10 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .news-card-body { padding: 0.9rem; flex: 1; }
+
+    .news-card-source {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--orange);
+      margin-bottom: 0.4rem;
+    }
+
+    .news-card-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--text);
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .news-card-summary {
+      font-size: 0.79rem;
+      color: var(--text2);
+      line-height: 1.5;
+      margin-top: 0.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .news-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 0.9rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.68rem;
+      color: var(--text3);
+    }
+
+    /* ── SCHEDULE TAB ───────────────────────────────────────── */
+    .schedule-table-wrap { overflow-x: auto; }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .schedule-table thead th {
+      text-align: left;
+      padding: 0.55rem 0.9rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text3);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .schedule-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .schedule-table tbody tr:hover { background: var(--card-h); }
+    .schedule-table tbody tr.current-game { background: rgba(244,115,33,0.08); }
+
+    .schedule-table td {
+      padding: 0.75rem 0.9rem;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .opp-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .opp-logo-sm {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      padding: 2px;
+      flex-shrink: 0;
+    }
+
+    .opp-logo-placeholder {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .opp-name { font-weight: 600; color: var(--text); }
+    .opp-rank-tag { font-size: 0.65rem; color: var(--orange); font-weight: 700; }
+
+    .tag-home { color: var(--text3); font-size: 0.72rem; }
+
+    .result-cell { font-weight: 800; font-size: 0.9rem; }
+    .result-w { color: #00c853; }
+    .result-l { color: #ff5252; }
+    .result-upcoming { color: var(--orange); font-weight: 600; font-size: 0.8rem; }
+    .result-live { color: #ff5252; font-weight: 800; }
+
+    .score-cell { color: var(--text2); font-size: 0.82rem; }
+
+    .conf-badge {
+      font-size: 0.62rem;
+      background: rgba(0,80,48,0.35);
+      color: var(--green-light);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .neutral-badge {
+      font-size: 0.62rem;
+      background: rgba(244,115,33,0.15);
+      color: var(--orange);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-weight: 700;
+    }
+
+    /* ── STATS TAB ──────────────────────────────────────────── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-card {
+      padding: 1.1rem 1.2rem;
+    }
+
+    .stat-card-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text3);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-card-value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .stat-card-sublabel {
+      font-size: 0.75rem;
+      color: var(--text2);
+      margin-top: 0.3rem;
+    }
+
+    .stat-rank {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      background: rgba(244,115,33,0.15);
+      color: var(--orange);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      margin-top: 0.4rem;
+    }
+
+    /* Leaders */
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .leader-card {
+      padding: 1rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .leader-photo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--border);
+      flex-shrink: 0;
+      border: 2px solid var(--orange);
+    }
+
+    .leader-photo-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--bg));
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      border: 2px solid var(--orange);
+    }
+
+    .leader-info {}
+    .leader-cat { font-size: 0.65rem; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.06em; }
+    .leader-name { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-top: 0.15rem; }
+    .leader-value { font-size: 0.8rem; color: var(--text2); margin-top: 0.1rem; }
+    .leader-pos { font-size: 0.68rem; color: var(--text3); }
+
+    /* ── RECRUITING TAB ─────────────────────────────────────── */
+    .recruiting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+
+    .recruit-card { padding: 1rem; cursor: pointer; }
+
+    .recruit-source {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--orange);
+      margin-bottom: 0.35rem;
+    }
+
+    .recruit-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .recruit-summary {
+      font-size: 0.78rem;
+      color: var(--text2);
+      line-height: 1.5;
+      margin-top: 0.45rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .recruit-date { font-size: 0.68rem; color: var(--text3); margin-top: 0.5rem; }
+
+    /* ── SOCIAL TAB ─────────────────────────────────────────── */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .social-card { padding: 1rem; cursor: pointer; }
+
+    .social-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .social-sub-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .social-flair {
+      font-size: 0.62rem;
+      background: rgba(244,115,33,0.12);
+      color: var(--orange);
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .social-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+
+    .social-text {
+      font-size: 0.78rem;
+      color: var(--text2);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .social-footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.72rem;
+      color: var(--text3);
+      border-top: 1px solid var(--border);
+      padding-top: 0.6rem;
+    }
+
+    .social-footer span { display: flex; align-items: center; gap: 0.25rem; }
+
+    /* ── ROSTER TAB ─────────────────────────────────────────── */
+    .roster-filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+    }
+
+    .roster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .roster-card { padding: 1rem; text-align: center; cursor: default; }
+
+    .roster-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 0.6rem;
+      background: var(--border);
+      border: 2px solid var(--green-light);
+    }
+
+    .roster-photo-placeholder {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--bg));
+      margin: 0 auto 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      border: 2px solid var(--green-light);
+    }
+
+    .roster-jersey { font-size: 0.7rem; color: var(--orange); font-weight: 800; }
+    .roster-name { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-top: 0.15rem; }
+    .roster-pos { font-size: 0.75rem; color: var(--text2); }
+    .roster-year { font-size: 0.68rem; color: var(--text3); margin-top: 0.1rem; }
+    .roster-ht-wt { font-size: 0.68rem; color: var(--text3); }
+
+    /* ── Empty states ───────────────────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text3);
+    }
+
+    .empty-state .icon { font-size: 3rem; margin-bottom: 1rem; }
+    .empty-state h3 { font-size: 1rem; font-weight: 600; color: var(--text2); margin-bottom: 0.5rem; }
+    .empty-state p { font-size: 0.85rem; line-height: 1.5; }
+
+    /* ── Loading overlay ────────────────────────────────────── */
+    #loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11,14,11,0.85);
+      backdrop-filter: blur(6px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid var(--border);
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+    }
+
+    #loading-overlay p { color: var(--text2); font-size: 0.9rem; font-weight: 500; }
+
+    /* ── Stale data banner ──────────────────────────────────── */
+    #stale-banner {
+      display: none;
+      background: rgba(244,115,33,0.12);
+      border-bottom: 1px solid rgba(244,115,33,0.3);
+      padding: 0.5rem 1.5rem;
+      font-size: 0.78rem;
+      color: var(--orange);
+      text-align: center;
+    }
+
+    /* ── Responsive tweaks ──────────────────────────────────── */
+    @media (max-width: 600px) {
+      .banner-inner { gap: 0.6rem; padding: 0 0.75rem; }
+      .banner-meta { gap: 0.4rem; }
+      .updated-time { display: none; }
+      .record-badge { font-size: 0.82rem; padding: 0.25rem 0.6rem; }
+      .main { padding: 1rem 0.75rem 3rem; }
+      .news-grid, .social-grid, .recruiting-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .leaders-grid { grid-template-columns: 1fr 1fr; }
+      .roster-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <p>Loading Hurricanes data...</p>
+</div>
+
+<div id="stale-banner">
+  ⚠ Data may be more than 24 hours old — GitHub Actions runs daily to refresh automatically.
+</div>
+
+<!-- ── Header ─────────────────────────────────────────────── -->
+<header class="top-banner">
+  <div class="banner-inner">
+    <div class="logo-u">U</div>
+    <div class="banner-title">
+      <h1>MIAMI HURRICANES</h1>
+      <div class="subtitle">Football Dashboard</div>
+    </div>
+    <div class="banner-meta">
+      <div class="record-badge" id="record-badge">— — —</div>
+      <div class="updated-time" id="updated-time">Loading...</div>
+      <button class="btn-refresh" id="btn-refresh" onclick="loadData(true)">
+        <span class="icon-refresh">↺</span> Refresh
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── Tab bar ────────────────────────────────────────────── -->
+<nav class="tab-bar">
+  <div class="tab-bar-inner">
+    <button class="tab-btn active" data-tab="home">🏠 Home</button>
+    <button class="tab-btn" data-tab="news">📰 News</button>
+    <button class="tab-btn" data-tab="schedule">📅 Schedule</button>
+    <button class="tab-btn" data-tab="stats">📊 Stats</button>
+    <button class="tab-btn" data-tab="recruiting">🎓 Recruiting</button>
+    <button class="tab-btn" data-tab="social">💬 Social</button>
+    <button class="tab-btn" data-tab="roster">👥 Roster</button>
+  </div>
+</nav>
+
+<!-- ── Main content ───────────────────────────────────────── -->
+<main class="main">
+
+  <!-- HOME -->
+  <div class="tab-panel active" id="tab-home">
+    <div class="home-grid">
+      <!-- Left column -->
+      <div>
+        <div id="game-hero" class="game-hero">
+          <div class="game-hero-label" id="game-label">NEXT GAME</div>
+          <div class="game-matchup" id="game-matchup">
+            <div class="empty-state" style="padding:1rem 0; width:100%;">
+              <div class="icon">🏈</div>
+              <p>Schedule loading...</p>
+            </div>
+          </div>
+          <div class="season-strip" id="season-strip"></div>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div>
+        <div class="section-heading">
+          <div class="dot"></div>
+          <h2>Latest News</h2>
+        </div>
+        <div class="news-list" id="home-news-list"></div>
+      </div>
+    </div>
+
+    <!-- Reddit below -->
+    <div style="margin-top:1.5rem;">
+      <div class="section-heading">
+        <div class="dot"></div>
+        <h2>Fan Talk — Reddit</h2>
+      </div>
+      <div class="reddit-list" id="home-reddit-list" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:0.75rem;"></div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="tab-panel" id="tab-news">
+    <div class="news-filters" id="news-filters">
+      <button class="filter-chip active" data-source="all">All Sources</button>
+    </div>
+    <div class="news-grid" id="news-grid"></div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="tab-panel" id="tab-schedule">
+    <div class="schedule-table-wrap">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Opponent</th>
+            <th>H/A</th>
+            <th>TV</th>
+            <th>Result</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="schedule-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="tab-panel" id="tab-stats">
+    <div class="section-heading"><div class="dot"></div><h2>Team Leaders</h2></div>
+    <div class="leaders-grid" id="leaders-grid" style="margin-bottom:2rem;"></div>
+    <div class="section-heading"><div class="dot"></div><h2>Team Statistics</h2></div>
+    <div class="stats-grid" id="stats-grid"></div>
+  </div>
+
+  <!-- RECRUITING -->
+  <div class="tab-panel" id="tab-recruiting">
+    <div class="section-heading"><div class="dot"></div><h2>Recruiting News</h2></div>
+    <div class="recruiting-grid" id="recruiting-grid"></div>
+  </div>
+
+  <!-- SOCIAL -->
+  <div class="tab-panel" id="tab-social">
+    <div class="section-heading"><div class="dot"></div><h2>Reddit Community</h2></div>
+    <div class="social-grid" id="social-grid"></div>
+  </div>
+
+  <!-- ROSTER -->
+  <div class="tab-panel" id="tab-roster">
+    <div class="roster-filters" id="roster-filters">
+      <button class="filter-chip active" data-pos="all">All Positions</button>
+      <button class="filter-chip" data-pos="QB">QB</button>
+      <button class="filter-chip" data-pos="RB">RB</button>
+      <button class="filter-chip" data-pos="WR">WR</button>
+      <button class="filter-chip" data-pos="TE">TE</button>
+      <button class="filter-chip" data-pos="OL">OL</button>
+      <button class="filter-chip" data-pos="DL">DL</button>
+      <button class="filter-chip" data-pos="LB">LB</button>
+      <button class="filter-chip" data-pos="DB">DB</button>
+      <button class="filter-chip" data-pos="K">K/P</button>
+    </div>
+    <div class="roster-grid" id="roster-grid"></div>
+  </div>
+
+</main>
+
+<script>
+/* ──────────────────────────────────────────────────────────
+   App state
+────────────────────────────────────────────────────────── */
+let DATA = null;
+let activeNewsSource = 'all';
+let activeRosterPos = 'all';
+
+/* ──────────────────────────────────────────────────────────
+   Tab switching
+────────────────────────────────────────────────────────── */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+/* ──────────────────────────────────────────────────────────
+   Utility helpers
+────────────────────────────────────────────────────────── */
+function fmtDate(iso) {
+  if (!iso) return '';
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  } catch { return iso; }
+}
+
+function fmtDateShort(iso) {
+  if (!iso) return '';
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  } catch { return iso; }
+}
+
+function timeAgo(iso) {
+  if (!iso) return '';
+  const diff = (Date.now() - new Date(iso)) / 1000;
+  if (diff < 60) return 'just now';
+  if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+  return Math.floor(diff / 86400) + 'd ago';
+}
+
+function esc(str) {
+  const d = document.createElement('div');
+  d.textContent = str || '';
+  return d.innerHTML;
+}
+
+function imgOrPlaceholder(src, cls, placeholder = '🌀') {
+  if (src) {
+    return `<img src="${esc(src)}" class="${cls}" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='flex';" />
+            <div class="${cls}-placeholder" style="display:none;">${placeholder}</div>`;
+  }
+  return `<div class="${cls}-placeholder">${placeholder}</div>`;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Data loading
+────────────────────────────────────────────────────────── */
+async function loadData(force = false) {
+  const overlay = document.getElementById('loading-overlay');
+  const btn = document.getElementById('btn-refresh');
+  if (force) {
+    btn.classList.add('loading');
+    btn.querySelector('.icon-refresh').textContent = '↺';
+  } else {
+    overlay.style.display = 'flex';
+  }
+
+  try {
+    const url = `./hurricanes_data.json?t=${force ? Date.now() : ''}`;
+    const r = await fetch(url, { cache: force ? 'no-store' : 'default' });
+    DATA = await r.json();
+
+    // Check staleness
+    const staleBanner = document.getElementById('stale-banner');
+    if (DATA.last_updated) {
+      const ageHours = (Date.now() - new Date(DATA.last_updated)) / 3600000;
+      staleBanner.style.display = ageHours > 25 ? 'block' : 'none';
+    } else {
+      staleBanner.style.display = 'block';
+    }
+
+    renderAll();
+  } catch (e) {
+    console.error('Load failed:', e);
+    document.getElementById('home-news-list').innerHTML =
+      '<div class="empty-state"><div class="icon">⚠️</div><h3>Could not load data</h3><p>Check that hurricanes_data.json exists and the page is served over HTTP/HTTPS.</p></div>';
+  } finally {
+    overlay.style.display = 'none';
+    btn.classList.remove('loading');
+  }
+}
+
+/* ──────────────────────────────────────────────────────────
+   Render everything
+────────────────────────────────────────────────────────── */
+function renderAll() {
+  if (!DATA) return;
+  renderBanner();
+  renderGameHero();
+  renderHomeNews();
+  renderHomeReddit();
+  renderNewsTab();
+  renderSchedule();
+  renderStats();
+  renderLeaders();
+  renderRecruiting();
+  renderSocial();
+  renderRoster();
+}
+
+/* ── Banner ─────────────────────────────────────────────── */
+function renderBanner() {
+  const team = DATA.team || {};
+  const record = team.record || {};
+  const badge = document.getElementById('record-badge');
+  badge.textContent = record.summary || '— — —';
+  document.getElementById('updated-time').textContent =
+    DATA.last_updated ? 'Updated ' + timeAgo(DATA.last_updated) : 'Not yet updated';
+}
+
+/* ── Game hero (next game or last result) ───────────────── */
+function renderGameHero() {
+  const schedule = DATA.schedule || [];
+  const team = DATA.team || {};
+  const label = document.getElementById('game-label');
+  const matchup = document.getElementById('game-matchup');
+  const strip = document.getElementById('season-strip');
+
+  // Season pip strip
+  const finished = schedule.filter(g => g.result === 'W' || g.result === 'L');
+  const upcoming = schedule.filter(g => g.status === 'STATUS_SCHEDULED' || (!g.result && g.status !== 'STATUS_FINAL'));
+  strip.innerHTML = schedule.map(g => {
+    const cls = g.result === 'W' ? 'pip-w' : g.result === 'L' ? 'pip-l' : 'pip-u';
+    const letter = g.result || '·';
+    return `<div class="season-pip ${cls}" title="${esc(g.opponent)}">${letter}</div>`;
+  }).join('');
+
+  // Find next game (upcoming) or most recent finished game
+  const live = schedule.find(g => g.status === 'STATUS_IN_PROGRESS');
+  const next = schedule.find(g => g.status === 'STATUS_SCHEDULED');
+  const last = [...schedule].reverse().find(g => g.status === 'STATUS_FINAL');
+
+  const focus = live || next || last;
+  if (!focus) {
+    matchup.innerHTML = '<div class="empty-state" style="padding:1rem 0;width:100%;"><div class="icon">🏈</div><p>No schedule data yet.</p></div>';
+    return;
+  }
+
+  if (live) label.textContent = '🔴 LIVE';
+  else if (next) label.textContent = 'NEXT GAME';
+  else label.textContent = 'LAST RESULT';
+
+  const miamiLogo = team.logo || '';
+  const oppLogo = focus.opponent_logo || '';
+  const rankTag = focus.miami_rank ? `<div class="game-team-rank">#${focus.miami_rank}</div>` : '';
+  const oppRankTag = focus.opponent_rank ? `<div class="game-team-rank">#${focus.opponent_rank}</div>` : '';
+
+  let centerHTML = '';
+  if (focus.status === 'STATUS_FINAL') {
+    const cls = focus.result === 'W' ? 'win' : 'loss';
+    centerHTML = `
+      <div class="game-score">${focus.miami_score}–${focus.opp_score}</div>
+      <div class="game-result-badge ${cls}">${focus.result === 'W' ? 'WIN' : 'LOSS'}</div>
+      <div class="game-date">${fmtDateShort(focus.date)}</div>`;
+  } else if (focus.status === 'STATUS_IN_PROGRESS') {
+    centerHTML = `
+      <div class="game-score">${focus.miami_score || '0'}–${focus.opp_score || '0'}</div>
+      <div class="game-result-badge live">LIVE</div>`;
+  } else {
+    centerHTML = `
+      <div class="game-date" style="font-size:1rem;font-weight:800;color:#fff;">${fmtDateShort(focus.date)}</div>
+      <div class="game-result-badge upcoming">UPCOMING</div>`;
+  }
+
+  const haTag = focus.home_away === 'away' ? 'at ' : focus.neutral_site ? '(Neutral) ' : 'vs ';
+  const venue = focus.venue ? `<div class="game-venue">${esc(haTag)}${esc(focus.venue)}${focus.city ? ', ' + esc(focus.city) : ''}</div>` : '';
+  const tv = focus.tv ? `<div class="game-tv">📺 ${esc(focus.tv)}</div>` : '';
+  const confBadge = focus.conference_game ? '<span class="conf-badge">ACC</span> ' : '';
+  const neutralBadge = focus.neutral_site ? '<span class="neutral-badge">Neutral</span> ' : '';
+
+  matchup.innerHTML = `
+    <div class="game-team">
+      ${imgOrPlaceholder(miamiLogo, 'game-team-img', '🌀')}
+      ${rankTag}
+      <div class="game-team-name">Miami</div>
+    </div>
+    <div class="game-center">
+      ${centerHTML}
+      ${venue}${tv}
+      <div style="margin-top:0.4rem;">${confBadge}${neutralBadge}</div>
+    </div>
+    <div class="game-team">
+      ${imgOrPlaceholder(oppLogo, 'game-team-img', '🏈')}
+      ${oppRankTag}
+      <div class="game-team-name">${esc(focus.opponent_short || focus.opponent)}</div>
+    </div>`;
+}
+
+/* ── Home news list ─────────────────────────────────────── */
+function renderHomeNews() {
+  const news = (DATA.news || []).slice(0, 8);
+  const container = document.getElementById('home-news-list');
+  if (!news.length) {
+    container.innerHTML = '<div class="empty-state"><div class="icon">📰</div><h3>No news yet</h3><p>Hit Refresh or wait for the daily auto-update.</p></div>';
+    return;
+  }
+  container.innerHTML = news.map(n => `
+    <a href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
+      <div class="card news-item">
+        ${n.image ? `<img class="news-item-img" src="${esc(n.image)}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="news-item-img-placeholder">📰</div>`}
+        <div class="news-item-body">
+          <div class="news-item-source">${esc(n.source)}</div>
+          <div class="news-item-title">${esc(n.title)}</div>
+          <div class="news-item-date">${timeAgo(n.published)}</div>
+        </div>
+      </div>
+    </a>`).join('');
+}
+
+/* ── Home Reddit list ───────────────────────────────────── */
+function renderHomeReddit() {
+  const posts = (DATA.social?.reddit || []).slice(0, 6);
+  const container = document.getElementById('home-reddit-list');
+  if (!posts.length) {
+    container.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">💬</div><h3>No social posts yet</h3></div>';
+    return;
+  }
+  container.innerHTML = posts.map(p => `
+    <a href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
+      <div class="card reddit-item">
+        <div class="reddit-item-header">
+          <span class="reddit-sub">${esc(p.subreddit)}</span>
+          ${p.flair ? `<span class="reddit-flair">${esc(p.flair)}</span>` : ''}
+        </div>
+        <div class="reddit-title">${esc(p.title)}</div>
+        <div class="reddit-meta">
+          <span>⬆ ${p.score?.toLocaleString() || 0}</span>
+          <span>💬 ${p.comments?.toLocaleString() || 0}</span>
+          <span>${timeAgo(p.created)}</span>
+        </div>
+      </div>
+    </a>`).join('');
+}
+
+/* ── News tab ───────────────────────────────────────────── */
+function renderNewsTab() {
+  const news = DATA.news || [];
+  const sources = ['all', ...new Set(news.map(n => n.source))];
+
+  // Build filter chips
+  const filtersEl = document.getElementById('news-filters');
+  filtersEl.innerHTML = sources.map(s => `
+    <button class="filter-chip${s === activeNewsSource ? ' active' : ''}" data-source="${esc(s)}">
+      ${s === 'all' ? 'All Sources' : esc(s)}
+    </button>`).join('');
+
+  filtersEl.querySelectorAll('.filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeNewsSource = btn.dataset.source;
+      renderNewsTab();
+    });
+  });
+
+  const filtered = activeNewsSource === 'all' ? news : news.filter(n => n.source === activeNewsSource);
+  const grid = document.getElementById('news-grid');
+
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">📰</div><h3>No news yet</h3><p>Run the scraper or wait for the daily update.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(n => `
+    <a href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
+      <div class="card news-card">
+        ${n.image ? `<img class="news-card-img" src="${esc(n.image)}" loading="lazy" onerror="this.style.display='none'" />` : `<div class="news-card-img-placeholder">🌀</div>`}
+        <div class="news-card-body">
+          <div class="news-card-source">${esc(n.source)}</div>
+          <div class="news-card-title">${esc(n.title)}</div>
+          ${n.summary ? `<div class="news-card-summary">${esc(n.summary)}</div>` : ''}
+        </div>
+        <div class="news-card-footer">
+          <span>${timeAgo(n.published)}</span>
+          <span>Read →</span>
+        </div>
+      </div>
+    </a>`).join('');
+}
+
+/* ── Schedule tab ───────────────────────────────────────── */
+function renderSchedule() {
+  const schedule = DATA.schedule || [];
+  const tbody = document.getElementById('schedule-body');
+
+  if (!schedule.length) {
+    tbody.innerHTML = '<tr><td colspan="6"><div class="empty-state"><div class="icon">📅</div><h3>No schedule yet</h3></div></td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = schedule.map(g => {
+    const isUpcoming = g.status === 'STATUS_SCHEDULED';
+    const isFinal = g.status === 'STATUS_FINAL';
+    const isLive = g.status === 'STATUS_IN_PROGRESS';
+
+    let resultHTML = '';
+    if (isFinal) resultHTML = `<span class="result-cell ${g.result === 'W' ? 'result-w' : 'result-l'}">${g.result}</span>`;
+    else if (isLive) resultHTML = `<span class="result-live">LIVE</span>`;
+    else if (isUpcoming) resultHTML = `<span class="result-upcoming">${fmtDateShort(g.date)}</span>`;
+
+    const scoreHTML = isFinal
+      ? `<span class="score-cell">${g.miami_score}–${g.opp_score}</span>`
+      : isLive ? `<span class="score-cell result-live">${g.miami_score||0}–${g.opp_score||0}</span>`
+      : '';
+
+    const haLabel = g.home_away === 'away' ? `<span class="tag-home">@ Away</span>` :
+                    g.neutral_site ? `<span class="tag-home">Neutral</span>` :
+                    `<span class="tag-home">🏠 Home</span>`;
+
+    const confBadge = g.conference_game ? `<span class="conf-badge">ACC</span>` : '';
+    const oppRank = g.opponent_rank ? `<span class="opp-rank-tag">#${g.opponent_rank}</span>` : '';
+
+    return `<tr class="${isLive ? 'current-game' : ''}">
+      <td>${isFinal || isLive ? fmtDateShort(g.date) : ''}</td>
+      <td>
+        <div class="opp-cell">
+          ${g.opponent_logo
+            ? `<img class="opp-logo-sm" src="${esc(g.opponent_logo)}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=opp-logo-placeholder>🏈</div>'${g.opponent_short||g.opponent}" />`
+            : '<div class="opp-logo-placeholder">🏈</div>'}
+          <div>
+            <div class="opp-name">${oppRank} ${esc(g.opponent)}</div>
+            <div>${confBadge}</div>
+          </div>
+        </div>
+      </td>
+      <td>${haLabel}</td>
+      <td style="color:var(--text2);font-size:0.8rem;">${esc(g.tv)}</td>
+      <td>${resultHTML}</td>
+      <td>${scoreHTML}</td>
+    </tr>`;
+  }).join('');
+}
+
+/* ── Stats tab ──────────────────────────────────────────── */
+function renderStats() {
+  const stats = DATA.stats || {};
+  const grid = document.getElementById('stats-grid');
+
+  // Flatten interesting stats for display
+  const highlights = [
+    { label: 'Scoring Offense', cat: 'scoring', key: 'points', suffix: ' PPG' },
+    { label: 'Total Offense', cat: 'general', key: 'totalYardsPerGame', suffix: ' YPG' },
+    { label: 'Passing Offense', cat: 'passing', key: 'netPassingYardsPerGame', suffix: ' YPG' },
+    { label: 'Rushing Offense', cat: 'rushing', key: 'rushingYardsPerGame', suffix: ' YPG' },
+    { label: 'Scoring Defense', cat: 'defensive', key: 'pointsAllowedPerGame', suffix: ' PPG' },
+    { label: 'Total Defense', cat: 'defensive', key: 'totalYardsAllowedPerGame', suffix: ' YPG' },
+    { label: '3rd Down %', cat: 'situational', key: 'thirdDownConversionPct', suffix: '%' },
+    { label: 'Turnovers', cat: 'turnovers', key: 'totalTurnovers', suffix: '' },
+  ];
+
+  const cards = highlights.map(h => {
+    const catData = stats[h.cat] || {};
+    const stat = catData[h.key];
+    if (!stat) return null;
+    const rankBadge = stat.rank ? `<div class="stat-rank">National Rank: #${stat.rank}</div>` : '';
+    return `
+      <div class="card stat-card">
+        <div class="stat-card-label">${esc(h.label)}</div>
+        <div class="stat-card-value">${esc(stat.display)}${esc(h.suffix)}</div>
+        ${rankBadge}
+      </div>`;
+  }).filter(Boolean);
+
+  if (!cards.length) {
+    // If ESPN didn't return stats, show a placeholder
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">📊</div><h3>Stats will appear after the season starts</h3><p>The ESPN API returns game statistics once games have been played.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = cards.join('');
+}
+
+/* ── Leaders tab ────────────────────────────────────────── */
+function renderLeaders() {
+  const leaders = DATA.leaders || [];
+  const grid = document.getElementById('leaders-grid');
+
+  if (!leaders.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">🏆</div><h3>Leaders load once the season begins</h3></div>';
+    return;
+  }
+
+  grid.innerHTML = leaders.map(l => `
+    <div class="card leader-card">
+      ${l.headshot
+        ? `<img class="leader-photo" src="${esc(l.headshot)}" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='flex';" />
+           <div class="leader-photo-placeholder" style="display:none;">🏈</div>`
+        : `<div class="leader-photo-placeholder">🏈</div>`}
+      <div class="leader-info">
+        <div class="leader-cat">${esc(l.category)}</div>
+        <div class="leader-name">${esc(l.name)}</div>
+        <div class="leader-value">${esc(l.value)}</div>
+        <div class="leader-pos">${esc(l.position)}${l.jersey ? ' · #' + esc(l.jersey) : ''}</div>
+      </div>
+    </div>`).join('');
+}
+
+/* ── Recruiting tab ─────────────────────────────────────── */
+function renderRecruiting() {
+  const items = DATA.recruiting || [];
+  const grid = document.getElementById('recruiting-grid');
+
+  if (!items.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">🎓</div><h3>No recruiting news yet</h3><p>Check back after the daily refresh.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = items.map(r => `
+    <a href="${esc(r.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
+      <div class="card recruit-card">
+        <div class="recruit-source">${esc(r.source)}</div>
+        <div class="recruit-title">${esc(r.title)}</div>
+        ${r.summary ? `<div class="recruit-summary">${esc(r.summary)}</div>` : ''}
+        <div class="recruit-date">${timeAgo(r.published)}</div>
+      </div>
+    </a>`).join('');
+}
+
+/* ── Social tab ─────────────────────────────────────────── */
+function renderSocial() {
+  const posts = DATA.social?.reddit || [];
+  const grid = document.getElementById('social-grid');
+
+  if (!posts.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">💬</div><h3>No Reddit posts yet</h3></div>';
+    return;
+  }
+
+  grid.innerHTML = posts.map(p => `
+    <a href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none;">
+      <div class="card social-card">
+        <div class="social-card-header">
+          <span class="social-sub-badge">${esc(p.subreddit)}</span>
+          ${p.flair ? `<span class="social-flair">${esc(p.flair)}</span>` : ''}
+        </div>
+        <div class="social-title">${esc(p.title)}</div>
+        ${p.text ? `<div class="social-text">${esc(p.text)}</div>` : ''}
+        <div class="social-footer">
+          <span>⬆ ${(p.score||0).toLocaleString()}</span>
+          <span>💬 ${(p.comments||0).toLocaleString()}</span>
+          <span>👤 ${esc(p.author)}</span>
+          <span>${timeAgo(p.created)}</span>
+        </div>
+      </div>
+    </a>`).join('');
+}
+
+/* ── Roster tab ─────────────────────────────────────────── */
+function renderRoster() {
+  const roster = DATA.roster || [];
+
+  // Position filter chips
+  const filtersEl = document.getElementById('roster-filters');
+  filtersEl.querySelectorAll('.filter-chip').forEach(btn => {
+    const isActive = btn.dataset.pos === activeRosterPos;
+    btn.classList.toggle('active', isActive);
+    btn.addEventListener('click', () => {
+      activeRosterPos = btn.dataset.pos;
+      renderRoster();
+    });
+  });
+
+  const OL_POS = ['OT', 'OG', 'OL', 'C'];
+  const DL_POS = ['DT', 'DE', 'DL', 'NT'];
+  const DB_POS = ['CB', 'S', 'DB', 'FS', 'SS'];
+  const KP_POS = ['K', 'P', 'LS'];
+
+  const filtered = activeRosterPos === 'all' ? roster : roster.filter(p => {
+    if (activeRosterPos === 'OL') return OL_POS.includes(p.position);
+    if (activeRosterPos === 'DL') return DL_POS.includes(p.position);
+    if (activeRosterPos === 'DB') return DB_POS.includes(p.position);
+    if (activeRosterPos === 'K') return KP_POS.includes(p.position);
+    return p.position === activeRosterPos;
+  });
+
+  const grid = document.getElementById('roster-grid');
+
+  if (!filtered.length) {
+    grid.innerHTML = '<div class="empty-state" style="grid-column:1/-1;"><div class="icon">👥</div><h3>No roster data yet</h3></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => `
+    <div class="card roster-card">
+      ${p.image
+        ? `<img class="roster-photo" src="${esc(p.image)}" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='flex';" />
+           <div class="roster-photo-placeholder" style="display:none;">👤</div>`
+        : `<div class="roster-photo-placeholder">👤</div>`}
+      <div class="roster-jersey">#${esc(p.jersey)||'–'}</div>
+      <div class="roster-name">${esc(p.name)}</div>
+      <div class="roster-pos">${esc(p.position_name||p.position)}</div>
+      <div class="roster-year">${esc(p.year)}</div>
+      ${p.height||p.weight ? `<div class="roster-ht-wt">${esc(p.height)}${p.weight?' · '+esc(p.weight):''}</div>` : ''}
+    </div>`).join('');
+}
+
+/* ──────────────────────────────────────────────────────────
+   Boot
+────────────────────────────────────────────────────────── */
+loadData();
+</script>
+</body>
+</html>
