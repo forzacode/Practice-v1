@@ -174,6 +174,7 @@ function renderMap() {
 function setActiveChapter(chNum) {
   G._activeChapter = chNum;
   renderMap();
+  requestAnimationFrame(drawConnectorLines);
 }
 
 function renderMiniStats() {
@@ -181,12 +182,18 @@ function renderMiniStats() {
   if (!p) return;
   const el = document.getElementById('player-mini-stats');
   if (!el) return;
+  const xpPct = Math.min(100, Math.round((p.xp / p.xpToNext) * 100));
   el.innerHTML = `
     <span class="mini-stat"><span>🧑</span>${p.name}</span>
     <span class="mini-stat"><span>Lv</span>${p.level}</span>
     <span class="mini-stat"><span>HP</span>${p.hp}/${p.maxHp}</span>
     <span class="mini-stat"><span>MP</span>${p.mp}/${p.maxMp}</span>
     <span class="mini-stat"><span>⬡</span>${p.gold}</span>
+    <div class="xp-bar-wrap">
+      <span class="xp-bar-label">XP ${p.xp}/${p.xpToNext}</span>
+      <div class="xp-bar-track"><div class="xp-bar-fill" style="width:${xpPct}%"></div></div>
+      <span class="xp-bar-label">${xpPct}%</span>
+    </div>
   `;
 }
 
@@ -206,14 +213,33 @@ function renderLevel(levelId) {
   if (!body) return;
 
   const alreadyDone = isLevelCompleted(lvl.id);
+  const isPuzzle    = lvl.type === 'puzzle';
 
-  body.innerHTML = `
-    <div class="level-flavor">${lvl.flavor || ''}</div>
-    <div class="level-title">${lvl.title}</div>
-    <div class="level-text">${(lvl.text || lvl.preText || '').replace(/\n/g, '<br>')}</div>
-    ${alreadyDone ? '<p style="color:var(--text3);font-size:.8rem;margin-bottom:.8rem">✓ Previously visited</p>' : ''}
-    <div class="choices" id="choices-container">${renderChoicesHtml(lvl)}</div>
-  `;
+  const mainText = (lvl.text || lvl.preText || '').replace(/\n/g, '<br>');
+
+  if (isPuzzle) {
+    body.innerHTML = `
+      <div class="puzzle-banner">
+        <span class="puzzle-icon">${lvl.icon || '⚙'}</span>
+        <div>
+          <span class="puzzle-badge">⚙ Puzzle</span>
+          <div class="puzzle-title">${lvl.title}</div>
+        </div>
+      </div>
+      <div class="level-flavor">${lvl.flavor || ''}</div>
+      <div class="puzzle-clue">${mainText}</div>
+      ${alreadyDone ? '<p style="color:var(--text3);font-size:.8rem;margin-bottom:.8rem">✓ Previously solved</p>' : ''}
+      <div class="choices" id="choices-container">${renderChoicesHtml(lvl)}</div>
+    `;
+  } else {
+    body.innerHTML = `
+      <div class="level-flavor">${lvl.flavor || ''}</div>
+      <div class="level-title">${lvl.title}</div>
+      <div class="level-text">${mainText}</div>
+      ${alreadyDone ? '<p style="color:var(--text3);font-size:.8rem;margin-bottom:.8rem">✓ Previously visited</p>' : ''}
+      <div class="choices" id="choices-container">${renderChoicesHtml(lvl)}</div>
+    `;
+  }
 
   showScreen('level');
 }
@@ -293,6 +319,7 @@ function handleReturnToMap() {
   G._activeChapter = G._activeChapter || 1;
   renderMap();
   showScreen('map');
+  requestAnimationFrame(drawConnectorLines);
 }
 
 // ─── Combat Screen ────────────────────────────────────────────────────────────
@@ -658,6 +685,77 @@ function renderVictory() {
       `<span class="gain-chip" style="border-color:var(--mp2)">${p.flags.length} Story Choices</span>`,
     ].join('');
   }
+}
+
+// ─── Constellation Connector Lines ───────────────────────────────────────────
+function drawConnectorLines() {
+  const trail = document.getElementById('level-trail');
+  if (!trail) return;
+
+  const old = trail.querySelector('.connector-svg');
+  if (old) old.remove();
+
+  const nodes = [...trail.querySelectorAll('.level-node:not(.secret)')];
+  if (nodes.length < 2) return;
+
+  const trailRect = trail.getBoundingClientRect();
+  const positions = nodes.map(n => {
+    const r = n.getBoundingClientRect();
+    return { x: r.left - trailRect.left + r.width / 2, y: r.top - trailRect.top + r.height / 2 };
+  });
+
+  const NS  = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg');
+  svg.classList.add('connector-svg');
+  // Size to actual scroll dimensions of the trail
+  svg.setAttribute('width',  trail.scrollWidth);
+  svg.setAttribute('height', trail.scrollHeight);
+
+  for (let i = 0; i < positions.length - 1; i++) {
+    const p1 = positions[i];
+    const p2 = positions[i + 1];
+
+    // Dim glow line (wide, blurred)
+    const glow = document.createElementNS(NS, 'line');
+    glow.setAttribute('x1', p1.x); glow.setAttribute('y1', p1.y);
+    glow.setAttribute('x2', p2.x); glow.setAttribute('y2', p2.y);
+    glow.setAttribute('stroke', '#4a3880');
+    glow.setAttribute('stroke-width', '3');
+    glow.setAttribute('stroke-opacity', '0.35');
+    svg.appendChild(glow);
+
+    // Dashed foreground line
+    const line = document.createElementNS(NS, 'line');
+    line.setAttribute('x1', p1.x); line.setAttribute('y1', p1.y);
+    line.setAttribute('x2', p2.x); line.setAttribute('y2', p2.y);
+    line.setAttribute('stroke', '#6a4faa');
+    line.setAttribute('stroke-width', '1');
+    line.setAttribute('stroke-dasharray', '5 5');
+    svg.appendChild(line);
+  }
+
+  // Small star dots at each node center
+  positions.forEach(p => {
+    const dot = document.createElementNS(NS, 'circle');
+    dot.setAttribute('cx', p.x); dot.setAttribute('cy', p.y);
+    dot.setAttribute('r', '2.5');
+    dot.setAttribute('fill', '#8a6acc');
+    dot.setAttribute('fill-opacity', '0.5');
+    svg.appendChild(dot);
+  });
+
+  trail.insertBefore(svg, trail.firstChild);
+}
+
+// ─── About Modal ─────────────────────────────────────────────────────────────
+function showAboutModal() {
+  const el = document.getElementById('about-modal');
+  if (el) el.style.display = 'flex';
+}
+
+function closeAboutModal() {
+  const el = document.getElementById('about-modal');
+  if (el) el.style.display = 'none';
 }
 
 // ─── Entering a Level ─────────────────────────────────────────────────────────

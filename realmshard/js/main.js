@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function bindEvents() {
 
   // ── Title ──
+  on('btn-about', 'click', showAboutModal);
+
   on('btn-new-game', 'click', () => {
     G._selectedClass = null;
     renderCreate();
@@ -23,6 +25,7 @@ function bindEvents() {
       renderMap();
       showScreen('map');
       showToast(`Welcome back, ${G.player.name}!`);
+      requestAnimationFrame(drawConnectorLines);
     } else {
       showToast('No save data found.');
     }
@@ -41,6 +44,7 @@ function bindEvents() {
     renderMap();
     showScreen('map');
     showToast(`Welcome, ${name} the ${getClassName(classId)}!`);
+    requestAnimationFrame(drawConnectorLines);
   });
 
   on('btn-back-title', 'click', () => {
@@ -137,6 +141,7 @@ Object.assign(window, {
   showScreen, renderMap, renderInventory, renderCombat, renderTitle,
   renderCreate, renderLevel, renderVictory, renderGameOver,
   showToast, showLevelUpModal, closeLevelUpModal,
+  showAboutModal, closeAboutModal, drawConnectorLines,
 
   // map / navigation
   setActiveChapter, enterLevel, handleReturnToMap,
