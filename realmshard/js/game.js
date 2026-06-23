@@ -620,6 +620,16 @@ function resolveVictory() {
   }
   checkSecretUnlocks();
   saveGame();
+
+  // Final boss: transition to victory screen after a delay
+  if (c.enemy.finalBoss) {
+    addFlag('realmshard_sealed');
+    saveGame();
+    setTimeout(() => {
+      if (window.showScreen)    showScreen('victory');
+      if (window.renderVictory) renderVictory();
+    }, 2500);
+  }
 }
 
 // ─── Level Completion & Outcomes ─────────────────────────────────────────────

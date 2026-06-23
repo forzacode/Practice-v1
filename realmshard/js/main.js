@@ -131,22 +131,6 @@ function on(id, event, handler) {
   if (el) el.addEventListener(event, handler);
 }
 
-// ─── Final Boss Victory Check ─────────────────────────────────────────────────
-const _origResolveVictory = resolveVictory;
-window.resolveVictory = function () {
-  _origResolveVictory();
-  const c   = G.combat;
-  const lvl = c ? LEVEL_MAP[c.levelId] : null;
-  if (lvl?.enemy?.finalBoss) {
-    addFlag('realmshard_sealed');
-    saveGame();
-    setTimeout(() => {
-      showScreen('victory');
-      renderVictory();
-    }, 2000);
-  }
-};
-
 // ─── Expose globals for inline onclick handlers ───────────────────────────────
 Object.assign(window, {
   // screens
