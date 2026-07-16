@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-15T12:09:45.862536+00:00",
+  "last_updated": "2026-07-16T12:14:25.074273+00:00",
   "team": {
     "name": "Miami Hurricanes",
     "abbreviation": "MIA",
@@ -12,6 +12,38 @@
     "website": ""
   },
   "news": [
+    {
+      "title": "Why Darian Mensah chose to transfer to Miami",
+      "summary": "Why Darian Mensah chose to transfer to Miami",
+      "url": "https://www.espn.com/video/clip/_/id/49369084/why-darian-mensah-chose-transfer-miami",
+      "published": "2026-07-15T20:10:21Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/media/motion/2026/0715/ss_20260715_154901636_3594320966/ss_20260715_154901636_3594320966.jpg"
+    },
+    {
+      "title": "What Miami needs to avoid this season",
+      "summary": "What Miami needs to avoid this season",
+      "url": "https://www.espn.com/video/clip/_/id/49368618/what-miami-needs-avoid-season",
+      "published": "2026-07-15T18:52:39Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/media/motion/2026/0715/ss_20260715_143443359_3594286892/ss_20260715_143443359_3594286892.jpg"
+    },
+    {
+      "title": "Miami's Mensah: Success of Ward, Beck factored into transfer",
+      "summary": "New Miami QB Darian Mensah said that the success Cam Ward and Carson Beck had in Coral Gables was a 'huge factor' in his decision to transfer from Duke.",
+      "url": "https://www.espn.com/college-football/story/_/id/49367682/miami-mensah-success-ward-beck-factored-transfer",
+      "published": "2026-07-15T20:55:49Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0602/r1667380_600x400_3-2.jpg"
+    },
+    {
+      "title": "ACC implements new tiebreaker policy for football title game",
+      "summary": "The ACC has a new tiebreaker policy for its football championship game in a move that commissioner Jim Phillips said allows the league to feature its two best teams.",
+      "url": "https://www.espn.com/college-football/story/_/id/49366844/acc-implements-new-tiebreaker-policy-football-title-game",
+      "published": "2026-07-15T14:41:38Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2025/1216/r1590173_1296x729_16-9.jpg"
+    },
     {
       "title": "2026 ACC college football preview, predictions, top transfers and more",
       "summary": "Repeat run for Miami? Revenge for Duke? Reset for Clemson? Redemption at UNC? Intrigue abounds in the ACC.",
@@ -213,38 +245,6 @@
       "image": "https://a.espncdn.com/photo/2025/0317/r1465598_1296x729_16-9.jpg"
     },
     {
-      "title": "Herbstreit to McAfee: Miami could win it all this season",
-      "summary": "Kirk Herbstreit joins Pat McAfee and makes the case for Miami to win college football's national title this season.",
-      "url": "https://www.espn.com/video/clip/_/id/48751748/miami-win-all-season",
-      "published": "2026-05-12T18:26:18Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/media/motion/2026/0512/ss_20260512_140528562_3524850861/ss_20260512_140528562_3524850861.jpg"
-    },
-    {
-      "title": "College football post-spring football buzz: Notes around the country",
-      "summary": "What we heard around college football after the completion of spring practice.",
-      "url": "https://www.espn.com/college-football/story/_/id/48695281/college-football-spring-buzz-week-0-cfp-ohio-state-notre-dame-army-navy",
-      "published": "2026-05-11T15:49:27Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2025/1209/r1587014_1296x729_16-9.jpg"
-    },
-    {
-      "title": "Donte Wright, No. 30 in the SC Next 300, commits to play for Miami",
-      "summary": "Four-star cornerback Donte Wright, No. 30 in the SC Next 300, flipped his commitment to Miami from Georgia on Saturday.",
-      "url": "https://www.espn.com/college-football/story/_/id/48724201/donte-wright-no-30-sc-next-300-commits-play-miami",
-      "published": "2026-05-09T21:56:18Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2014/1015/fan_g_fg2_cr_600x600.jpg"
-    },
-    {
-      "title": "Miami murder case retrial delayed amid misconduct allegations",
-      "summary": "A judge on Thursday delayed the retrial of former Hurricanes football player Rashaun Jones, who is accused of killing teammate Bryan Pata in 2006.",
-      "url": "https://www.espn.com/college-football/story/_/id/48704026/bryan-pata-rashaun-jones-retrial-postponed-misconduct-allegations",
-      "published": "2026-05-08T02:15:34Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/0302/r1622236_1296x729_16-9.jpg"
-    },
-    {
       "title": "Miami lands pair of coveted recruits for '28, '29 classes",
       "summary": "Miami coach Mario Cristobal secured a pair of coveted recruits for the future Wednesday with commitments from 2028 offensive tackle Kweli Fielder and class of 2029 quarterback CJ Cypher.",
       "url": "https://www.espn.com/college-football/story/_/id/49169745/miami-lands-pair-coveted-recruits-28-29-classes",
@@ -253,37 +253,73 @@
       "image": ""
     },
     {
-      "title": "Everything to Know About the Miami Hurricanes’ ACC Kickoff Media Day - Yahoo Sports",
-      "summary": "Everything to Know About the Miami Hurricanes’ ACC Kickoff Media Day&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWUk3SnlMdTNraGhualRTUzRHTHFyS05kcVMwaU5tdTZLTGtOQ0I3ZlMyaDVvbHBaRUljQThJbWl4ekhTS0hwWjhUTHpWQXlLQXJEcHNteHBtT2VsRkZuZlZqaTBHZExoWkFrSjc2djhrLVNlUEFvbTZGZ19iZHlpUVdxcXlVdFhlcWxyX1FB?oc=5",
-      "published": "Wed, 15 Jul 2026 10:00:40 GMT",
+      "title": "ACC Supremacy: Is it really the Miami Hurricanes versus the field for the 2026 season? - Fox News",
+      "summary": "ACC Supremacy: Is it really the Miami Hurricanes versus the field for the 2026 season?&nbsp;&nbsp;Fox NewsDarian Mensah ready to lead Miami Hurricanes: ‘This is my offense’&nbsp;&nbsp;Miami HeraldACC MEDIA DAYS MEGA NOTEBOOK: The 2026 Miami Hurricanes are ready to make their mark&nbsp;&nbsp;247SportsDarian Mensah unfazed by critics after controversial move from Duke to Miami: 'Why would I worry about it?'&nbsp;&nbsp;Yahoo SportsDarian Mensah Reveals How Carson Beck, Cam Ward Affected His Decisio",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPWHJGb05qUlJmWjFuRTlOZUMxZ21OTHh2dGZ3aGxXc1ZxNGl6dERHRG1FZzJHWTRTUXhUQl9TWnBaOW94Nm1kTDl5SzYyUjZreHZKeHJvdldGRllyVHg5UEVlTTlXQ1hPOGZzV3RBQWtWZTg2aGpIOUxiaGo2QVlRV3k5bkkwLWM5dFBobm9EeHNLZkNRMzl1UDdB?oc=5",
+      "published": "Wed, 15 Jul 2026 16:07:16 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "July Player Performance Index: No. 17 Miami Hurricanes WR Josh Moore Could Be Next Breakout Receiver - On3",
-      "summary": "July Player Performance Index: No. 17 Miami Hurricanes WR Josh Moore Could Be Next Breakout Receiver&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNVlRIb29wb3dvLXZJbjhwQTE2ZTg0YzMzaWpxTkxBUDZxNnJEZGcyenFkUlZSZHNGekJiODB2VnhaYmswOVF5YmJ0X0xwMVVRVFUxMmpoSWRBcVY3dUlubzNFekc0ak5tTUlJenBHelJmOEs3MGY0aFpVb0syU2o3OUxtUGZzeFZ5dFdvN0ExMGxqT2VrTWRWQ1dNRm9xMThwSm8wWjFFbkFfdWFQYWQ1WU1CZEE0Q3VGVXBHWDdzVm9GNlZhVkg4QzF6bEdIRTV5dEc5QkR4ZWRqZ09iSVhIMg?oc=5",
-      "published": "Tue, 14 Jul 2026 10:08:49 GMT",
+      "title": "Miami's Mark Fletcher Jr. Rebounds From National Championship Loss Only One Way - Sports Illustrated",
+      "summary": "Miami's Mark Fletcher Jr. Rebounds From National Championship Loss Only One Way&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbEpkLWU5Y0xFdWFHYjlDekwtVmpmd21uNHJkWk12dTE0ajhUZVJqSFBlR0xFc1NYUGdGdHNUVWlPVXNrNWRUdTlGRXJDOGhCeDJqaU9PeFNYcnR6VGxuZ3daNzFmMFN5UGFseXNSWkNZSUFjbW56UWU0WUpMdHZkc3lJdjNpOEdza3N0NFJKM3kzUUhaM21DVEl5S3JXVDJOWHFDeFN0Ulk0aEtkM0VYcnFpYjdWZy1zVWc?oc=5",
+      "published": "Thu, 16 Jul 2026 11:00:04 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Live Updates: Multiple five-stars participating in The Antonio Brown Experience in Miami - 247Sports",
-      "summary": "Live Updates: Multiple five-stars participating in The Antonio Brown Experience in Miami&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPSWY2US1ZTXdSLTcwejZ0RHNoWU5yZXJqQTFMN2FkZmVMdHQ5M193XzQ1amZ2SzVTeXBrZlFybWd0TlY5Z095a0xDM3VxV181T3BuV0xmVGc2ZnBkeVpNLU5Scmo1dS1iTWVXM3pFRHNlTDhVOUlrR3B2Wk5nSFVjU3hfR0VEWnBQLVZCX0w5WTcwb1VIWHRMSi15QmVpX1VPNXdQODVXNDV1MHNHdjNWMXNPd2dhN1drUzdoUkpUaVhhYTVJWnZEYnk1SEVkTHhhM2JWWEJEeC1qV01Ldm92aWVzNFpXV1BMak83T19tblQ3WHRhRElFckttdE5jdmJxOTFyak5iSlpoTlpQdUYzLTJIX3dmekhkM19FTGloWTlsZw?oc=5",
-      "published": "Tue, 14 Jul 2026 21:02:18 GMT",
+      "title": "Miami Turns to Duke Transfer Darian Mensah to Continue Portal Quarterback Success - FOX Sports",
+      "summary": "Miami Turns to Duke Transfer Darian Mensah to Continue Portal Quarterback Success&nbsp;&nbsp;FOX Sports",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQY08tbWZMYnp5Vk9sMzJhRjhvVjlRYnZCNDloM2VDcF9uQXVyemE5dFVNTHV4MElzRjIyMUNwaVZhVEpxY3QxNTdaZkFwSl9FcUVIZzFYYkZCS290YVN0Tl9PM21DRkxLek5RRnNndkthOGNMdXBFdE1sYmdEZFBrZExFd18tMldHN29LRWk4Q3hqMi1iUTJZSG93RFN1eGtlVDFFd080X242NElJaS02VDE1QUtMaVpyb1QzRy1JdkRFUFpI0gHEAUFVX3lxTE9lT09tRDRGQWU4WE1LOWRxZlZ6RkgyOHk5UnVXNjFMSl92RGJLWDN3TF94MngzOGxuejRRdml0eVFKdUhVZDlveWZWZ3pmaTBjdGxJYlJTNE9UbDhwaXBtaWVvaVFUYzNUR0x1YjNUTUF3SF9GUEltWGNHMXUxdnF0cFp2RW1VeU93UkFLM3ZxQkpobjFVT3hCWWU4RDlRZ0MycHl4eVk1Sm8wTjA1Sl9IY2VmNzVmRzN4djZaQkZhTnFNcW4?oc=5",
+      "published": "Thu, 16 Jul 2026 04:23:37 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Mario Cristobal has delivered on his promise to bring 5-star talent to Miami - Canes Warning",
-      "summary": "Mario Cristobal has delivered on his promise to bring 5-star talent to Miami&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZDRQbV9ldmQ0S0p4X29ZX1FDLWs4Z0NIc2xaZzVzaEFiNjhwcFdLVmZNTG85NjJMb0pFOTJEam9rLUlNYWN6Yy1xeTM5VXNDRnVtbnlFRGZsckRJZWptZGhzcV8zdm9nT2lTbW9LclBiWWVtMEJvZWhXREFRandna2dQa0VpdjlNLWJWQzc3YzRFZWhSTS1jX2dQbHlZSjhFWWJj?oc=5",
-      "published": "Tue, 14 Jul 2026 22:43:00 GMT",
+      "title": "2026 ACC football kickoff: Hurricanes coach Mario Cristobal - NBC 6 South Florida",
+      "summary": "2026 ACC football kickoff: Hurricanes coach Mario Cristobal&nbsp;&nbsp;NBC 6 South Florida",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdFlXWG8tRmNOSk5yeWE4ZlR1TFdEaVdqTkY4V1N0UWFxa2dQODhPbGpvNkRoMVJ5LVNEcmlhMG9IZXdoUXJERkdqeTRrSGdUdjNiYmtEM2xkelRXMVY0Q2pDSDFEbUZWNUJEOEx6XzMweW1hc3VrUjFVRXZmMXdocXhuOWpOZ1R1OXgtMmpFZThESmJUc1ExVl9iaWI4OTc0NTFMUWM4Zmo5eVpCVEHSAbYBQVVfeXFMTUlrUVpnNS1RVUhZS214QjFuSEQyY3ZnSTMxcm1IU0I4aXdDM1lkTUlQTEZvUk9CMHJSMUFCdjVYRF82TVFtMW54QS1WazJFaGxWQVlSdjBoS05UdUxkRXBNNmY2OHdtTTJWY1l0TmNGTkI5aTgxVXdPdERVMWp0alVTZDVlQlpaTEN2WGRfY21vQTdVV1R1WlJaR0pTWTlpTUxpcTMtZ1hwZ2hWN1U3SmFBelhIN1E?oc=5",
+      "published": "Wed, 15 Jul 2026 21:29:32 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "It's July 16! What's Up, Miami Hurricanes Fans … Are U? - On3",
+      "summary": "It's July 16! What's Up, Miami Hurricanes Fans … Are U?&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPek0yUXJsd0FWQzR5MkhjY3FsWjA1V19MSHV5cHVfb3FJeEpQUVdKY0c2QmxLbEpESkdjbVdrS3dPTGo1X0dqZGpRdHRmLWdGVFZhYWg0ZEJRWWd6QXBjdlAwWndEMS1sR05pX2F1NG5GMGF2ZElSV2tJVWkwWFkyRkJTZEVBcDJOcHEwMVdSOG1VX2pMS3huU1BfVUpxQQ?oc=5",
+      "published": "Thu, 16 Jul 2026 10:00:11 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Will the Miami Hurricanes Have College Football's Best Offense in the 2026 Season? - Yahoo Sports",
+      "summary": "Will the Miami Hurricanes Have College Football's Best Offense in the 2026 Season?&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQS0ZFLTV4T2l6OUd0ekx1dXFqR0xjdlVlSlY0X09jRUszTGlyeG5WWTVGX0ZBdWhTaXd0UVEtUlFnaFo5X3d2ZUJ3M1lfcjY0b25hSHUzSjQ2RVZ5ZGRBNEMtLTZSZ0dsbWw1dkRjTVdEQUkzV1ZVOW85OU00WGpWMHpiS2V6UWloOHNsNnJkUzh3Zw?oc=5",
+      "published": "Tue, 14 Jul 2026 22:00:43 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "New ACC football tiebreaker means Duke over Miami won't happen again - The Palm Beach Post",
+      "summary": "New ACC football tiebreaker means Duke over Miami won't happen again&nbsp;&nbsp;The Palm Beach Post",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOWHJVa0lHMkxvcFBlQi03b2ZoUTgxbnctNldkMC1tcnU5QTJESk80NEg0bGV1ZURLNWJkYVpvQ2p2YXNHeEc1aGJQNFhDUmZlZGFOM0sxOUIzS1ZMRFFkWjhncGgweElFVFdZelVqbFNTRmNTd1pSNlJCNWdFQXE3T053R2xWVVVNTVJXMlcyVlJaUTJDMmZuM0xkQ19oWlg3MXZKaEZQeGsxMzJGazhaZ01OM19OTU9tSG8tV1ExOC1hX3BvanlBcXlsdU5kdGh1NEZiZDhaemxfcGpTOExr?oc=5",
+      "published": "Wed, 15 Jul 2026 16:23:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Breaking down the top WR classes in the 2027 cycle so far - On3",
+      "summary": "Breaking down the top WR classes in the 2027 cycle so far&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbXJsRC1QZWpseS1YMHJrVDVaQVgwMDgyZWtXV1JtUkZCLTVnS2tRVHNvSDMyMjdKSTFoakxiZjZlT2lWb0w1VWhyWklzLTZCaF8xeVB1UzB0SFgzdlpYVzJ1VHdyNzZ3aUxHdlUzZUt1aHI2aVFJcWZOUmVYQTFCbWdFMFNjdmRkRUMzcFN1bnFtNVNWbVZ5bFM3M2ZpZ3NsSGdxV1ZSOERFM0dXQnZCNGphbw?oc=5",
+      "published": "Tue, 14 Jul 2026 14:09:36 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -291,53 +327,17 @@
     {
       "title": "Preseason chatter has high praise for Miami Hurricanes ahead of ACC media days - Miami Herald",
       "summary": "Preseason chatter has high praise for Miami Hurricanes ahead of ACC media days&nbsp;&nbsp;Miami Herald",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLXRCamR2dkw1LXppMkJJUi04ekRoMEs2NFZYc2d6WjFhbnZ2YS1QbmxtemZMRDE0eTdaVFk3X29HbEw0eF94RHp6WWhmSG9Telc2eEpaMEY0RnVhdE5UYjAtcVp4Uk1FRDNkejFSRkFyX3luTGZ1M3dNakRZMHlIZHd4aFVRMVY3cEUyQVJvV2pid9IBkgFBVV95cUxNTnJCTUNGM0NrdXFKT1NhZTdBYUhXY3o3NTI5UTdFckdXT1VOemdOZ2RTdVZDWGk3WENGRWh4OVNoUnFCbEFSa2hDMEFLSGxLRGtKbUlYYnk0OE5YcThVa0o1TV9TMjlfcXVLWWhQZjRxa19hNmM0SkxWX0RkOUVqM2taTElWTzhfeVBoM1JVbklzUQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTnJCTUNGM0NrdXFKT1NhZTdBYUhXY3o3NTI5UTdFckdXT1VOemdOZ2RTdVZDWGk3WENGRWh4OVNoUnFCbEFSa2hDMEFLSGxLRGtKbUlYYnk0OE5YcThVa0o1TV9TMjlfcXVLWWhQZjRxa19hNmM0SkxWX0RkOUVqM2taTElWTzhfeVBoM1JVbklzUdIBkgFBVV95cUxNTnJCTUNGM0NrdXFKT1NhZTdBYUhXY3o3NTI5UTdFckdXT1VOemdOZ2RTdVZDWGk3WENGRWh4OVNoUnFCbEFSa2hDMEFLSGxLRGtKbUlYYnk0OE5YcThVa0o1TV9TMjlfcXVLWWhQZjRxa19hNmM0SkxWX0RkOUVqM2taTElWTzhfeVBoM1JVbklzUQ?oc=5",
       "published": "Tue, 14 Jul 2026 14:41:40 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "On3 Ranks Miami as the No. 1 Offense in College Football Entering 2026 - CanesInSight",
-      "summary": "On3 Ranks Miami as the No. 1 Offense in College Football Entering 2026&nbsp;&nbsp;CanesInSight",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxONk9LN3RNZVJ3aWtPVnFMS0VibGFCZU5KWGs4Q0VJQS1mUUU1X3hBSmhjdHBhUW9KamRYa2pXQk5JYVhQTFpYOGdRSml4YWMwNldwT1JQc0M0TWhzMEdBOHlHamhhUWg4N3p5RlEzZ2VxR1Vqc01zN3FabFhDZnJ5bE9xVHVHYWh3MFZNZWZ1SHBTZ0tWUEszQ3dzYndiVXZpRzBGZXhENXkzbWxxbE5NT192QzQ?oc=5",
-      "published": "Tue, 14 Jul 2026 20:06:18 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Three Burning Questions for Miami Ahead of 2026 ACC Football Kickoff - Sports Illustrated",
-      "summary": "Three Burning Questions for Miami Ahead of 2026 ACC Football Kickoff&nbsp;&nbsp;Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX2Y0RTdtTzktV3hWSUEzSVpWeGpHdGwzbmR2d1k2LTNrTl9jNWd2ZmJWWHo3N09jTHRJWkYxVkRhWU1yLTRzb2k1NFM3XzQ5RkF0V1hsUU42cUhEdFVHaGg5UTNFMHN0akpuVEpuZ1ZJS1RLWVVQdEg1UTFqazlrdHB3RkZaTkV0WEFQR1kwNVRPMzR5dnJvbzNnQ2ptLUtkMVRWU3lSYnN6VTNPZ2tN?oc=5",
-      "published": "Tue, 14 Jul 2026 16:21:15 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Miami Hurricanes in the mix for QB-turned-DB Jaxon Flowers - On3",
-      "summary": "Miami Hurricanes in the mix for QB-turned-DB Jaxon Flowers&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTUxYYUVScHRLTmdrV1F5Qno0bmR6ZVFYdzJUZlpwSzVtWVAxemZaQ3pQamdFdlFXLWdtMUVDdzdNeDZVR3Z0TVpocnR5X3BGNHdZVVNKamFaNmd6cHp0b0MyN3U5bDgtdUNrb3lTelFuZUZhYUNpekxrSW52ZEpjU1lqX1pEQnhYb1VpT295c2pNSlJSWUlIRXlMMUVmNFFaMlZUYlgwV1JxV2c?oc=5",
-      "published": "Tue, 14 Jul 2026 10:08:51 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Miami commit 2028 QB Knox Annis wraps up offseason at UA Next S7VNS - 247Sports",
-      "summary": "Miami commit 2028 QB Knox Annis wraps up offseason at UA Next S7VNS&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUF96ZTU0elFRVDN6cE5MazNST1p0bjE5LWx1a3lNV0VNc0YtakFIcWRMY2xJOHJmQWd2MkplVnZXRW1LRW5za3lIcEVvcVQzeVFtekc2S0JfbTBRLWcwb1pZd3hkM1k0ZkctSmVlSGlIX1haOC1xY25EbG8wajdLdUN0YmUyek9wQjRBOE5hVmM4RzItS1VKWkxVd1pFd0xYREhuY01zZXI0LUktTDJ1VDVqbE5iZFJlblhPeW9leUlNbENHM3lyTXVYZElEMDZRd0NqX3hSQ0ljQQ?oc=5",
-      "published": "Tue, 14 Jul 2026 18:57:38 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "All About Recruiting: Insight on Top 100 Miami LB target, intriguing in-state OL - On3",
-      "summary": "All About Recruiting: Insight on Top 100 Miami LB target, intriguing in-state OL&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdFNKNVBMNGprVlYwRjJOcWxlSUxoLVBaVjAxekxKT0RVaGpjZGlDdUtqSGJvZGNJdWpNb0VwdDZNeDczMjVDd2hmTnZwZElGdFFpWTVMeWxQakctTkpYZjhPZXhVLXU1dThmXzRTOUlNaXFIeFFqWk1wZGV1NjBzRmE5VVllclhsbVNFcm43UHFkb0o5bG1MeW9FVjFZdjEzZ0dxTXd4VnQ5NVdxcXlVWlB1RUhKbjlxaXVFbzJpUFk2dGlOUlE?oc=5",
-      "published": "Wed, 15 Jul 2026 00:04:07 GMT",
+      "title": "Cam Ward and Carson Beck's Success at Miami Helped Darian Mensah's Lucrative Decision - Yahoo Sports",
+      "summary": "Cam Ward and Carson Beck's Success at Miami Helped Darian Mensah's Lucrative Decision&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxON1J4SXJpSXpjeU1qb3V5R2lSTVBPWEF3QWRHeUNobENpRXpuOWhMeWtDQ1llaXRuWjdhYlkyU0JsWk1GS2J1VWY5bmt2Y0hyek5KSnROM1dBNVROU2Qtd1dDOTlVQnl2THpPX1FKa2Rld0NZSFdkVV9Ra25nVV8wNEJrdE8?oc=5",
+      "published": "Wed, 15 Jul 2026 17:30:01 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -2853,13 +2853,6 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "If you read the tea leaves, 2026 transfer portal QB market could be red-hot for Miami - Canes Warning",
-      "summary": "If you read the tea leaves, 2026 transfer portal QB market could be red-hot for Miami&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTV9uZnNySWtxdW4yNmY0eVM4WGo0Y1ZMREdkUDRoX0ptd0ZqY0t1X3NRVU05VTFBZlNMVXJ6R2M1VVJWemxyTU96YlkwcHNSQm9NNW54WGRqZ1ZBNmlEcjVPMkZMQWRjaDRLM3llQVJJdzc1YWx3eWJzbzJyYzNmdDJwUmxmUXJHREppR0FVRVotNnhSdEV0ekpTOEdsYWtCc0dxeDZ4WUE?oc=5",
-      "published": "Wed, 19 Nov 2025 08:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
       "title": "Dayton Raiola's Top CFB Landing Spots After Dylan's Brother Decommits from Nebraska - Bleacher Report",
       "summary": "Dayton Raiola's Top CFB Landing Spots After Dylan's Brother Decommits from Nebraska&nbsp;&nbsp;Bleacher Report",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWFo4clB0cVhwa09SelotU1ZjOGc5ODZFM3JPOXdsM2RMc0wtdndROG1PeUxPcEZRckFwQmhsaEctaE9xRkJJQnV1aHA2dFVlQWpmM0VUX1NNdDh2TEVkSWFNLWg4UkpnTVJHeTVKQnZDTW1mQVlidWZHaDJYQWx6eWhBQzAwRmJIZ3JMM2Fzd1pMWjdnUnJwVENwcmR5UUZrUHhDaWxQNWxEN2pybkVlY3loSnhtZDk1X1Y4T1BR?oc=5",
@@ -2867,10 +2860,10 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami - 247Sports",
-      "summary": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTFhwTVUyTlJpNExtMktEUk5sYllrMTVBX1pMRVVpaER5ZW1Eb1h0RzRuV1A3ZlFLR1VCRURjUjdDdXB5aE1VQ3VXVDQ4YXkwUEZCTmM3czBfRWJNeFhWdk5EN1lJMUg5NFA3eGdsclVleW5tQjFvMWgtZWIyQldCeEpuQ25NNUptY0dXdUtWWktfbHU4WWNka3prbFVkVGJjU0lsQlZBLVQ2dWRiUHlRa3hWekM5LVRhWnVfR1JZdFpRU05ZMWhpdkhIRXZsMm9YYjRkTGtONnRKWjdpYUM5aGNDU3YtUUU?oc=5",
-      "published": "Sun, 17 May 2026 07:00:00 GMT",
+      "title": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes - 247Sports",
+      "summary": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa0lOX2hkWVFlc21aYVdtRmw1UkloNWVQeWRLa2VnekZ3TWZSNWNRNzJ3WVZHZ05MQU94NDNkdmxBRnRORzA0cllINDRMcXBzbGdfeVl5Z292M0h5T3Iyeml0b0hCVVBRV0VkSHlJNEJVOW1rREE0OEZKVGc2UnZnX0xzNmh5T2hXM1dFUERTVWdfU0RfNXpYUC00SXMwdm11UnlvVjltZnVsSk9rSWZYelBncTJfY3VmdDJFMkFOY1VPSkdBZllibEFEVTFjNkhTV2RCV2tqZHB2dlVnU3c?oc=5",
+      "published": "Sat, 09 May 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
@@ -2881,6 +2874,13 @@
       "source": "On3 Recruiting"
     },
     {
+      "title": "Future LSU stars tell exactly how they feel about former Tigers HC Brian Kelly and his firing without saying anything at all - A to Z Sports",
+      "summary": "Future LSU stars tell exactly how they feel about former Tigers HC Brian Kelly and his firing without saying anything at all&nbsp;&nbsp;A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPbXc4ZVEwOEhBWVN1SFFMVWNVMHY5a2FzaThmcmVOTGJtTl85UFN5c0N3cjFEQU9OSnVyRXpvSUFsLTh5T2x4NWhLRk41M0pnMUtzbWlVV3lvSVlTN21pYkt3MXNpc3hRUS1OdE5ZVHhzTzctOGV0WkIwaTFHR1BvR2MwYzAxbHRBZmRWVTQ5TUlzTlJfTHJBenVXcXROczlQeGxnc2xPemdBeWVPbTNkRTkzeTA3T09XOXB3cnpkUjdjUXZzTHQ2SG9nMzZxclVaTzF0Y3lQdUtXU0NCMkY2aUdZU296ZFIxeGZvandYUnZ5aVNTVF9CWA?oc=5",
+      "published": "Mon, 17 Nov 2025 08:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
       "title": "Latest intel on college football quarterback recruits for class of 2027 - ESPN",
       "summary": "Latest intel on college football quarterback recruits for class of 2027&nbsp;&nbsp;ESPN",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOE9wVUtwRW9xeVlfaTFfWFZJNEo3Z18xSWEzUzVRWlhYcFBnQ1VZNUxqQmhMQ0xrNEM4NDB2OG5uM0M0RjV6ektPZmg3V0RFWjhDN3pnY3VXb0dfa3RHbzJDMWZfc2gzWlNsVDd2TEhtanAta015dU5JZl9abjRWRGFiLU1iUVJlUlhIcEhRX21sM2t3Z1lVVzF1eWcyX0FPNXNldDc1aFRjLWpVTVFUVnIyaDR6ZWl2bzlzZ2FxTFZZMlU?oc=5",
@@ -2888,10 +2888,10 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Colorado in Danger of Losing Four-Star Recruit to Miami - Sports Illustrated",
-      "summary": "Colorado in Danger of Losing Four-Star Recruit to Miami&nbsp;&nbsp;Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQS1NBWW5kTGU4STEwYWw1d2dHeF9WT2QtdWJab29nTFpmeGpOZGlzM0IxeFhicF9GYUNTakR1Y3ZQVzVxbm4tRExWdkNWSy1jaEQwLUFTTzg2OWs0NnBqbnl2ZWJkMWlmVGZsU1R6SXpOWFQ2MGkxLVFMNFV6N2pTSVFSY0RzczhzTXZ4SGx5dTNBeUVBTmpOdmJGY1VUa2ZaZ0JGZnN4eWxZWDk0Mlo4?oc=5",
-      "published": "Sat, 15 Nov 2025 08:00:00 GMT",
+      "title": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami - 247Sports",
+      "summary": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTFhwTVUyTlJpNExtMktEUk5sYllrMTVBX1pMRVVpaER5ZW1Eb1h0RzRuV1A3ZlFLR1VCRURjUjdDdXB5aE1VQ3VXVDQ4YXkwUEZCTmM3czBfRWJNeFhWdk5EN1lJMUg5NFA3eGdsclVleW5tQjFvMWgtZWIyQldCeEpuQ25NNUptY0dXdUtWWktfbHU4WWNka3prbFVkVGJjU0lsQlZBLVQ2dWRiUHlRa3hWekM5LVRhWnVfR1JZdFpRU05ZMWhpdkhIRXZsMm9YYjRkTGtONnRKWjdpYUM5aGNDU3YtUUU?oc=5",
+      "published": "Sun, 17 May 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     }
   ]
