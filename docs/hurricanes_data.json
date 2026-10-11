@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10T16:00:45.889230+00:00",
+  "last_updated": "2026-10-11T16:27:26.874196+00:00",
   "team": {
     "name": "Miami Hurricanes",
     "abbreviation": "MIA",
@@ -16,6 +16,46 @@
     "website": ""
   },
   "news": [
+    {
+      "title": "Allstate Playoff Predictor",
+      "summary": "Select your favorite contender, make your picks for how its season will play out and see what the Allstate Playoff Predictor foretells.",
+      "url": "https://www.espn.com/espn/feature/story/_/page/cfbplayoffpredictor/college-football-allstate-playoff-bracket-predictor",
+      "published": "2026-10-11T14:07:18Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/0831/cfb_predictor_photo26__1296x729.jpg"
+    },
+    {
+      "title": "2026 college football SP+ rankings for all 138 FBS teams",
+      "summary": "The updated SP+ rankings, plus strength of schedule and résumé SP+, after this weekend's results.",
+      "url": "https://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp+-rankings-all-138-fbs-teams",
+      "published": "2026-10-11T13:58:05Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1011/r1729140_608x342_16-9.jpg"
+    },
+    {
+      "title": "Predicting the College Football Playoff: Who's most likely to make the field?",
+      "summary": "Find out which teams our experts think will make this season's CFP.",
+      "url": "https://www.espn.com/college-football/story/_/page/playoffpredictions101029/college-football-playoff-2026-predictions-week-6",
+      "published": "2026-10-11T08:13:10Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1010/r1728840_608x342_16-9.jpg"
+    },
+    {
+      "title": "Projecting the College Football Playoff top 12 after Week 6",
+      "summary": "We assess how the selection committee could stack the top teams in the country after Week 6.",
+      "url": "https://www.espn.com/college-football/story/_/id/50148225/projecting-2026-college-football-playoff-top-12-week-6",
+      "published": "2026-10-11T14:14:44Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1011/r1728806_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Why Herbstreit views Miami as the best team in the country",
+      "summary": "Why Herbstreit views Miami as the best team in the country",
+      "url": "https://www.espn.com/video/clip/_/id/50148594/why-herbstreit-views-miami-best-team-country",
+      "published": "2026-10-10T16:48:16Z",
+      "source": "ESPN",
+      "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1010/ss_20261010_124246464_3690986/ss_20261010_124246464_3690986.jpg"
+    },
     {
       "title": "2027 NFL draft QB rankings: Arch Manning, Dante Moore, Drew Mestemaker in top 15",
       "summary": "Who are the best quarterbacks in the 2027 draft class? We sized up the top 15, including Arch Manning, Dante Moore, Trinidad Chambliss and Darian Mensah.",
@@ -81,14 +121,6 @@
       "image": "https://a.espncdn.com/photo/2026/1006/r1725520_1296x729_16-9.jpg"
     },
     {
-      "title": "Predicting the College Football Playoff: Who's most likely to make the field?",
-      "summary": "Find out which teams our experts think will make this season's CFP.",
-      "url": "https://www.espn.com/college-football/story/_/page/playoffpredictions100629/college-football-playoff-2026-predictions-week-5",
-      "published": "2026-10-06T13:44:16Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1006/r1726794_608x342_16-9.jpg"
-    },
-    {
       "title": "College football Power Rankings: What we've learned about top teams",
       "summary": "After another week of big wins and surprising upsets, we break down the top 25 through Week 5.",
       "url": "https://www.espn.com/college-football/story/_/id/50086951/2026-college-football-power-rankings-top-25-week-5",
@@ -119,22 +151,6 @@
       "published": "2026-10-04T19:51:36Z",
       "source": "ESPN",
       "image": "https://a.espncdn.com/photo/2026/1004/r1725887_1296x729_16-9.jpg"
-    },
-    {
-      "title": "Allstate Playoff Predictor",
-      "summary": "Select your favorite contender, make your picks for how its season will play out and see what the Allstate Playoff Predictor foretells.",
-      "url": "https://www.espn.com/espn/feature/story/_/page/cfbplayoffpredictor/college-football-allstate-playoff-bracket-predictor",
-      "published": "2026-10-04T16:28:44Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/0831/cfb_predictor_photo26__1296x729.jpg"
-    },
-    {
-      "title": "2026 college football SP+ rankings for all 138 FBS teams",
-      "summary": "The updated SP+ rankings, plus strength of schedule and résumé SP+, after this weekend's results.",
-      "url": "https://www.espn.com/college-football/story/_/id/49868647/2026-college-football-sp+-rankings-all-138-fbs-teams",
-      "published": "2026-10-04T15:09:21Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1004/r1725760_608x342_16-9.jpg"
     },
     {
       "title": "AP college football Week 5 poll reaction: What's next for each Top 25 team",
@@ -233,36 +249,37 @@
       "image": "https://a.espncdn.com/photo/2026/0929/cfb-ranking-every-p4-qb_16x9_608x342.png"
     },
     {
-      "title": "College Football Playoff 2026: Bubble Watch after Week 4",
-      "summary": "Putting the spotlight on select teams and questions around others as the early playoff picture takes shape.",
-      "url": "https://www.espn.com/college-football/story/_/id/50043905/college-football-playoff-2026-week-4-bubble-watch",
-      "published": "2026-09-29T15:08:23Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/0927/r1722296_1296x729_16-9.jpg"
-    },
-    {
-      "title": "Week 6 Watch Party: FSU could actually do Miami a solid by taking down Louisville - Canes Warning",
-      "summary": "Week 6 Watch Party: FSU could actually do Miami a solid by taking down Louisville&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPLWFzZmd1R0puUU9ldW5FclFoSDlPa2lUSFlxX01PMlNZZHlVbzVuMHU3LXZQRGF5TmVwV2RrVC1YR3BjMTd5aEFaNmpxbm1NcDlTdG5WZjFwbEhTdXk5bG5jY3pnZU1JalpZQURPTFhzWWxfa0VpMjdJN2Ixd0JfNXZWamNiakhoMnFSR2paeTlyQTRFV1A1VWRta2VfU01UOXZTc0w5OGE?oc=5",
-      "published": "Fri, 09 Oct 2026 12:00:02 GMT",
+      "title": "Miami Hurricanes open as enormous favorites over Florida State Seminoles - State of The U",
+      "summary": "Miami Hurricanes open as enormous favorites over Florida State Seminoles&nbsp;&nbsp;State of The U",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONmgyR2JVQ2NPOHVsTW5hUk1KT2JKSUxhU2tobF9wcUNXRDRsa2c0SlNWT3hBQzJ1V3lyNDlOaXNMWW8tM3pSRTk1VFItV2tDVWVmdzA0YmZCNTE4dDZvVTZQQmoxbWoxWUZ2WTkwWnV2SkdwSy1LR0JKUWRLc3dkelU1V2Rtejl6LTc3Nm1jbmxXMlZsMmU3TV9MZHpBNjVZVXBMaDNYcXJKRlZqb2JLR19Ma2w1ZWF3UDEtZHRKUEx2NDVDQWZnX3NnNUE?oc=5",
+      "published": "Sun, 11 Oct 2026 02:48:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "VISITORS LIST: Miami-FSU - CanesInSight",
-      "summary": "VISITORS LIST: Miami-FSU&nbsp;&nbsp;CanesInSight",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNaHNjNVhkNlZmYldETmpadURtUi0ySnhHRmVRWi1hSVdRcDV2T2NmUWlrVTF0RHB3Z3VYN3lzZlNmaG1OQkVyTU1iUFJkN1pIYnYtb01kU1cxSkwwS3JtWVBndy1Wc3dnNXpvLWRZSU5LV1E5a1hjenE3czBoLUhnVw?oc=5",
-      "published": "Fri, 09 Oct 2026 17:45:11 GMT",
+      "title": "Miami Hurricanes a record favorite over FSU football. It may not be enough - Yahoo Sports",
+      "summary": "Miami Hurricanes a record favorite over FSU football. It may not be enough&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMUx1WmtYRnFvQ2dGbkUxRzhiMEswY0k0dHp5V20xT0xrcjRVOS04QjhSWWE3VjctQ1dRODk5YUc3YS02Sy1wbjItS2lic09qMDJpV0o2ZFMyc0dqbkhHMkY5N0pjTEtLdVVEWWFseFVnbU5vNVBIdjJRU0J0UHFlSFdLMk5nSHFucHBacE5ZVQ?oc=5",
+      "published": "Sun, 11 Oct 2026 13:54:36 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "The 3-2-1: Three Miami recruiting storylines to watch during bye week - On3",
-      "summary": "The 3-2-1: Three Miami recruiting storylines to watch during bye week&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSnpNYTRCTUU4cEtvOUFjTTd5OTlCclpOeVZQSnRyd1k0UEZyMXhUbTVpckkwQWkyd3Awb2JwNGtkMlMwRDg2MHNfZjZEOXBsal9BS3lGbWNLZE9aTlNZTzFNSnprUzVTQ20wVHQ5TlpuNWVGMUxTX3VLMFlBOHViQVVoOElpb1U2WGdnSm1YYmF6TjZWZ2ZCc0R0SzdQSXdsTGVnWjZ0ZGlUeWFtb3gzcmU0TVpmRTR2?oc=5",
-      "published": "Thu, 08 Oct 2026 20:11:24 GMT",
+      "title": "FSU has already quit on Mike Norvell and now Miami will put the final nail in his coffin - Canes Warning",
+      "summary": "FSU has already quit on Mike Norvell and now Miami will put the final nail in his coffin&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWmlwdXJ3TWliVGc0OXFfOTZ5VTV5VEV4WHc0NmpOT0NJUEZNM1l4dVNTVFU1enh0WklFdHExS1RJU0NVT1V1b3JDVWtVdTQ3a0VGZ3hCYWV5VzJxZnBSZEdZWXRTWloxWmtYajlJajB1dHNNMmY0T0JnVjl1UDFGb1RhYjNtc3FaZ1E2TUlnVGcta1I4Z3hzR2M3bzhXeHB3bUpYQ2w1TG4wdGZWTFE4OG9GTQ?oc=5",
+      "published": "Sat, 10 Oct 2026 14:25:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "College Football’s 9 Undefeated Teams Ranked: Georgia Makes Statement After Week 6 - Sports Illustrated",
+      "summary": "College Football’s 9 Undefeated Teams Ranked: Georgia Makes Statement After Week 6&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQbHR3V2J0WmprZ0tLTTcycGJwN0Q4Ylo2ZXZnVTFnQzVveC15UnQzUXF5c2VnM1VFM25ySDY2TF9MTDFPRDhhMTU1UU1uZXVZTFNhbmtUYVNPY0JGRVhKaXlrV3k2cFhTYjloRU12N3dHa0xIN3ZaNWoycGhaVTZPQnVPaWNvbzlWZnNBcWRFOEVnZ2NiblM4WS1zV1BWM2t4c2QzNE9aZ3RBRVlwT3NSSnlrZk5tTWlIdUdmdDItcVJSVkx3Q3dhb3pfLTVJMEhScU5RVFhQbXo1NkFjQlNoS0lRTTdjM2tsOS1wSk1lRTQ3NGd5?oc=5",
+      "published": "Sun, 11 Oct 2026 14:20:30 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -277,46 +294,37 @@
       "category": "news"
     },
     {
+      "title": "Freshman Ben Congdon making his family proud as he pushes for bigger Hurricanes role - Miami Herald",
+      "summary": "Freshman Ben Congdon making his family proud as he pushes for bigger Hurricanes role&nbsp;&nbsp;Miami Herald",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNUxHNDVQV2xVdVQtdU4zRnpqMHVZRURzQTVrcENNaFZYNDRicDZsZ0ZSZks0NEZORDJMNC1RbTJESmR6WkRpSlY4QktZLWwwR0M2ZmtOX0xBM3ZyTVZIaTVBbnRiSi1URmhtc2xnbjN3TFdqVVBQM2IxTEZvOGJNWEk5MmlTaC1zQ252M1U3TlppQdIBkgFBVV95cUxONzNES2w1R2lOT0JmMDM3clMwWmh3OGcydXFHdGtNNExHa2N5RmNpQXRUd0dpaW82LXFFR1dta19ST183OFVYVmQ4b1lmUnF4NXAzTlJiY1J1aFc1dmVlYk1UdFFxYkQzVGY2ZXNhUlllU1FoYl9pSkNScnNMaHRiZHFrbmZXZXFiRm9nbEUyU2t3QQ?oc=5",
+      "published": "Sat, 10 Oct 2026 16:45:43 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Miami Hurricanes Bye Week Survival Guide for Desperate Fans - On3",
+      "summary": "Miami Hurricanes Bye Week Survival Guide for Desperate Fans&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNSk9kSk43aXFJMmhJY2M5S3RZYTZNRzNEX0V4UVBmSWRtdm1iNGxiV3NLS3ZlN0xyTEpiQnZ3WEppOXpiUFZYQmlrdDh4UmRmRjdlOUw0WnB6YmcxbWRJN3M2cGhTdFpoUG5lTkE5SGZkeG1XVUg4ODlUNGlpbXRaeXMtUWxsd0RwUjd0YWp3OUxLSFlQNTV1NV9QOF82QjBsbjJ1UXpSWEt6NHE4?oc=5",
+      "published": "Sat, 10 Oct 2026 10:15:32 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "AP Top 25 prediction: Miami should move into the top 3 without having to play a game - Canes Warning",
+      "summary": "AP Top 25 prediction: Miami should move into the top 3 without having to play a game&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQXA1Z2RvdTRlVE0xQkZNS045djh6c1lLMkw2bTY1d0dkR3ZQZ2VFc0tPRUVQaDJUSUFmTk1xT3VEREtlYm1ibmYteE81TjM1RHgwUUNHbFh3bnBGTGxYMzZma0dNQ2pJcjVsU2V1TzN3eFJVbEN5SHZqQ0lrZ0xzTGUwSjRWRG5EU0VTcWprNWtWSzNuVy1aRHlYREk1ZDVsR0RuTS1DRXpITjVm?oc=5",
+      "published": "Sun, 11 Oct 2026 10:30:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
       "title": "Updating Miami’s Top 50 players in 2026 with the Hurricanes on a bye week - 247Sports",
       "summary": "Updating Miami’s Top 50 players in 2026 with the Hurricanes on a bye week&nbsp;&nbsp;247Sports",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOR0pvTmtTNWphZXZwRGpOZ2w3ZXIxWldHTW04VXBiN1NRN3pUQTlzNS03aXB5QTRUMnRsa0ZLdEdyanc4Rm1KWloxeXdOVDNEekRidU1VRjJOdlFiQ0lhMXF3SFdZVE9oN3d5Y0k2VmM2UWxjMHI1eWJwb1Q3RXNZdEViZlNxb2hiY3lEeFJVaElSeVRaanlxb2RhN2FxS01reHprVHpkeVY0R3JKNFo5bmtXdkJpRmRTZ1NlX2tSNGtWTmt6cUE?oc=5",
-      "published": "Fri, 09 Oct 2026 17:50:33 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Projecting Miami's updated depth chart on offense coming out of the bye week - Canes Warning",
-      "summary": "Projecting Miami's updated depth chart on offense coming out of the bye week&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcF9uSVpCbG1RRnBOb29QX2Y3Zk5vdjVnTTNjNjU4SllOTHpnbnJNQjdKZncza0g1OHo4NmJ0TU5JTm1ueGFGYVpwaTZpd2Q2Rkd4Y1lCek1Db0cwQVlQeXZfTU1tcTIwN2l2M0s2NTY0dWhUTk91UmE0UHA1blVWN0NYNVFFMEhPNnh1dlotZTJFdU90Q3MyQUt5Rzl5SVVsWXlR?oc=5",
-      "published": "Fri, 09 Oct 2026 14:00:00 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "He’s in his 8th season of college football. He makes about $1M a year. Welcome to NCAA’s new normal. - NJ.com",
-      "summary": "He’s in his 8th season of college football. He makes about $1M a year. Welcome to NCAA’s new normal.&nbsp;&nbsp;NJ.com",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOV0FGd01KUHU5MjNpRE56aTFXSy01OWVaTElhdFlrdVpiZlZYazJEWHREX0NZeklMZGVjM0l5UWl4TkpVV283QkpDOEFISkJjaVduNWgtRjk5c0k1RmZ1WUZLaTl5NmZaaTF1eDhvYU5zcjhwa2d6UTdrektYZU9mM1cwVGU0eHV0MURpMFpETEJ4U2YyaHdOWFhsdk1HaUJJTzA2NWdXNldUdXQ4QlZWMXdleUNpSVRLTk1QTHV2TGtUeFRpdERqV2hXTHZpdDd5?oc=5",
-      "published": "Thu, 08 Oct 2026 10:00:00 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Storm Cellar: All-22 Review of the Miami Hurricanes DEFENSE vs. the Clemson Tigers OFFENSE - State of The U",
-      "summary": "Storm Cellar: All-22 Review of the Miami Hurricanes DEFENSE vs. the Clemson Tigers OFFENSE&nbsp;&nbsp;State of The U",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNT0poVjJZRGdtOVNQREx5eDFsNW9xTmt0MW5mc3lEVkdEcnNnd1pJbDY5VXRwUXdFVFRVZHZoRTRQOE9pcEpaUi15R3JmclZ1S2ZnbTdCdFhGUHZkY0JyN0pNbHV1Z2pzSlM4bmN5SzZZWUZjdXNTVm5wQ3Zkdm54SHJMZElNdlpHcVlUYVZKRGg2UkxKT1c3LVZ6RG1XdXZiOWZOZ2JqXzlaeHh0eElSMTdWclh1Y29YYVhBcjA1OWlEMEdLNUVnUjRuWXBxR3ByZmN3UUl3ZjNabzBvR0FacjFR?oc=5",
-      "published": "Thu, 08 Oct 2026 12:05:59 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Is Miami football playing today? Hurricanes on bye during Week 6 - Yahoo Sports",
-      "summary": "Is Miami football playing today? Hurricanes on bye during Week 6&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOajlodXN1U0RRT2VuSzNBZF9DdFhKQ2FvMGJ3ejNZUEdWT1RqQzhyYVhUMXJsYWEwRGtJVUNDa3dneXQtaWx3djA3NmtMajI5N1Q3ZEIwMHVubXBBQzRNZzJHNlJzc3RHRzREYjNnb1EwM2JCWWVTdXdpMHZ3R3gtOFA3YkEzeVZYMkJxT1FBYUE3dw?oc=5",
-      "published": "Sat, 10 Oct 2026 10:04:46 GMT",
+      "published": "Fri, 09 Oct 2026 15:48:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -325,25 +333,16 @@
       "title": "No. 4/4 Miami Pulls Away from Clemson, 41-13 - Clemson University Athletics",
       "summary": "No. 4/4 Miami Pulls Away from Clemson, 41-13&nbsp;&nbsp;Clemson University Athletics",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWXdaTTFtQnhYTEZNMGRtWFV6cl9Ya2dZVXc2OVlXSUswYWVPaUx6bWtOWlEtN2VyUXZtRkRlRDFaVHRkZ2Y0VUVVTVRNeWZaV1ZBdHR6QUlmVEQ1YVVpaUlKTkxpcEtEX3U3Y3U2M1RPTE1Dd0wweDlHM2hKcHplcVJLcUx3OVdMTGc?oc=5",
-      "published": "Sun, 04 Oct 2026 03:44:39 GMT",
+      "published": "Sat, 03 Oct 2026 07:00:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami Hurricanes Remaining Schedule: Breaking Down Every Game - On3",
-      "summary": "Miami Hurricanes Remaining Schedule: Breaking Down Every Game&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSnJDZ1R1bThkRkdja2VNSEZuaXgySGhpLU9Hem5LUG1fV3ZtSXBuOHBSRlM1dFVYdnh6MXJSYlNhYl9hNFc0RTJSWDNBT3RoMG10VmxERXQzZ2ZfMmdreXVxMmtqaDlnMi1LVG4zSHF5WTd3bDNfUFhtTEdPSnNKWDRTMl9KYXIzRDNoanMxSU9jOWctT1J0SlVJeUx1cVJsNVJzc29IQW91UzRScVE?oc=5",
-      "published": "Fri, 09 Oct 2026 10:11:48 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "College football insider: Scouting Georgia-Alabama matchup, coordinators impressing & more - On3",
-      "summary": "College football insider: Scouting Georgia-Alabama matchup, coordinators impressing & more&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNSE05Y2pudW9fend6dzRFZDhZU2lLUzZ2YTAwdVBtUndqMHdUa3NTZ0t3dUl4MU9UckFCQXJMc0tZck4zWjcxcm9FOVdKdXBKd014T0pzc3FPWEw1SnBOTU1HSkN5bG1wNmVwbnFjSzBxaml5VG9YeGVNbG1sdXU4SHRsWGJWZjFFLThYUS13NzQ2SnhfeWNzdGx3UTNHaTFnS3d5ZlFkdF9sdHhqUWoxbUJ0TTVVYmh2WHdYNnRIdEpFWFFETDhGMldUOUtkUVRO?oc=5",
-      "published": "Fri, 09 Oct 2026 16:46:51 GMT",
+      "title": "College football scores, rankings, highlights in Week 5: Miami keeps rolling with win at Clemson - CBS Sports",
+      "summary": "College football scores, rankings, highlights in Week 5: Miami keeps rolling with win at Clemson&nbsp;&nbsp;CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMUliUkp5dmF3Z0hKSFJNWm5QdnRPRXNTeEh4Z19FY0FBSFVkUzZ1S1huZkNORUM2enpLNjdoSDliU0RmeG1PeFJzdWxOdi1SLU80X0JUUXlRMktXSjg4ZlF2S1JWc2JmOXBBMjZaME41X1NNYzg1MXVMQ1Z2Z2tXLUlFbWU5bFlyTDN3Y2lRVklnaXVjODJWc2Z3MEY2ejQxRWZldDBROHJVZDdObktfdA?oc=5",
+      "published": "Sat, 03 Oct 2026 07:00:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -2719,17 +2718,17 @@
   },
   "recruiting": [
     {
+      "title": "Seven Miami commits named preseason USA Today All-Americans - On3",
+      "summary": "Seven Miami commits named preseason USA Today All-Americans&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxObklkQ0dYQm9VMi1mSUxLYk82SDNNNFJQRWszU2hJSkl5S1Z1eDl4RElkZjhZV00wQl80a3hDQXpBV0x6bGdKa2N1ajdNNUZBYmRmZzYxN1hxQ2YwUGVaZS1OMDFGVHJ6dzJqX3dfVXRQeE5SalFDMkNQQkdyUFptZWFIUGZYMllTNGw1STF3MFZoWXVWd3NqRm9JWmJ2SHZLVzcwZGgyOHR6TWJq?oc=5",
+      "published": "Wed, 19 Aug 2026 07:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
       "title": "2026 college football recruiting class rankings: Top 75 schools - ESPN",
       "summary": "2026 college football recruiting class rankings: Top 75 schools&nbsp;&nbsp;ESPN",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOaDl1cG1MZVRtaVk4dWUwZm5tRkgtb0hKeGdnVzRLNW9jWDlsRktmTlBJd2RKaXo3TENQekxycTF3SGp6c2E0NmtiNElHTjdXWFBrbUwzMXE1MmZyZlBYcFB1SUs3b0hMTXY1QV94MjNyekk3Tzk5R0Y3OEdvYXJQWVZ2ZzNfWXZJYUhWMFg3VDNuVWRTc3FuT2d2MEI2bXlyLUw5RGdzWkFoeUZ3c3FPNGJIY3AtMENDc0JfMmNHVFctbm1Tc29pV0lmblZ1dlU?oc=5",
       "published": "Wed, 04 Feb 2026 08:00:00 GMT",
-      "source": "Rivals Recruiting"
-    },
-    {
-      "title": "Meet The Commits: Miami builds on No. 2 ranked recruiting class nationally - On3",
-      "summary": "Meet The Commits: Miami builds on No. 2 ranked recruiting class nationally&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmxEdDI2RFBiYUFJcmVyMVJIME9FTThxeTZ6SmhhLW8xUGw2UnQ3Zmd6czRRc2pHZzlMX3M0c2JWWlo5T0I3YXBNU3p5TFpXaVlCNFVnZXBIU1pxbEJLSFNteUVud00zdXNpaHBQUThMVzQxUGtodDlsakhkY3Z3cUhORGN5d0R3NDNzMlBmVVdrQ2dTR29oWEJ6SG5BRW5NLTVxZWw0UkRNOC1WR28wR3Y4NC1PLXBrOUo4aFdn?oc=5",
-      "published": "Mon, 15 Jun 2026 07:00:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
@@ -2754,10 +2753,10 @@
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Miami football Early Signing Period tracker: Can Hurricanes hold on to top commits? - Canes Warning",
-      "summary": "Miami football Early Signing Period tracker: Can Hurricanes hold on to top commits?&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR0ZUSVFjUFFfYl9FSTNwMUp1Uk56cFVCbmdzaUliV1JYbUF5OEZBRlR4b0Y5X0lJQzZPSzV2aVcxUzlVVmVqbzhaLUdXSFJyaHlMaVhnazNxaVRrcjZoUkFWZm1yQ1F6ZXVCdkVzSEsxcEw4OG9UcEh0SmI1RGE2V3I2UmNkNkN5NlRkOWZ3TWJLcTF5Wm9wMkpRTEozWWFMNjVuNzd2TFZjQQ?oc=5",
-      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
+      "title": "Miami Hurricanes land 6-foot-9 JUCO OT as late 2026 offensive line add - Canes Warning",
+      "summary": "Miami Hurricanes land 6-foot-9 JUCO OT as late 2026 offensive line add&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZU1rU1hXWC04OW1kUjlCLXI3ekpVTTg3d2dQUzZQdUkxTUFjdVRKR2swZkhCd0JvUU5vZ0JkLVJLOFI3YXRuY1RSYi1ZUk9rMjBkYUdjaHhPU2UtNGZpMDF4NEYxa0lhTjFWLW5FN25KX0ZSTzNzLVpRRDdPRzdrUEZsR0hlVFVybFI4c1UtcS1oMjBuWlJqREYydw?oc=5",
+      "published": "Sat, 11 Apr 2026 07:00:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
@@ -2768,24 +2767,24 @@
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Miami transfer TE Brock Schott returns to home state, commits to Indiana football - Indiana Daily Student",
-      "summary": "Miami transfer TE Brock Schott returns to home state, commits to Indiana football&nbsp;&nbsp;Indiana Daily Student",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZHJyUW8xOEVJLVhXcURfVDQtWTRLUk1HN1JxMHkxWU11Z0UwUnUxX0sxQVZhaHdVQl9tUTBIbXdWMFZBbGNHeVhXXzcyU3JKWUtMNEZQeWlkbDhaS3Mxc2FobFlrYjlNSllxb1UxX1RVbHpwUlBSNEhiWi1HeEdBTWVTVDJlQko1aEJyTFVn?oc=5",
-      "published": "Mon, 05 Jan 2026 08:00:00 GMT",
+      "title": "Meet The Commits: Miami builds on No. 2 ranked recruiting class nationally - On3",
+      "summary": "Meet The Commits: Miami builds on No. 2 ranked recruiting class nationally&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmxEdDI2RFBiYUFJcmVyMVJIME9FTThxeTZ6SmhhLW8xUGw2UnQ3Zmd6czRRc2pHZzlMX3M0c2JWWlo5T0I3YXBNU3p5TFpXaVlCNFVnZXBIU1pxbEJLSFNteUVud00zdXNpaHBQUThMVzQxUGtodDlsakhkY3Z3cUhORGN5d0R3NDNzMlBmVVdrQ2dTR29oWEJ6SG5BRW5NLTVxZWw0UkRNOC1WR28wR3Y4NC1PLXBrOUo4aFdn?oc=5",
+      "published": "Mon, 15 Jun 2026 07:00:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Meet The Commits: Miami adds more in-state talent to Top 10 recruiting class - On3",
-      "summary": "Meet The Commits: Miami adds more in-state talent to Top 10 recruiting class&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQ2Z5NW0yVXRVNXZsSldmNHFydWpKUEVQcXpPVDlYd0w5MGVCbFhOb0tCYjE1V0FXSFhkRHZ4UDFTdEhuSWNRSmR5TWt1MmhFU25MZWxrUk9SWjNCcDJ4eUtDR1ltVzN2M2hGcUFTeFptbWdPV05nMzlJdWJMZ29PYTQ4YXB2d0F4dy13dGpNWjdUSmhmNHFWNDdjd2xPVU9OQjloQXNVVzhjQ3FNUndWSGJ5dGMwRmRwVFlveTMwZXd4QQ?oc=5",
-      "published": "Sat, 11 Apr 2026 07:00:00 GMT",
+      "title": "Miami football Early Signing Period tracker: Can Hurricanes hold on to top commits? - Canes Warning",
+      "summary": "Miami football Early Signing Period tracker: Can Hurricanes hold on to top commits?&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR0ZUSVFjUFFfYl9FSTNwMUp1Uk56cFVCbmdzaUliV1JYbUF5OEZBRlR4b0Y5X0lJQzZPSzV2aVcxUzlVVmVqbzhaLUdXSFJyaHlMaVhnazNxaVRrcjZoUkFWZm1yQ1F6ZXVCdkVzSEsxcEw4OG9UcEh0SmI1RGE2V3I2UmNkNkN5NlRkOWZ3TWJLcTF5Wm9wMkpRTEozWWFMNjVuNzd2TFZjQQ?oc=5",
+      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Miami Hurricanes land 6-foot-9 JUCO OT as late 2026 offensive line add - Canes Warning",
-      "summary": "Miami Hurricanes land 6-foot-9 JUCO OT as late 2026 offensive line add&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZU1rU1hXWC04OW1kUjlCLXI3ekpVTTg3d2dQUzZQdUkxTUFjdVRKR2swZkhCd0JvUU5vZ0JkLVJLOFI3YXRuY1RSYi1ZUk9rMjBkYUdjaHhPU2UtNGZpMDF4NEYxa0lhTjFWLW5FN25KX0ZSTzNzLVpRRDdPRzdrUEZsR0hlVFVybFI4c1UtcS1oMjBuWlJqREYydw?oc=5",
-      "published": "Sat, 11 Apr 2026 07:00:00 GMT",
+      "title": "Miami Hurricanes National Signing Day Notebook: Who is a Cane and Who Is Not? - Sports Illustrated",
+      "summary": "Miami Hurricanes National Signing Day Notebook: Who is a Cane and Who Is Not?&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZ0kzcGcySWZCZllDdzY2Ty1xVlMwSnNXbThpV1NLOHFrcExWcHk4azc4TDR2ZjVzVjJkVkpzY3AwbUZ1cnEyYnpUb2REZHBfN3ZlY1lBZzduOE8tSURvNEYxbXhPZlROaWlMUkFxU3BIYUlMWDFUM2hzbVFNZ2lKWU44QkpxZEl6XzJ3MTVkcWtwVjJadS1nRDFsWGdYbF9JUm04UlppMnU2ZnN4aDJieDIzMUJxemxUMWFz?oc=5",
+      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
@@ -2810,17 +2809,17 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Latest intel on college football quarterback recruits for class of 2027 - ESPN",
-      "summary": "Latest intel on college football quarterback recruits for class of 2027&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNOE9wVUtwRW9xeVlfaTFfWFZJNEo3Z18xSWEzUzVRWlhYcFBnQ1VZNUxqQmhMQ0xrNEM4NDB2OG5uM0M0RjV6ektPZmg3V0RFWjhDN3pnY3VXb0dfa3RHbzJDMWZfc2gzWlNsVDd2TEhtanAta015dU5JZl9abjRWRGFiLU1iUVJlUlhIcEhRX21sM2t3Z1lVVzF1eWcyX0FPNXNldDc1aFRjLWpVTVFUVnIyaDR6ZWl2bzlzZ2FxTFZZMlU?oc=5",
-      "published": "Fri, 06 Mar 2026 08:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
       "title": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami - 247Sports",
       "summary": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami&nbsp;&nbsp;247Sports",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTFhwTVUyTlJpNExtMktEUk5sYllrMTVBX1pMRVVpaER5ZW1Eb1h0RzRuV1A3ZlFLR1VCRURjUjdDdXB5aE1VQ3VXVDQ4YXkwUEZCTmM3czBfRWJNeFhWdk5EN1lJMUg5NFA3eGdsclVleW5tQjFvMWgtZWIyQldCeEpuQ25NNUptY0dXdUtWWktfbHU4WWNka3prbFVkVGJjU0lsQlZBLVQ2dWRiUHlRa3hWekM5LVRhWnVfR1JZdFpRU05ZMWhpdkhIRXZsMm9YYjRkTGtONnRKWjdpYUM5aGNDU3YtUUU?oc=5",
       "published": "Sun, 17 May 2026 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Recruiting intel: Who remains uncommitted? Which classes could rise? - ESPN",
+      "summary": "Recruiting intel: Who remains uncommitted? Which classes could rise?&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRVF5Ri1DMV9UUzJ3dzVLVVpwcW9XQVRmS21LRC1TeHFuZElELW5OeWxpallpRnkyRjJsQlZzM2owM21IN0xCdlVpNXFna2xZRXNidVFlMl9PUzVodTlfVVJWX3lQbVgtLXJPQ1VhREtYQzBMcVdGV0dvdFNncTFEUlVlb3ByaGp4V01xT0JhN2tOc0Q4YkVGckdGZDhEQl9RQ0VuRzFrUDhMbC1TUUtJaDdidW5FSGlRRlowekJ5U01OVGpHMTFJ?oc=5",
+      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
@@ -2838,10 +2837,10 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Recruiting intel: Who remains uncommitted? Which classes could rise? - ESPN",
-      "summary": "Recruiting intel: Who remains uncommitted? Which classes could rise?&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRVF5Ri1DMV9UUzJ3dzVLVVpwcW9XQVRmS21LRC1TeHFuZElELW5OeWxpallpRnkyRjJsQlZzM2owM21IN0xCdlVpNXFna2xZRXNidVFlMl9PUzVodTlfVVJWX3lQbVgtLXJPQ1VhREtYQzBMcVdGV0dvdFNncTFEUlVlb3ByaGp4V01xT0JhN2tOc0Q4YkVGckdGZDhEQl9RQ0VuRzFrUDhMbC1TUUtJaDdidW5FSGlRRlowekJ5U01OVGpHMTFJ?oc=5",
-      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
+      "title": "Georgia OT Jamal Meriweather signs with Miami out of NCAA Transfer Portal - Yahoo Sports",
+      "summary": "Georgia OT Jamal Meriweather signs with Miami out of NCAA Transfer Portal&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb293Qk5ELVA4UTJGbmdUNGpnWkN0UUJiR1RJdHJWRUpkck10MFRGTGk4ZVJod3pHZEF3Z09neXBSQWNnVDVETEphMGRlQllpNEhkcmJ4Z0hWVGJIR2dYNWVLaDRBaFBrNDlEVEdST3ZNQlFZNjJLMnBOX0N2T1Zsdk4wOU9rS2twYXZF?oc=5",
+      "published": "Fri, 23 Jan 2026 08:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
