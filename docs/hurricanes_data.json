@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-24T14:09:53.965595+00:00",
+  "last_updated": "2026-10-25T14:40:54.532937+00:00",
   "team": {
     "name": "Miami Hurricanes",
     "abbreviation": "MIA",
@@ -9,13 +9,53 @@
     "alternate_color": "035131",
     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
     "record": {
-      "summary": "6-0",
-      "wins": 6.0,
+      "summary": "7-0",
+      "wins": 7.0,
       "losses": 0.0
     },
     "website": ""
   },
   "news": [
+    {
+      "title": "College Football Playoff top 12 projection after Week 8",
+      "summary": "We assess how the selection committee could stack the top teams in the country after Week 8.",
+      "url": "https://www.espn.com/college-football/story/_/id/50268049/projecting-2026-playoff-top-12-week-8-cfp",
+      "published": "2026-10-25T07:13:20Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1025/r1735804_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Inside Malachi Toney's record-breaking performance",
+      "summary": "Malachi Toney put up video game numbers en route to a Miami blowout vs. Pitt",
+      "url": "https://www.espn.com/video/clip/_/id/50269675/inside-malachi-toney-record-breaking-performance",
+      "published": "2026-10-24T20:52:49Z",
+      "source": "ESPN",
+      "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1024/dm_261024_toney_btbs/dm_261024_toney_btbs.jpg"
+    },
+    {
+      "title": "Pittsburgh Panthers vs. Miami Hurricanes: Full Highlights",
+      "summary": "Pittsburgh Panthers vs. Miami Hurricanes: Full Highlights",
+      "url": "https://www.espn.com/video/clip/_/id/50269561/full-highlights",
+      "published": "2026-10-24T20:43:20Z",
+      "source": "ESPN",
+      "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/wsc/2026/1024/f0bbd5dd-da61-4d89-a0fc-9f01c24040d8/f0bbd5dd-da61-4d89-a0fc-9f01c24040d8.jpg"
+    },
+    {
+      "title": "Malachi Toney, Darian Mensah dominate as No. 1 Miami routs Pitt",
+      "summary": "Malachi Toney had a school-record 16 catches and Darian Mensah threw for 387 yards and four TDs as No. 1 Miami rolled past Pitt 52-23.",
+      "url": "https://www.espn.com/college-football/story/_/id/50269204/malachi-toney-darian-mensah-star-no-1-miami-routs-pitt",
+      "published": "2026-10-24T21:54:13Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1024/r1735627_1296x729_16-9.jpg"
+    },
+    {
+      "title": "No. 1 Miami, in its first game atop AP poll since 2002 season, rolls past Pitt 52-23",
+      "summary": "— Malachi Toney had a big game, again. Darian Mensah had a big game, again.",
+      "url": "http://www.espn.com/ncf/recap?gameId=401858274",
+      "published": "2026-10-24T21:09:46Z",
+      "source": "ESPN",
+      "image": "https://s.espncdn.com/stitcher/sports/football/college-football/events/401858274.png?templateId=espn.applewatch.awayhome.1"
+    },
     {
       "title": "The 2001 Miami Hurricanes are one of college football's greatest teams ever",
       "summary": "The Canes became one of CFB's greatest teams 25 years ago. Here is the story of the 2001 season, told in their own words.",
@@ -23,6 +63,14 @@
       "published": "2026-10-24T12:15:49Z",
       "source": "ESPN",
       "image": "https://a.espncdn.com/photo/2021/1116/ncf_miami-2001_16x9.jpg"
+    },
+    {
+      "title": "Predicting the College Football Playoff: Who's most likely to make the field?",
+      "summary": "Find out which teams our experts think will make this season's CFP.",
+      "url": "https://www.espn.com/college-football/story/_/page/playoffpredictions102426/cfp-predictions-week-8",
+      "published": "2026-10-25T06:24:51Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1025/r1735772_608x342_16-9.jpg"
     },
     {
       "title": "Top 25 betting lines: Texas favored vs. Ole Miss, Utah the fave vs. Houston",
@@ -201,93 +249,64 @@
       "image": "https://s.espncdn.com/stitcher/sports/football/college-football/events/401858263.png?templateId=espn.applewatch.awayhome.1"
     },
     {
-      "title": "Predicting the College Football Playoff: Who's most likely to make the field?",
-      "summary": "Find out which teams our experts think will make this season's CFP.",
-      "url": "https://www.espn.com/college-football/story/_/page/playoffpredictions101729/cfp-predictions-week-7",
-      "published": "2026-10-18T07:07:33Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1018/r1732289_608x342_16-9.jpg"
-    },
-    {
-      "title": "Projecting the College Football Playoff top 12 at midseason",
-      "summary": "We assess how the selection committee could stack the top teams in the country at midseason.",
-      "url": "https://www.espn.com/college-football/story/_/id/50204253/projecting-2026-playoff-top-12-week-7-cfp",
-      "published": "2026-10-18T13:30:38Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1017/r1732189_1296x729_16-9.jpg"
-    },
-    {
-      "title": "Florida State Seminoles vs. Miami Hurricanes: Full Highlights",
-      "summary": "Florida State Seminoles vs. Miami Hurricanes: Full Highlights",
-      "url": "https://www.espn.com/video/clip/_/id/50207603/full-highlights",
-      "published": "2026-10-18T05:52:51Z",
-      "source": "ESPN",
-      "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1018/def6a5a230d3409d954c8e42f5663a21112/def6a5a230d3409d954c8e42f5663a21112.jpg"
-    },
-    {
-      "title": "Miami survives two Hail Marys, leaving FSU without answers in 2OT thriller",
-      "summary": "Miami withstood a pair of Hail Mary attempts from Florida State to come away with a 43-35, double-overtime win and a likely move to No. 1 in the AP Top 25.",
-      "url": "https://www.espn.com/college-football/story/_/id/50207351/miami-holds-florida-state-double-thriller",
-      "published": "2026-10-18T12:01:19Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1018/r1732319_600x400_3-2.jpg"
-    },
-    {
-      "title": "Who has the most wins vs. No. 1 college football teams?",
-      "summary": "Alabama has won the most games vs. No. 1-ranked teams in college football history. See which teams make the rest of the list.",
-      "url": "https://www.espn.com/college-football/story/_/id/41698842/who-most-wins-vs-no-1-college-football-teams",
-      "published": "2026-10-17T23:06:56Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2024/1001/r1394536_608x342_16-9.jpg"
-    },
-    {
-      "title": "Connelly breaks down Week 7: Notre Dame-BYU, Ohio State-Indiana, more",
-      "summary": "The Irish face their first test in the biggest game at Provo in ages, but that's just the tip of the iceberg.",
-      "url": "https://www.espn.com/college-football/story/_/id/50189757/connelly-week-7-notre-dame-ohio-state-indiana",
-      "published": "2026-10-16T18:09:18Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1015/r1731245_608x342_16-9.jpg"
-    },
-    {
-      "title": "Ranking the top 50 college football recruiting classes for 2027",
-      "summary": "Where the top 50 classes stand as the latest cycle hits the home stretch.",
-      "url": "https://www.espn.com/college-football/recruiting/story/_/id/48503376/2027-college-football-recruiting-class-rankings-top-teams-schools",
-      "published": "2026-10-16T10:19:20Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1015/r1731143_608x342_16-9.jpg"
-    },
-    {
-      "title": "Is more college football realignment on the way? Amid congressional sports bill drama, Miami's president says 'You cannot lock us into a conference' - Yahoo Sports",
-      "summary": "Is more college football realignment on the way? Amid congressional sports bill drama, Miami's president says 'You cannot lock us into a conference'&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQYUEzMDdqZWJwNnU2OFN6QTFxVmhwWHhQQzFOMmptaElnUjdzSzhSbmRsckxOV3JLQk90OEtUd0dKNWpjS1dGaHhaT09uR082Q2t2Vk5nZHIxcWFPOGRuNElUMGtPZzdVRy0tUkJLc2NtNFlEc3lhbkwySEJSRjhDT29fa21MRmE2T1JmcmxobG9zRmZTVXFQZE1LVnFjRjVxVTZlMm9pbG9rMFptS1AyV0dNa3F4WXVzdHZtSk5OYWt5a0NhcUlvanNNVmt1RjNVbk1fZ1NZOG1ZaXVQY3BJYm83c1pMbDRZVGdXYi0xb0dVVzdPa3c?oc=5",
-      "published": "Thu, 22 Oct 2026 12:26:59 GMT",
+      "title": "Malachi Toney, Darian Mensah dominate as No. 1 Miami routs Pitt - ESPN",
+      "summary": "Malachi Toney, Darian Mensah dominate as No. 1 Miami routs Pitt&nbsp;&nbsp;ESPNPittsburgh Panthers vs. Miami (Fla.) Hurricanes Live Score and Stats - October 24, 2026 Gametracker&nbsp;&nbsp;CBS SportsStock Up, Stock Down After No. 1 Miami's Win Over Pittsburgh&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVzByY0lUWEJNMGgwcmo5VkRZaEJMWGNIZDRlMTgzSER6bHp0Q0FOcXd5MlNTMDdtREZCUGtmOVVUeHEyQTctM2pXNUdSS0tIQjlVYzNtSGU1Qnd4ZnR4NXR3Zk84U1JRakZHS3FLeWlZLTBadlRqenhKdTBlZUFQOEYyY3RqTzZtU0dEMDc5M1BjSlFZWENHc1BsSFJYdm1vX2ZHUUE4OE9yMXpkQkRmUzJn?oc=5",
+      "published": "Sat, 24 Oct 2026 20:10:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami president says ACC is in college football's 'second tier,' discusses moving to SEC, Big Ten - CBS Sports",
-      "summary": "Miami president says ACC is in college football's 'second tier,' discusses moving to SEC, Big Ten&nbsp;&nbsp;CBS Sports",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZWhKUXAzWDFhZXRKUk5Ta1ZjNGZpTG51ZFRmVUpsSldsU3N6ZERzTTJITzNHRFJYdHJ6RWNMVk5qVFRTaDZRVE9GUUNqWUI4dXZYTXo2WHdJN012WnJJcTlDYUUzdXFPYl82MFJqeURrRGItZXRMUGcxWGdmYXhQOGRVR08zY2tiMVJZUk85VDg?oc=5",
-      "published": "Thu, 22 Oct 2026 14:19:00 GMT",
+      "title": "Miami makes a big move with Ohio State commit Quinton Cypher back for surprise visit - Canes Warning",
+      "summary": "Miami makes a big move with Ohio State commit Quinton Cypher back for surprise visit&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPazFJX3lYRHdWUFItVlZiMWFkWmE1OFgtRTZLVHlSYnladDBUZWxoRm9SODdzMjk3V0ZhaW1sRVd3UFRGSGUtSHZEOEFJanJISzhGNEd4cDdaM05Vckc4TVgxNURZM3h4NlBaZ3IwUURwYlBjNVpscVhPVWNZa3E2eUc1MThweXBWM2ItclVLVHNuZGJESkdXa3FnbUxXZ2c?oc=5",
+      "published": "Sat, 24 Oct 2026 16:20:41 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami vs Pitt Prediction: Will the Hurricanes Play Like a No. 1 Team? - College Football News",
-      "summary": "Miami vs Pitt Prediction: Will the Hurricanes Play Like a No. 1 Team?&nbsp;&nbsp;College Football NewsMiami Hurricanes Get Pregame Bulletin Board Material From Pitt&nbsp;&nbsp;On3Pitt at No. 1 Miami: Game Central Weather Updates, Rundown, Live Updates, Analysis&nbsp;&nbsp;Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPck1fQzlFX2xpWXp6Sk9NSDRIaTBIdnNYS3Jva1pwSFBjcnF0QTZ3NFBjTDEzUGhiSFNESXl1N2FLNWtWZmZxZWRiZmtaOUlmVm1tdE5MRHMyTEZJUjBJTWRaRy13amdDQm82bjFrLTdhRk96YVFsenQyVjMzYWpKWFlXVm8?oc=5",
-      "published": "Thu, 22 Oct 2026 06:47:06 GMT",
+      "title": "Is No. 1 Miami the best team in the country? The ESPN FPI doesn’t think so - 247Sports",
+      "summary": "Is No. 1 Miami the best team in the country? The ESPN FPI doesn’t think so&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPTlEwemNwRHNjRnVsNVlVSG1zc2dRZWZwc21pSXNlSGRuOU1tN2Jpank2V3F0dlRfUXBLSDlBOW91S3FBMGRzTU5TbW5OM3UtN1pxWi1TYTNPWVItZ2Y5Qmtrbmx6UWU0ZElFUTNabFpab0VmX09IdlBYdHhaLUw3M1ZpeURUOWFKOTgyLWxVUlNzYlY5Zk1oSVk5MFpyc0x6cUdiYjE0T2pGNk5kQ09OX08zVmpqSGRZeHRFLTN5Q1B2dFlRbGRyd2VfM0drU2dUUkxWa3Rwb05Fb2ppLTNrNWpzWmNuTGs?oc=5",
+      "published": "Sun, 25 Oct 2026 13:18:11 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami's 2001 throwbacks lead best Week 8 uniforms in college football - ESPN",
-      "summary": "Miami's 2001 throwbacks lead best Week 8 uniforms in college football&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYlFrNVRWeGNJUkxTNmd0SWVqUVpHTDNqZDZCb2NmcFJKZkZPWGNtSlEtdGM5cEliNDBubTlmOEtiU2FEZmJWb3RsWWhCcTh2dnF5Y2lRMUllVHJxMnVzRUd0M09YcUVVcHBuUlpHcF9oUVVBcURmZ283X21RTUZTTzhWUDNJU0plLTN6UUt5OFRmZGJ1XzVIaGNmSlFWbWRHOWZYVWx1VHdIQQ?oc=5",
-      "published": "Fri, 23 Oct 2026 13:09:00 GMT",
+      "title": "AP Top 25 Poll Prediction as Five Top-Ranked Teams Fall - Sports Illustrated",
+      "summary": "AP Top 25 Poll Prediction as Five Top-Ranked Teams Fall&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZHVSZ0wtZGRtTjBzUnNmT1RHUnRRVno4OXBqTV9URDlLbURPNWx1Z09rU3lsY1Y5bE93RlFXUWpNWFp0QlBLU21CcDh6T1FNRUp2V2syTjJ3UGdtQW1hemNJVGxmMjFvM3FKOTBKS2NYTUlIMlltTlBoNlBMRjRESlo0cW5IWmtUS2h2OXFrRkVWRF84MFBuaHhmMA?oc=5",
+      "published": "Sun, 25 Oct 2026 12:31:48 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "College Football Playoff top 12 projection after Week 8 - ESPN",
+      "summary": "College Football Playoff top 12 projection after Week 8&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQLVN6MWg4bDVLOVVyRjg3ejVjcW85QmRGaTlnMHZMcmFrMUpNTDBTaV9GRkVRcU01bGxCS1B6NnNKTFB4ZUlKQzRVZHVfWE00UzRPd0pGYzB5R3FzYjduM2YwQzFZYVV1ZEM4T2h1b29ibkVmc2NQVjBicnF0bWlXdlEydkJEYThSR2t1SWUwZFBBcFl5N3I1c0o4WTN1X1Jh?oc=5",
+      "published": "Sun, 25 Oct 2026 06:50:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "College football winners, losers in Week 8: Big 12 loses momentum amid upsets, Miami's dominance continues - CBS Sports",
+      "summary": "College football winners, losers in Week 8: Big 12 loses momentum amid upsets, Miami's dominance continues&nbsp;&nbsp;CBS Sports",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOclNkUzN4Ym9kUEU2Z1o2eFdwM2FJVDI5TWp4Sk91dkd2MkdZX2NVeXNzYlA4WThBZnRHUzg5bUtUaE1QUXpGWWxTTWdPcGtBcHJXSW5idEM1SGVoZVhoQUFIUGQ5VDZpQUtJdzFESS1XUHNjQldudVRvM1hkVUkyTGpFaVBkb085N1ZySUhaUXg1Qzh3ZmJ2N3BMbDRVYV9uaDRSQQ?oc=5",
+      "published": "Sun, 25 Oct 2026 04:55:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "College Football Rankings: Is Anyone Any Good? These 25 Are - College Football News",
+      "summary": "College Football Rankings: Is Anyone Any Good? These 25 Are&nbsp;&nbsp;College Football News",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRXFaaWtXQ1BGY0NteWxJUGg3a0RfYjBnVGNjUlVfZzJvYTRKTC1BYjQwRVB0MXduOTV0MWZ2dEg2M2VVbGFPdm42YWNMamZQRmNCUkY4UG44SEhfWlZhYjhXS2dIelhEWEhHNDdjcWIxWEtVZnJZUFVSODdicndabzhmcVdxYmtLamlOMV9naUx2bTdvNEZGcjFvVkVQQQ?oc=5",
+      "published": "Sun, 25 Oct 2026 08:56:55 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -302,46 +321,28 @@
       "category": "news"
     },
     {
-      "title": "Miami exploring football independence, how will it affect college football landscape - AL.com",
-      "summary": "Miami exploring football independence, how will it affect college football landscape&nbsp;&nbsp;AL.com",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQeWpJM0JRYlRRUzJhUElXS0s3WS1NRlY5dEJESHBEVy1JbjdiLU5ITlo5M3FidzRUbGQ3cmhEaVdoTUJWQVhaeG91VkdvUGUtbkdyWHlCT1FySUthMktueTRwY2sxcG9hOHRlNDlGaC0tRnhjdXU4WDNCdVFtTkYyQnNlSmZsc2VmclVZVFdpMWVFQnFlZVMtNkR4QWlUeDhZamxiRUpiSzN0WURLQnBENnZXUnMyM245M28zQWRFbw?oc=5",
-      "published": "Fri, 23 Oct 2026 16:49:00 GMT",
+      "title": "Week 9 College Football Rankings: LSU, UCLA, Kentucky Climb as BYU, Texas Tech Drop after Chaotic Saturday - Sportsnaut",
+      "summary": "Week 9 College Football Rankings: LSU, UCLA, Kentucky Climb as BYU, Texas Tech Drop after Chaotic Saturday&nbsp;&nbsp;Sportsnaut",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPeHlDckdZM0d0Wm4xc1ZET3dPbUxWUy1GeXdPRVRZVEozU1MtSjZFa095cnVwa0pmTmg5SzNtSHZ5WUFMcEowazRlcS1sOHBlbGdLcThIMzlPY24wdjB5bzRzSzdIbnRoNzdoTWlhTWZyRW9XNHA3emhFaGxSSkMyZWhROA?oc=5",
+      "published": "Sun, 25 Oct 2026 03:24:28 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Could Hurricanes break away from ACC? Miami’s president doesn’t rule it out - Miami Herald",
-      "summary": "Could Hurricanes break away from ACC? Miami’s president doesn’t rule it out&nbsp;&nbsp;Miami Herald",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOanozRFZveGFMUzlMc1E1c1ZTakNUOEZSeXNIN0pHOHh1U0FBSEFJOXdBa01keTZDVVV2WFNCeXR6R082c1VQaU5VaUUxOE41eWNvSWt2clhoejBGRFBybGFKWmVVbmpocXNpYUFiN1RFSHZTbHQyMWw5VmxLbzNkanR6aTBBWFpBNFVPVUtRN3dmQdIBkgFBVV95cUxOXzRsUDUwN0dLSTk4NVRBZlhaM1o4WGNQZ3ZiY1ZndEhOaTFhRU5sdFFmeTNVTFJGdlJLb3l0TjhpRXdISE1aTUx2SWl3WmhTaU9DcHlfOEVKajQza1MycVh0TWE1VlpNSGJiTGh5SklkWTdUU0Q2MGJlNGk2N2dMMW40TmZZcnFxUEpjN19reTlndw?oc=5",
-      "published": "Thu, 22 Oct 2026 15:05:35 GMT",
+      "title": "Pitt vs Miami Prediction, Odds, Picks Today: College Football Week 8 - Action Network",
+      "summary": "Pitt vs Miami Prediction, Odds, Picks Today: College Football Week 8&nbsp;&nbsp;Action Network",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMkFBeWczSU1odkh3bk5za2p4eWl5cy1lTHpvUWRQd2Q1VHMwS3ZickRHUW9oTHZQTUF3TEFyWXRDS1dLaFh5T0x6V1o3dG9DRVJNNG13LVV4STRHNW14bWVERXdyMTZaQVNVV25zSmNiYjRUTW14NHlLVDhFUWUyVlVmdzRWZjhETUhCeDlhZGpRRkNNU2MxdWFPaDlvdGNhdnhfT2RSc3NKdWFqUmI2QVRVd183NGVPeEtXZ1FEZTY5azZqNWc?oc=5",
+      "published": "Sat, 24 Oct 2026 12:57:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "No. 1 Hurricanes wearing 2001 tribute jerseys against Pittsburgh - Sun Sentinel",
-      "summary": "No. 1 Hurricanes wearing 2001 tribute jerseys against Pittsburgh&nbsp;&nbsp;Sun Sentinel",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ueFZkeS1aX0xTX2dsTmNZVm9oSHI4NDNVVGdPRzJWRVZIbHF6eFJGUlRtQk1YcTNHUkJlRGhTVF80ZzQ5ZF9wc3VjSVZUVGxQWE1iaDROWVVVU0lwVEdsWUJUbEFjdXk2N1JB?oc=5",
-      "published": "Thu, 22 Oct 2026 16:31:08 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Miami president speaks candidly on possibility of UM joining SEC/Big Ten or going independent - Saturday Down South",
-      "summary": "Miami president speaks candidly on possibility of UM joining SEC/Big Ten or going independent&nbsp;&nbsp;Saturday Down South",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQazUycjB2N2dNVnljbnR3YWVFdGRLOVM4bWpJbTdiYk1aZ2dRdGlLNFJiWFVWVWlLUGJTOE9IU2U4X2pNSnAwbGVxOGc1RVQweHE0bE5YVWRvMDZOWmEwcnI4by0tMEgtaGVlS1ZLS0V4cmZKMFBQNnViemM0WDN5N0d5dDI2eU90bnhxbXZfM1dKbk45anFsNlREZ09TYTc5NEZrVVgwejBxdUJ3U0kyc3ZNaUt4YmF4UDQtZGJJMzMxdzRxT0htNnJxbFFPM3Q0a0xudjZ6YW9xTEJfV0RBQVl5Z2U?oc=5",
-      "published": "Thu, 22 Oct 2026 16:32:00 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "FSU football vs Miami recap: Seminoles fall in 2OT heartbreaker - Tallahassee Democrat",
-      "summary": "FSU football vs Miami recap: Seminoles fall in 2OT heartbreaker&nbsp;&nbsp;Tallahassee Democrat",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWnlNcTQ1THFUUUVMbkVjT2NVX09wRExLaUJ3dVdmNWdrWXFyVmNHcExfdjNHeUx3LWJnano3RzNZN1BOM3U1VGdRck9ST2RVS0ExY1BZeUwxMWlQeGhSR3ZlWUVlOU1LcGg2N1FBd1RqejBPMWZUeXkwWDBPTzcwZS1YZWUxMmNHeDRmU003Y0k2M0JrNnF5R04tT204bEtYSmhseHVhdDFPbTNJbGg5TXNHLWhVS1ktUHdfZ1dEbjcwemE0MXNDckcya01jaG15SkZrcUx4UzdMOXRzSTNxUA?oc=5",
-      "published": "Sun, 18 Oct 2026 04:11:06 GMT",
+      "title": "Mensah, Toney dominate again as No. 1 Miami Hurricanes dominate Pittsburgh - Miami Herald",
+      "summary": "Mensah, Toney dominate again as No. 1 Miami Hurricanes dominate Pittsburgh&nbsp;&nbsp;Miami Herald",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZHh6T2t1dEMtbEJXT01BTFJha0NNZ3luZ0w2TU9SdXdmbWVDSXBlU1JkUEI2SWZUVGxIaGpPTnVvZWpvSmdoQVpsbGtpUU1VcUdBS3RPM1hod01EVUVrb0wtdTU2Wm00RnNNUGdmQUlBWTRkUEF2b0NMbk9Ud3g3STFmeGR0bTJjU091cXhBOVBFQdIBkgFBVV95cUxOTTVjLUwydWpPbk1WSktVUHRDYnN6R0U2bDJWLVNLQVpXT1ItdTFxSF9QaG04ZHZCbUs0X2o1QThMVF9QeW9sOXh5V2lyNlhBc0U5bGxIM0N4U1RxSE0zaEVmRzl6VXphNG5CV3NsYWstQ0tvbmQ1eTVBbkdmUmFoNE5TU0ZHM0dBZ3Z0UU5iNWZkQQ?oc=5",
+      "published": "Sat, 24 Oct 2026 19:43:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -536,11 +537,17 @@
       "home_away": "home",
       "venue": "Hard Rock Stadium",
       "city": "Miami Gardens",
-      "result": "",
-      "miami_score": "",
-      "opp_score": "",
-      "status": "STATUS_SCHEDULED",
-      "status_detail": "Sat, October 24th at 12:00 PM EDT",
+      "result": "W",
+      "miami_score": {
+        "value": 52.0,
+        "displayValue": "52"
+      },
+      "opp_score": {
+        "value": 23.0,
+        "displayValue": "23"
+      },
+      "status": "STATUS_FINAL",
+      "status_detail": "Final",
       "neutral_site": false,
       "conference_game": false,
       "tv": ""
@@ -664,18 +671,18 @@
   "stats": {
     "passing": {
       "completionPct": {
-        "display": "80.3",
-        "value": 80.3,
+        "display": "80.9",
+        "value": 80.9,
         "rank": ""
       },
       "completions": {
-        "display": "155",
-        "value": 155.0,
+        "display": "186",
+        "value": 186.0,
         "rank": ""
       },
       "interceptionPct": {
-        "display": "1.00",
-        "value": 1.0,
+        "display": "0.90",
+        "value": 0.9,
         "rank": ""
       },
       "interceptions": {
@@ -689,18 +696,18 @@
         "rank": ""
       },
       "netPassingYards": {
-        "display": "1,998",
-        "value": 1998.0,
+        "display": "2,385",
+        "value": 2385.0,
         "rank": ""
       },
       "netPassingYardsPerGame": {
-        "display": "333.0",
-        "value": 333.0,
+        "display": "340.7",
+        "value": 340.7143,
         "rank": ""
       },
       "passingAttempts": {
-        "display": "193",
-        "value": 193.0,
+        "display": "230",
+        "value": 230.0,
         "rank": ""
       },
       "passingTouchdownPct": {
@@ -709,23 +716,23 @@
         "rank": ""
       },
       "passingTouchdowns": {
-        "display": "21",
-        "value": 21.0,
+        "display": "25",
+        "value": 25.0,
         "rank": ""
       },
       "QBRating": {
-        "display": "201.6",
-        "value": 201.56674,
+        "display": "202.3",
+        "value": 202.32956,
         "rank": ""
       },
       "sacks": {
-        "display": "6",
-        "value": 6.0,
+        "display": "9",
+        "value": 9.0,
         "rank": ""
       },
       "sackYardsLost": {
-        "display": "29",
-        "value": 29.0,
+        "display": "57",
+        "value": 57.0,
         "rank": ""
       },
       "yardsPerPassAttempt": {
@@ -734,8 +741,8 @@
         "rank": ""
       },
       "passingYards": {
-        "display": "1,998",
-        "value": 1998.0,
+        "display": "2,385",
+        "value": 2385.0,
         "rank": ""
       },
       "passingFumblesLost": {
@@ -744,60 +751,60 @@
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "yardsPerGame": {
-        "display": "559.5",
-        "value": 559.5,
+        "display": "551.9",
+        "value": 551.9,
         "rank": ""
       },
       "totalPointsPerGame": {
-        "display": "48.5",
-        "value": 48.5,
+        "display": "49.0",
+        "value": 49.0,
         "rank": ""
       },
       "totalPoints": {
-        "display": "291",
-        "value": 291.0,
+        "display": "343",
+        "value": 343.0,
         "rank": ""
       },
       "totalTouchdowns": {
-        "display": "39",
-        "value": 39.0,
+        "display": "46",
+        "value": 46.0,
         "rank": ""
       },
       "passingYardsPerGame": {
-        "display": "333.0",
-        "value": 333.0,
+        "display": "340.7",
+        "value": 340.7,
         "rank": ""
       },
       "completionAttempts": {
-        "display": "155-193",
+        "display": "186-230",
         "value": "",
         "rank": ""
       },
       "sacksYardsLost": {
-        "display": "6-29",
+        "display": "9-57",
         "value": "",
         "rank": ""
       }
     },
     "rushing": {
       "rushingAttempts": {
-        "display": "223",
-        "value": 223.0,
+        "display": "262",
+        "value": 262.0,
         "rank": ""
       },
       "rushingYards": {
-        "display": "1,359",
-        "value": 1359.0,
+        "display": "1,478",
+        "value": 1478.0,
         "rank": ""
       },
       "yardsPerRushAttempt": {
-        "display": "6.1",
-        "value": 6.1,
+        "display": "5.6",
+        "value": 5.6,
         "rank": ""
       },
       "longRushing": {
@@ -811,13 +818,13 @@
         "rank": ""
       },
       "rushingTouchdowns": {
-        "display": "17",
-        "value": 17.0,
+        "display": "20",
+        "value": 20.0,
         "rank": ""
       },
       "rushingYardsPerGame": {
-        "display": "226.5",
-        "value": 226.5,
+        "display": "211.1",
+        "value": 211.1,
         "rank": ""
       },
       "rushingFumbles": {
@@ -831,45 +838,45 @@
         "rank": ""
       },
       "rushingFirstDowns": {
-        "display": "64",
-        "value": 64.0,
+        "display": "71",
+        "value": 71.0,
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "totalYards": {
-        "display": "3,357",
-        "value": 3357.0,
+        "display": "3,863",
+        "value": 3863.0,
         "rank": ""
       },
       "totalOffensivePlays": {
-        "display": "422",
-        "value": 422.0,
+        "display": "501",
+        "value": 501.0,
         "rank": ""
       },
       "totalPointsPerGame": {
-        "display": "48.5",
-        "value": 48.5,
+        "display": "49.0",
+        "value": 49.0,
         "rank": ""
       },
       "totalPoints": {
-        "display": "291",
-        "value": 291.0,
+        "display": "343",
+        "value": 343.0,
         "rank": ""
       },
       "totalTouchdowns": {
-        "display": "39",
-        "value": 39.0,
+        "display": "46",
+        "value": 46.0,
         "rank": ""
       }
     },
     "receiving": {
       "receptions": {
-        "display": "155",
-        "value": 155.0,
+        "display": "186",
+        "value": 186.0,
         "rank": ""
       },
       "receivingTargets": {
@@ -878,13 +885,13 @@
         "rank": ""
       },
       "receivingYards": {
-        "display": "1,998",
-        "value": 1998.0,
+        "display": "2,385",
+        "value": 2385.0,
         "rank": ""
       },
       "receivingTouchdowns": {
-        "display": "21",
-        "value": 21.0,
+        "display": "25",
+        "value": 25.0,
         "rank": ""
       },
       "longReception": {
@@ -898,8 +905,8 @@
         "rank": ""
       },
       "receivingYardsPerGame": {
-        "display": "333.0",
-        "value": 333.0,
+        "display": "340.7",
+        "value": 340.71,
         "rank": ""
       },
       "receivingFumbles": {
@@ -918,70 +925,70 @@
         "rank": ""
       },
       "receivingFirstDowns": {
-        "display": "96",
-        "value": 96.0,
+        "display": "112",
+        "value": 112.0,
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "yardsPerReception": {
-        "display": "12.9",
-        "value": 12.9,
+        "display": "12.8",
+        "value": 12.8,
         "rank": ""
       },
       "totalPointsPerGame": {
-        "display": "48.5",
-        "value": 48.5,
+        "display": "49.0",
+        "value": 49.0,
         "rank": ""
       },
       "totalPoints": {
-        "display": "291",
-        "value": 291.0,
+        "display": "343",
+        "value": 343.0,
         "rank": ""
       },
       "totalTouchdowns": {
-        "display": "39",
-        "value": 39.0,
+        "display": "46",
+        "value": 46.0,
         "rank": ""
       }
     },
     "miscellaneous": {
       "firstDowns": {
-        "display": "174",
-        "value": 174.0,
+        "display": "199",
+        "value": 199.0,
         "rank": ""
       },
       "firstDownsRushing": {
-        "display": "64",
-        "value": 64.0,
+        "display": "71",
+        "value": 71.0,
         "rank": ""
       },
       "firstDownsPassing": {
-        "display": "96",
-        "value": 96.0,
+        "display": "112",
+        "value": 112.0,
         "rank": ""
       },
       "firstDownsPenalty": {
-        "display": "13",
-        "value": 13.0,
+        "display": "15",
+        "value": 15.0,
         "rank": ""
       },
       "thirdDownConvs": {
-        "display": "32",
-        "value": 32.0,
+        "display": "42",
+        "value": 42.0,
         "rank": ""
       },
       "thirdDownAttempts": {
-        "display": "62",
-        "value": 62.0,
+        "display": "77",
+        "value": 77.0,
         "rank": ""
       },
       "thirdDownConvPct": {
-        "display": "51.61",
-        "value": 51.6129,
+        "display": "54.55",
+        "value": 54.545456,
         "rank": ""
       },
       "fourthDownConvs": {
@@ -990,28 +997,28 @@
         "rank": ""
       },
       "fourthDownAttempts": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "fourthDownConvPct": {
-        "display": "33.33",
-        "value": 33.333336,
+        "display": "28.57",
+        "value": 28.57143,
         "rank": ""
       },
       "totalPenalties": {
-        "display": "38",
-        "value": 38.0,
+        "display": "48",
+        "value": 48.0,
         "rank": ""
       },
       "totalPenaltyYards": {
-        "display": "363",
-        "value": 363.0,
+        "display": "440",
+        "value": 440.0,
         "rank": ""
       },
       "possessionTimeSeconds": {
-        "display": "12431",
-        "value": 12431.0,
+        "display": "14551",
+        "value": 14551.0,
         "rank": ""
       },
       "redzoneFieldGoalPct": {
@@ -1035,8 +1042,8 @@
         "rank": ""
       },
       "totalTakeaways": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "totalGiveaways": {
@@ -1045,8 +1052,8 @@
         "rank": ""
       },
       "turnOverDifferential": {
-        "display": "3",
-        "value": 3.0,
+        "display": "4",
+        "value": 4.0,
         "rank": ""
       },
       "fumblesLost": {
@@ -1055,55 +1062,55 @@
         "rank": ""
       },
       "thirdDownEff": {
-        "display": "32-62",
+        "display": "42-77",
         "value": "",
         "rank": ""
       },
       "fourthDownEff": {
-        "display": "2-6",
+        "display": "2-7",
         "value": "",
         "rank": ""
       },
       "totalPenaltiesYards": {
-        "display": "38-363",
+        "display": "48-440",
         "value": "",
         "rank": ""
       }
     },
     "defensive": {
       "soloTackles": {
-        "display": "185",
-        "value": 185.0,
+        "display": "212",
+        "value": 212.0,
         "rank": ""
       },
       "assistTackles": {
-        "display": "134",
-        "value": 134.0,
+        "display": "158",
+        "value": 158.0,
         "rank": ""
       },
       "totalTackles": {
-        "display": "319",
-        "value": 319.0,
+        "display": "370",
+        "value": 370.0,
         "rank": ""
       },
       "sacks": {
-        "display": "18",
-        "value": 18.0,
+        "display": "20",
+        "value": 20.0,
         "rank": ""
       },
       "sackYards": {
-        "display": "93",
-        "value": 93.0,
+        "display": "110",
+        "value": 110.0,
         "rank": ""
       },
       "stuffs": {
-        "display": "44",
-        "value": 44.0,
+        "display": "50",
+        "value": 50.0,
         "rank": ""
       },
       "passesDefended": {
-        "display": "16",
-        "value": 16.0,
+        "display": "21",
+        "value": 21.0,
         "rank": ""
       },
       "avgInterceptionYards": {
@@ -1127,13 +1134,13 @@
         "rank": ""
       },
       "tacklesForLoss": {
-        "display": "29",
-        "value": 29.0,
+        "display": "31",
+        "value": 31.0,
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       }
     },
@@ -1166,13 +1173,13 @@
         "rank": ""
       },
       "fumblesForced": {
-        "display": "3",
-        "value": 3.0,
+        "display": "4",
+        "value": 4.0,
         "rank": ""
       },
       "fumblesRecovered": {
-        "display": "4",
-        "value": 4.0,
+        "display": "5",
+        "value": 5.0,
         "rank": ""
       },
       "fumblesTouchdowns": {
@@ -1181,8 +1188,8 @@
         "rank": ""
       },
       "gamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "fumblesAndLost": {
@@ -1218,18 +1225,18 @@
         "rank": ""
       },
       "puntReturns": {
-        "display": "7",
-        "value": 7.0,
+        "display": "10",
+        "value": 10.0,
         "rank": ""
       },
       "puntReturnYards": {
-        "display": "89",
-        "value": 89.0,
+        "display": "117",
+        "value": 117.0,
         "rank": ""
       },
       "yardsPerPuntReturn": {
-        "display": "12.7",
-        "value": 12.714286,
+        "display": "11.7",
+        "value": 11.7,
         "rank": ""
       },
       "longPuntReturn": {
@@ -1258,30 +1265,30 @@
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "totalPuntReturnsYards": {
-        "display": "7-89",
+        "display": "10-117",
         "value": "",
         "rank": ""
       }
     },
     "kicking": {
       "fieldGoalsMade": {
-        "display": "5",
-        "value": 5.0,
-        "rank": ""
-      },
-      "fieldGoalAttempts": {
         "display": "6",
         "value": 6.0,
         "rank": ""
       },
+      "fieldGoalAttempts": {
+        "display": "7",
+        "value": 7.0,
+        "rank": ""
+      },
       "fieldGoalPct": {
-        "display": "83.3",
-        "value": 83.33333,
+        "display": "85.7",
+        "value": 85.71429,
         "rank": ""
       },
       "longFieldGoalMade": {
@@ -1305,8 +1312,8 @@
         "rank": ""
       },
       "fieldGoalAttempts40_49": {
-        "display": "1",
-        "value": 1.0,
+        "display": "2",
+        "value": 2.0,
         "rank": ""
       },
       "fieldGoalAttempts50": {
@@ -1315,13 +1322,13 @@
         "rank": ""
       },
       "extraPointsMade": {
-        "display": "38",
-        "value": 38.0,
+        "display": "45",
+        "value": 45.0,
         "rank": ""
       },
       "extraPointAttempts": {
-        "display": "38",
-        "value": 38.0,
+        "display": "45",
+        "value": 45.0,
         "rank": ""
       },
       "extraPointPct": {
@@ -1345,8 +1352,8 @@
         "rank": ""
       },
       "fieldGoalsMade40_49": {
-        "display": "1",
-        "value": 1.0,
+        "display": "2",
+        "value": 2.0,
         "rank": ""
       },
       "fieldGoalsMade50": {
@@ -1355,18 +1362,18 @@
         "rank": ""
       },
       "totalKickingPoints": {
-        "display": "53",
-        "value": 53.0,
+        "display": "63",
+        "value": 63.0,
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "touchbackPct": {
-        "display": "85",
-        "value": 85.106384,
+        "display": "86",
+        "value": 85.96491,
         "rank": ""
       },
       "avgKickoffReturnYards": {
@@ -1390,20 +1397,20 @@
         "rank": ""
       },
       "totalGoalsVsAttemps": {
-        "display": "5-6",
+        "display": "6-7",
         "value": "",
         "rank": ""
       }
     },
     "punting": {
       "punts": {
-        "display": "16",
-        "value": 16.0,
+        "display": "18",
+        "value": 18.0,
         "rank": ""
       },
       "puntYards": {
-        "display": "714",
-        "value": 714.0,
+        "display": "813",
+        "value": 813.0,
         "rank": ""
       },
       "longPunt": {
@@ -1412,13 +1419,13 @@
         "rank": ""
       },
       "grossAvgPuntYards": {
-        "display": "44.6",
-        "value": 44.625,
+        "display": "45.2",
+        "value": 45.166668,
         "rank": ""
       },
       "netAvgPuntYards": {
-        "display": "44.6",
-        "value": 44.625,
+        "display": "45.2",
+        "value": 45.166668,
         "rank": ""
       },
       "puntsBlocked": {
@@ -1427,8 +1434,8 @@
         "rank": ""
       },
       "puntsInside20": {
-        "display": "5",
-        "value": 5.0,
+        "display": "6",
+        "value": 6.0,
         "rank": ""
       },
       "touchbacks": {
@@ -1442,8 +1449,8 @@
         "rank": ""
       },
       "puntReturns": {
-        "display": "5",
-        "value": 5.0,
+        "display": "6",
+        "value": 6.0,
         "rank": ""
       },
       "puntReturnYards": {
@@ -1457,25 +1464,25 @@
         "rank": ""
       },
       "teamGamesPlayed": {
-        "display": "6",
-        "value": 6.0,
+        "display": "7",
+        "value": 7.0,
         "rank": ""
       },
       "totalPuntsYards": {
-        "display": "16-714",
+        "display": "18-813",
         "value": "",
         "rank": ""
       }
     },
     "scoring": {
       "rushingTouchdowns": {
-        "display": "17",
-        "value": 17.0,
+        "display": "20",
+        "value": 20.0,
         "rank": ""
       },
       "receivingTouchdowns": {
-        "display": "21",
-        "value": 21.0,
+        "display": "25",
+        "value": 25.0,
         "rank": ""
       },
       "returnTouchdowns": {
@@ -1484,18 +1491,18 @@
         "rank": ""
       },
       "totalTouchdowns": {
-        "display": "38",
-        "value": 38.0,
+        "display": "45",
+        "value": 45.0,
         "rank": ""
       },
       "fieldGoals": {
-        "display": "5",
-        "value": 5.0,
+        "display": "6",
+        "value": 6.0,
         "rank": ""
       },
       "kickExtraPoints": {
-        "display": "38",
-        "value": 38.0,
+        "display": "45",
+        "value": 45.0,
         "rank": ""
       },
       "totalTwoPointConvs": {
@@ -1504,13 +1511,13 @@
         "rank": ""
       },
       "totalPoints": {
-        "display": "291",
-        "value": 291.0,
+        "display": "343",
+        "value": 343.0,
         "rank": ""
       },
       "totalPointsPerGame": {
-        "display": "48.5",
-        "value": 48.5,
+        "display": "49.0",
+        "value": 49.0,
         "rank": ""
       }
     }
@@ -2723,13 +2730,6 @@
   },
   "recruiting": [
     {
-      "title": "Meet The Commits: Miami builds on No. 2 ranked recruiting class nationally - On3",
-      "summary": "Meet The Commits: Miami builds on No. 2 ranked recruiting class nationally&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMmxEdDI2RFBiYUFJcmVyMVJIME9FTThxeTZ6SmhhLW8xUGw2UnQ3Zmd6czRRc2pHZzlMX3M0c2JWWlo5T0I3YXBNU3p5TFpXaVlCNFVnZXBIU1pxbEJLSFNteUVud00zdXNpaHBQUThMVzQxUGtodDlsakhkY3Z3cUhORGN5d0R3NDNzMlBmVVdrQ2dTR29oWEJ6SG5BRW5NLTVxZWw0UkRNOC1WR28wR3Y4NC1PLXBrOUo4aFdn?oc=5",
-      "published": "Mon, 15 Jun 2026 07:00:00 GMT",
-      "source": "Rivals Recruiting"
-    },
-    {
       "title": "2026 college football recruiting class rankings: Top 75 schools - ESPN",
       "summary": "2026 college football recruiting class rankings: Top 75 schools&nbsp;&nbsp;ESPN",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOaDl1cG1MZVRtaVk4dWUwZm5tRkgtb0hKeGdnVzRLNW9jWDlsRktmTlBJd2RKaXo3TENQekxycTF3SGp6c2E0NmtiNElHTjdXWFBrbUwzMXE1MmZyZlBYcFB1SUs3b0hMTXY1QV94MjNyekk3Tzk5R0Y3OEdvYXJQWVZ2ZzNfWXZJYUhWMFg3VDNuVWRTc3FuT2d2MEI2bXlyLUw5RGdzWkFoeUZ3c3FPNGJIY3AtMENDc0JfMmNHVFctbm1Tc29pV0lmblZ1dlU?oc=5",
@@ -2765,6 +2765,13 @@
       "source": "Rivals Recruiting"
     },
     {
+      "title": "Breakout Candidates: 3 Miami commits who can boost their recruiting ranking in 2026 - On3",
+      "summary": "Breakout Candidates: 3 Miami commits who can boost their recruiting ranking in 2026&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVHhmVEh0dXNwNkZrTGNqQldtNzNnM08tN1R6WC04ZHIyVS15dTFKaEg3NjlhNF9kTmI4d3pEVlJnbWlWLVIwdU1aMER5d3U3M0ZZV2hnMUEzUk5DclFOXzBnLXhJOG1SUlVUNjVtb2VaaUNocFpLWEh0WWwycHRXNEVmN1FKRGJ1cWpMUjJlcUhlUXNodGVNTGg5Z0laSTRCRWFvcGdOUWc3VnVpRkFKMHhsNlFKVmMzSXlpLWhfWkhZaG5BZWQtWlFwZw?oc=5",
+      "published": "Sat, 18 Jul 2026 07:00:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
       "title": "Coveted Syracuse football recruit, top-30 player commits to Miami - Syracuse.com",
       "summary": "Coveted Syracuse football recruit, top-30 player commits to Miami&nbsp;&nbsp;Syracuse.com",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLWZSNUtxT2U5Y1FRT3NEVjFWazlOc1dSZlBCbGQzaGM5anJmVkdFYkdSSEZoTG1wMnBPS29VTWFMQmo3VWNOa2VUVldWNU1pWll4NDJzbU1yMlg3SU9jcTVpZlV3aE1iRjJ0c1l1MUFIZjFnM3EwSDlOM2ZjTlZSaFJucjhKQl9BR3A5RnJNUno4czJicWVXcU9RR2Z6V1gtWnlWNUY3SlFIYnZUeHV4eEdBaFdobUxv?oc=5",
@@ -2786,11 +2793,18 @@
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Breakout Candidates: 3 Miami commits who can boost their recruiting ranking in 2026 - On3",
-      "summary": "Breakout Candidates: 3 Miami commits who can boost their recruiting ranking in 2026&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVHhmVEh0dXNwNkZrTGNqQldtNzNnM08tN1R6WC04ZHIyVS15dTFKaEg3NjlhNF9kTmI4d3pEVlJnbWlWLVIwdU1aMER5d3U3M0ZZV2hnMUEzUk5DclFOXzBnLXhJOG1SUlVUNjVtb2VaaUNocFpLWEh0WWwycHRXNEVmN1FKRGJ1cWpMUjJlcUhlUXNodGVNTGg5Z0laSTRCRWFvcGdOUWc3VnVpRkFKMHhsNlFKVmMzSXlpLWhfWkhZaG5BZWQtWlFwZw?oc=5",
-      "published": "Sat, 18 Jul 2026 07:00:00 GMT",
+      "title": "Miami Hurricanes included in final six schools for elite 2027 4-star WR - Canes Warning",
+      "summary": "Miami Hurricanes included in final six schools for elite 2027 4-star WR&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQeldIcUtnQ1dMTmduVlJET3lMMmF1WDJqREQzTnZVeThEVW5od0NEdEZpcEc4VXM0WXRlcExKbVc0akRqUzYzSlVFTG03SUUyR1FiVzBNNVVrWVptSF9aLXVORHoxWHJrVTVJdThQZEI3S3E2OEFZdDU0TXpmYUpvWmdZOVZUemtnbE1ITWNUeWlmcUxZdERKZk5rQUU?oc=5",
+      "published": "Mon, 26 Jan 2026 08:00:00 GMT",
       "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Four-star Texas A&M commit flips to Miami Hurricanes - Aggies Wire",
+      "summary": "Four-star Texas A&amp;M commit flips to Miami Hurricanes&nbsp;&nbsp;Aggies Wire",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOWWlzblBmM0dMa19Ga1U0UDRILVB3ODlMcXdjNUJpY3RTMmFMV1ZRbXNZRlFWa0pJampXdjR2NjQ0ekFLcXZGcXJrck1TMl94aGU1aGlPME9aenNjRm9yQ2JmYlZfSWFsZVdQZmpWdHd3WDNHQm55bWpSb3hVWjY5cmNsclN2SGR3NXVFOVh5MEdWZEZ4bS1zcVpWV2E3ejdpOURvOGQxaDlRYW5tTzBTTy1uRlYxc0NQNFFqSDZHNGtMWGQxMjMtMXZvbUF0Tm5LOVM2ZFcyTjItMzZ5eFN3YmRiR3BtRmN4ZGc?oc=5",
+      "published": "Wed, 21 Oct 2026 23:20:00 GMT",
+      "source": "On3 Recruiting"
     },
     {
       "title": "Miami quarterback Emory Williams plans to enter NCAA Transfer Portal - Yahoo Sports",
@@ -2828,13 +2842,6 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Ohio State football star Jeremiah Smith drops eye-opening transfer portal offer bombshell - Yahoo Sports",
-      "summary": "Ohio State football star Jeremiah Smith drops eye-opening transfer portal offer bombshell&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdG1fVlFoanpVR3gxNE8zUVNCNC1PelpZOW9hM1dYTXNtNEZvZktlalpZcGhmRTBsZm10XzJieHNtbHVRenI5R0NEaEpFM0JSOGJ2Tm80UDhRZ2dlcF9vUmVpNEVveGg1WXdiOFhwbXpHb18zakNiM21yY2o1cldEbVFrazY0VUhBbWc?oc=5",
-      "published": "Sat, 28 Mar 2026 07:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
       "title": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami - 247Sports",
       "summary": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami&nbsp;&nbsp;247Sports",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTFhwTVUyTlJpNExtMktEUk5sYllrMTVBX1pMRVVpaER5ZW1Eb1h0RzRuV1A3ZlFLR1VCRURjUjdDdXB5aE1VQ3VXVDQ4YXkwUEZCTmM3czBfRWJNeFhWdk5EN1lJMUg5NFA3eGdsclVleW5tQjFvMWgtZWIyQldCeEpuQ25NNUptY0dXdUtWWktfbHU4WWNka3prbFVkVGJjU0lsQlZBLVQ2dWRiUHlRa3hWekM5LVRhWnVfR1JZdFpRU05ZMWhpdkhIRXZsMm9YYjRkTGtONnRKWjdpYUM5aGNDU3YtUUU?oc=5",
@@ -2849,17 +2856,17 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Every Ohio State player who has entered the NCAA Transfer Portal - Sports Illustrated",
-      "summary": "Every Ohio State player who has entered the NCAA Transfer Portal&nbsp;&nbsp;Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNajVRMVEzS3BHS2RSZFFBNHNCMlg2N2ZWTGRxYlRySEVtNjRjT2FSdWVQV1dGQjc3dVcwbXZ5aFlJMm5Ec01HNVF3UklDV0J6cHBrR0t0OWswUWIxMHBEY3dXTEpMc2R2b2xGbWFzb000alZDdzQ5OE9vaDNNVWlhQ1pJT05tdVYzMlc2MTcydGJuU1VfR2NBOWp2aG5BRWw4eFNud0tnc3QtSGI1ZnpHczVGSGpycUdHVmxF?oc=5",
-      "published": "Fri, 02 Jan 2026 08:00:00 GMT",
+      "title": "Colorado in Danger of Losing Four-Star Recruit to Miami - Sports Illustrated",
+      "summary": "Colorado in Danger of Losing Four-Star Recruit to Miami&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQS1NBWW5kTGU4STEwYWw1d2dHeF9WT2QtdWJab29nTFpmeGpOZGlzM0IxeFhicF9GYUNTakR1Y3ZQVzVxbm4tRExWdkNWSy1jaEQwLUFTTzg2OWs0NnBqbnl2ZWJkMWlmVGZsU1R6SXpOWFQ2MGkxLVFMNFV6N2pTSVFSY0RzczhzTXZ4SGx5dTNBeUVBTmpOdmJGY1VUa2ZaZ0JGZnN4eWxZWDk0Mlo4?oc=5",
+      "published": "Sat, 15 Nov 2025 08:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
-      "title": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes - 247Sports",
-      "summary": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa0lOX2hkWVFlc21aYVdtRmw1UkloNWVQeWRLa2VnekZ3TWZSNWNRNzJ3WVZHZ05MQU94NDNkdmxBRnRORzA0cllINDRMcXBzbGdfeVl5Z292M0h5T3Iyeml0b0hCVVBRV0VkSHlJNEJVOW1rREE0OEZKVGc2UnZnX0xzNmh5T2hXM1dFUERTVWdfU0RfNXpYUC00SXMwdm11UnlvVjltZnVsSk9rSWZYelBncTJfY3VmdDJFMkFOY1VPSkdBZllibEFEVTFjNkhTV2RCV2tqZHB2dlVnU3c?oc=5",
-      "published": "Sat, 09 May 2026 07:00:00 GMT",
+      "title": "2027 4-star athlete Tramond Collins decommits from Florida - Yahoo Sports",
+      "summary": "2027 4-star athlete Tramond Collins decommits from Florida&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWTVrVkN5dU5VT2prZktZLVBXTnh2VnZWSWlSbk41bmJHREYxNHdHQUZrWHZCYWo5S0RRaDNqUXQzUjQ1WmxTWEdlUnBKTExqclJFbVZLOEhRN1p0TlJmMW9IMDNKOGVkdzZSeVVkYm01TlhWVVhMMnlEVHJCSXBLLWR3?oc=5",
+      "published": "Sun, 14 Dec 2025 08:00:00 GMT",
       "source": "On3 Recruiting"
     }
   ]
