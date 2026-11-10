@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09T21:11:27.200599+00:00",
+  "last_updated": "2026-11-10T18:21:58.106056+00:00",
   "team": {
     "name": "Miami Hurricanes",
     "abbreviation": "MIA",
@@ -17,10 +17,42 @@
   },
   "news": [
     {
+      "title": "College Football Playoff Bubble Watch after Week 10",
+      "summary": "A conference-by-conference look at which teams are contending for the playoff, who's close, and who's out.",
+      "url": "https://www.espn.com/college-football/story/_/id/50422353/cfp-playoff-2026-bubble-watch-week-10",
+      "published": "2026-11-10T15:03:23Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1108/r1742774_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Breaking down the CFP race for three conferences after Week 10",
+      "summary": "Before making a futures prediction after Week 10, let's look at three paths to conference championships.",
+      "url": "https://www.espn.com/espn/betting/story/_/id/50433949/college-football-cfp-futures-2026-odds-favorites-picks-week-11",
+      "published": "2026-11-10T15:05:31Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1109/r1743677_1296x729_16-9.jpg"
+    },
+    {
+      "title": "What would a 24-team College Football Playoff bracket look like?",
+      "summary": "Using the CFP committee's final ranking from the 2025 season, here's what the new format would look like.",
+      "url": "https://www.espn.com/college-football/story/_/id/50191217/cfp-24-team-playoff-bracket-mock",
+      "published": "2026-11-09T18:33:26Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1016/r1601045_1296x729_16-9.jpg"
+    },
+    {
+      "title": "Top 25 betting lines: LSU favored over Texas, and Indiana over USC",
+      "summary": "This week's odds and FPI predictions for LSU-Texas, Indiana-USC and every top-25 matchup.",
+      "url": "https://www.espn.com/espn/betting/story/_/id/50434742/2026-college-football-week-11-top-25-betting-lines-odds",
+      "published": "2026-11-09T23:47:50Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1109/r1743728_2_1296x729_16-9.jpg"
+    },
+    {
       "title": "CFP 24-team format: What you need to know about the new playoff",
       "summary": "The expanded College Football Playoff is official and begins next season. Here's what you need to know.",
       "url": "https://www.espn.com/college-football/story/_/id/50433738/cfp-playoff-24-team-format-faq",
-      "published": "2026-11-09T19:27:25Z",
+      "published": "2026-11-09T23:35:54Z",
       "source": "ESPN",
       "image": "https://a.espncdn.com/photo/2026/1016/r1731817_1296x729_16-9.jpg"
     },
@@ -36,7 +68,7 @@
       "title": "How every 2027 five-star college football prospect will fit",
       "summary": "There are 23 five-star players in the class, and we scout each one's game for the next level.",
       "url": "https://www.espn.com/college-football/recruiting/story/_/id/48543549/college-football-recruiting-2027-prospects-five-star-scouts-take",
-      "published": "2026-11-09T15:57:57Z",
+      "published": "2026-11-09T22:56:16Z",
       "source": "ESPN",
       "image": "https://a.espncdn.com/photo/2026/0527/r1664326_608x342_16-9.jpg"
     },
@@ -225,87 +257,55 @@
       "image": "https://a.espncdn.com/photo/2024/1001/r1394536_608x342_16-9.jpg"
     },
     {
-      "title": "How Miami mom Linda Fletcher is traveling with her son, Hurricanes this season",
-      "summary": "How Miami mom Linda Fletcher is traveling with her son, Hurricanes this season",
-      "url": "https://www.espn.com/video/clip/_/id/50407793/how-miami-mom-linda-fletcher-traveling-son-hurricanes-season",
-      "published": "2026-11-07T14:35:06Z",
-      "source": "ESPN",
-      "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1107/dm_261107_Miami_HUrricanes/dm_261107_Miami_HUrricanes.jpg"
-    },
-    {
-      "title": "Top 25 betting lines: No. 4 Notre Dame favored over No. 1 Miami",
-      "summary": "This week's odds and FPI predictions for Notre Dame-Miami, Utah-BYU and every top 25 matchup.",
-      "url": "https://www.espn.com/espn/betting/story/_/id/50355297/2026-college-football-week-10-top-25-betting-lines-odds",
-      "published": "2026-11-06T16:13:51Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1102/r1739962_1296x729_16-9.jpg"
-    },
-    {
-      "title": "Notre Dame-Miami rivalry defined by seven memorable games",
-      "summary": "Here's a refresher on some of the most iconic games in the intense series between two of the sport's premier programs.",
-      "url": "https://www.espn.com/college-football/story/_/id/50392748/notre-dame-miami-rivalry-iconic-games",
-      "published": "2026-11-06T14:55:59Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1105/r1741742_608x342_16-9.jpg"
-    },
-    {
-      "title": "20 years after murder, Bryan Pata's family holds on for justice",
-      "summary": "For 15 years, the Patas blamed police missteps. Now they stand behind police and prosecutors in solidarity.",
-      "url": "https://www.espn.com/college-football/story/_/id/50392579/20-years-later-bryan-pata-family-holds-justice",
-      "published": "2026-11-06T14:00:05Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1105/ncf_bryan_pata_killing_20th_anniversary_16x9.jpg"
-    },
-    {
-      "title": "Mario Cristobal Could Face Harsh Punishment for What He Did After Miami-Notre Dame - Heavy.com",
-      "summary": "Mario Cristobal Could Face Harsh Punishment for What He Did After Miami-Notre Dame&nbsp;&nbsp;Heavy.comNotre Dame's Luke Talich saves day for No. 11 Irish in 31-24 win over No. 1 Miami&nbsp;&nbsp;Yahoo SportsWas Miami robbed vs Notre Dame? Michael Irvin says ‘100%’&nbsp;&nbsp;USA TodayMiami Hurricanes drops to No. 5 in AP Top 25 Poll following loss to Notre Dame&nbsp;&nbsp;247SportsMario Cristobal blasts refs' call denying Miami tying TD in loss to Notre Dame&nbsp;&nbsp;ESPNNotre Dame Football S",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOazhXd3dmYzZIUk9QYkJVMDBMX0xCYXJXWVEwd2FCNExWYnQwd2xoNkRETUFUc0FWNUZDX1pPTXFZZlk4bmxfOFdnMkZWYmw0SWFZNHBKYk1CckZ6MkVLdTZJb080STg5al9YdGpMWF9CNUdMWTZzbE9QQmw4WHFKc1liYWNiRThZODE1UmE5YkFNSVpDckZVX2o0djNIZw?oc=5",
-      "published": "Mon, 09 Nov 2026 01:47:00 GMT",
+      "title": "Miami Hurricanes vs Virginia Tech Hokies Week 12 game placed on 6 day hold - State of The U",
+      "summary": "Miami Hurricanes vs Virginia Tech Hokies Week 12 game placed on 6 day hold&nbsp;&nbsp;State of The U",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPcERQRXhGZlM5WGFwNzUxRTYxQzA0VjdIdDZ6MGxoWEZjeDhkY2xsVzI1aHlna2luOWFZQTMtRldxZmlvZTlrWEFkUGt6dHBTdzBXbWNiaUk2ZFBvOEV1TzhqNkpZV1NWNzJ4d1FtOFJ3RExDbTlEbFN1ZVNJOGtFT2JMSjZUclM1YjRwcVRxUW1BUG5NdFZXMktzVDdfOGxYS3JmV3hGU2dTeHQ3b2lVUXVSV2xxLW1xZUpjN3czb3M1bnRBeUd6UUszaEpkOGc?oc=5",
+      "published": "Tue, 10 Nov 2026 01:03:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Malachi Toney’s message to the Hurricanes after his injury. And how the team responded - Miami Herald",
-      "summary": "Malachi Toney’s message to the Hurricanes after his injury. And how the team responded&nbsp;&nbsp;Miami Herald",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOR19lenlSNHp4Z3BmQklHR2N3YWlzTFZ3QjQ1dU1fVi1nQWt1LVppN0t3SVZjUTNLc0dSc1czeEl3LXRMUTZ5VS0ySnRfbmp3NGJlYWxzYV82d3N1THZpZFlGYmwzdS1MNGlzcHA2Q2ltME9vZGcxRmlLSzRIVDFmb1ZRRzdIVmJsQjJhX1BBdmlvZ9IBkgFBVV95cUxOZTRwWlVwdXlHQ183UjVGQ1FLS3FBaHJrNkpoWk4wZ1VwY2lkRjlrZGRjQUlheTB2N3pZeTRkRGUxZDExakdPbXFLMzNfdEl5VXpsVS0wWTNtVlVuMVhUelhPbnRUUHJrY3FNWkFKNlpfMDJpdzBZb0xUMkFRay05cWFJckdSa1JYeENocm9YbHJiZw?oc=5",
-      "published": "Mon, 09 Nov 2026 17:23:35 GMT",
+      "title": "How To Watch Duke at No. 5 Miami - Sports Illustrated",
+      "summary": "How To Watch Duke at No. 5 Miami&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQaVVWWmk2bnNCY2FEdnNDYU03RVNoaVF4S2FYelF3N3RqLTdSYkZkWDZXNXhUX3g4bU1qVTNwaDR2dFVBcTFiRGhNaC00N3RDNnVxWVAyNXpleUkwTkJxODhVNFVLVl9pVzJrT1NWU1kwbFVfV241LTVKOEVhNW0tTE9hUlVoWkN6cVE?oc=5",
+      "published": "Tue, 10 Nov 2026 17:54:27 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Canes Rewind: A Look Back at the Game Against Notre Dame - Miami Hurricanes",
-      "summary": "Canes Rewind: A Look Back at the Game Against Notre Dame&nbsp;&nbsp;Miami Hurricanes",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORm5SYV80UnJOSjUyZ0IzamI2UXRQeFgzOF94RzN4OURWUDRDWWdNRjEzU2FwaFVXVHVqNGtTMkNMRF9wRkc5TFFvWkd4RHc0U01QNFV0WExjTEhNSWF2dnlhSnQyck9NRHdQSzhWd0VOLUpNYnZlWkJsRXpVOG4wb2wwWWVhWUNVY2VrZGFKck5XcDVOSGhubmhmQTlyV1U?oc=5",
-      "published": "Mon, 09 Nov 2026 19:44:54 GMT",
+      "title": "Miami Hurricanes Film Study From Second Half Of Notre Dame Game Reveals Workable Blueprint With No Malachi Toney - On3",
+      "summary": "Miami Hurricanes Film Study From Second Half Of Notre Dame Game Reveals Workable Blueprint With No Malachi Toney&nbsp;&nbsp;On35 up, 5 down from Miami’s 31-24 loss to Notre Dame&nbsp;&nbsp;State of The UMiami Hurricanes Found Their Offense Without Malachi Toney&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOYlFaeFk1YmN2WlM4WTVaTE1mSmllYVZaczBzYkxRQTlETmR1ZXFWUUp1QTRIdXBDcUt4UFVlWjY0VTRKbmJsSm1pbnpwMHoyT3VzVnFBTEY3ejdsejJsUC1qYWJxMTZvTHFuSFdKeHo2VlNWTHFwWTJVM0FObWR6YnFBU09rMUpKaDc4RGVqSnM5dTkzZVM0b3cxZjczT19YTElXdVE2RkVEZVFPNEIyY1EtYVUyUDJlbVU1a3pHcC1SQUJhT0pmVkVzeXVxSVliRkhBMHZVaThPb281SDVhTnpfQ2xUejJsbFAzTUZQRzZ6bTQ?oc=5",
+      "published": "Sat, 07 Nov 2026 08:00:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami’s Controversial Notre Dame Ruling Gets Powerful Final Decision From Legendary Referee - Yahoo Sports",
-      "summary": "Miami’s Controversial Notre Dame Ruling Gets Powerful Final Decision From Legendary Referee&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNSEZkdmFTR1ByUUkycTBzZDZicmRDZTVZQzBLR2NLWU9wUEVzTEs3VUVLTzVSeG9SMXFzOGpfQ0Q1bkE4UG1EZE9lSlBBWi1wY00xZU9OSWZWZ2R2Sm1FMjhOYnU0b1Nna2tvSldaLV8zblB3ODBLWm9USVBMT3VoaDg1dE9LQzZaNFlfdU1xcw?oc=5",
-      "published": "Sun, 08 Nov 2026 23:53:48 GMT",
+      "title": "UNSTOPPABLE: Miami Hurricanes Star Malachi Toney RACES to Recovery, Miami Rushing D Faces Toughest Test - 13WMAZ",
+      "summary": "UNSTOPPABLE: Miami Hurricanes Star Malachi Toney RACES to Recovery, Miami Rushing D Faces Toughest Test&nbsp;&nbsp;13WMAZ",
+      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPc1ZDYlZ0MlMxZVE0OUM2OWJXZTdMY3c5TGJxNTRwcEdhSXdtc01EMHdVUVJLLTd0Sk8tVzg2QWZtUC1lOHBfZl82a2h5UnRnSnBjdXYwdEpMaWlxSzgzelNtUEdsaS1UbXR1NHBLUEgxZHQ0WjVna3Iwa2JGTjBkQ1k3b0wtUjNEeUNfekhHejVGd1hDdG1pOC05NUlaaTI0ZHZJY1ZYY3V4RTlhcXJza1c4a21oSlk5REFyMjE4QjU5MlFlNjdnWDVjNFEtdnQ1TXlqV1pPSDdQdmdVNmRDUTFzNVJlRnk2aWNTR3AweXpJZ0UxNjdTbkM4Q0EzSlRxTnJxd29WRkRNMUFQZnFkei1vMldoaVF1eENzZW5rcTNnMlBVZS16YVVscGdSLWxBdmlXcVdYd3dKc3RJaVBnQw?oc=5",
+      "published": "Tue, 10 Nov 2026 14:56:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Notre Dame 31-24 Miami (Nov 7, 2026) Game Recap - ESPN",
-      "summary": "Notre Dame 31-24 Miami (Nov 7, 2026) Game Recap&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNMkJiSHFFem54Y29ibFg1aU00X2k0bG5iWFF5WlNWY2ZrVXBFMlNVX0VIM2pkRWpyOEZTT0hvX0VuUnZtdmVHaWZybWtCVDJHbUVyY1hlVVE0dUpMVWZuaGdjQkVYR3FfSzdlaw?oc=5",
-      "published": "Sun, 08 Nov 2026 04:18:19 GMT",
+      "title": "How Miami can finish the cycle with the nation's No. 1-ranked recruiting class - 247Sports",
+      "summary": "How Miami can finish the cycle with the nation's No. 1-ranked recruiting class&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOb0t1NWxETGFqWUVES0Q1ZTR5ckN2WWI0VkdmMWRvbkxmcTZwT3YwcnRJbjRqazQyZHpneU9sclV6OG14MzNFYlVkd0gwZEN0RUg5QmNObFJaVTJkZ3FNekpQR1JqNnV2M3BOVDQ3ZkMxR085cTJ5R3N1SnZOb0piU0xZMzN6WUFtV3ZvUkdQZWd3LVFfVGhUVlNLdjkxLWZvTHo2cDVMVWkyREVJZjhBRkxSa0NGWDU0OF93dE5WZzZTbVZ5VGZsUDkyakROZVpyWXNSeEc1d2gwWVNFbWx2MmJlZ3ZpTnhrdTB3bDJYaUNwWE1RbVE?oc=5",
+      "published": "Tue, 10 Nov 2026 12:10:42 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Notre Dame Football: Miami Hurricanes Q&A with State Of The U - One Foot Down",
-      "summary": "Notre Dame Football: Miami Hurricanes Q&amp;A with State Of The U&nbsp;&nbsp;One Foot Down",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbnJVRHVnX2J5YUp4N18wRkh1d1dhUFl6Q0FEQkVIZTVNSTdraHh0UzZLYWZsQkl0U2JPUHVjYjdSaUt6RDV3ZnRVOXZ5akJ0Qjg2V3kxSG5LSldxSnJzbXUtLWpKTy1udmpnd0x6TDZmMU9TaTdNZU55NEFNWnB3T0ZZaXRVdWt6dTdFRlNHSXlJT1F5V1BWeFJiV1JpVnM0ZnBYU3ZOeVI4X2lRbVc3cDVpU1hUOFZoeXZsNG5SZlFFUDZSMnNB?oc=5",
-      "published": "Fri, 06 Nov 2026 12:00:00 GMT",
+      "title": "Was Miami robbed vs Notre Dame? Michael Irvin says ‘100%’ - USA Today",
+      "summary": "Was Miami robbed vs Notre Dame? Michael Irvin says ‘100%’&nbsp;&nbsp;USA Today",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOZU9CVDhEMEJxWUozeUZOYWlBSXRBejBpNHdUdS1DNWJRNEljYjI4WEhnY0k3MW10TDI4MGRPb0dkMFFSVHlUUXc3cU85R1Nab1RrTTByM0V2NEhNYTFPaHRRdThEejI5QnUtQmpqMDlJQ1hTQVpCSTRMU2w2eVN5SHFMYThFY3FVZ2VVOXA0ZGRyWDVldkRkb3hwUUdPcGJQZVB4aW9zOWV6Z1R1YXlodl85SklDN1NSaEV6eXhRYzlCVmhuZTNkci1WUldLSVpLWEhPVnlERjJFVnN1NWNiXzdBQlF3dDlrb0UzTWw2c0w5dGVjS2Y0?oc=5",
+      "published": "Tue, 10 Nov 2026 14:42:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -320,28 +320,28 @@
       "category": "news"
     },
     {
-      "title": "Duke Football vs. Miami: Time, TV & Game Info (2026) - NC Football News",
-      "summary": "Duke Football vs. Miami: Time, TV & Game Info (2026)&nbsp;&nbsp;NC Football News",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9zYzktdkY5UjlCaklUSlZEd19GNnNvWXBKcldDUFMzVnJoLVBhVlcyY1AyQy1zMWw5TVh2a3piOUdsZkpfZGw4NTltSnpLS3daR1ZwMUFhOGhZckRPSkJPa0ItVlJmZ285VmhFOVZMR19nU0dEcEozNm9YbXZTZw?oc=5",
-      "published": "Mon, 09 Nov 2026 20:27:01 GMT",
+      "title": "Notre Dame football is predicted to land an elite top-10 recruit - A to Z Sports",
+      "summary": "Notre Dame football is predicted to land an elite top-10 recruit&nbsp;&nbsp;A to Z Sports",
+      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQU1p0OEdWUDJ4MFkyN18ySHZEVmpQdHVZVVloVmUxU1RMSlVZU1ZncFpZNGxpdWZncjNsazlkMkhzVlZ6Y0ZPNmxENFNxYWlrU3RDM2RhdnVsQ0VmUm1fQmg1UEl4R016Xy11dUJ6aGo2QjdEQ0JBOTh0M0VWZ3NpMGFkenN5cEZIV0JteEwwbGZUdkJqTHNhd3kxUmEzMlV4aVhkbnRFWmtMR2ROMm4xZEwxZC1TbV9raDVVeDhGMVRjZGM1UUE4ekh1Vk0yZVFJQlFndlpYZHEtbWJJa0R6Rllxcm9iTWw4OHNHZEdNZVY4c3JUR2VMbWFVRW9Ma0puWFNxVGFRa3c4WmdWSEh6djhkaC16eVJCaFB1N3RFRE5SWW9fNEdsSGw3X3ZhY1ZESHA5MDh5TWI?oc=5",
+      "published": "Mon, 09 Nov 2026 20:43:48 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "College Football Playoff Outlook: Where Miami Stands After Loss to No. 11 Notre Dame - Sports Illustrated",
-      "summary": "College Football Playoff Outlook: Where Miami Stands After Loss to No. 11 Notre Dame&nbsp;&nbsp;Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNFE2RkgzdUFjcGloVWdhUXZIMkFuLTFTNWpSeUd5SVk4djhCcXplcjVDODV1SXdQTFZFMlNKd0l1TGU3MFJSTnJLZFhfckp0bmpTbWF5Z05BSkszYmxEbjYydjZUZGZfcDJyaW1ET2VnRWs5dmJpX2p3dXU3czJiNEdBaGFyWkRRcmU2OVU2QlJhdjl6OVFmX1lrNVBSWWVrTmZNSHRmcENJSXdsdjlUekROLU9fWXV0NjVCcGE1ejhsdw?oc=5",
-      "published": "Sun, 08 Nov 2026 05:36:43 GMT",
+      "title": "Miami has to win the final ACC Championship Game and then figure out its exit plan - Canes Warning",
+      "summary": "Miami has to win the final ACC Championship Game and then figure out its exit plan&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZFBPaVZNOTdlLXBlSDdMMVN0RWNDNkNyWW1SVWNHQW1PZ0M2aGpIcWNSelVOb2NHVFBPTlJEMjdfMnh4OS1LTkoxSmtGUmtUWmgyX2hHTUx2a2REM1RoRjFUYVNpc051WF8yVjlaNFVaS2FmTC1SOUtJR3c5dENqcVJDc1FPQjA3VEhYNkFGQlhQU3dXRm5faDJhVE1PcWRrVERKSmM3SzB0NXM?oc=5",
+      "published": "Mon, 09 Nov 2026 19:45:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "How ESPN's advanced analytic views Miami after losing to Notre Dame - 247Sports",
-      "summary": "How ESPN's advanced analytic views Miami after losing to Notre Dame&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNck1CQkZpYWxSa0VnZi1FT2hyLXZTYjJ3NzRVSk0wYVU0V3Q3ODBITnRDTEd3NjlZc0RjQWVOTWp6eXVINlpxMGo2ZkgyOF85VFpkVEFGMmR6azh2c3lvUmJqQi1HOTBxUElYX2MzaGtLTWVTTDN0SEFKOFVGRkMxQ3pkWC1MT2hIUFZVX24zWldsRHVsX2lWVnMydmROSjE3Qi1JcHctUmpxQ3JTempXM2RuWmo1TE5RNUlGLThXbWstYWtHRlZ2ZU9vaTdvanZ1NkJNLW00Tkc5UWRmbEdneg?oc=5",
-      "published": "Sun, 08 Nov 2026 11:33:00 GMT",
+      "title": "Three Things We Saw in Notre Dame’s Win Over Miami - One Foot Down",
+      "summary": "Three Things We Saw in Notre Dame’s Win Over Miami&nbsp;&nbsp;One Foot Down",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPX21kV1RFVFhfYnY3UWQyeUF5c3BsSmlvaDBFaXJOSDhfOW1KVHlzQXVvaFl4Xy1yUjJTUHZDdVIyMktvTnhBRExhSjRFWF9ucGN5d09MU0R1a2F3SjJjWHEyN1N0Q2tFWmNBc0NiQ2l0VDJ6VjBhT0l1WlBnZlJ3R3E3RUtBUDU0QkpLakh6T3VRNTE3aHlzM1kxVlkwdnRib1JkWlRlQ3p6bzZUbEpQeXNuUUJ4QTgtZHc?oc=5",
+      "published": "Tue, 10 Nov 2026 05:09:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -2797,10 +2797,10 @@
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Miami football rumors: Hurricanes linked to 2027 No. 1 OT recruit after he bails on Texas A&M commitment - Yahoo Sports",
-      "summary": "Miami football rumors: Hurricanes linked to 2027 No. 1 OT recruit after he bails on Texas A&amp;M commitment&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWEhxeS1HeVl0VlVOZXBUejZSUHVyRFBmd0tqMWNGTmtQNmY2WjJFRjFFQlpsN0V6U1JYUHRYV2ZoUHQ0WW5Jc3M1SXRrcmdDd0szc2o3bG9BZjhkWnlIZXEybW9ieC1LakhyRjFWdWpvQWFwdnJxVDhuSnIzZVVSdUFpODNQUDlta0VNM3JsdDdYUQ?oc=5",
-      "published": "Sun, 08 Nov 2026 20:10:49 GMT",
+      "title": "A’mir Sears — college football’s next two-way star commits to Miami - The Miami Hurricane",
+      "summary": "A’mir Sears — college football’s next two-way star commits to Miami&nbsp;&nbsp;The Miami Hurricane",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNcWU4djR2RHlQQmxSdzU2MFJUN1Y2ZFNkeG15TndGdERKX0VSb3dVa0I1MmdaMTNRMnNPZXpTU194TlA2Z25na2lvQy1XWmo2U3haTTdJQnlwWFRxUWJkcy1ocndaVHprSEZELW9XUEJzR3hEa2ZHQlBQMWxObTNRa1I0eHJ2d3pnWXk5VjNaU2JjYk5hQ1dwbDd3X0VrR21yR051VnRGcW4?oc=5",
+      "published": "Sat, 01 Aug 2026 07:00:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
@@ -2818,17 +2818,17 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Darian Mensah, Duke settle; QB commits to Miami - ESPN",
-      "summary": "Darian Mensah, Duke settle; QB commits to Miami&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTnJGeEp3cmZpN2ZSdlZIVDZ3dFlEMzVURTFpT2ZIMUtKTzZ2SmhtY2J3MzhZOGd5RXg3clEyWjFQT1hWMl9TX2d6NmMwM2hQaU5lTVpjZWJSVW95T0E3MDhkYS1Yd0RfVmUzVnoxNks2RGF6UlRhMmZRcXdGeFA4OTVxeE9zX2kxZ2RxM3NUMzYzTFNOakFJQ0tOWVNaMkZGZGhVanFQeTZDVlVRREtjb2xYYmw?oc=5",
-      "published": "Tue, 27 Jan 2026 08:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
       "title": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes - 247Sports",
       "summary": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes&nbsp;&nbsp;247Sports",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa0lOX2hkWVFlc21aYVdtRmw1UkloNWVQeWRLa2VnekZ3TWZSNWNRNzJ3WVZHZ05MQU94NDNkdmxBRnRORzA0cllINDRMcXBzbGdfeVl5Z292M0h5T3Iyeml0b0hCVVBRV0VkSHlJNEJVOW1rREE0OEZKVGc2UnZnX0xzNmh5T2hXM1dFUERTVWdfU0RfNXpYUC00SXMwdm11UnlvVjltZnVsSk9rSWZYelBncTJfY3VmdDJFMkFOY1VPSkdBZllibEFEVTFjNkhTV2RCV2tqZHB2dlVnU3c?oc=5",
       "published": "Sat, 09 May 2026 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Recruiting intel: Who remains uncommitted? Which classes could rise? - ESPN",
+      "summary": "Recruiting intel: Who remains uncommitted? Which classes could rise?&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRVF5Ri1DMV9UUzJ3dzVLVVpwcW9XQVRmS21LRC1TeHFuZElELW5OeWxpallpRnkyRjJsQlZzM2owM21IN0xCdlVpNXFna2xZRXNidVFlMl9PUzVodTlfVVJWX3lQbVgtLXJPQ1VhREtYQzBMcVdGV0dvdFNncTFEUlVlb3ByaGp4V01xT0JhN2tOc0Q4YkVGckdGZDhEQl9RQ0VuRzFrUDhMbC1TUUtJaDdidW5FSGlRRlowekJ5U01OVGpHMTFJ?oc=5",
+      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
@@ -2846,17 +2846,10 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Recruiting intel: Who remains uncommitted? Which classes could rise? - ESPN",
-      "summary": "Recruiting intel: Who remains uncommitted? Which classes could rise?&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRVF5Ri1DMV9UUzJ3dzVLVVpwcW9XQVRmS21LRC1TeHFuZElELW5OeWxpallpRnkyRjJsQlZzM2owM21IN0xCdlVpNXFna2xZRXNidVFlMl9PUzVodTlfVVJWX3lQbVgtLXJPQ1VhREtYQzBMcVdGV0dvdFNncTFEUlVlb3ByaGp4V01xT0JhN2tOc0Q4YkVGckdGZDhEQl9RQ0VuRzFrUDhMbC1TUUtJaDdidW5FSGlRRlowekJ5U01OVGpHMTFJ?oc=5",
-      "published": "Sat, 04 Oct 2025 07:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
-      "title": "2025-26 College Football Playoff: What's next for Indiana and Miami? - ESPN",
-      "summary": "2025-26 College Football Playoff: What's next for Indiana and Miami?&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPemFBUFUzRDBoMTBKa2RRVHNvdjZJRGRLQnoyRkkyUkFBLUlPZnJMa25YZkdUbHFna3paQmdUT3N5ekp0QmdnQm96TFhwRHFFdmhxY0xDRFVoV0FkWXVNVUhmYmN6SFQ4dXI5R0s0V1NNa2pCT09KbDNqYjI0UnRaS21ZaTZ0cERPVXZXajcyZ2YzWUFOZ2RwVlEwekJDNEtCUjVrTjRROG1wUQ?oc=5",
-      "published": "Mon, 19 Jan 2026 08:00:00 GMT",
+      "title": "Ranking the offseason for every Power 4 college football team - ESPN",
+      "summary": "Ranking the offseason for every Power 4 college football team&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVTFFNEhSOTRKRGswR3hnMi14dEl0cS0xT0VRcXNqSm9qRmRuWGUwSkNtOVpzcVZnZjBKT0xINlNlZEtKek1LU3hCdzJBOEtvZlpzdmRGR1kxRFQ4U0xlb1I3b1ZZaFJxSzJLaXd2b1g3RmdrZ3JKZThoZjhpcXNOZFF1TVhpNklyaWRLNnhnYXRXRVhSS1hpSVJsa1pNQUhsTTFMckJDV0d0YXVfbXlOeA?oc=5",
+      "published": "Tue, 05 May 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
@@ -2867,17 +2860,17 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Ranking the offseason for every Power 4 college football team - ESPN",
-      "summary": "Ranking the offseason for every Power 4 college football team&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVTFFNEhSOTRKRGswR3hnMi14dEl0cS0xT0VRcXNqSm9qRmRuWGUwSkNtOVpzcVZnZjBKT0xINlNlZEtKek1LU3hCdzJBOEtvZlpzdmRGR1kxRFQ4U0xlb1I3b1ZZaFJxSzJLaXd2b1g3RmdrZ3JKZThoZjhpcXNOZFF1TVhpNklyaWRLNnhnYXRXRVhSS1hpSVJsa1pNQUhsTTFMckJDV0d0YXVfbXlOeA?oc=5",
-      "published": "Tue, 05 May 2026 07:00:00 GMT",
+      "title": "Top 100 OL Jatori Williams decommits from Miami - 247Sports",
+      "summary": "Top 100 OL Jatori Williams decommits from Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNGtnd2l5TFhrZERyU19pZ0hxNHV6a09zd2h4SzV4SnZyWFprN1owX2VaNjZlQnVYTWdaQ2h3YUZTaUQzYTdEQ2QtY0czYkIwUVg1Z0x0VlRrNHY4TjFfT0FFalYyTXpQUzNtUUE1ajQ3c1RhcWRwdUFmdVVobjJsSGJvQ2hnSjdaekwycnpLQQ?oc=5",
+      "published": "Tue, 13 Oct 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
-      "title": "247Sports Crystal Ball: Who is trending to land five-star OT Mark Matthews fresh off Texas A&M decommitment? - 247Sports",
-      "summary": "247Sports Crystal Ball: Who is trending to land five-star OT Mark Matthews fresh off Texas A&amp;M decommitment?&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeEYwdm5pZ0VRR0NVMmF1N2hIUUpBczR2QWZjWU9QbTVqblJVWlB0MzJTRjFpbUcxdHNUdFhVOElsZTRQb0x5RzBZWHJRdkV6N0p1QkxDazY5emhkYkwzdWlBOVgtVS1UZWlNWUg5ODRkbWFYd2Q2cUVfdXpXUXpYbFF1YVliQm1hdllnTDNUd1RwdV83Tk5kZFJZdTdLYldPRlR3ejlGbndscUs5TWN5VlFsZXNrV3c?oc=5",
-      "published": "Sun, 08 Nov 2026 17:01:00 GMT",
+      "title": "WR Malachi Toney decommits from Miami - 247Sports",
+      "summary": "WR Malachi Toney decommits from Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNU1IxT0FVT3NrakJaYWJ5Uy10THRkMXlrT2t1NnQ4eEY3QnJWTWhMTFBYTDdXV3lCandhRmk0SUNsRklPXzJGRTdyN1k4LXBPc0wyV0hlOWNQQW1uWFZOczdqczczWHdwVnd3Vk9ZaW5ZM21SU2dUc1JKY0ZzdmV5NFV1RkpDQ1ZnbFdYUERFVUpKa3c3YXlvcFVjTFVGVHRUZjRyVXlvSjgyQVlCQzBfcWQ3dlNlUUtfNFlubk9Pd3RNenZtcVhGbWo4QzI3a2R0THdDalhDcXZxamVNMHRpWDBoMzVWQ1pF?oc=5",
+      "published": "Thu, 03 Oct 2024 07:00:00 GMT",
       "source": "On3 Recruiting"
     }
   ]
