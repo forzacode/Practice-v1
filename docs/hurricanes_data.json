@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-18T19:10:54.729121+00:00",
+  "last_updated": "2026-11-19T19:16:00.156492+00:00",
   "team": {
     "name": "Miami Hurricanes",
     "abbreviation": "MIA",
@@ -17,10 +17,18 @@
   },
   "news": [
     {
+      "title": "Week 12 Game Day Kickoff: Appreciating Jeremiah Smith's greatness",
+      "summary": "What to expect in Week 12, from top games and players to teams on upset alert.",
+      "url": "https://www.espn.com/college-football/story/_/page/gamedaykickoff111926/week-12-top-games-upsets-preview",
+      "published": "2026-11-19T17:08:28Z",
+      "source": "ESPN",
+      "image": "https://a.espncdn.com/photo/2026/1118/r1747795_608x342_16-9.jpg"
+    },
+    {
       "title": "2027 College Football Playoff National Championship odds",
       "summary": "Odds and futures to win the 2027 College Football Playoff National Championship.",
       "url": "https://www.espn.com/espn/betting/story/_/id/47664633/2027-college-football-playoff-national-championship-odds-futures",
-      "published": "2026-11-18T18:26:17Z",
+      "published": "2026-11-18T22:17:13Z",
       "source": "ESPN",
       "image": "https://a.espncdn.com/photo/2026/1118/r1747749_1296x729_16-9.jpg"
     },
@@ -121,10 +129,10 @@
       "image": "https://a.espncdn.com/photo/2026/1116/r1746847_1296x729_16-9.jpg"
     },
     {
-      "title": "No. 5 Miami (FL) takes on Virginia Tech in ACC action",
-      "summary": "Virginia Tech (6-4) at No. 5 Miami (FL) (9-1), Nov. 21 at 7 p.m. EST.",
+      "title": "No. 5 Miami to host Virginia Tech on Saturday, with ACC title game berth within reach",
+      "summary": "— No. 5 Miami isn't deviating from its plan now.",
       "url": "http://www.espn.com/ncf/preview?gameId=401858302",
-      "published": "2026-11-16T20:44:55Z",
+      "published": "2026-11-19T17:49:35Z",
       "source": "ESPN",
       "image": "https://s.espncdn.com/stitcher/sports/football/college-football/events/401858302.png?templateId=espn.applewatch.awayhome.1"
     },
@@ -249,45 +257,64 @@
       "image": "https://a.espncdn.com/photo/2026/1113/r1744989_608x342_16-9.jpg"
     },
     {
-      "title": "2027 NFL draft Big Board rankings: Mel Kiper's top 25 prospects, best by position",
-      "summary": "Seven quarterbacks ranked in the top 25? This NFL draft class could be fun. Mel Kiper Jr. stacks the best players on the board as of mid-November.",
-      "url": "https://www.espn.com/nfl/draft2027/story/_/id/50182998/2027-nfl-draft-rankings-kiper-big-board-top-prospects",
-      "published": "2026-11-12T22:00:32Z",
-      "source": "ESPN",
-      "image": "https://a.espncdn.com/photo/2026/1014/r1730858_608x342_16-9.jpg"
-    },
-    {
-      "title": "Miami Welcomes Back ESPN College GameDay, ACC Huddle - Miami Hurricanes",
-      "summary": "Miami Welcomes Back ESPN College GameDay, ACC Huddle&nbsp;&nbsp;Miami HurricanesThree Keys to Virginia Tech Football Pulling Off An Upset vs. No. 7 Miami&nbsp;&nbsp;Yahoo SportsA look at Hurricanes’ College GameDay history, from appearances to guest pickers&nbsp;&nbsp;Miami Herald",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNzNoOUNjSHRmRjgwcWF2U3VmRDVUS0RSOC1OYnh3UTB2amRhQUR0RDBHbmx5MUhQbkpwa0xlRl9kcGwtRGkxa0FRYkI5d0l2RnBSbDc0aGUtbnFJbE5zSEY1WnluVndCM19XbUppSWo3dENEbm9DczVDdGtRZG9SXzJnWU1BTE0zMHJaYktyc3lheUQtY190VHhrbEhrQQ?oc=5",
-      "published": "Wed, 18 Nov 2026 16:18:45 GMT",
+      "title": "Rivals Rankings Director on Nick Lennear drop, five-star status for Miami commits A'mir Sears, Brysen Wright - On3",
+      "summary": "Rivals Rankings Director on Nick Lennear drop, five-star status for Miami commits A'mir Sears, Brysen Wright&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPUHdydlBZR3paWUFxRXhhbmhQTGF6aG5qZmlMYVJHaE9UTWYyWkFjcTFLMzJqM1BGdUxuMFVsdlh0Y0JwNTVCb0YyYUlVTGZfdTJVb2U5VjM3WnkxXzE1azNtTExTYkxJV01ISlk3a3I4M2c3czVteXJZalFBNlVkSlQ5Mk1BUTNyQ25YNUIwNnZ5dGFwU19SbHVpRU01Q2xhVFBtZ1UtaW1SbXVKXzJha0JidE1YU3lOUkEtcTdGZTBQNHVJWTZHbl82VjVnbDBoMUpnODFNZTJKU282TDc0aFN1aHk4bGlmV2c?oc=5",
+      "published": "Wed, 18 Nov 2026 22:32:21 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami Hurricanes CFP Bye Path Is Clear as Mud - On3",
-      "summary": "Miami Hurricanes CFP Bye Path Is Clear as Mud&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWnJwcHJTTWJGbTNBUFR2M2g3TjdIWGZLMV9XNV9UZ3JubHdZazNwQmJySnpBZlB0aVlHWmhkSFRWWHNycUtjVnZ3cV8wUkQ4bko2aUVNVUIyUXNIQS1HSk5VcUhrTDJTNFFQczZnbS1FWlNleE5xWUlLZGljSGJoOHVzMnI0ZmR1TzkySkJuQ2RnNktuTjRzbU5R?oc=5",
-      "published": "Wed, 18 Nov 2026 14:25:05 GMT",
+      "title": "Former Miami Hurricanes Wide Receiver Reportedly Plans Transfer Portal Entry - Yahoo Sports",
+      "summary": "Former Miami Hurricanes Wide Receiver Reportedly Plans Transfer Portal Entry&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNV1FodG1FWmRpVjhCX0xHQW1JS3hNc1E4cGFxUlphS2Z3NnQ0eVI2cUR1MFpwSlk1QkFTUEFLUlBjOHFBblJMQUh4RWl6dXhSMmtDUm1TNzBsRmEtSEhTcENmOFlidlFlTVpkcFlia1BRYlpKY1pmdTZXWDRrcEFrMmJEaVVaZHVEcU5xX0N4cw?oc=5",
+      "published": "Thu, 19 Nov 2026 18:35:04 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Hurricanes stay put in latest College Football Playoff rankings - Sun Sentinel",
-      "summary": "Hurricanes stay put in latest College Football Playoff rankings&nbsp;&nbsp;Sun Sentinel",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5JeEgtWmstSDFjcUxXRFVtRUo1ZXlLaGdkWDg3MXlUM0tIYkFxcV9MUlNxcHhnRzJmWGpaUVNqd3NjQk1PcFBEQ1NjY2l3Tkd6NG9ldlJNdVJUR21YcHBvOWNKXy0wOTFKVkJudEFLcW5yWGc2?oc=5",
-      "published": "Wed, 18 Nov 2026 04:16:56 GMT",
+      "title": "Manny Diaz Is Staying: What It Means for Duke Football - Sports Illustrated",
+      "summary": "Manny Diaz Is Staying: What It Means for Duke Football&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPU2g4bC0yR2gyTzhPbl82c0ViV28yazJWRzdCT25lZUJldHcwVkNuWFl6V2s5YlB3RTVjRnlYUUdBSHo1d1ZLcktReDZnWFhqYWo0WDlrTTc5ZUhRaHdRMzNuTy1GOElrUEVCTUl3TjhkS2thVTdmcEpxQkFCOFQxNEV3OW1CTEt5ODJMN1B3?oc=5",
+      "published": "Thu, 19 Nov 2026 19:04:19 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "College Football Playoff: Miami 7th in latest rankings - State of The U",
-      "summary": "College Football Playoff: Miami 7th in latest rankings&nbsp;&nbsp;State of The U",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVzM2d2VDZU5HT1J2UVhCUS1SMVRuRmVJdkUtbVZfWHhHM2tvdjk4Ym4xWXlaOF9wYzlab3NhNWkzTEtwZjNvb2oyZk43VUpMSHFJc0pOTkVKOEtNQUJQUDAzU2RjRDR1S2N6UXQ0ZDZMcVNTeXB4WXhsTDRKaWxKbVdYclBzamFCS3pUdGlLTXF4R0MwXzQ0MHRRUTNmakFlYVk4ck1iOUJOSEtESDdVVlUyNA?oc=5",
-      "published": "Wed, 18 Nov 2026 02:47:39 GMT",
+      "title": "Why a healthy Xavier Lucas is ‘invaluable’ for Hurricanes’ defense - Tampa Bay Times",
+      "summary": "Why a healthy Xavier Lucas is ‘invaluable’ for Hurricanes’ defense&nbsp;&nbsp;Tampa Bay Times",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxObDJ3VHRLeWhmWlA5b19EelBtVmlDZFp4SHl6NjlVLU9xcHViNTFWb2JHSVVYNktPeUxWTEp1TjRWUGlSV1FSN0J3Z1BLSHBoTVBCV3dBVTBUQUhlN1FuZ3RiYWVTRE9VRnFXMl84dDczUk9GUll6UkF2bTh6WDRZRU43eEthVWV0bUpwVmhlekpobXdsWGhyWDBYWHRWUGZEM3VjcDNqTzJKak00RExpc1RxclNiU005RGZ4TlhFOEVCNDFXeENZendTVDlpLTVSVUp5QjVR?oc=5",
+      "published": "Thu, 19 Nov 2026 16:23:20 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "RB Brennen Lacey commits to Miami - 247Sports",
+      "summary": "RB Brennen Lacey commits to Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQLXNleHhFR2FsRlBCSFQzUXlQVG44RU5pQnVuR0Z2cElSNmRpSVF3R0EwQzNyWlhjRXJ0bjBvZk1EY2swdkJISFctVW5Da3BlUEQwR1lVdTBINkdCMjZYNGNoUGhiSVBNNmFaTlo1bWx3Rzk2b1laek9acjR1SHNLN1JHbXVKZWRYWFQzRDh5aW51TXNzMXBTZ1M1cnJsc25Vcmw5a1hqZFZSaEt1MnRNaGlaQ2dNUUUzaFFVSGNTenVYNTREWVBNdWVKcHI1NFlpTDAwY2ZkUTREdTQ1S3puS1c5VEZ2SmV0aUZtSXEzeDN1TUdZYmZiSnUxMldXY05PY2c?oc=5",
+      "published": "Thu, 19 Nov 2026 01:20:52 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Miami Hurricanes news: GTA VI takes over South Florida in full circle moment - Canes Warning",
+      "summary": "Miami Hurricanes news: GTA VI takes over South Florida in full circle moment&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPM21BUkNvZmk3THJncTVxT2JtNTZFVUZBamRLTTFTOFQ2Z1c5SHhWMWhNdm9CYVExdnRxWFEzTHBMdnYwckJWU3Fpd0JFcmk3VE5fNy1GdnZ0TGlZSVBqT2F0NWVYQ244R2dtaFFHU3FxaDFlTkl0YjdTSVJISEtjV0FSVGRWenNTaURTS0p2d0c4Y3Bvd2NIZnRYbzR5VHZiOGc?oc=5",
+      "published": "Thu, 19 Nov 2026 01:47:00 GMT",
+      "source": "Google News",
+      "image": "",
+      "category": "news"
+    },
+    {
+      "title": "Notre Dame 31-24 Miami (Nov 7, 2026) Final Score - ESPN",
+      "summary": "Notre Dame 31-24 Miami (Nov 7, 2026) Final Score&nbsp;&nbsp;ESPN",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNalhXVzhJZ3JzandGcktIMEU2QS1DNmtONXowMEtIRmNZbEZlbGQtRk43NTNFUDBmeFdqVl9LYjREQkVwYlo2ME02Q3BhWTVpTUYzeV9vaTZqdE94WmlRazRzU25HTlR0QTc3UXc1RE8ySkxjZ0RNblp5c1V0alpQdVhVTGM?oc=5",
+      "published": "Tue, 27 Jan 2026 00:07:09 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -296,52 +323,25 @@
       "title": "Miami stays at No. 7 in the latest College Football Playoff rankings - 247Sports",
       "summary": "Miami stays at No. 7 in the latest College Football Playoff rankings&nbsp;&nbsp;247Sports",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQejh3ajZOY0t1amRFb1FUX2NUYXQxaERRYW95S2EtZzhhRktZQmQ3d3NDakVJUFhvQnZ0QTI4SmhGd1RWaU9mZXRCaFpVRERmWWx2LWRISlFLRnRibDhUNE4xd3IzOTZpeWRTbG9YODhQZVhPXzNxWm1MR28xU2ZDdG41cHpHUDlLWE1QWDZSM2xNWVlhUFoyQU93WU5QMHdzTFd3MlMwYnFRak5rOHNXMHJaeGZMX1lDWlRySzJtYWVvbEl2SVJ3ZHlvTQ?oc=5",
-      "published": "Wed, 18 Nov 2026 02:50:46 GMT",
+      "published": "Wed, 18 Nov 2026 00:49:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Alabama and Tennessee chase the Hayden Lowe pass-rush help Miami desperately needed - Canes Warning",
-      "summary": "Alabama and Tennessee chase the Hayden Lowe pass-rush help Miami desperately needed&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaTdtT2R5NjM3MF9GbUNMN0tFVi03ZmRhbFppR1c5RGRHcFNwNjI2NlpVSGJTdW9kd3NOOFRFeTB4dHVyeEV0TjA4T0swaGpIUlhRcEF6UldqTUhiOXA2SG5NQThyZnpNMVpFNDBOOG43T0hNUHZBd2hRU1lYWjkxWEUzSnp5c2dsN3UwamQ2V3Vfb1pfLUtNTFpNaEY1N0NHYlRHMWdoaEV4ODNZ?oc=5",
-      "published": "Tue, 17 Nov 2026 19:40:34 GMT",
+      "title": "Miami Hurricanes CFP Bye Path Is Clear as Mud - On3",
+      "summary": "Miami Hurricanes CFP Bye Path Is Clear as Mud&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWnJwcHJTTWJGbTNBUFR2M2g3TjdIWGZLMV9XNV9UZ3JubHdZazNwQmJySnpBZlB0aVlHWmhkSFRWWHNycUtjVnZ3cV8wUkQ4bko2aUVNVUIyUXNIQS1HSk5VcUhrTDJTNFFQczZnbS1FWlNleE5xWUlLZGljSGJoOHVzMnI0ZmR1TzkySkJuQ2RnNktuTjRzbU5R?oc=5",
+      "published": "Wed, 18 Nov 2026 14:21:59 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
     },
     {
-      "title": "Miami 41-13 Clemson (Oct 3, 2026) Final Score - ESPN",
-      "summary": "Miami 41-13 Clemson (Oct 3, 2026) Final Score&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQN2dvd0dCRzdObno3SzJRekg3Y2NiM29ncmdpV0UwZEE1OGJ1UTB6MklKRE9JbVFOUzhkQXBHcVFDRjlDMXVRdU9Vd0V4U2hscUk5eWRHdm1xVkJYY1ZSaXdEZERObmFIWE1JYkpwYVVLRU9DVEZoWDF2UUY3X1ZIWg?oc=5",
-      "published": "Tue, 27 Jan 2026 00:07:10 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Why Miami as the Seventh Seed is the Best Route In the College Football Playoff - Sports Illustrated",
-      "summary": "Why Miami as the Seventh Seed is the Best Route In the College Football Playoff&nbsp;&nbsp;Sports Illustrated",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQXlQbW4yQ3U4d0FvekJkb05fVWlESVNmTTF0RndudmRKSjAtejdFdllmOXpQNXZRblBaOFk0NE96a000eGVfWWEybjVXUWIwczNYOWVzSENqS0pha2d1c3dTTTVwUmgtNDNoY3ViaWpBRmFHX1lEVlpiQzNKNzZua2J6ektFUUMxNkcxREV2VlM5eTZ3RS1lb1dJS1dkbjd0Q1dJN1R4dWhPeGhZX01EVXFhaDFJNmR2YVRBYzZR?oc=5",
-      "published": "Wed, 18 Nov 2026 13:13:32 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "Flip Watch? Fresno State LB commit Grant Moser fired up about new Miami offer - On3",
-      "summary": "Flip Watch? Fresno State LB commit Grant Moser fired up about new Miami offer&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSlpDU1NqTU95RmxZMzdiSHgtZEhKUHNXaGpZc2h5bmJEWjlJTTlsWDBEcHVzUG5OdkREWjdJck1NRXJoN3MwTVkydUtudFJSUUNDeDJ5ZWo2QlN0QjhxMXI5bW4yLUFxMlBiM0dhNWZwN0FsaDVoSmlLQTBBNjFuVGg5eXBYZm42ZmhKOGhlbFpVQXpmc0FrT0JkYlgzcDhVdDhOb2laMWZ6cUFKb0ROc1g5bDhURGNyUy1MbTdpZUJRejQ?oc=5",
-      "published": "Wed, 18 Nov 2026 14:17:46 GMT",
-      "source": "Google News",
-      "image": "",
-      "category": "news"
-    },
-    {
-      "title": "OPINION: The Good, The Bad and The Ugly ... Assessing the 9-1 Miami Hurricanes - On3",
-      "summary": "OPINION: The Good, The Bad and The Ugly ... Assessing the 9-1 Miami Hurricanes&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNeU1MZ3NESEs5WG9WcHc4UXpwLVdQYmJRbng2WFFxT0U2UVZseWFDUzhjRlJfLXRXMDRPdjRQZHdSTW85NDlidU1jVlVQckVlOFJpLWdTMkRJWUo4eFMtY1lIdXJiOW9pTTBmQnhRaUVWVElmWmZsMkh3NG9KX0dXUDJCbDl6Z21PX1JsR3pJMUZFYkRieFl3c3k2RTF1SU0xNEEwTVY0cEVXanVIcDg2U3lJQXRSS0diWkROZVFR?oc=5",
-      "published": "Wed, 18 Nov 2026 11:11:32 GMT",
+      "title": "Where the Miami Hurricanes stand in third College Football Playoff rankings - Miami Herald",
+      "summary": "Where the Miami Hurricanes stand in third College Football Playoff rankings&nbsp;&nbsp;Miami Herald",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeDgtRFE4YS1BYVgxSG1lTk1HS21BcEFEdHI1ZzhqY3VuYVZPTVdPclpZQUNSdXBmSlEwWmdaUS01SVRRYUhoS0I4VTFqekx1VnFNOVVONF9aaGN1MnNMM3BiVGg2SEpXZ05DaFZUSEg2Vm00eWNfS256dk5ZZThWckhZd0h3ak5OR2I0Y0dVVVRpd9IBkgFBVV95cUxQeTZvUE9ELW93THEyTEtGbmd1V2VaR09nZ0lsOC1XNEdQc0VhWmtMLXZ0LXUtaVVDTjZ2d1Q3cTdfX1U3UTR5dDJEaVdhbHhnWjBTZFBCa0UtSDdsT1kwQTJRSFM2TmdLVk5oWVZoUFNLS1V6UWoyQmFPdVpCUHVSY2ZNajM1YVhCanJXQU84UzloQQ?oc=5",
+      "published": "Wed, 18 Nov 2026 03:04:00 GMT",
       "source": "Google News",
       "image": "",
       "category": "news"
@@ -2747,80 +2747,80 @@
   },
   "recruiting": [
     {
-      "title": "Miami is hosting its entire top-ranked class, rising seniors, and key targets for clash vs. Virginia Tech - 247Sports",
-      "summary": "Miami is hosting its entire top-ranked class, rising seniors, and key targets for clash vs. Virginia Tech&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPc2ZxaVFRT1JFZ2RxdVNxSUdOeUZQQ1k5Q0JITmlEeUpobGpMWnZtNzVrTU5Db1FSc0pneTFpai1EWGR0MVo2M0tVZDBwWDlRQjNHTXczcHBNM2RiV19HUXJ3djNlSlhibzBRZVhMekNEVWtsNTMwS3c1azRwYjVVdzhPZ3BHOUdJYUJSTnpsWTRfZ0twcU9BSTM5OGdCRmw3Y3JydGdhNGotM1VyUzVBNHVyTUt1RjJITldnTEIwSlAtT1RKWTF5MnJSZEZkUVB5d3BwcTFBQXJEUThRelBVaS14eGNhN2R4SWcxQ3dPSlJwVkhpbG5zSXg5S2ZYcWJ5R0xiOGVBWFlLaHc?oc=5",
-      "published": "Wed, 18 Nov 2026 15:35:44 GMT",
+      "title": "Five-star Risers: Miami commits among the best prospects in the country after the latest ranking update - 247Sports",
+      "summary": "Five-star Risers: Miami commits among the best prospects in the country after the latest ranking update&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQRVcyM3BnSkVtQWNJUllHOVhaMVNKV1RUcTF5b0xQcjNvN3ZSSF9pdXRsMG9VZG9pZXZwVUM2NTdQQUFGb1g1TW9fc1ZaVEhEUGVUR1lBTDhOSXB3QUU5ZW9EUG10NlRrUE41UHlUYjl4OGxObDlJZEVUTWlfbTdYRkp2YnRtd1RFMXVUdUgzbldkSXZtNFZoLVNCdkdUckpYcXNZbGYxMGJWUUtzdVlNNEpneUI0bzliMkhfZVkycDA5Nmpib3ZWYU9Eai1Ic0xEU1VrM1lzUVZxSkZrTjZnY3ZfSFZlNEFwZTVxR2RLSlNNOU1VdEJqX0lzakJFU2h4RnZuTVdnWUJVTlVNSXJuQ2JGRFB2LUlfbUVvcjd3?oc=5",
+      "published": "Wed, 18 Nov 2026 17:02:35 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Miami QB Commit Israel Abrams Makes Announcement Before College GameDay - Yahoo Sports",
-      "summary": "Miami QB Commit Israel Abrams Makes Announcement Before College GameDay&nbsp;&nbsp;Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOTlPX2d1V2ZhVmRGblBUNXN1ZEpRd3RtRXhKQ09XeWZLVFItemFxM2k2SHpHNkttWldya1RMYzg3UTc5cVU5eUNqemVpOFIxVzFaYUo5YUs1aTJCWXlqQTVQRkU1TEVmcU5MNjdmcElIZE9HazFMVWZBTTFIR2NGajFlc1o?oc=5",
-      "published": "Tue, 17 Nov 2026 23:21:49 GMT",
+      "title": "Miami lands commitment from former LSU RB commit Brennen Lacey - On3",
+      "summary": "Miami lands commitment from former LSU RB commit Brennen Lacey&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPemtiQUNkVWdMWTNkdHFkNHNhX1JhVjNBWW9reVp4NEdtY19IYVVlZVpKYlRaSVBJZFRPWkdTbklUcWFjUUVRdmNtaDlLUjl4MGtjSEpNaW4xZ0pNZEpGMjR0aFpSdDFTVGhfd2dXR2tscnlkdE1BLUhCRS13Q0I4MlZmSGQteFd1Y2YtWElmdEFVc3hEZkRaSFg3ZG9BWWVxbTRkM0hmM28yMlB4UW1OTQ?oc=5",
+      "published": "Thu, 19 Nov 2026 01:19:43 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Miami adds two commits to Rivals No. 1 ranked recruiting class. - Yahoo Sports",
+      "summary": "Miami adds two commits to Rivals No. 1 ranked recruiting class.&nbsp;&nbsp;Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZllrVXRMdk5jT1NJUTVxT3o2Z05NMW90UG1LSEs5d1JVWVRnV01XX3A0akI4WjAtNmxnVTVGeU55ZWJqZ05Cc1JHVmRfSnRFVDJhQ0JiVFpOWmFjVG1zcHpTWUE3cjV3c216ZWZvU2RMM25YekNBQzVuUlJvNVlDWEFIMDg?oc=5",
+      "published": "Thu, 19 Nov 2026 01:30:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Miami lands 2 more commitments as Hurricanes strengthen No. 1 recruiting class - Canes Warning",
+      "summary": "Miami lands 2 more commitments as Hurricanes strengthen No. 1 recruiting class&nbsp;&nbsp;Canes Warning",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNU1BQMTUxbmxJSTFSRmdQUm1nRVlNeFBVSzJ0ZVJmb25xSzRtTExkZE9KOVlTNDF2UEpIaFZKSllpSTJVeDBCOUlrXy0yVVhqeDRGM3d6YlBtSk1haVJJcmt4RXlvbkFZYU02R21ONnhpVkYtRUxhVXNRVVc3ZEJUSmNkR240SlJXU04wVzhCbVFPbGZpMXVWYkVGQ3hiSC1hVWJkaA?oc=5",
+      "published": "Thu, 19 Nov 2026 02:05:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "Canes make handful of late additions to No. 1-rated recruiting class. Details - Miami Herald",
+      "summary": "Canes make handful of late additions to No. 1-rated recruiting class. Details&nbsp;&nbsp;Miami Herald",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQR2hkem1zMkdKbFNUN2k4V2tzakc2Q09PVUNqT2xsakV3cEU4TFltOVVoRzB5TlNXTElyUFlRcy1EMl8tbGdMUGJNX0h1TDloNW52eVQ3bXRDdXZjT1Y3Q0J0dlRvOHFMdHZuOUtXZzJzVXRZUFgyb1JRUGFNQlZ4RG5tRDhBVWtFWUJWaTVHSmJSd9IBkgFBVV95cUxQUEtRcE9XRlg1U0hlR0pENjlPMmNVc0FKeEp1b0xFTlFfUi1MeUc0bHpBZUJSZGc4OG5ZUTBHQ1VFbnMwZkY4SE9YWml0eEpzRHRxaTBFU1NsWWhWSlZESXd4amNMaTZJWlgtVXVtZVotN0IyUnZEMXBtMHdUTFFZRzJjV2g4WWk1TkNOTk5SN0h0dw?oc=5",
+      "published": "Thu, 19 Nov 2026 16:33:00 GMT",
+      "source": "Rivals Recruiting"
+    },
+    {
+      "title": "OL Armani Eusebio flips from Harvard to Miami - 247Sports",
+      "summary": "OL Armani Eusebio flips from Harvard to Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOS0d0enFDd0gydURVc0IyUHNwT1ZGdWljc1V0bUN3c2QteHdfOURMaWhQZ1hHVlYzQzBxSE5UdkRyai01d1ZBLUZTMG1OakdId1pPRHBFYlpvMTFfdFVLZWFIbDVOcnI4Y3hTU3c0TTJzYnBKVHlJdVZzTy14TUVMbmV6ZW9nYkRkbk04R1lfVU1PcEJmWHJ6ajI1MWVpUVNvM1RqOXZWMlJVNVZDamM1LVhZMmRmV3lsaE12ejdkblh6ZkpsM2tLN1RZalg3SW5nLV9HMjRCYWd5NjF3UGw2amVOSmJpTGtfNlpVRWlZZ2pDa3pxckctRzY1R1NLeWJGRm1xS01mbVptbnBiZVlOYmF3?oc=5",
+      "published": "Wed, 18 Nov 2026 15:46:00 GMT",
       "source": "Rivals Recruiting"
     },
     {
       "title": "Three Rankings Thoughts: What did Rivals get right, wrong with Miami commits? - On3",
       "summary": "Three Rankings Thoughts: What did Rivals get right, wrong with Miami commits?&nbsp;&nbsp;On3",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOb01QSnB6Qjd5SldIYUQ5ZVFzaEh4ckVySm1wQXdUbWpFa2Q2OW9RWWhkSzBMSE4wZlp4OWFvV2VHQXIteGVJSHJJeWRFazRnUXhXYkxWdzU1NC15X0M1UG9QdnBXNXFPSVkxMUQwZUhXRlRiNEJHS1VEclA1cm9aWktYbUNkSTdYS0tEZFBSVzhhd1lzdnVBQVY4TENKR1N1OFpTQmZGdVZrZlVnNHBGSDJkUTRyNV9QZnBQT2V2Vlg?oc=5",
-      "published": "Tue, 17 Nov 2026 22:18:49 GMT",
+      "published": "Tue, 17 Nov 2026 22:51:47 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Five-star Risers: Miami commits among the best prospects in the country after the latest ranking update - 247Sports",
-      "summary": "Five-star Risers: Miami commits among the best prospects in the country after the latest ranking update&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQRVcyM3BnSkVtQWNJUllHOVhaMVNKV1RUcTF5b0xQcjNvN3ZSSF9pdXRsMG9VZG9pZXZwVUM2NTdQQUFGb1g1TW9fc1ZaVEhEUGVUR1lBTDhOSXB3QUU5ZW9EUG10NlRrUE41UHlUYjl4OGxObDlJZEVUTWlfbTdYRkp2YnRtd1RFMXVUdUgzbldkSXZtNFZoLVNCdkdUckpYcXNZbGYxMGJWUUtzdVlNNEpneUI0bzliMkhfZVkycDA5Nmpib3ZWYU9Eai1Ic0xEU1VrM1lzUVZxSkZrTjZnY3ZfSFZlNEFwZTVxR2RLSlNNOU1VdEJqX0lzakJFU2h4RnZuTVdnWUJVTlVNSXJuQ2JGRFB2LUlfbUVvcjd3?oc=5",
-      "published": "Wed, 18 Nov 2026 17:03:45 GMT",
+      "title": "RB Brennen Lacey commits to Miami - 247Sports",
+      "summary": "RB Brennen Lacey commits to Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQLXNleHhFR2FsRlBCSFQzUXlQVG44RU5pQnVuR0Z2cElSNmRpSVF3R0EwQzNyWlhjRXJ0bjBvZk1EY2swdkJISFctVW5Da3BlUEQwR1lVdTBINkdCMjZYNGNoUGhiSVBNNmFaTlo1bWx3Rzk2b1laek9acjR1SHNLN1JHbXVKZWRYWFQzRDh5aW51TXNzMXBTZ1M1cnJsc25Vcmw5a1hqZFZSaEt1MnRNaGlaQ2dNUUUzaFFVSGNTenVYNTREWVBNdWVKcHI1NFlpTDAwY2ZkUTREdTQ1S3puS1c5VEZ2SmV0aUZtSXEzeDN1TUdZYmZiSnUxMldXY05PY2c?oc=5",
+      "published": "Thu, 19 Nov 2026 01:20:52 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Rivals RPM: Miami leads for these three recruits after visit weekend - On3",
-      "summary": "Rivals RPM: Miami leads for these three recruits after visit weekend&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNDhNQWRvajBsN3JBcU5jeWpPV3JHYzlkX1pPZlRVQV9qaUVFcGZXbkpGV3ozTU5FMERQdkNmUmNTY0JjMXdVekZuRHR0Uks4a1VEclVjQ2twbkNTLS10dGpoSTRRY25BYUtWclJleFpWb0VSdVdUa2pTVE4ybDdEanFRN3I4TkVoZHRYSW1mVjRFNEdqY1YwNnZsbG9udGtGV0pDWklPaG1QcjBhNWJKc09jWUx0aU5tS3c?oc=5",
-      "published": "Tue, 17 Nov 2026 14:28:23 GMT",
+      "title": "Rivals Rankings Update: A'mir Sears now Top 5 recruit nationally; several Miami commits rise, fall - On3",
+      "summary": "Rivals Rankings Update: A'mir Sears now Top 5 recruit nationally; several Miami commits rise, fall&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSE5kT0Y1amZ6UTM3bFYtVnJjVDdMMms5Ty10NUZQRUhkUXZ4YktBZXhSLW9TWGdBVnJmaVJlOUhWTjl2dEdsVEZuMF9sM01ucVJGdEtGNVNQQWVHX0c2d1doSVhaNUNSZGdwdndGOWlmTlR6M3ZyOE5KU0szUU1UNmlMUzdYQmpxczJSWFQ5RkdoOTZtVF9ZLXl5R2w2ZkFEUk5kbTJUQjRvQlRfaS1zQ1NGajZXdnJPNUtqbFhwcEhlanU5aHdRaUpyanB4LTVIQUU4SXV5dFdsMFE?oc=5",
+      "published": "Mon, 16 Nov 2026 16:57:14 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Meet The Commits: Miami boasts No. 1 recruiting class in the country - On3",
-      "summary": "Meet The Commits: Miami boasts No. 1 recruiting class in the country&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRzNYdk5sQXdrUXZ5MGhiaFVzNTBWcVh1c2NBdDd5c2hfZEpOY3NlaHNoRXAwUXpCYkxsUzRtQ0FtaThlR3QxMW41VEJub09ZS2ZqcDJqYllCQUxyUm81ZmZyQVpVSlBlYkxBWVJTbko2SWg4aHRlTngweWl3ZjdQYjc1azdZZXgxNUpOQzhqdmUzQmlsUDV1VVNyTlZ5OUNGZG9kVjVkV25TdGdPcW9DTXJKZV9SZw?oc=5",
-      "published": "Sun, 15 Nov 2026 15:32:05 GMT",
+      "title": "Local OL Armani Eusebio flips commitment from Harvard to Miami - On3",
+      "summary": "Local OL Armani Eusebio flips commitment from Harvard to Miami&nbsp;&nbsp;On3",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVTVfQlRQaVVKUUxTQnZtaHVCVmRJUXhab0NmeXQ4MHY2M3pnaEZZT0FCZjVlLVZkeE56YVliS3B6bjdReXNZSVJZN2IwaU5udUlsb2VOUVlTRFcybGVxN1BlUlZxWEMwVG5HdzNlV3M2cE9NdXZlOVVFS3lhUE4yUU1sMExZU2VPWFAxdkdkMmtzWllYTVJ4LXFFYmR3YnNEYnBFZDZ5NklyTDhQWWc1WQ?oc=5",
+      "published": "Thu, 19 Nov 2026 00:22:12 GMT",
       "source": "Rivals Recruiting"
     },
     {
-      "title": "Monday Afternoon Recruiter: Power ranking Miami's three Rivals five-star commits - On3",
-      "summary": "Monday Afternoon Recruiter: Power ranking Miami's three Rivals five-star commits&nbsp;&nbsp;On3",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOEFBR1cyMHZlRm8zOUFjRXJhWGpiMnlpVEY2TlAwSy1kOWRXbTJ4RUNuWlFxM1NsUVpDV3loMkVYNnctNk5vcXE3VS14VXZPY1drZEdyWk9pRkROSGZBY3BqY0x1VjVMT2VvakN6VEh3U0E1VE80VG1mWlRtX21fSkRqaklhQTBQMzdVY2xObzMwZU9ERWozOWJSM0pwYXYtN19DbGpxcHY3aGNvSDFfRnduYVNycGtPYklSWFFqMUQ2QU5QdkE?oc=5",
-      "published": "Mon, 16 Nov 2026 19:57:49 GMT",
-      "source": "Rivals Recruiting"
-    },
-    {
-      "title": "2026 college football recruiting class rankings: Top 75 schools - ESPN",
-      "summary": "2026 college football recruiting class rankings: Top 75 schools&nbsp;&nbsp;ESPN",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOaDl1cG1MZVRtaVk4dWUwZm5tRkgtb0hKeGdnVzRLNW9jWDlsRktmTlBJd2RKaXo3TENQekxycTF3SGp6c2E0NmtiNElHTjdXWFBrbUwzMXE1MmZyZlBYcFB1SUs3b0hMTXY1QV94MjNyekk3Tzk5R0Y3OEdvYXJQWVZ2ZzNfWXZJYUhWMFg3VDNuVWRTc3FuT2d2MEI2bXlyLUw5RGdzWkFoeUZ3c3FPNGJIY3AtMENDc0JfMmNHVFctbm1Tc29pV0lmblZ1dlU?oc=5",
-      "published": "Wed, 04 Feb 2026 08:00:00 GMT",
-      "source": "Rivals Recruiting"
-    },
-    {
-      "title": "StoryStream - Miami Hurricanes Recruiting: National Signing Day Central 2026 - State of The U",
-      "summary": "StoryStream - Miami Hurricanes Recruiting: National Signing Day Central 2026&nbsp;&nbsp;State of The U",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZmZHdDZoQnJvSzA4aVZuZG5ERzh4bDZRd1ZucXpDWXM1NllodnF6OGRPUHRJYkF0LWotbEJlTVhIRHh5U2tidTVGWjR3Sm5VUEdWZWZPRnAwcERPMVh4djN4R2tlNkRmQWZjR2RYYTRBU1paSkVzcWpra3lvS1c0aHJpODlwdE1kSEJ5S1JCS2YwenBtTEh3bjNjSzF6ZjBFd19SVUZDU0hwWUFKeDVUUXhEYy1ZNHkwdE0wSC1WR0FsOUVLck9ZMW1lVXRDLWU4T1JUMkdYeDVSNFZFWjVya3BGYXdVNjEzVzJsXw?oc=5",
-      "published": "Wed, 10 Dec 2025 08:00:00 GMT",
-      "source": "Rivals Recruiting"
-    },
-    {
-      "title": "Predicting 3 Miami football transfer commits coming this week - Canes Warning",
-      "summary": "Predicting 3 Miami football transfer commits coming this week&nbsp;&nbsp;Canes Warning",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOelpGMnpTWUlXVGpYb2RyeGFOTWJlNWlKRlZ4cnNHQzhELUxGZ1J2ZTREeF9NaWhXdU9ud012a1RQWHZTWWZIRjAtaklZMEt3eHI0VUMzZERMV1Y2WEppSjQyclNSZmRueVNnQk5KZ2ZYR0tqYVlVMjBxUFRocXJqREVrckh2eGdZa3ZHa1JFSQ?oc=5",
-      "published": "Wed, 31 Dec 2025 08:00:00 GMT",
-      "source": "Rivals Recruiting"
-    },
-    {
-      "title": "OL Zaquan Linton is no longer a member of Miami's recruiting class - 247Sports",
-      "summary": "OL Zaquan Linton is no longer a member of Miami's recruiting class&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxObzBza0FvRTdNa0ZGMnlTck1nVnNwZU9oNjNkenZ0dDFFRzl3RDF0S0phMjdadmphLUpxS3g2OXJHWV9NZGVfMlAwaUpuSFRqb0duVEVTdVh1YjhmMWd4RDFZVjhKYV94T243WV8wdEtmWFZaZmw3UUtMNklxYVVWNXdwWVNhV1ZCVVFVTGhyaDZ3Qml4T3pZUlpSbUhLVEwyTHl6TGtOcVlITHhBelhBV0VuODVoWmoxT0xDTFpMUXBydXBKRS1OUzlqZTJHNnRTbk1QUURBSjZKdEVEQ0xrTDV5dHJOZGZaeG96WXZEeEF1ZHIxQm1lT3JDSQ?oc=5",
-      "published": "Fri, 17 Apr 2026 07:00:00 GMT",
+      "title": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes - 247Sports",
+      "summary": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa0lOX2hkWVFlc21aYVdtRmw1UkloNWVQeWRLa2VnekZ3TWZSNWNRNzJ3WVZHZ05MQU94NDNkdmxBRnRORzA0cllINDRMcXBzbGdfeVl5Z292M0h5T3Iyeml0b0hCVVBRV0VkSHlJNEJVOW1rREE0OEZKVGc2UnZnX0xzNmh5T2hXM1dFUERTVWdfU0RfNXpYUC00SXMwdm11UnlvVjltZnVsSk9rSWZYelBncTJfY3VmdDJFMkFOY1VPSkdBZllibEFEVTFjNkhTV2RCV2tqZHB2dlVnU3c?oc=5",
+      "published": "Sat, 09 May 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
@@ -2831,38 +2831,24 @@
       "source": "On3 Recruiting"
     },
     {
-      "title": "Transfer Portal Spotlight: Duke's Cooper Barkate could give Miami one of the nation's best receiver rooms - 247Sports",
-      "summary": "Transfer Portal Spotlight: Duke's Cooper Barkate could give Miami one of the nation's best receiver rooms&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPU1NmdWVEYzg3b3RjTnpNdndhZS1ENGRJVkNPVHNNWVRNT2k4YkdLUkp2UmctMVJEd0NzN2kxUWNUeUlhcHhxWnJWcHRZRTFPdExicVg2OE0temhOTjBYb2ttQjR3dXlPODdyVHlibklWcG5sSzJ1M21jYVlyTHFJRnFkdHE0cEhNSWpyakpfTlhXem9KZ3I0MDFWUXd0YkVJd3ljRUs3Wk5PRE43dnNBNlZTX3VLZERtTVZYMDhDUFVOcGNUcjE5UHozUTBFQkdaeDJYdHFhTGJwZWhaYmhUWm50cEwtSDV6VkhuaE9aQQ?oc=5",
-      "published": "Thu, 22 Jan 2026 08:00:00 GMT",
+      "title": "Every Ohio State player who has entered the NCAA Transfer Portal - Sports Illustrated",
+      "summary": "Every Ohio State player who has entered the NCAA Transfer Portal&nbsp;&nbsp;Sports Illustrated",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNajVRMVEzS3BHS2RSZFFBNHNCMlg2N2ZWTGRxYlRySEVtNjRjT2FSdWVQV1dGQjc3dVcwbXZ5aFlJMm5Ec01HNVF3UklDV0J6cHBrR0t0OWswUWIxMHBEY3dXTEpMc2R2b2xGbWFzb000alZDdzQ5OE9vaDNNVWlhQ1pJT05tdVYzMlc2MTcydGJuU1VfR2NBOWp2aG5BRWw4eFNud0tnc3QtSGI1ZnpHczVGSGpycUdHVmxF?oc=5",
+      "published": "Fri, 02 Jan 2026 08:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
-      "title": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes - 247Sports",
-      "summary": "5-star cornerback Donte Wright decommits from Georgia Bulldogs, flips to Miami Hurricanes&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPa0lOX2hkWVFlc21aYVdtRmw1UkloNWVQeWRLa2VnekZ3TWZSNWNRNzJ3WVZHZ05MQU94NDNkdmxBRnRORzA0cllINDRMcXBzbGdfeVl5Z292M0h5T3Iyeml0b0hCVVBRV0VkSHlJNEJVOW1rREE0OEZKVGc2UnZnX0xzNmh5T2hXM1dFUERTVWdfU0RfNXpYUC00SXMwdm11UnlvVjltZnVsSk9rSWZYelBncTJfY3VmdDJFMkFOY1VPSkdBZllibEFEVTFjNkhTV2RCV2tqZHB2dlVnU3c?oc=5",
-      "published": "Sat, 09 May 2026 07:00:00 GMT",
+      "title": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami - 247Sports",
+      "summary": "Four-Star cornerback Ai'King Hall decommits from Oregon, flips to Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTFhwTVUyTlJpNExtMktEUk5sYllrMTVBX1pMRVVpaER5ZW1Eb1h0RzRuV1A3ZlFLR1VCRURjUjdDdXB5aE1VQ3VXVDQ4YXkwUEZCTmM3czBfRWJNeFhWdk5EN1lJMUg5NFA3eGdsclVleW5tQjFvMWgtZWIyQldCeEpuQ25NNUptY0dXdUtWWktfbHU4WWNka3prbFVkVGJjU0lsQlZBLVQ2dWRiUHlRa3hWekM5LVRhWnVfR1JZdFpRU05ZMWhpdkhIRXZsMm9YYjRkTGtONnRKWjdpYUM5aGNDU3YtUUU?oc=5",
+      "published": "Sun, 17 May 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
-      "title": "Miami has the No. 1 recruiting class in the country following a decommitment from 5-star OL Mark Matthews - 247Sports",
-      "summary": "Miami has the No. 1 recruiting class in the country following a decommitment from 5-star OL Mark Matthews&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQa0xIUWl3MkpTQUFMOUVxQllrQ1RyZ2JMaDNjMHdvMGxtTzRqUS1LR2t4MVd3SFp5ck9MdnUxaEk5UDByc3JQSEo5MDBFNl9RY1c1QUo5UTZKcmJoREpGMkJtbzgzRmgzZS1UbmlfU2hCblFndTBYaUIzNlFRRmFMRDdvS2xIbTgyQnlZcFB0Tk14aWoxS1dFTVFEMzMyTmpiQ19qdVJzSy1fZ0o1YVBoUlFJTTZxdkpzdFduYUduanVJMFlJN2dqUG51aThhMEgxMHNrYm9ralItUVBRVFg1OTR1Z0QwX3VzTURNUy0wUEg?oc=5",
-      "published": "Sun, 08 Nov 2026 08:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
-      "title": "VIP Notes: What happened with Miami and Top OL commit Jatori Williams? - 247Sports",
-      "summary": "VIP Notes: What happened with Miami and Top OL commit Jatori Williams?&nbsp;&nbsp;247Sports",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNUmZIUGpIc29CRnBXUmNJM3VfdXpOZ080bEpjS2otYUlkZ2VQZXFER0ItOTBEdV9MRU5VX1JtVi1iM2ZzSi15WkI3S1EzNlNXSjdVd1dURENvazlBWkhTUGlKcnZtUjlqQnlvWmpWQ01uZVl3Q0JsMjFxNWpId0E3T0VLR0NmWjU0YnRuZ0h4TXVXLWNrX1hKZVRPbGpOdEZHb1otX0wtYXI1bERrQWd2bkJta0oxWnpaTmZzT2Mwa2xnUE9sSVRLNF9SYWJJU1lZZklNdUMyekVkZ0N4T1RMWk9ZbEI?oc=5",
-      "published": "Tue, 13 Oct 2026 07:00:00 GMT",
-      "source": "On3 Recruiting"
-    },
-    {
-      "title": "Miami Hurricanes Add Two New Talents to No. 1 Ranked 2027 Recruiting Class - roundtable.io",
-      "summary": "Miami Hurricanes Add Two New Talents to No. 1 Ranked 2027 Recruiting Class&nbsp;&nbsp;roundtable.io",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPSzVETHlobUw4VXhTSGlucmFhMVYxNGFhbkdsa1oxNGNtN2lKWklUUm9YRktuZEc0eWhIaHFjSy1USGhHRzcxVkwzakl0WEVHMktSRDNYdUlBYlluUzYxNHlPTENXbkp0UldQZEN4OW1udUJxQi1KelVHM1ZqSUQwQm1PSEVvLXA1aWNoWERfLWd5a2hXNTRTbzg2RmZQQ2N3eU1yUGVLX3U1d2QxSDdKMkxuMndXWURoS2c?oc=5",
-      "published": "Sun, 15 Nov 2026 16:50:44 GMT",
+      "title": "OL Zaquan Linton is no longer a member of Miami's recruiting class - 247Sports",
+      "summary": "OL Zaquan Linton is no longer a member of Miami's recruiting class&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxObzBza0FvRTdNa0ZGMnlTck1nVnNwZU9oNjNkenZ0dDFFRzl3RDF0S0phMjdadmphLUpxS3g2OXJHWV9NZGVfMlAwaUpuSFRqb0duVEVTdVh1YjhmMWd4RDFZVjhKYV94T243WV8wdEtmWFZaZmw3UUtMNklxYVVWNXdwWVNhV1ZCVVFVTGhyaDZ3Qml4T3pZUlpSbUhLVEwyTHl6TGtOcVlITHhBelhBV0VuODVoWmoxT0xDTFpMUXBydXBKRS1OUzlqZTJHNnRTbk1QUURBSjZKdEVEQ0xrTDV5dHJOZGZaeG96WXZEeEF1ZHIxQm1lT3JDSQ?oc=5",
+      "published": "Fri, 17 Apr 2026 07:00:00 GMT",
       "source": "On3 Recruiting"
     },
     {
@@ -2870,6 +2856,20 @@
       "summary": "BREAKING: 5-star OL Jackson Cantwell commits to Miami over Georgia and Oregon&nbsp;&nbsp;247Sports",
       "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOZVZOeFFNWHRlRVZwLXgyNU82amRSS1FGS1l2eTFpQ1lISGxNLUhFVzRtaExJMlhTcjVJbUZWTURKdUV3dncyeHZNZGhKMkgwYUZMaTZiTmdSR0tjRldhLUowdDhtM3c4SkdCR0ZqdkZBLXI2bnRqQnczMzVCRVpkcjNsYkRZUEVnTU5oU2FuMS1oY2RXdzU5TE9qNUdyN3RhQ0pFTGV0YXNiQlk4aDQ4bWxacV94T1doQWNhYkZJanl1NkxBU2ktbTdxelppWlZuNm9aci1lR19scU5vSFNVVG5zc3pZTmxxQlFCWnhiLW1wV2RHSWdGSjRtT1FQSXAydl9qZjVUakstTVV3amZlajVsRnZfRmRtVUQ5bHZWaVRySm5acGdKeQ?oc=5",
       "published": "Tue, 13 May 2025 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Louisville EDGE Tyler Baron commits to Miami - 247Sports",
+      "summary": "Louisville EDGE Tyler Baron commits to Miami&nbsp;&nbsp;247Sports",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPbXlEN3BGTVhYUmJhUUFxeUVwamlfU2lMS0lvajZETll2am9vZWt4Nkoycmc0R2hBc3ZGZGVWcHFobGNDQnhmOUZMLXdCRlRWLUFUYWx3dXNwWE9TcXZ6eXFlYVczc1pnODJVRTVyOC1FdS1yeWZVVG11ZW5yZURENUtYX2YtbVQ2RDZUTkFkV3dydmZhV3hINE8yUkljdXlVbk41WEVEVHBMb2N0WW1MYkNscGE0dGtiUEZ2Umd1bTF5M1Bzcl9GbHNvdi04dm9sR2tRNVlWMHFGX0c5MVhKeTNjYVlBSkhzTzRvRUFveUlaRXVDOUJjWlpQenJEbGhsZTNXS3NFcmFfV3pkVEVwbWhGVlAtM2Q1aFFj?oc=5",
+      "published": "Tue, 21 May 2024 07:00:00 GMT",
+      "source": "On3 Recruiting"
+    },
+    {
+      "title": "Miami Hurricanes Add Two New Talents to No. 1 Ranked 2027 Recruiting Class - roundtable.io",
+      "summary": "Miami Hurricanes Add Two New Talents to No. 1 Ranked 2027 Recruiting Class&nbsp;&nbsp;roundtable.io",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPSzVETHlobUw4VXhTSGlucmFhMVYxNGFhbkdsa1oxNGNtN2lKWklUUm9YRktuZEc0eWhIaHFjSy1USGhHRzcxVkwzakl0WEVHMktSRDNYdUlBYlluUzYxNHlPTENXbkp0UldQZEN4OW1udUJxQi1KelVHM1ZqSUQwQm1PSEVvLXA1aWNoWERfLWd5a2hXNTRTbzg2RmZQQ2N3eU1yUGVLX3U1d2QxSDdKMkxuMndXWURoS2c?oc=5",
+      "published": "Sun, 15 Nov 2026 16:50:44 GMT",
       "source": "On3 Recruiting"
     },
     {
